@@ -1,8 +1,7 @@
 # Time Log
-* Automatic Illustration of Text
-* Stergious Aji
-* 2546916A
-* Advisor: Debasis Ganguly
+**Automatic Illustration of Text**
+* 2546916A - Stergious Aji
+* **Advisor:** Debasis Ganguly
 
 ## 13/10/22
 * 0.5 hrs - Researching multimodal interactions and text to image generation/retrieval
