@@ -32,7 +32,7 @@
 * 3 hrs - Creating small program that uses Shazam and Genius APIs to recognise and retrieve lyrics of a song in Python
 
 ## 25/10/22
-* 3 hrs - Creating 10 slides for small presentation of previous disstertation and initial ideas
+* 3 hrs - Creating 10 slides for small presentation of previous dissertation and initial ideas
 * 2 hrs - Researching ideas for project plan
   
 ## 27/10/22
@@ -54,7 +54,7 @@
 * 2 hrs - Reading "Introduction to IR" as suggested from meeting, particularly on indexing
 
 ## 04/11/22
-* 4 hrs - Creating a jupyter notebook script to programmatically download 5 random images for each ImageNet synset (Category)
+* 4 hrs - Creating a jupyter notebook script to programmatically download 5 random images for each ImageNet synset (category)
 
 ## 05/11/22
 * 4 hrs - Continuing work on downloading real ImageNet collection and fixing bugs
@@ -78,3 +78,30 @@
 
 ## 14/11/22
 * 2 hrs - Researching pyterrier as suggested from previous meeting
+
+## 17/11/22
+* 0.5 hrs - Supervisor meeting (in-person)
+* 1 hr - Researching CLIP for image vectorisation
+  
+## 20/11/22
+* 3 hrs - Reading suggested multimodal research paper
+* 1 hr - Researching MobileNetV2 to embed images to vectors (from above paper)
+  
+## 24/11/22
+* 0.5 hrs - Supervisor meeting
+
+## 26/11/22
+* 2 hrs - Building Gantt chart to plan out work
+
+## 01/12/22
+* 0.5 hrs - Supervisor meeting
+
+## 10/11/22
+* 2 hrs - Researching image vectorisation using CLIP and implementing it
+* 3 hrs - Making initial Django Webapp
+
+## 11/11/22
+* 2 hrs - Researcing and registering musixmatch api to pipeline to get synced lyrics
+  
+## 12/12/22
+* 3 hrs - Writing intial draft of status report

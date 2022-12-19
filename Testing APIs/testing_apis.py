@@ -1,16 +1,17 @@
 from lyricsgenius import Genius
 from ShazamAPI import Shazam
+# Source: https://github.com/fashni/MxLRC
+from mxlrc import Musixmatch, Song, get_lrc
 import re
 import os
 import shutil
 import urllib.parse
+import requests
+import sys
 
 import pytube
 from html import unescape
 import xml.etree.ElementTree as ElementTree
-import requests
-
-import sys
 
 # Bug in pytube internal xml -> srt conversion. Modified to updated YouTube's xml format.
 # Source: https://stackoverflow.com/questions/68780808/xml-to-srt-conversion-not-working-after-installing-pytube.
@@ -44,9 +45,9 @@ def xml_to_srt_captions(xml_captions: str) -> str:
         return "\n".join(segments).strip()
 
 # GENIUS
-ACCESS_TOKEN = "fhJghXLRdI2UDMZajTHSZnitVnAyki9Az2ajdgDC0l0Gcic5dJOK3haId8GJWruT"
+GENIUS_ACCESS_TOKEN = "fhJghXLRdI2UDMZajTHSZnitVnAyki9Az2ajdgDC0l0Gcic5dJOK3haId8GJWruT"
 def extractLyrics(artist_name, song_name):
-    genius = Genius(ACCESS_TOKEN, verbose=False, remove_section_headers=True)
+    genius = Genius(GENIUS_ACCESS_TOKEN, verbose=False, remove_section_headers=True)
 
     artist = genius.search_artist(artist_name, max_songs=1, sort="title", include_features=True)
     song = artist.song(song_name)
@@ -59,6 +60,13 @@ def extractLyrics(artist_name, song_name):
 
     return lyrics
 
+MUSIXMATCH_ACCESS_TOKEN = "2203269256ff7abcb649269df00e14c833dbf4ddfb5b36a1aae8b0"
+def get_synced_lyrics(artist, title, filename=""):
+    musixmatch = Musixmatch(MUSIXMATCH_ACCESS_TOKEN)
+    song = Song(artist, title)
+    get_lrc(musixmatch, song, "Transcripts\\", filename)
+
+
 # Clear directories
 folders = ["Audio", "Images", "Transcripts"]
 for f in folders:
@@ -67,12 +75,9 @@ for f in folders:
 
 # PYTUBE
 yt = pytube.YouTube(sys.argv[1])
-language = ''
+language = 'a.en'
 if 'en' in yt.captions:
     language = 'en'
-else:
-    if 'a.en' in yt.captions:
-        language = 'a.en'
 
 try:
     print(f"Grabbing {language} captions...")
@@ -83,14 +88,13 @@ try:
 except Exception as ex:
     print(ex)
 
-# Rename downloaded mp4 into mp3 to convert to audio file.
 print("Downloading audio...")
 out_file = yt.streams.get_audio_only().download("Audio")
 audio_file = f"Audio\\{yt.video_id}.mp3"
+# Rename downloaded mp4 into mp3 to convert to audio file.
 os.rename(os.path.relpath(out_file), audio_file)
 
 # SHAZAM
-mp3_file_path = "C:\\Users\\jovin\\Documents\\Songs\\"
 mp3_file = open(audio_file, 'rb').read()
 
 shazam = Shazam(mp3_file)
@@ -108,6 +112,8 @@ try:
     print("Downloading cover art...")
     with open(f"Images\\{yt.video_id}.jpg", "wb") as cover_art_file:
         cover_art_file.write(requests.get(imageURL).content)
+
+    get_synced_lyrics(artist, title, yt.video_id)
         
     # -- Use as backup
     print("\nGenius:")
@@ -115,11 +121,11 @@ try:
 except Exception as ex:
     print(ex)
 
-try:
-    print("\n\nTry getting from shazam")
-    lyrics = recognised["sections"][1]["text"]
-    print("Shazam:\n")
-    for line in lyrics:
-        print(line)
-except Exception as ex:
-    print(ex)
+# try:
+#     print("\n\nTry getting from shazam")
+#     lyrics = recognised["sections"][1]["text"]
+#     print("Shazam:\n")
+#     for line in lyrics:
+#         print(line)
+# except Exception as ex:
+#     print(ex)
