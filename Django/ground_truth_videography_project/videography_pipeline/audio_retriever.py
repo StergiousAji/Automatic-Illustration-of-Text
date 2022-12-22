@@ -34,33 +34,36 @@ def xml_to_srt_captions(xml_captions: str) -> str:
             segments.append(line)
         return "\n".join(segments).strip()
 
-def clear_directories():
-    folders = ["Audio", "Images", "Transcripts"]
+def clear_directories(folder='.'):
+    folders = ["audio", "coverart", "transcript"]
     for f in folders:
-        shutil.rmtree(f)
-        os.mkdir(f)
+        path = f"{folder}\\{f}"
+        shutil.rmtree(path)
+        os.mkdir(path)
 
-def download_yt(url):
+def download_yt(url, folder='.'):
     yt = pytube.YouTube(url)
     language = 'a.en'
     if 'en' in yt.captions:
         language = 'en'
 
+    captions = False
     try:
-        print(f"Grabbing {language} captions...")
+        print(f"Try grabbing {language} captions...")
         srt_captions = xml_to_srt_captions(yt.captions[language].xml_captions)
 
-        with open(f"Transcripts\\{yt.video_id}.srt", 'w') as captions_file:
+        with open(f"{folder}\\transcript\\{yt.video_id}.srt", 'w') as captions_file:
             captions_file.write(srt_captions)
+        captions = True
     except Exception as ex:
-        print(ex)
+        print(f"Error: {ex}")
 
     print("Downloading audio...")
     out_file = yt.streams.get_audio_only().download("Audio")
-    audio_file = f"Audio\\{yt.video_id}.mp3"
+    audio_file = f"{folder}\\audio\\{yt.video_id}.mp3"
     # Rename downloaded mp4 into mp3 to convert to audio file.
     os.rename(os.path.relpath(out_file), audio_file)
 
-    return yt
+    return yt, audio_file, captions
 
 # TODO Handle MP3 files raw

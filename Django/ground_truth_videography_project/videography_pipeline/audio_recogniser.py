@@ -1,13 +1,9 @@
 from ShazamAPI import Shazam
 import urllib.parse
 import requests
+import os
 
-def save_cover_art(imageURL, filename):
-    print("Downloading cover art...")
-    with open(f"Images\\{filename}.jpg", "wb") as cover_art_file:
-        cover_art_file.write(requests.get(imageURL).content)
-
-def recognise_audio(filepath, yt):
+def recognise_audio(yt, filepath):
     with open(filepath, 'rb') as mp3_file:
         shazam = Shazam(mp3_file.read())
 
@@ -19,9 +15,15 @@ def recognise_audio(filepath, yt):
         artist = urllib.parse.unquote_plus(recognised["urlparams"]["{trackartist}"])
         imageURL = recognised["images"]["coverart"]
 
-        print((title, artist))
-        save_cover_art(imageURL, yt.video_id)
+        print(f"{artist} - {title}")
+        parent_folder = os.path.split(os.path.split(filepath)[0])[0]
+        save_coverart(imageURL, yt.video_id, parent_folder)
 
-        return (title, artist)
+        return title, artist
     except Exception as ex:
-        print(ex)
+        print(f"Error: {ex}")
+
+def save_coverart(imageURL, filename, folder='.'):
+    print("Downloading cover art...")
+    with open(f"{folder}\\coverart\\{filename}.jpg", "wb") as cover_art_file:
+        cover_art_file.write(requests.get(imageURL).content)
