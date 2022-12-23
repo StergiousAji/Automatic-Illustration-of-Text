@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 
 <html lang="en">
 <head>
@@ -13,6 +13,9 @@
     {% block links %}
     {% endblock %}
 
+    {% block style %}
+    {% endblock %}
+
     <title>Videography -
         {% block title %}
             Home
@@ -22,11 +25,12 @@
 
 <body>
     <div class="section-title">
-        <h1 class="heading-title">Automatic Videography Ground Truth Builder</h1>
+        <a href="{% url 'ground_truth:home' %}"><h1 class="heading-title">Automatic Videography Ground Truth Builder</h1></a>
     </div>
     <div class="section-navbar">
         <a href="{% url 'ground_truth:about' %}">
             <button class="button-navbar">About</button>
+        </a>
         <a href="{% url 'ground_truth:collections' %}">
             <button class="button-navbar">Collections</button>
         </a>

@@ -16,6 +16,7 @@
     font-weight: 700;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .section-navbar {
@@ -44,7 +45,6 @@ a { text-decoration: none; }
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    text-decoration: none;
     text-align: center;
 }
 

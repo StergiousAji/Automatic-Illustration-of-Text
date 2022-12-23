@@ -1,16 +1,41 @@
-{% extends base.html %}
-{% load staticfiles %}
+{% extends 'ground_truth/base.html' %}
+{% load static %}
 
 {% block links %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}"/>
 {% endblock %}
 
+{% block style %}
+    <style>
+        .paragraph-lines:hover { background-color: {{ coverart_colour }}; }
+    </style>
+{% endblock %}
+
 {% block title %}
-    {{ result_info }}
+    {{ audio }}
 {% endblock %}
 
 {% block body %}
-    <div class="section-result_info">
-        
+    <div class="section-audio" style="background-color: {{ coverart_colour }}">
+        <img src="{% static '/coverart/'|add:audio.filename|add:'.png' %}" id="imgCoverArt">
+        <div class="section-audio_info">
+            <h1 class="heading-audio" id="hdTitle">{{ audio.title }}</h1>
+            <h2 class="heading-audio" id="hdArtist">{{ audio.artist }}</h2>
+
+            <div class="section-start_button">
+                <a href="{% url 'ground_truth:about' %}">
+                    <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
+                </a>
+                <a href="{% url 'ground_truth:about' %}">
+                    <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-transcript">
+        {% for line in text %}
+            <a href="{% url 'ground_truth:about' %}" class="paragraph-lines">{{ line }}</a><br />
+        {% endfor %}
     </div>
 {% endblock %}

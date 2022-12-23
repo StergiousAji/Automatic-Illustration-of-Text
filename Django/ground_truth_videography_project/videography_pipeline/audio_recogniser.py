@@ -3,9 +3,11 @@ import urllib.parse
 import requests
 import os
 
-def recognise_audio(yt, filepath):
+def recognise_audio(filepath, filename):
     with open(filepath, 'rb') as mp3_file:
         shazam = Shazam(mp3_file.read())
+    
+    title, artist = None, None
 
     try:
         print("Recognising song...")
@@ -15,15 +17,16 @@ def recognise_audio(yt, filepath):
         artist = urllib.parse.unquote_plus(recognised["urlparams"]["{trackartist}"])
         imageURL = recognised["images"]["coverart"]
 
-        print(f"{artist} - {title}")
+        print(f"\u001b[36m{artist} - {title}\u001b[0m")
         parent_folder = os.path.split(os.path.split(filepath)[0])[0]
-        save_coverart(imageURL, yt.video_id, parent_folder)
-
-        return title, artist
+        save_coverart(imageURL, filename, parent_folder)
     except Exception as ex:
-        print(f"Error: {ex}")
+        print(f"\u001b[31m{type(ex).__name__}: {ex.args}\u001b[0m")
+    
+    return title, artist
+
 
 def save_coverart(imageURL, filename, folder='.'):
     print("Downloading cover art...")
-    with open(f"{folder}\\coverart\\{filename}.jpg", "wb") as cover_art_file:
+    with open(f"{folder}\\coverart\\{filename}.png", "wb") as cover_art_file:
         cover_art_file.write(requests.get(imageURL).content)

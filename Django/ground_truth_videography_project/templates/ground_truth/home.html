@@ -1,5 +1,5 @@
 {% extends 'ground_truth/base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block links %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
@@ -21,9 +21,10 @@
 
     <div class="section-file_input">
         <label for="inputFile" class="form-label label-input" id="lblFile">Upload an audio file:</label>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ file_upload_form.as_p }}
+            <!-- {{ file_upload_form.as_p }} -->
+            <input type="file" name="audio_file" class="form-control" id="inputFile">
             <input type="submit" class="btn btn-primary button-submit">
         </form>
     </div>

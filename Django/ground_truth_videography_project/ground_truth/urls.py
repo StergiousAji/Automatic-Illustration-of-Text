@@ -8,4 +8,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('collections/', views.collections, name='collections'),
+    path('<slug:audio_slug>', views.result, name='result')
 ]
