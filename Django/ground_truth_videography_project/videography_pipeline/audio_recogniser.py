@@ -2,6 +2,7 @@ from ShazamAPI import Shazam
 import urllib.parse
 import requests
 import os
+from colorthief import ColorThief
 
 def recognise_audio(filepath, filename):
     with open(filepath, 'rb') as mp3_file:
@@ -30,3 +31,8 @@ def save_coverart(imageURL, filename, folder='.'):
     print("Downloading cover art...")
     with open(f"{folder}\\coverart\\{filename}.png", "wb") as cover_art_file:
         cover_art_file.write(requests.get(imageURL).content)
+    
+def get_coverart_colour(filename, folder='.'):
+    colourthief = ColorThief(f"{folder}coverart\\{filename}.png")
+    # Add opacity to lighten colour
+    return tuple(colourthief.get_color(quality=1)) + (0.97,)

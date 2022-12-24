@@ -23,7 +23,6 @@
         <label for="inputFile" class="form-label label-input" id="lblFile">Upload an audio file:</label>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <!-- {{ file_upload_form.as_p }} -->
             <input type="file" name="audio_file" class="form-control" id="inputFile">
             <input type="submit" class="btn btn-primary button-submit">
         </form>

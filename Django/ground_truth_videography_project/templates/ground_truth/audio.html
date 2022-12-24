@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block links %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/audio.css' %}"/>
 {% endblock %}
 
 {% block style %}
@@ -26,7 +26,7 @@
                 <a href="{% url 'ground_truth:about' %}">
                     <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
                 </a>
-                <a href="{% url 'ground_truth:about' %}">
+                <a href="{% url 'ground_truth:chunk' audio.slug 'chunk-0' %}">
                     <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
                 </a>
             </div>
@@ -34,8 +34,20 @@
     </div>
 
     <div class="section-transcript">
-        {% for line in text %}
-            <a href="{% url 'ground_truth:about' %}" class="paragraph-lines">{{ line }}</a><br />
+        {% for line in transcript %}
+            {% if line != '♪' %}
+                {% with counter.value|stringformat:"i" as i %}
+                <a href="{% url 'ground_truth:chunk' audio.slug 'chunk-'|add:i %}" class="paragraph-lines">{{ line }}</a><br />
+                {% endwith %}
+                {{ counter.increment }}
+            {% else %}
+                <br />
+            {% endif %}
         {% endfor %}
     </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/dynamicTextColours.js' %}"></script>
+    <script src="{% static 'js/audio.js' %}"></script>
 {% endblock %}

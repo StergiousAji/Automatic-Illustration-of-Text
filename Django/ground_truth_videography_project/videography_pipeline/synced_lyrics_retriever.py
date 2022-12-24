@@ -9,7 +9,7 @@ def get_synced_lyrics(title, artist, folder, filename=""):
     return get_lrc(musixmatch, song, f"{folder}\\transcript\\", filename)
 
 def parse_lrc(transcript_path):
-    with open(transcript_path, 'r') as transcript:
+    with open(transcript_path, 'r', encoding='utf-8') as transcript:
         lrc = ''.join(transcript.readlines())
     
     return pylrc.parse(lrc)
