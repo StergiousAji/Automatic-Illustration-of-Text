@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_smTitle.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/audio.css' %}"/>
 {% endblock %}
 
 {% block style %}
     <style>
-        .paragraph-lines:hover { background-color: {{ coverart_colour }}; }
+        .paragraph-lines:hover { background-color: {{ audio.coverart_colour }}; }
     </style>
 {% endblock %}
 
@@ -16,7 +17,7 @@
 {% endblock %}
 
 {% block body %}
-    <div class="section-audio" style="background-color: {{ coverart_colour }}">
+    <div class="section-audio" style="background-color: {{ audio.coverart_colour }}">
         <img src="{% static '/coverart/'|add:audio.filename|add:'.png' %}" id="imgCoverArt">
         <div class="section-audio_info">
             <h1 class="heading-audio" id="hdTitle">{{ audio.title }}</h1>
@@ -26,7 +27,7 @@
                 <a href="{% url 'ground_truth:about' %}">
                     <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
                 </a>
-                <a href="{% url 'ground_truth:chunk' audio.slug 'chunk-0' %}">
+                <a href="{% url 'ground_truth:chunk' audio.slug chunks.0.slug %}">
                     <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
                 </a>
             </div>
@@ -34,20 +35,13 @@
     </div>
 
     <div class="section-transcript">
-        {% for line in transcript %}
-            {% if line != '♪' %}
-                {% with counter.value|stringformat:"i" as i %}
-                <a href="{% url 'ground_truth:chunk' audio.slug 'chunk-'|add:i %}" class="paragraph-lines">{{ line }}</a><br />
-                {% endwith %}
-                {{ counter.increment }}
-            {% else %}
-                <br />
-            {% endif %}
-        {% endfor %}
+        {% for chunk in chunks %}
+            <a href="{% url 'ground_truth:chunk' audio.slug chunk.slug %}" class="paragraph-lines">{{ chunk.text }}</a><br />
+        {% endfor %}  
     </div>
 {% endblock %}
 
 {% block scripts %}
-    <script src="{% static 'js/dynamicTextColours.js' %}"></script>
-    <script src="{% static 'js/audio.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/dynamicTextColours.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/audio.js' %}"></script>
 {% endblock %}

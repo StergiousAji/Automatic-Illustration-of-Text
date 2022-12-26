@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_smTitle.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/chunk.css' %}"/>
 {% endblock %}
 
@@ -10,5 +11,38 @@
 {% endblock %}
 
 {% block body %}
+    <div class="section-audio_subheading" style="background-color: {{ audio.coverart_colour }}">
+        <a href="{% url 'ground_truth:audio' audio.slug %}"><h2 class="subheading-audio">{{ audio }}</h2></a>
+    </div>
 
+    <p class="paragraph-chunk_info">Chunk {{ chunk.index }} of {{ audio.chunks }}</p>
+
+    <div class="section-images">
+        {% for path in image_paths %}
+            <img src="{% static path %}" class="images-most_similar">
+        {% endfor %}
+    </div>
+
+    <div class="section-bottom_nav">
+        {% if chunk.index > 1 %}
+            <a href="{% url 'ground_truth:chunk' audio.slug prev_slug %}">
+                <button class="btn btn-primary button-nav" id="btnPrevious">Previous</button>
+            </a>
+        {% endif %}
+        <p id="parText">{{ chunk.text }}</p>
+        {% if chunk.index < audio.chunks %}
+            <a href="{% url 'ground_truth:chunk' audio.slug next_slug %}">
+                <button class="btn btn-primary button-nav" id="btnNext">Next</button>
+            </a>
+        {% else %}
+            <a href="{% url 'ground_truth:about' %}">
+                <button class="btn btn-primary button-nav" id="btnFinish">Finish</button>
+            </a>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="application/javascript" src="{% static 'js/dynamicTextColours.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/chunk.js' %}"></script>
 {% endblock %}

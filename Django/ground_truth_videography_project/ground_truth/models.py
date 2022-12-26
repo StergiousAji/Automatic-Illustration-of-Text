@@ -6,6 +6,8 @@ class Audio(models.Model):
     artist = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     filename = models.CharField(max_length=50)
+    coverart_colour = models.CharField(max_length=50)
+    chunks = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
     
     def save(self, *args, **kwargs):
@@ -24,26 +26,31 @@ class Chunk(models.Model):
     index = models.IntegerField(unique=True, blank=True)
     text = models.CharField(max_length=200)
     audio = models.ForeignKey(Audio, on_delete=models.CASCADE, default=1)
-    start_time = models.TimeField()
-    end_time = models.TimeField()
-    image_ids = models.CharField(max_length=500)
+    start_time = models.FloatField()
+    end_time = models.FloatField()
+    _image_ids = models.CharField(max_length=500)
+    _selected_image_ids = models.CharField(max_length=500)
     slug = models.SlugField()
 
     @property
     def image_ids(self):
-        return json.loads(self.image_ids)
+        return json.loads(self._image_ids)
     
     @image_ids.setter
     def image_ids(self, value):
-        self.image_ids = json.dumps(value)
+        self._image_ids = json.dumps(value)
+        print(self._image_ids)
 
-    def create_index(self):
-        ids = [chunk.id for chunk in Chunk.objects.filter(audio__slug=self.audio.slug)]
-        if self.id not in ids:
-            self.index = len(ids) + 1
+    @property
+    def selected_image_ids(self):
+        return json.loads(self._selected_image_ids)
+    
+    @selected_image_ids.setter
+    def selected_image_ids(self, value):
+        self._selected_image_ids = json.dumps(value)
 
     def save(self, *args, **kwargs):
-        self.create_index()
+        print("saving")
         self.slug = f"chunk-{slugify(self.index)}"
         # Delete any existing records of the same chunk.
         Chunk.objects.filter(index=self.index).delete()

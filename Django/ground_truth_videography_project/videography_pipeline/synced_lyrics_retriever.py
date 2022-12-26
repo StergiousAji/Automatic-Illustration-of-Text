@@ -1,12 +1,14 @@
 # Source: https://github.com/fashni/MxLRC
 from .mxlrc import Musixmatch, Song, get_lrc
 import pylrc
+import os
 
-MUSIXMATCH_ACCESS_TOKEN = "2203269256ff7abcb649269df00e14c833dbf4ddfb5b36a1aae8b0"
+MUSIXMATCH_ACCESS_TOKEN = "2212262fac49706f69495b666eeb8b05c0b293b75997dd15e795af"
 def get_synced_lyrics(title, artist, folder, filename=""):
     musixmatch = Musixmatch(MUSIXMATCH_ACCESS_TOKEN)
     song = Song(artist, title)
-    return get_lrc(musixmatch, song, f"{folder}\\transcript\\", filename)
+
+    get_lrc(musixmatch, song, os.path.join(folder, "transcript"), filename)
 
 def parse_lrc(transcript_path):
     with open(transcript_path, 'r', encoding='utf-8') as transcript:

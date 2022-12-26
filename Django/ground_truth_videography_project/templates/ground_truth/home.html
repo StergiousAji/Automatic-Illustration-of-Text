@@ -10,7 +10,7 @@
 
     <div class="section-url_input">
         <form method="POST">
-            <label for="inputURL" class="form-label label-input" id="lblURL">Enter a YouTubeURL:</label>
+            <label for="inputURL" class="form-label label-input" id="lblURL">Enter a YouTube URL:</label>
             {% csrf_token %}
             {{ link_form.as_p }}
             <input type="submit" class="btn btn-primary button-submit">

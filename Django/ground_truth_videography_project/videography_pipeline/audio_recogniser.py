@@ -4,35 +4,41 @@ import requests
 import os
 from colorthief import ColorThief
 
-def recognise_audio(filepath, filename):
+def recognise_audio(filepath, filename, retries=3):
     with open(filepath, 'rb') as mp3_file:
         shazam = Shazam(mp3_file.read())
     
-    title, artist = None, None
+    title, artist, recognised = None, None, {}
 
-    try:
-        print("Recognising song...")
-        recognised = next(shazam.recognizeSong())[1]["track"]
+    print("Recognising song...")
+    while retries > 0:
+        recognised = next(shazam.recognizeSong())[1]
+        if "track" in recognised:
+            break
+        print(f"\u001b[31mTrying again...\u001b[0m")
+        retries -= 1
+    else:
+        print(f"\u001b[31m\nUnable to recognise audio...\u001b[0m")
+        return title, artist
+        
+    recognised = recognised["track"]
 
-        title = urllib.parse.unquote_plus(recognised["urlparams"]["{tracktitle}"])
-        artist = urllib.parse.unquote_plus(recognised["urlparams"]["{trackartist}"])
-        imageURL = recognised["images"]["coverart"]
+    title = urllib.parse.unquote_plus(recognised["urlparams"]["{tracktitle}"])
+    artist = urllib.parse.unquote_plus(recognised["urlparams"]["{trackartist}"])
+    imageURL = recognised["images"]["coverart"]
 
-        print(f"\u001b[36m{artist} - {title}\u001b[0m")
-        parent_folder = os.path.split(os.path.split(filepath)[0])[0]
-        save_coverart(imageURL, filename, parent_folder)
-    except Exception as ex:
-        print(f"\u001b[31m{type(ex).__name__}: {ex.args}\u001b[0m")
+    print(f"\u001b[36m{artist} - {title}\u001b[0m")
+    parent_folder = os.path.split(os.path.split(filepath)[0])[0]
+    save_coverart(imageURL, filename, parent_folder)
     
     return title, artist
 
-
 def save_coverart(imageURL, filename, folder='.'):
     print("Downloading cover art...")
-    with open(f"{folder}\\coverart\\{filename}.png", "wb") as cover_art_file:
+    with open(os.path.join(folder, "coverart", f"{filename}.png"), "wb") as cover_art_file:
         cover_art_file.write(requests.get(imageURL).content)
     
 def get_coverart_colour(filename, folder='.'):
-    colourthief = ColorThief(f"{folder}coverart\\{filename}.png")
+    colourthief = ColorThief(os.path.join(folder, "coverart", f"{filename}.png"))
     # Add opacity to lighten colour
     return tuple(colourthief.get_color(quality=1)) + (0.97,)

@@ -23,4 +23,4 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('ground-truth/', include('ground_truth.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
