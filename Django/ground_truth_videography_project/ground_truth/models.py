@@ -6,9 +6,10 @@ class Audio(models.Model):
     artist = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     filename = models.CharField(max_length=50)
+    transcript = models.TextField(blank=True, null=True)
     coverart_colour = models.CharField(max_length=50)
-    chunks = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
+    # TODO: HOLD GROUND TRUTH DATA HERE
     
     def save(self, *args, **kwargs):
         self.slug = f"{slugify(self.artist)}-{slugify(self.title)}"
@@ -50,7 +51,6 @@ class Chunk(models.Model):
         self._selected_image_ids = json.dumps(value)
 
     def save(self, *args, **kwargs):
-        print("saving")
         self.slug = f"chunk-{slugify(self.index)}"
         # Delete any existing records of the same chunk.
         Chunk.objects.filter(index=self.index).delete()

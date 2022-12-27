@@ -1,11 +1,11 @@
-.paragraph-info {
+#parInfo {
     display: flex;
     margin: 80px 300px 0px;
     justify-content: center;
     align-items: center;
     font-family: 'Exo';
     color: #111010;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -26,7 +26,7 @@
     font-weight: 700;
 }
 
-.paragraph-or {
+#parOr {
     display: flex;
     justify-content: center;
     align-items: center;

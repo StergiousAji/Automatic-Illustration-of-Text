@@ -25,11 +25,13 @@ def recognise_audio(filepath, filename, retries=3):
 
     title = urllib.parse.unquote_plus(recognised["urlparams"]["{tracktitle}"])
     artist = urllib.parse.unquote_plus(recognised["urlparams"]["{trackartist}"])
-    imageURL = recognised["images"]["coverart"]
 
     print(f"\u001b[36m{artist} - {title}\u001b[0m")
-    parent_folder = os.path.split(os.path.split(filepath)[0])[0]
-    save_coverart(imageURL, filename, parent_folder)
+
+    if "images" in recognised:
+        imageURL = recognised["images"]["coverart"]
+        parent_folder = os.path.split(os.path.split(filepath)[0])[0]
+        save_coverart(imageURL, filename, parent_folder)
     
     return title, artist
 
@@ -39,6 +41,10 @@ def save_coverart(imageURL, filename, folder='.'):
         cover_art_file.write(requests.get(imageURL).content)
     
 def get_coverart_colour(filename, folder='.'):
-    colourthief = ColorThief(os.path.join(folder, "coverart", f"{filename}.png"))
-    # Add opacity to lighten colour
-    return tuple(colourthief.get_color(quality=1)) + (0.97,)
+    filepath = os.path.join(folder, "coverart", f"{filename}.png")
+    if os.path.exists(filepath):
+        colourthief = ColorThief(filepath)
+        # Add opacity to lighten colour
+        return tuple(colourthief.get_color(quality=1)) + (0.97,)
+    else:
+        return (128, 128, 128)

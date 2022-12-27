@@ -3,41 +3,32 @@ from html import unescape
 import xml.etree.ElementTree as ElementTree
 import os, shutil
 
-def clear_directories(folder='.'):
-    folders = ["audio", "coverart", "transcript"]
-    for f in folders:
+def clear_directories(subfolders, folder='.'):
+    for f in subfolders:
         path = os.path.join(folder, f)
         shutil.rmtree(path)
         os.mkdir(path)
 
 def download_yt(url, folder='.'):
-    yt = pytube.YouTube(url)
-    language = 'en' if 'en' in yt.captions else ('a.en' if 'a.en' in yt.captions else '')
-    # if 'en' in yt.captions:
-    #     language = 'en'
+    yt = pytube.YouTube(url, use_oauth=True)
+    captions = 'en' if 'en' in yt.captions else ('a.en' if 'a.en' in yt.captions else None)
 
-    # TODO: REWRITE ENTIRELY
-    captions = False
-    try:
-        print(f"Try grabbing {language} captions...")
-        srt_captions = xml_to_srt_captions(yt.captions[language].xml_captions)
+    if captions:
+        print(f"Grabbing {captions} captions...")
+        srt_captions = xml_to_srt_captions(yt.captions[captions].xml_captions)
 
-        with open(os.path.join(folder, "transcript", f"{yt.video_id}.srt"), 'w') as captions_file:
+        with open(os.path.join(folder, "transcript", f"{yt.video_id}.srt"), 'w', encoding="utf-8") as captions_file:
             captions_file.write(srt_captions)
-        captions = True
-    except Exception as ex:
-        print(f"\u001b[31m{type(ex).__name__}: {ex.args}\u001b[0m")
 
     print("Downloading audio...")
     audio_folder = os.path.join(folder, "audio")
 
-    default_file = os.path.join(audio_folder, "Video Not Available.mp4")
+    default_file = "Video Not Available.mp4"
     out_file = default_file
     while os.path.relpath(out_file) == default_file:
         if os.path.exists(out_file):
             os.remove(out_file)
-        ydl = pytube.YouTube(url)
-        out_file = ydl.streams.get_audio_only().download("downloads")
+        out_file = yt.streams.get_audio_only().download()
 
     audio_file = os.path.join(audio_folder, f"{yt.video_id}.mp3")
     # Rename downloaded mp4 into mp3 to convert to audio file.
@@ -53,6 +44,7 @@ def save_file(file, folder):
             destination.write(chunk)
     
     return path
+
 
 # Bug in pytube internal xml -> srt conversion. Modified to updated YouTube's xml format.
 # Source: https://stackoverflow.com/questions/68780808/xml-to-srt-conversion-not-working-after-installing-pytube.

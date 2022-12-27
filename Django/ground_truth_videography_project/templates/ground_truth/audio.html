@@ -8,7 +8,7 @@
 
 {% block style %}
     <style>
-        .paragraph-lines:hover { background-color: {{ audio.coverart_colour }}; }
+        .link-lines:hover { background-color: {{ audio.coverart_colour }}; }
     </style>
 {% endblock %}
 
@@ -24,20 +24,28 @@
             <h2 class="heading-audio" id="hdArtist">{{ audio.artist }}</h2>
 
             <div class="section-start_button">
-                <a href="{% url 'ground_truth:about' %}">
-                    <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
-                </a>
-                <a href="{% url 'ground_truth:chunk' audio.slug chunks.0.slug %}">
-                    <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
-                </a>
+                {% if chunks|length %}
+                    <a href="{% url 'ground_truth:about' %}">
+                        <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
+                    </a>
+                    <a href="{% url 'ground_truth:chunk' audio.slug chunks.0.slug %}">
+                        <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
 
     <div class="section-transcript">
-        {% for chunk in chunks %}
-            <a href="{% url 'ground_truth:chunk' audio.slug chunk.slug %}" class="paragraph-lines">{{ chunk.text }}</a><br />
-        {% endfor %}  
+        {% if chunks|length %}
+            {% for chunk in chunks %}
+                <a href="{% url 'ground_truth:chunk' audio.slug chunk.slug %}" class="link-lines">{{ chunk.text }}</a><br />
+            {% endfor %}
+        {% elif instrumental %}
+            <p id="parInstrumental" style="background-color: {{ audio.coverart_colour }}">♪ &nbsp&nbsp INSTRUMENTAL &nbsp&nbsp ♪</p>
+        {% else %}
+            <p id="parNoTranscript">No transcript found for this audio track</p>
+        {% endif %}
     </div>
 {% endblock %}
 

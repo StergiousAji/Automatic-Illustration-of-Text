@@ -40,6 +40,7 @@
 .button-start {
     font-size: 20px;
     font-weight: 700;
+    margin-bottom: 15px;
     border-color: transparent;
 }
 
@@ -51,7 +52,6 @@
     background-color: #005fb3;
     margin-right: 25px;
 }
-
 #btnGenerate:hover { background-color: #1c86e4; }
 
 #btnBuild { background-color: #208a0b; }
@@ -66,8 +66,21 @@
     width: 36%;
 }
 
-.paragraph-lines {
+.link-lines {
     margin-bottom: -1px;
     padding: 1px 3px 1px 3px;
     color: black;
+}
+
+#parInstrumental {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 170px;
+}
+
+#parNoTranscript {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 170px;
+    color: #d44545;
 }
