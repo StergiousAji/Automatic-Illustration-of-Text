@@ -1,0 +1,15 @@
+.section-video {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#parNoAudio {
+    margin: auto;
+    font-family: 'Exo';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 300px;
+    color: #d44545;
+}

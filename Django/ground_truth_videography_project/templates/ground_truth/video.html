@@ -1,0 +1,31 @@
+{% extends 'ground_truth/base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base-extended.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/video.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    {{ audio }} | Video
+{% endblock %}
+
+{% block body %}
+    <div class="section-audio_subheading" style="background-color: {{ audio.coverart_colour }}">
+        <a href="{% url 'ground_truth:audio' audio.slug %}"><h2 class="subheading-audio">{{ audio }}</h2></a>
+    </div>
+    
+    {% if audio_exists %}
+        <div class="section-video">
+            <video width="1280" height="720" controls>
+                <source src="{% static 'video/'|add:audio.filename|add:'.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+    {% else %}
+        <p id="parNoAudio">No audio file found for this track</p>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+    <script type="application/javascript" src="{% static 'js/chunk.js' %}"></script>
+{% endblock %}

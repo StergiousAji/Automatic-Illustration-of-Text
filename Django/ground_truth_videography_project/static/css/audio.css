@@ -1,0 +1,87 @@
+.section-audio {
+    display: flex;
+    justify-content: center;
+    max-height: 450px;
+}
+
+#imgCoverArt {
+    margin: 15px 25px 15px -100px;
+    max-width: 15%;
+    width: auto;
+    height: auto;
+}
+
+.section-audio_info {
+    font-family: 'Exo';
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-audio {
+    font-weight: 700;
+}
+
+#hdTitle {
+    font-size: 60px;
+}
+
+#hdArtist {
+    font-size: 40px;
+}
+
+.section-start_button {
+    display: flex;
+    justify-content: right;
+    margin-top: 55px;
+    margin-left: 15px;
+}
+
+.button-start {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-color: transparent;
+}
+
+.button-start:hover {
+    border-color: transparent;
+}
+
+#btnGenerate {
+    background-color: #005fb3;
+    margin-right: 25px;
+}
+#btnGenerate:hover { background-color: #1c86e4; }
+
+#btnBuild { background-color: #208a0b; }
+#btnBuild:hover { background-color: #5cc048; }
+
+.section-transcript {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Exo';
+    font-size: 22px;
+    font-weight: 600;
+    width: 36%;
+}
+
+.link-lines {
+    margin-bottom: -1px;
+    padding: 1px 3px 1px 3px;
+    color: black;
+}
+
+#parInstrumental {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 170px;
+}
+
+#parNoTranscript {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 170px;
+    color: #d44545;
+}

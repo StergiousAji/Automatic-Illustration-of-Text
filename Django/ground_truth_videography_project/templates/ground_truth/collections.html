@@ -1,0 +1,25 @@
+{% extends 'ground_truth/base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/collections.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    Videography - Collections
+{% endblock %}
+
+{% block body %}
+    <h1 id="hdCollections">Collections</h1>
+    <div class="section-audio_links">
+        {% for track in audio_tracks %}
+            <a href="{% url 'ground_truth:audio' track.slug %}" class="link-tracks">
+                <button class="button-tracks" style="background-color: {{ track.coverart_colour }}">{{ track }}</button>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="application/javascript" src="{% static 'js/collections.js' %}"></script>
+{% endblock %}

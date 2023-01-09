@@ -1,0 +1,29 @@
+#hdCollections {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    font-family: 'Exo';
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.section-audio_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-family: 'Exo';
+    font-size: 27px;
+    
+}
+
+.link-tracks {
+    margin: 30px; 
+}
+
+.button-tracks {
+    padding: 30px 90px 30px 90px;
+    border-radius: 5px;
+    font-weight: 600;
+}

@@ -1,0 +1,19 @@
+.heading-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.section-audio_subheading {
+    display: flex;
+    justify-content: center;
+    max-height: 200px;
+}
+
+.subheading-audio {
+    margin: 20px;
+    font-family: 'Exo';
+    font-size: 35px;
+    font-weight: 800;
+}

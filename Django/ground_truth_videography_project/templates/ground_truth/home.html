@@ -1,0 +1,30 @@
+{% extends 'ground_truth/base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock %}
+
+{% block body %}
+    <p id="parInfo">Enter a Youtube URL below or, alternatively, upload your own audio file to start building a ground truth for your selected song.</p>
+
+    <div class="section-url_input">
+        <form method="POST">
+            <label for="inputURL" class="form-label label-input" id="lblURL">Enter a YouTube URL:</label>
+            {% csrf_token %}
+            {{ link_form.as_p }}
+            <input type="submit" class="btn btn-primary button-submit">
+        </form>
+    </div>
+
+    <p id="parOr">OR</p>
+
+    <div class="section-file_input">
+        <label for="inputFile" class="form-label label-input" id="lblFile">Upload an audio file:</label>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="audio_file" class="form-control" id="inputFile">
+            <input type="submit" class="btn btn-primary button-submit">
+        </form>
+    </div>
+{% endblock %}

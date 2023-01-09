@@ -1,0 +1,84 @@
+.section-audio_subheading {
+    display: flex;
+    justify-content: center;
+    max-height: 200px;
+}
+
+.subheading-audio {
+    margin: 20px;
+    font-family: 'Exo';
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.section-chunk_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+    font-family: 'Exo';
+}
+
+#parChunkNumber {
+    font-size: 34px;
+    font-weight: 900;
+}
+
+#parInstructions {
+    margin-top: 12px;
+    font-size: 21.5px;
+    font-weight: 600;
+}
+
+.section-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.images-most_similar {
+    margin: 30px 30px 0px 30px;
+    width: 200px;
+    height: 200px;
+    /* width: 150px; */
+}
+
+.section-chunk_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo';
+    margin: 50px;
+    margin-top: 30px;
+}
+
+.section-chunk_nav .button-nav {
+    font-size: 25px;
+    font-weight: 700;
+    border-color: transparent;
+    padding: 20px;
+}
+
+#parText {
+    font-size: 30px;
+    font-weight: 700;
+    margin: auto;
+    padding: 1px 10px 1px 10px;
+    border-radius: 3.5px;
+}
+
+#btnPrevious { 
+    background-color: #005fb3;
+    margin-right: -55px;
+}
+#btnPrevious:hover { background-color: #1c86e4; }
+
+#btnNext { background-color: #208a0b; }
+#btnNext:hover { background-color: #5cc048; }
+
+#btnFinish { background-color: #208a0b; }
+#btnFinish:hover { background-color: #5cc048; }

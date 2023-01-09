@@ -1,0 +1,54 @@
+{% extends 'ground_truth/base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base-extended.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/audio.css' %}"/>
+{% endblock %}
+
+{% block style %}
+    <style>
+        .link-lines:hover { background-color: {{ audio.coverart_colour }}; }
+    </style>
+{% endblock %}
+
+{% block title %}
+    {{ audio }}
+{% endblock %}
+
+{% block body %}
+    <div class="section-audio" style="background-color: {{ audio.coverart_colour }}">
+        <img src="{% static '/coverart/'|add:audio.filename|add:'.png' %}" id="imgCoverArt">
+        <div class="section-audio_info">
+            <h1 class="heading-audio" id="hdTitle">{{ audio.title }}</h1>
+            <h2 class="heading-audio" id="hdArtist">{{ audio.artist }}</h2>
+
+            <div class="section-start_button">
+                {% if chunks|length %}
+                    <a href="{% url 'ground_truth:video' audio.slug %}">
+                        <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
+                    </a>
+                    <a href="{% url 'ground_truth:chunk' audio.slug chunks.0.slug %}">
+                        <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="section-transcript">
+        {% if chunks|length %}
+            {% for chunk in chunks %}
+                <a href="{% url 'ground_truth:chunk' audio.slug chunk.slug %}" class="link-lines">{{ chunk.text }}</a><br />
+            {% endfor %}
+        {% elif instrumental %}
+            <p id="parInstrumental" style="background-color: {{ audio.coverart_colour }}">♪ &nbsp&nbsp INSTRUMENTAL &nbsp&nbsp ♪</p>
+        {% else %}
+            <p id="parNoTranscript">No transcript found for this audio track</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="application/javascript" src="{% static 'js/audio.js' %}"></script>
+{% endblock %}
