@@ -10,5 +10,23 @@
 {% endblock %}
 
 {% block body %}
+    <div class="section-about">
+        <h1 id="hdAbout">About</h1>
 
+        <p class="paragraph-about">
+            This tool is used to build ground truths for automatic videography systems for given audio tracks. To try, navigate to the home page and input a YouTube URL of a music track, or upload your own audio file. The system will attempt to recognise the track title and artist and retrieve it's synced lyric transcript if available.
+        </p>
+
+        <br />
+        <h2 id="hdGroundTruth">Ground Truth Building</h2>
+        <p class="paragraph-about">
+            Once an audio track is recognised and retrieved you will be able to start building the ground truth by clicking on the 'Build Ground Truth' button. Alternatively, you can click into a particular audio chunk within the transcript. Each chunk will display ten images that are relevant to the text present in the audio chunk. To build the ground truth, for each chunk, select the images that you believe are the <b>most</b> relevant to the text. Once finished the ground truth data that you built will be available to download as a JSON object file.
+        </p>
+
+        <br />
+        <h2 id="hdVideography">Automatic Videography</h2>
+        <p class="paragraph-about">
+            This tool also provides the standard automatic videography functionality itself. Once an audio track is recognised and displayed, you can click on the 'Generate Video' button which will automatically generate a video with the downloaded audio track accompanied by relevant imagery based on the textual information present. The images will be chosen at random from the ranked ten for each audio chunk.
+        </p>
+    </div>
 {% endblock %}

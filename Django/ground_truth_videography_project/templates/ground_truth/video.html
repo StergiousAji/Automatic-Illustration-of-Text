@@ -15,7 +15,7 @@
         <a href="{% url 'ground_truth:audio' audio.slug %}"><h2 class="subheading-audio">{{ audio }}</h2></a>
     </div>
     
-    {% if audio_exists %}
+    {% if video_exists %}
         <div class="section-video">
             <video width="1280" height="720" controls>
                 <source src="{% static 'video/'|add:audio.filename|add:'.mp4' %}" type="video/mp4">

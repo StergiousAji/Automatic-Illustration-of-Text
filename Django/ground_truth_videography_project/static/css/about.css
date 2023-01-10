@@ -1,0 +1,16 @@
+.section-about {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    max-width: 60%;
+    font-family: 'Exo';
+}
+
+#hdAbout {
+    font-weight: 700;
+}
+
+.paragraph-about {
+    font-size: 20px;
+}

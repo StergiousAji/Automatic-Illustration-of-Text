@@ -3,8 +3,7 @@ function darkenColour(colour) {
     r = parseInt(rgba[0])
     g = parseInt(rgba[1])
     b = parseInt(rgba[2])
-    console.log(rgba)
-    console.log(`rgb(${r + (255 - r)*0.25}, ${g + (255 - g)*0.25}, ${b + (255 - b)*0.25})`)
+
     return `rgb(${r + (255 - r)*0.25}, ${g + (255 - g)*0.25}, ${b + (255 - b)*0.25})`
 }
 

@@ -39,7 +39,6 @@ def home(request):
             link_form = LinkForm(request.POST)
 
             if link_form.is_valid():
-                # TODO: VALIDATE URL
                 yt, audio_path, captions = download_yt(link_form.cleaned_data['youtube_url'], SRC_FOLDER) 
                 filename = yt.video_id
 
@@ -159,7 +158,7 @@ def video(request, audio_slug):
 
     context = {
         'audio': audio,
-        'audio_exists': os.path.exists(audio_path),
+        'video_exists': os.path.exists(video_path),
     }
     return render(request, 'ground_truth/video.html', context)
 
@@ -179,9 +178,4 @@ def about(request):
 
 
 def collections(request):
-    audio_tracks = Audio.objects.all()
-
-    context = {
-        'audio_tracks': audio_tracks,
-    }
-    return render(request, 'ground_truth/collections.html', context)
+    return render(request, 'ground_truth/collections.html', {'audio_tracks': Audio.objects.all()})

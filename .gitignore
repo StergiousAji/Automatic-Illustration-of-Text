@@ -136,7 +136,13 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
+# Data Sources
+audio/
+transcript/
+
 # ImageNet #
 imagenet-1k/
 imagenet-1k-val/
 imagenet-1k-test/
+
+image_vectors/
