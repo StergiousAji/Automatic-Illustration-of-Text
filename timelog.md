@@ -1,5 +1,5 @@
 # Time Log
-**Automatic Illustration of Text**
+## **Automatic Illustration of Text**
 * 2546916A - Stergious Aji
 * **Supervisor:** Debasis Ganguly
 
@@ -105,3 +105,49 @@
   
 ## 12/12/22
 * 3 hrs - Writing intial draft of status report
+
+## 18/12/22
+* 3 hrs - Making and desinging the Home page of webapp
+* 4 hrs - Working on input YouTube URL and upload file functionality
+  
+## 19/12/22
+* 3 hrs - Making a script that gets synced lyric transcripts from Musixmatch
+* 3 hrs - Designing the Audio page showing result of song recogniser and lyrics retriever
+* 9 hrs - Downloading WIT images in batches (Stopped at 2k images since was taking too long)
+  
+## 20/12/22
+* 2 hrs - Making backend Django models for Audio tracks and Chunks
+* 3 hrs - Adding functionality to select a chunk within audio transcript
+* 2 hrs - Designing Chunk page that will show chunk text and top 10 images
+
+## 21/12/22
+* 3 hrs - Making a script to embed images using pre-trained CLIP model
+* 3 hrs - Testing running script to process imagenette dataset from HuggingFace and evaluating its performance
+
+## 22/12/22
+* 4 hrs - Designing and adding top ten images to Chunk pages
+* 1 hr - Adding functionality to navigate the Audio chunks
+* 8 hrs - Downloading ImageNet-1k dataset
+  
+## 23/12/22
+* 7 hrs - Running script to process ImageNet-1k test (Size: 100k) and validation images (Size: 50k) and saving in .npy files
+* 3 hrs - Testing performance of validation vs. test images at retrieving best images
+
+# 26/12/22
+* 14 hrs - Running script to process ImageNet-1k train images (Size: 1.2M) and saving in .npy file
+* 2 hrs - Testing performance of train images at retrieving best images
+
+# 27/12/22
+* 2 hrs - Adding form validation in Home page for inputting YouTube URL and file upload
+* 4 hrs - Redesigning Audio page, now showing coverart, song title and artist.
+
+# 28/12/22
+* 3 hrs - Adding coverart primary colour identifier to show in pages, make webapp more dynamic
+
+# 04/01/23
+* 1 hr - Added video generation functionality to the Audio page
+* 3 hrs - Making videography script to create video with Moviepy by getting a random top 10 image for each audio chunk
+
+# 10/01/23
+* 2 hrs - Designing and finishing the Collections page showing all audio tracks stored in database
+* 2 hrs - Designing and finishing the About page

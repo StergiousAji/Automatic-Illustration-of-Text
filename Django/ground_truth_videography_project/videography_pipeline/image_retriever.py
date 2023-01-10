@@ -3,13 +3,10 @@ from transformers import CLIPTokenizerFast, CLIPProcessor, CLIPModel
 from tqdm.auto import tqdm
 import numpy as np
 import os
-import pickle
 import torch
 
-from datasets import load_dataset
-
 class CLIP:
-    # Load pre-trained CLIP on instantiation.
+    # Load pre-trained CLIP on instantiation
     def __init__(self, image_paths, folder=None, model_id="openai/clip-vit-base-patch32"):
         self.device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
         
@@ -72,14 +69,22 @@ class CLIP:
         else:
             self.image_vectors = np.load(image_vectors_path)
 
-# Walk through imagenet directory structure to index each image.
-def index_image_paths(folder):
-    image_paths = []
-    for synset in os.listdir(folder):
-        subfolder = os.path.join(folder, synset)
-        if os.path.isdir(subfolder):
-            for image_name in os.listdir(subfolder):
-                image_paths.append(os.path.join(synset, image_name))
+# Walk through given directory structure to index each image. 
+# Assumes ImageNet train directory structure, can be set to False.
+def index_image_paths(folder, imagenet=True):
+    try:
+        image_paths = []
+
+        if imagenet:
+            for synset in os.listdir(folder):
+                subfolder = os.path.join(folder, synset)
+                if os.path.isdir(subfolder):
+                    for image_name in os.listdir(subfolder):
+                        image_paths.append(os.path.join(synset, image_name))
+        else:
+            return os.listdir(folder)
+    except Exception as ex:
+        print(f"\u001b[31m{type(ex).__name__}: {ex.args}\u001b[0m")
 
     return image_paths
 
