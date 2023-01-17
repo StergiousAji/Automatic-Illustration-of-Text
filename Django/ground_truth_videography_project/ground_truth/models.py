@@ -9,7 +9,15 @@ class Audio(models.Model):
     transcript = models.TextField(null=True)
     coverart_colour = models.CharField(max_length=50)
     slug = models.SlugField(unique=True)
-    # TODO: HOLD GROUND TRUTH DATA HERE
+    _ground_truth = models.CharField(max_length=1000)
+
+    @property
+    def ground_truth(self):
+        return json.loads(self._ground_truth)
+    
+    @ground_truth.setter
+    def ground_truth(self, value):
+        self._ground_truth = json.dumps(value)
     
     def save(self, *args, **kwargs):
         if self.artist and self.title:
@@ -34,7 +42,7 @@ class Chunk(models.Model):
     start_time = models.FloatField()
     end_time = models.FloatField()
     _image_ids = models.CharField(max_length=500)
-    _selected_image_ids = models.CharField(max_length=500)
+    _selected_ids = models.CharField(max_length=500)
     slug = models.SlugField()
 
     @property
@@ -44,15 +52,14 @@ class Chunk(models.Model):
     @image_ids.setter
     def image_ids(self, value):
         self._image_ids = json.dumps(value)
-        print(self._image_ids)
 
     @property
-    def selected_image_ids(self):
-        return json.loads(self._selected_image_ids)
+    def selected_ids(self):
+        return json.loads(self._selected_ids)
     
-    @selected_image_ids.setter
-    def selected_image_ids(self, value):
-        self._selected_image_ids = json.dumps(value)
+    @selected_ids.setter
+    def selected_ids(self, value):
+        self._selected_ids = json.dumps(value)
     
     @property
     def duration(self):

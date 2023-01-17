@@ -10,20 +10,21 @@ from .forms import LinkForm
 
 from videography_pipeline.audio_retriever import clear_directories, download_yt, save_file
 from videography_pipeline.audio_recogniser import recognise_audio, get_coverart_colour
-from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, read_transcript
+from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, read_transcript, seconds_to_time
 from videography_pipeline.image_retriever import CLIP, index_image_paths
 from videography_pipeline.videography import build_video
 
 import os
 import pylrc
 import numpy as np
+import json
 
 
 SRC_FOLDER = "videography_pipeline"
 IMAGE_PATHS = np.delete(index_image_paths(os.path.relpath(settings.IMAGE_DATASET_DIR)), settings.EXCLUDE)
 IMAGE_VECTOR_PATH = os.path.join(SRC_FOLDER, "image_vectors", "imagenet-1k-vecs-FILTERED.npy")
 
-clip = CLIP(image_paths=IMAGE_PATHS)
+clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
 
 def home(request):
     link_form = LinkForm()
@@ -99,7 +100,7 @@ def audio(request, audio_slug):
                 chunk = chunk[0]
             else:
                 chunk = Chunk(index=id, text=lyric.text, audio_id=audio.id, start_time=lyric.time, 
-                    end_time=lyrics[i+1].time, _image_ids="[]", _selected_image_ids="[]")
+                    end_time=lyrics[i+1].time, _image_ids="[]", _selected_ids="[]")
                 chunk.save()
 
             chunks.append(chunk)
@@ -118,25 +119,63 @@ def chunk(request, audio_slug, chunk_slug):
     chunk = Chunk.objects.get(slug=chunk_slug, audio__slug=audio_slug)
     print(chunk)
 
-    chunks = Chunk.objects.filter(audio__slug=audio_slug)
-
     print(len(clip.image_paths))
-
-    if clip.image_vectors is None:
-        clip.load_image_vectors(IMAGE_VECTOR_PATH)
 
     if chunk.image_ids == []:
         print("Performing query...")
         chunk.image_ids = clip.query_prompt(chunk.text)
         chunk.save()
 
+    if request.method == "POST":
+        post = request.POST.dict()
+
+        chunk.selected_ids = [int(k) for k in post.keys() if k.isdigit()]
+        chunk.save()
+
+        redirect_chunk = chunk.slug
+        if 'finish' in post:
+            ground_truth = {
+                'id': audio.filename,
+                'artist': audio.artist,
+                'title': audio.title,
+            }
+
+            chunks = []
+            for c in Chunk.objects.filter(audio__slug=audio_slug):
+                selected_image_paths = list(clip.image_paths[np.array(c.image_ids)[c.selected_ids]]) if c.selected_ids != [] else []
+                print(c.selected_ids)
+                print(selected_image_paths)
+                chunks.append({
+                    'index': c.index,
+                    'text': c.text,
+                    'start_time': c.start_time,
+                    'end_time': c.end_time,
+                    'selected_image_paths': selected_image_paths,
+                })
+            
+            ground_truth['chunks'] = chunks
+
+            audio.ground_truth = ground_truth
+            audio.save()
+
+            with open(os.path.join(SRC_FOLDER, "ground_truth", f"{audio.filename}.json"), "w") as gt_json:
+                json.dump(ground_truth, gt_json)
+            
+            return redirect(reverse('ground_truth:ground-truth', kwargs={'audio_slug': audio.slug}))
+        elif 'previous' in post:
+            redirect_chunk = f"chunk-{chunk.index - 1}"
+        elif 'next' in post:
+            redirect_chunk = f"chunk-{chunk.index + 1}"
+        
+        return redirect(reverse('ground_truth:chunk', kwargs={'audio_slug': audio.slug, 'chunk_slug': redirect_chunk}))
+
     context = {
         'audio': audio,
         'chunk': chunk,
-        'chunks': chunks,
+        'chunks': Chunk.objects.filter(audio__slug=audio_slug),
         'image_paths': clip.image_paths[chunk.image_ids],
-        'prev_slug': f"chunk-{chunk.index - 1}",
-        'next_slug': f"chunk-{chunk.index + 1}",
+        "start_time": seconds_to_time(chunk.start_time),
+        "end_time": seconds_to_time(chunk.end_time)
     }
     return render(request, 'ground_truth/chunk.html', context)
 
@@ -148,9 +187,6 @@ def video(request, audio_slug):
     audio_path = os.path.join(SRC_FOLDER, "audio", f"{audio.filename}.mp3")
 
     if not os.path.exists(video_path) and os.path.exists(audio_path):
-        if clip.image_vectors is None:
-            clip.load_image_vectors(IMAGE_VECTOR_PATH)
-
         chunks = Chunk.objects.filter(audio__slug=audio_slug).order_by("id")
 
         print("Building Video...")

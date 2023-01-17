@@ -18,6 +18,12 @@ def read_transcript(filename):
     with open(filename, 'r', encoding="utf-8") as transcript:
         return transcript.read()
 
+def seconds_to_time(total_seconds):
+    minutes = int(total_seconds//60)
+    seconds = total_seconds - minutes*60
+    return f"{minutes}:{seconds:05.2f}"
+
+
 def get_transcript_length(transcript):
     lyrics = pylrc.parse(transcript)
     mins, secs, mills = unpackTimecode(f"[{lyrics.length}]")

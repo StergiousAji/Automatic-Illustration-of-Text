@@ -32,6 +32,23 @@
     font-weight: 600;
 }
 
+.section-timestamp {
+    font-family: 'Exo';
+    font-weight: 600;
+    font-size: 17px;
+    margin: auto;
+    margin-top: -20px;
+    border: solid black 2px;
+    border-radius: 4px;
+    max-width: 300px;
+}
+
+#parTimestamp {
+    text-align: center;
+    color: black;
+    margin: 10px;
+}
+
 .section-images {
     display: flex;
     flex-wrap: wrap;
@@ -41,10 +58,14 @@
 }
 
 .images-most_similar {
-    margin: 30px 30px 0px 30px;
     width: 200px;
     height: 200px;
-    /* width: 150px; */
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.images-most_similar:hover {
+    transform: scale(1.1);
 }
 
 .section-chunk_nav {
