@@ -4,7 +4,7 @@ import requests
 import os
 from colorthief import ColorThief
 
-def recognise_audio(filepath, filename, retries=3):
+def recognise_audio(filepath, filename, retries=1):
     with open(filepath, 'rb') as mp3_file:
         shazam = Shazam(mp3_file.read())
     

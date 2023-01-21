@@ -1,3 +1,4 @@
+from .audio_recogniser import save_coverart
 import pytube
 from html import unescape
 import xml.etree.ElementTree as ElementTree
@@ -11,14 +12,17 @@ def clear_directories(subfolders, folder='.'):
 
 def download_yt(url, folder='.'):
     yt = pytube.YouTube(url, use_oauth=True)
-    captions = 'en' if 'en' in yt.captions else ('a.en' if 'a.en' in yt.captions else None)
+    captions_lang = 'en' if 'en' in yt.captions else ('a.en' if 'a.en' in yt.captions else None)
+    captions = None
 
-    if captions:
-        print(f"Grabbing {captions} captions...")
-        srt_captions = xml_to_srt_captions(yt.captions[captions].xml_captions)
+    if captions_lang:
+        print(f"Grabbing {captions_lang} captions...")
+        captions = xml_to_lrc_captions(yt.captions[captions_lang].xml_captions)
 
-        with open(os.path.join(folder, "transcript", f"{yt.video_id}.srt"), 'w', encoding="utf-8") as captions_file:
-            captions_file.write(srt_captions)
+        with open(os.path.join(folder, "transcript", f"{yt.video_id}.lrc"), 'w', encoding="utf-8") as captions_file:
+            captions_file.write(captions)
+    
+    save_coverart(yt.thumbnail_url, yt.video_id, folder)
 
     print("Downloading audio...")
     audio_folder = os.path.join(folder, "audio")
@@ -46,10 +50,10 @@ def save_file(file, folder):
     return path
 
 
-# Bug in pytube internal xml -> srt conversion. Modified to updated YouTube's xml format.
+# Repurposed function to convert XML to LRC format. Modified to updated YouTube's XML format.
 # Source: https://stackoverflow.com/questions/68780808/xml-to-srt-conversion-not-working-after-installing-pytube.
-def xml_to_srt_captions(xml_captions: str) -> str:
-        """Convert xml caption tracks to "SubRip Subtitle (srt)". MODIFIED
+def xml_to_lrc_captions(xml_captions: str) -> str:
+        """Convert XML caption tracks to "LyRiCs (LRC)". MODIFIED
 
         :param str xml_captions:
             XML formatted caption tracks.
@@ -66,13 +70,9 @@ def xml_to_srt_captions(xml_captions: str) -> str:
             except KeyError:
                 duration = 0.0
             start = float(child.attrib["t"])
-            end = start + duration
-            sequence_number = i + 1  # convert from 0-indexed to 1.
-            line = "{seq}\n{start} --> {end}\n{text}\n".format(
-                seq=sequence_number,
-                start=pytube.Caption.float_to_srt_time_format(start),
-                end=pytube.Caption.float_to_srt_time_format(end),
-                text=caption,
-            )
+            end = (start + duration)/1000
+
+            minutes, seconds = divmod(end, 60)
+            line = f"[{int(minutes):02d}:{seconds:05.02f}]{caption}"
             segments.append(line)
         return "\n".join(segments).strip()

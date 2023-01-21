@@ -3,6 +3,7 @@ from django.template.defaultfilters import slugify
 import json
 
 class Audio(models.Model):
+    music = models.BooleanField(default=True)
     artist = models.CharField(max_length=50, null=True)
     title = models.CharField(max_length=50, null=True)
     filename = models.CharField(max_length=50)
@@ -17,10 +18,10 @@ class Audio(models.Model):
     
     @ground_truth.setter
     def ground_truth(self, value):
-        self._ground_truth = json.dumps(value)
+        self._ground_truth = json.dumps(value, indent=4, ensure_ascii=False)
     
     def save(self, *args, **kwargs):
-        if self.artist and self.title:
+        if self.music:
             self.slug = slugify(f"{self.artist}-{self.title}")
         else:
             self.slug = slugify(self.filename)

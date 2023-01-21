@@ -5,7 +5,7 @@ import pylrc
 import os
 
 MUSIXMATCH_ACCESS_TOKEN = "2212262fac49706f69495b666eeb8b05c0b293b75997dd15e795af"
-def get_synced_lyrics(title, artist, folder, filename=""):
+def get_synced_lyrics(title, artist, folder, filename):
     musixmatch = Musixmatch(MUSIXMATCH_ACCESS_TOKEN)
     song = Song(artist, title)
 
@@ -28,3 +28,19 @@ def get_transcript_length(transcript):
     lyrics = pylrc.parse(transcript)
     mins, secs, mills = unpackTimecode(f"[{lyrics.length}]")
     return sum([0, mins*60, secs, mills/1000])
+
+
+
+
+def transcribe_audio(model, artist, title, folder, filename):
+    transcription = model.transcribe(os.path.join(folder, "audio", f"{filename}.mp3"))
+
+    lrc_string = f"[ar:{artist}]\n[ti:{title}]\n"
+    for segment in transcription["segments"]:
+        minutes, seconds = divmod(segment["end"], 60)
+        lrc_string += f"[{int(minutes):02d}:{seconds:05.2f}] {segment['text']}\n"
+
+    with open(os.path.join(folder, "transcript", f"{filename}.lrc"), 'w', encoding="utf-8") as transcript:
+        transcript.write(lrc_string)
+    
+    return lrc_string

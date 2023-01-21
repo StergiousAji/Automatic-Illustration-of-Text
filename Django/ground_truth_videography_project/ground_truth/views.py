@@ -14,6 +14,7 @@ from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, read
 from videography_pipeline.image_retriever import CLIP, index_image_paths
 from videography_pipeline.videography import build_video
 
+import whisper
 import os
 import pylrc
 import numpy as np
@@ -29,9 +30,9 @@ clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
 def home(request):
     link_form = LinkForm()
     audio_path = None
-    captions = None
     filename = None
     transcript = None
+    music = True
 
     if request.method == "POST":
         clear_directories(["audio", "transcript"], SRC_FOLDER)
@@ -40,11 +41,8 @@ def home(request):
             link_form = LinkForm(request.POST)
 
             if link_form.is_valid():
-                yt, audio_path, captions = download_yt(link_form.cleaned_data['youtube_url'], SRC_FOLDER) 
+                yt, audio_path, transcript = download_yt(link_form.cleaned_data['youtube_url'], SRC_FOLDER) 
                 filename = yt.video_id
-
-                if captions:
-                    transcript = read_transcript(os.path.join(SRC_FOLDER, "transcript", f"{filename}.srt"))
         
         elif 'audio_file' in request.FILES:
             audio_file = request.FILES['audio_file']
@@ -59,11 +57,12 @@ def home(request):
 
             if title and artist:
                 transcript = get_synced_lyrics(title, artist, SRC_FOLDER, filename)
-                
-                audio = Audio(artist=artist, title=title, filename=filename, transcript=transcript, coverart_colour=coverart_colour)
             else:
-                audio = Audio(filename=filename, transcript=transcript, coverart_colour=coverart_colour)
+                title = yt.title
+                artist = yt.author
+                music = False
             
+            audio = Audio(music=music, artist=artist, title=title, filename=filename, transcript=transcript, coverart_colour=coverart_colour)
             audio.save()
             return redirect(reverse('ground_truth:audio', kwargs={'audio_slug': audio.slug}))
         
@@ -119,6 +118,9 @@ def chunk(request, audio_slug, chunk_slug):
     chunk = Chunk.objects.get(slug=chunk_slug, audio__slug=audio_slug)
     print(chunk)
 
+    # if clip == "":
+    #     clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
+
     print(len(clip.image_paths))
 
     if chunk.image_ids == []:
@@ -157,9 +159,10 @@ def chunk(request, audio_slug, chunk_slug):
 
             audio.ground_truth = ground_truth
             audio.save()
+            print(audio.ground_truth)
 
-            with open(os.path.join(SRC_FOLDER, "ground_truth", f"{audio.filename}.json"), "w") as gt_json:
-                json.dump(ground_truth, gt_json)
+            with open(os.path.join(SRC_FOLDER, "ground_truth", f"{audio.filename}.json"), "w", encoding='utf-8') as gt_json:
+                json.dump(ground_truth, gt_json, indent=4, ensure_ascii=False)
             
             return redirect(reverse('ground_truth:ground-truth', kwargs={'audio_slug': audio.slug}))
         elif 'previous' in post:
@@ -185,6 +188,9 @@ def video(request, audio_slug):
     
     video_path = os.path.join(SRC_FOLDER, "video", f"{audio.filename}.mp4")
     audio_path = os.path.join(SRC_FOLDER, "audio", f"{audio.filename}.mp3")
+
+    # if clip == "":
+    #     clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
 
     if not os.path.exists(video_path) and os.path.exists(audio_path):
         chunks = Chunk.objects.filter(audio__slug=audio_slug).order_by("id")

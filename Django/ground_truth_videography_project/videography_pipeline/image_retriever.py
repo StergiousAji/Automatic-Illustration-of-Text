@@ -13,10 +13,10 @@ class CLIP:
         
         self.model_id = model_id
         self.multilingual_model_id = multilingual_model_id
-        # self.model = CLIPModel.from_pretrained(self.model_id).to(self.device)
-        # self.tokeniser = CLIPTokenizerFast.from_pretrained(self.model_id)
-        self.model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(multilingual_model_id)
-        self.tokeniser = AutoTokenizer.from_pretrained(multilingual_model_id)
+        self.model = CLIPModel.from_pretrained(self.model_id).to(self.device)
+        self.tokeniser = CLIPTokenizerFast.from_pretrained(self.model_id)
+        # self.model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(multilingual_model_id)
+        # self.tokeniser = AutoTokenizer.from_pretrained(multilingual_model_id)
         self.processor = None
 
         self.image_folder = folder
@@ -55,10 +55,10 @@ class CLIP:
             np.save(image_vectors_path, self.image_vectors)
 
     def query_prompt(self, prompt, top=10):
-        # inputs = self.tokeniser(prompt, return_tensors="pt").to(self.device)
-        # text_embeddings = self.model.get_text_features(**inputs).cpu().detach().numpy()
+        inputs = self.tokeniser(prompt, return_tensors="pt").to(self.device)
+        text_embeddings = self.model.get_text_features(**inputs).cpu().detach().numpy()
 
-        text_embeddings = self.model.forward(prompt, self.tokeniser).cpu().detach().numpy()
+        # text_embeddings = self.model.forward(prompt, self.tokeniser).cpu().detach().numpy()
 
         # Compute cosine similarity scores between prompt text and images
         scores = np.dot(text_embeddings, self.image_vectors.T)

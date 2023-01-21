@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block links %}
-
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=js&amp;skin=sunburst"></script>
 {% endblock %}
 
 {% block title %}
@@ -10,5 +10,5 @@
 {% endblock %}
 
 {% block body %}
-    
+    <pre class="prettyprint lang-scm">{{ audio.ground_truth }}</pre>
 {% endblock %}
