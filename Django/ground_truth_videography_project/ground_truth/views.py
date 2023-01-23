@@ -14,7 +14,6 @@ from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, read
 from videography_pipeline.image_retriever import CLIP, index_image_paths
 from videography_pipeline.videography import build_video
 
-import whisper
 import os
 import pylrc
 import numpy as np
@@ -55,9 +54,9 @@ def home(request):
             title, artist = recognise_audio(audio_path, filename)
             coverart_colour = f"rgba{get_coverart_colour(filename, SRC_FOLDER)}"
 
-            if title and artist:
+            if title and artist and not transcript:
                 transcript = get_synced_lyrics(title, artist, SRC_FOLDER, filename)
-            else:
+            elif not title and not artist:
                 title = yt.title
                 artist = yt.author
                 music = False

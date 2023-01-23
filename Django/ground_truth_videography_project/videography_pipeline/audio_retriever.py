@@ -64,15 +64,14 @@ def xml_to_lrc_captions(xml_captions: str) -> str:
             text = ''.join(child.itertext()).strip()
             if not text:
                 continue
-            caption = unescape(text.replace("\n", " ").replace("  ", " "),)
+            caption = unescape(text.replace("\n", " ").replace("  ", " ").replace('♪', ''),)
             try:
                 duration = float(child.attrib["d"])
             except KeyError:
                 duration = 0.0
             start = float(child.attrib["t"])
-            end = (start + duration)/1000
 
-            minutes, seconds = divmod(end, 60)
+            minutes, seconds = divmod(start/1000, 60)
             line = f"[{int(minutes):02d}:{seconds:05.02f}]{caption}"
             segments.append(line)
         return "\n".join(segments).strip()
