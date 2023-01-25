@@ -8,14 +8,24 @@
             "text": "Just as you take my hand",
             "start_time": 57.71,
             "end_time": 60.54,
-            "selected_image_paths": []
+            "selected_image_paths": [
+                "n03992509\\n03992509_12344.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG"
+            ]
         },
         {
             "index": 2,
             "text": "Just as you write my number down",
             "start_time": 60.54,
             "end_time": 63.52,
-            "selected_image_paths": []
+            "selected_image_paths": [
+                "n03187595\\n03187595_7795.JPEG",
+                "n03187595\\n03187595_825.JPEG",
+                "n03388183\\n03388183_4661.JPEG",
+                "n03388183\\n03388183_317.JPEG"
+            ]
         },
         {
             "index": 3,
@@ -303,7 +313,9 @@
             "start_time": 220.7,
             "end_time": 226.55,
             "selected_image_paths": [
-                "n03598930\\n03598930_3557.JPEG"
+                "n03598930\\n03598930_4116.JPEG",
+                "n03598930\\n03598930_17579.JPEG",
+                "n03598930\\n03598930_4942.JPEG"
             ]
         }
     ]

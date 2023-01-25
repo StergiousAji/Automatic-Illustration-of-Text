@@ -61,8 +61,8 @@ def home(request):
                 artist = yt.author
                 music = False
             
-            audio = Audio(music=music, artist=artist, title=title, filename=filename, transcript=transcript, coverart_colour=coverart_colour)
-            audio.save()
+            audio = Audio(music=music, artist=artist, title=title, filename=filename, transcript=transcript, coverart_colour=coverart_colour, _ground_truth="null")
+            audio.save(True)
             return redirect(reverse('ground_truth:audio', kwargs={'audio_slug': audio.slug}))
         
     context = { 
@@ -117,9 +117,6 @@ def chunk(request, audio_slug, chunk_slug):
     chunk = Chunk.objects.get(slug=chunk_slug, audio__slug=audio_slug)
     print(chunk)
 
-    # if clip == "":
-    #     clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
-
     print(len(clip.image_paths))
 
     if chunk.image_ids == []:
@@ -157,8 +154,7 @@ def chunk(request, audio_slug, chunk_slug):
             ground_truth['chunks'] = chunks
 
             audio.ground_truth = ground_truth
-            audio.save()
-            print(audio.ground_truth)
+            audio.save(False)
 
             with open(os.path.join(SRC_FOLDER, "ground_truth", f"{audio.filename}.json"), "w", encoding='utf-8') as gt_json:
                 json.dump(ground_truth, gt_json, indent=4, ensure_ascii=False)
@@ -188,9 +184,6 @@ def video(request, audio_slug):
     video_path = os.path.join(SRC_FOLDER, "video", f"{audio.filename}.mp4")
     audio_path = os.path.join(SRC_FOLDER, "audio", f"{audio.filename}.mp3")
 
-    # if clip == "":
-    #     clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
-
     if not os.path.exists(video_path) and os.path.exists(audio_path):
         chunks = Chunk.objects.filter(audio__slug=audio_slug).order_by("id")
 
@@ -205,13 +198,7 @@ def video(request, audio_slug):
 
 
 def ground_truth(request, audio_slug):
-    audio = Audio.objects.get(slug=audio_slug)
-    chunks = Chunk.objects.filter(audio__slug=audio_slug)
-
-    context = {
-        'audio': audio,
-    }
-    return render(request, 'ground_truth/ground_truth.html', context)
+    return render(request, 'ground_truth/ground_truth.html', {'audio': Audio.objects.get(slug=audio_slug)})
 
 
 def about(request):

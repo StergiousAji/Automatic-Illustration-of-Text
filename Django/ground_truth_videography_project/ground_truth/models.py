@@ -14,20 +14,22 @@ class Audio(models.Model):
 
     @property
     def ground_truth(self):
-        return json.loads(self._ground_truth)
+        return self._ground_truth
     
     @ground_truth.setter
     def ground_truth(self, value):
         self._ground_truth = json.dumps(value, indent=4, ensure_ascii=False)
     
-    def save(self, *args, **kwargs):
+    def save(self, delete, *args, **kwargs):
         if self.music:
             self.slug = slugify(f"{self.artist}-{self.title}")
         else:
             self.slug = slugify(self.filename)
         
         # Delete any existing records of the same track.
-        Audio.objects.filter(slug=self.slug).delete()
+        if delete:
+            Audio.objects.filter(slug=self.slug).delete()
+        
         super(Audio, self).save(*args, **kwargs)
     
     def __str__(self):

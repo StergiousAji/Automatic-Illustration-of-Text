@@ -4,6 +4,9 @@
     background-color: #c03e3e;
     overflow: hidden;
 }
+.section-title:hover {
+    background-color: #da5959;
+}
 
 .heading-title {
     display: flex;

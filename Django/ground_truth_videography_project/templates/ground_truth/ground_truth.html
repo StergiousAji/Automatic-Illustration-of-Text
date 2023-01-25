@@ -3,6 +3,8 @@
 
 {% block links %}
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=js&amp;skin=sunburst"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ground_truth.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/chunk.css' %}"/>
 {% endblock %}
 
 {% block title %}
@@ -10,5 +12,28 @@
 {% endblock %}
 
 {% block body %}
-    <pre class="prettyprint lang-scm">{{ audio.ground_truth }}</pre>
+    <div class="section-audio_subheading" style="background-color: {{ audio.coverart_colour }}">
+        <a href="{% url 'ground_truth:audio' audio.slug %}"><h2 class="subheading-audio">{{ audio }}</h2></a>
+    </div>
+
+    <div class="section-groundTruth">
+    {% if audio.ground_truth != "null" %}
+        <h1 id="hdGroundTruth">Ground Truth</h1>
+        <pre id="preGroundTruth" class="prettyprint lang-scm">{{ audio.ground_truth }}</pre>
+
+        <a href="{% static 'ground_truth/'|add:audio.filename|add:'.json' %}" download>
+            <button class="btn btn-primary button-start" id="btnDownload">Download</button>
+        </a>
+    {% else %}
+        <p id="parNoGroundTruth">No ground truth data has been built for <br /> <b>{{ audio }}</b></p>
+        <a href="{% url 'ground_truth:chunk' audio.slug 'chunk-1' %}">
+            <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
+        </a>
+    {% endif %}
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+    <script type="application/javascript" src="{% static 'js/chunk.js' %}"></script>
 {% endblock %}

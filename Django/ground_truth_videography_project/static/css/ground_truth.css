@@ -1,0 +1,47 @@
+.section-groundTruth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Exo';
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+#hdGroundTruth {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#preGroundTruth {
+    margin-top: 10px;
+    max-width: 800px;
+    max-height: 470px;
+}
+
+#btnDownload {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #077c2e;
+}
+#btnDownload:hover { background-color: #0fac43; }
+
+#parNoGroundTruth {
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    margin: auto;
+    margin-top: 150px;
+    max-width: 1000px;
+    color: #d44545;
+}
+
+#btnBuild { 
+    border-color: transparent;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 100px;
+    background-color: #208a0b; 
+}
+#btnBuild:hover { background-color: #5cc048; }
