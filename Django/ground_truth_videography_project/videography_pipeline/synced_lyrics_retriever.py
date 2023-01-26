@@ -3,6 +3,7 @@ from .mxlrc import Musixmatch, Song, get_lrc
 from pylrc.utilities import unpackTimecode
 import pylrc
 import os
+import whisper
 
 MUSIXMATCH_ACCESS_TOKEN = "2212262fac49706f69495b666eeb8b05c0b293b75997dd15e795af"
 def get_synced_lyrics(title, artist, folder, filename):
@@ -29,10 +30,8 @@ def get_transcript_length(transcript):
     mins, secs, mills = unpackTimecode(f"[{lyrics.length}]")
     return sum([0, mins*60, secs, mills/1000])
 
-
-
-
-def transcribe_audio(model, artist, title, folder, filename):
+def transcribe_audio(artist, title, folder, filename):
+    model = whisper.load_model("small")
     transcription = model.transcribe(os.path.join(folder, "audio", f"{filename}.mp3"))
 
     lrc_string = f"[ar:{artist}]\n[ti:{title}]\n"

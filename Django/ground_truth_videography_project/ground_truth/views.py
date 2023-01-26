@@ -10,7 +10,7 @@ from .forms import LinkForm
 
 from videography_pipeline.audio_retriever import clear_directories, download_yt, save_file
 from videography_pipeline.audio_recogniser import recognise_audio, get_coverart_colour
-from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, read_transcript, seconds_to_time
+from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
 from videography_pipeline.image_retriever import CLIP, index_image_paths
 from videography_pipeline.videography import build_video
 
@@ -61,14 +61,15 @@ def home(request):
                 artist = yt.author
                 music = False
             
+            if not transcript:
+                print("Transcribing audio with Whisper...")
+                transcript = transcribe_audio(artist, title, SRC_FOLDER, filename)
+            
             audio = Audio(music=music, artist=artist, title=title, filename=filename, transcript=transcript, coverart_colour=coverart_colour, _ground_truth="null")
             audio.save(True)
             return redirect(reverse('ground_truth:audio', kwargs={'audio_slug': audio.slug}))
         
-    context = { 
-        'link_form': link_form, 
-    }
-    return render(request, 'ground_truth/home.html', context)
+    return render(request, 'ground_truth/home.html', {'link_form': link_form})
 
 
 def audio(request, audio_slug):
