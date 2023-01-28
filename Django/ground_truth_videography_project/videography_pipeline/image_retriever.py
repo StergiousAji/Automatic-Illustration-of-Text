@@ -8,15 +8,19 @@ import torch
 
 class CLIP:
     # Load pre-trained multi-lingual CLIP model on instantiation
-    def __init__(self, image_paths, image_vectors_path,  folder='.', model_id="openai/clip-vit-base-patch32", multilingual_model_id="M-CLIP/XLM-Roberta-Large-Vit-B-32"):
+    def __init__(self, image_paths, image_vectors_path,  folder='.', multilingual=False, model_id="openai/clip-vit-base-patch32", multilingual_model_id="M-CLIP/XLM-Roberta-Large-Vit-B-32"):
         self.device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
         
         self.model_id = model_id
         self.multilingual_model_id = multilingual_model_id
-        self.model = CLIPModel.from_pretrained(self.model_id).to(self.device)
-        self.tokeniser = CLIPTokenizerFast.from_pretrained(self.model_id)
-        # self.model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(multilingual_model_id)
-        # self.tokeniser = AutoTokenizer.from_pretrained(multilingual_model_id)
+
+        if multilingual:
+            self.model = pt_multilingual_clip.MultilingualCLIP.from_pretrained(multilingual_model_id)
+            self.tokeniser = AutoTokenizer.from_pretrained(multilingual_model_id)
+        else:
+            self.model = CLIPModel.from_pretrained(self.model_id).to(self.device)
+            self.tokeniser = CLIPTokenizerFast.from_pretrained(self.model_id)
+        
         self.processor = None
 
         self.image_folder = folder

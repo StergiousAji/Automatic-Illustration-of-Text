@@ -24,7 +24,7 @@ SRC_FOLDER = "videography_pipeline"
 IMAGE_PATHS = np.delete(index_image_paths(os.path.relpath(settings.IMAGE_DATASET_DIR)), settings.EXCLUDE)
 IMAGE_VECTOR_PATH = os.path.join(SRC_FOLDER, "image_vectors", "imagenet-1k-vecs-FILTERED.npy")
 
-clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH)
+clip = CLIP(IMAGE_PATHS, IMAGE_VECTOR_PATH, multilingual=False)
 
 def home(request):
     link_form = LinkForm()
@@ -141,14 +141,16 @@ def chunk(request, audio_slug, chunk_slug):
 
             chunks = []
             for c in Chunk.objects.filter(audio__slug=audio_slug):
-                selected_image_paths = list(clip.image_paths[np.array(c.image_ids)[c.selected_ids]]) if c.selected_ids != [] else []
-                print(c.selected_ids)
+                selected_image_ids = np.array(c.image_ids)[c.selected_ids].tolist() if c.selected_ids != [] else []
+                selected_image_paths = list(clip.image_paths[selected_image_ids])
+                print(selected_image_ids)
                 print(selected_image_paths)
                 chunks.append({
                     'index': c.index,
                     'text': c.text,
                     'start_time': c.start_time,
                     'end_time': c.end_time,
+                    'selected_image_ids': selected_image_ids,
                     'selected_image_paths': selected_image_paths,
                 })
             
