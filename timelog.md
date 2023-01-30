@@ -1,6 +1,7 @@
 # Time Log
-## **Automatic Illustration of Text**
-* 2546916A - Stergious Aji
+## **Automatic Illustration of Text via Multimodal Interaction**
+* Stergious Aji
+* 2546916A
 * **Supervisor:** Debasis Ganguly
 
 ## 13/10/22
@@ -43,7 +44,7 @@
 * 2 hrs - Downloading tiny-imagenet-200 dataset to experiment with
 
 ## 30/10/22
-* 2 hrs - Creating a small jupyter notebook script to query tiny-imagenet-200 dataset from keywords.
+* 2 hrs - Creating a small jupyter notebook script to query tiny-imagenet-200 dataset with keywords.
 
 ## 02/11/22
 * 1 hr - Repreparing the small presentation as meeting missed last week

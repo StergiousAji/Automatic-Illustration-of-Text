@@ -1,0 +1,46 @@
+# Plan
+
+## **Automatic Illustration of Text via Multimodal Interaction**
+* Stergious Aji
+* 2546916A
+* **Supervisor:** Debasis Ganguly
+
+## Winter semester
+
+* **Week 1** Research text to image generation/retrieval using multimodal representations.
+* **Week 2** Read and rewrit/format demo paper for ECIR23 submission.
+* **Week 3** Read previous thesis and prepare project plan presentation for meeting.
+* **Week 4** Research Wikimedia Collection and CLIP.
+* **Week 5** Create Python script to recognise and retrieve lyrics of songs.
+* **Week 6** Add functionality to download YouTube videos/audio to script.
+* **Week 7** Research ImageNet and download tiny-imagenet-200
+* **Week 8** Creat Jupyter notebook to query tiny-imagenet-200 dataset with keywords.
+* **Week 9** Create Jupyter notebook to programmatically download 5 images for each synset the from real ImageNet dataset.
+* **Week 10** Research Wikipedia Image-Text (WIT) dataset and PyTerrier.
+* **Week 11 [PROJECT WEEK]** Build Gantt chart to show plan for Winter break and research retrieving synced lyrics/text transcript for audio.
+* **Week 12 [PROJECT WEEK]** Make initial Django webapp and submit status report.
+
+## Winter break
+* Make script to get synced lyrics from Musixmatch.
+* Make script to retrieve top 10 images from text prompt using CLIP.
+* Design and create Home page for user to input YouTube URL or upload audio file.
+* Design and create Audio page showing result of song recogniser and lyrics retriever.
+* Download WIT images in batches.
+* Make backend Django models for Audio tracks and Chunks.
+* Design and create Chunk page showing text and top 10 images.
+* Download ImageNet-1k and embed images using CLIP.
+* Add more user-friendly functionality to webapp.
+
+## Spring Semester
+
+* **Week 13** Make videography script with moviepy.
+* **Week 14** Design and create Collections and About pages.
+* **Week 15**
+* **Week 16**
+* **Week 17**
+* **Week 19**
+* **Week 20**
+* **Week 21**
+* **Week 22**
+* **Week 23 [TERM ENDS]**
+* **Week 24** Dissertation submission deadline and presentations.

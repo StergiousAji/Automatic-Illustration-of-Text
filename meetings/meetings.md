@@ -1,0 +1,102 @@
+# Meeting Notes
+
+## **Automatic Illustration of Text via Multimodal Interaction**
+* Stergious Aji
+* 2546916A
+* **Supervisor:** Debasis Ganguly
+
+<br />
+
+## Meeting 1 (13/10/22) - 0:28
+
+- Use [Wikimedia](https://commons.wikimedia.org/wiki/Main_Page) database as has captions
+- Pre-trained model Clip (Image and text embeddings)
+- [ecir2023.org](http://ecir2023.org/) - Reformat Demo Paper and submit on October 22, 2022
+    - [Demo Paper Overleaf](https://www.overleaf.com/project/6349947a99d6902905460a9b)
+- Read previous thesis
+
+
+## Meeting 2 (20/10/22) - 0:15
+
+- Use static image collection and index it
+- Limitations with current thesis
+    - APIs change
+- Better Evaluation
+    - Similarity to semantically relevant images
+- https://github.com/openai/CLIP - supervised database encoding text prompts to images.
+- **Next Week:** 10 slides explaining the thesis and what I can extend
+
+
+## Meeting 3 (03/11/22) - 0:30
+
+- Download Wikimedia collection.  ([How To](https://how-to.fandom.com/wiki/How_to_download_all_image_files_in_a_Wikimedia_Commons_page_or_directory)?)
+- Download random 5 images for each category from ImageNet
+- Image indexing by caption locally. https://github.com/gdebasis/luc4ir
+- Read Intro to IR [https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf](https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf)
+- Don’t use YAKE!!
+
+
+## Meeting 4 (10/11/22) - 0:28
+
+- USE WIKIMEDIA
+    - [WIT Image-Text Dataset](https://ai.googleblog.com/2021/09/announcing-wit-wikipedia-based-image.html) :  
+        [https://github.com/google-research-datasets/wit](https://github.com/google-research-datasets/wit)
+    
+    - [WIT Hugging Face Guide](https://huggingface.co/datasets/google/wit)
+- Retrieve from a dense index representation of image vectors
+    - sparse index of text
+- PyTerrier: [https://github.com/terrier-org/pyterrier](https://github.com/terrier-org/pyterrier)
+
+
+## Meeting 5 (17/11/22) - 0:16
+
+- Go to Alwyn’s Building Room M111 next week
+- Look into vectorising images with CLIP
+- Somehow transform query to some image-caption to text vector form and retrieve relevant image
+- Read on multimodal paper (Dataset looks interesting…)
+    
+    https://gla-my.sharepoint.com/:b:/g/personal/debasis_ganguly_glasgow_ac_uk/EW_0koAdFntCg-ci0RnO55wBGRjBRS2iKD6BG3lC8yBFPA
+    
+    - **MobileNetV2 (Embed Images to Vectors)**:
+        
+        *Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, and Liang-Chieh Chen. 2018. Mobilenetv2: Inverted residuals and linear bottlenecks. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 4510–4520.*
+        
+
+## Meeting 6 (24/11/22) - 0.30
+
+- Problem with user surveys: subjective, every time system is changed need to do user survey again.
+- Build a system to generate a ground truth (True Labels)
+- Input video/audio → divide into chunks → for each chunk let user query/select relevant image from a set → build the ground truth video.
+- Build a Gantt chart
+
+
+## Meeting 7 (01/12/22) - 0.30
+
+- Vectorise images using captions
+- Combine text and images vectors
+- Select 25 songs to build ground truth
+- Ground truth not a video will be data
+- Work on any mp3 file not just YouTube URL??
+- Status Report
+
+
+## Meeting 8 (12/01/23) - 0.30
+
+- Improve similarity search efficiency using Facebook’s FAISS
+- Reread and resolve reviewers’ issues to submit camera-ready paper (ECIR23)
+
+
+## Meeting 9 (19/01/23) - 0.30
+
+- FAISS may not be helpful when creating ground truth as accuracy is important
+- Add text/lyrics to the video generation
+- Think about evaluation and surveying
+
+
+## Meeting 10 (26/01/23) - 0.30
+
+- Get Jaccard overlaps between FAISS retrieved images vs. exhaustive
+- Show runtimes
+- Change videography to get top image not random.
+- Make backend to get metrics between ground truth and videography images.
+    - Possible metrics: P@1, MRR, nDCG, AP
