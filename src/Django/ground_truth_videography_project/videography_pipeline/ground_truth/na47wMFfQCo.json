@@ -1,0 +1,773 @@
+{
+    "id": "na47wMFfQCo",
+    "artist": "America",
+    "title": "A Horse With No Name",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "On the first part of the journey",
+            "start_time": 7.38,
+            "end_time": 11.1,
+            "selected_image_ids": [
+                1177792,
+                1177786,
+                1005741,
+                1074804,
+                1176882
+            ],
+            "selected_image_paths": [
+                "n06794110\\n06794110_753.JPEG",
+                "n06794110\\n06794110_7361.JPEG",
+                "n04162706\\n04162706_12964.JPEG",
+                "n04366367\\n04366367_15939.JPEG",
+                "n06794110\\n06794110_19384.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "I was looking at all the life",
+            "start_time": 11.1,
+            "end_time": 14.64,
+            "selected_image_ids": [
+                812450,
+                1071579,
+                759611,
+                1072612
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG",
+                "n04355933\\n04355933_3554.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04356056\\n04356056_4435.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "There were plants and birds and rocks and things",
+            "start_time": 14.64,
+            "end_time": 18.61,
+            "selected_image_ids": [
+                1057415,
+                1242363,
+                62827,
+                1269790,
+                59865,
+                51236
+            ],
+            "selected_image_paths": [
+                "n04326547\\n04326547_4290.JPEG",
+                "n09193705\\n09193705_16116.JPEG",
+                "n01695060\\n01695060_23938.JPEG",
+                "n12985857\\n12985857_2590.JPEG",
+                "n01693334\\n01693334_12493.JPEG",
+                "n01677366\\n01677366_1875.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "There was sand and hills and rings",
+            "start_time": 18.61,
+            "end_time": 23.01,
+            "selected_image_ids": [
+                70481,
+                1251756,
+                1251598,
+                88518
+            ],
+            "selected_image_paths": [
+                "n01729322\\n01729322_18.JPEG",
+                "n09421951\\n09421951_17256.JPEG",
+                "n09421951\\n09421951_14568.JPEG",
+                "n01756291\\n01756291_17270.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "The first thing I met was a fly with a buzz",
+            "start_time": 23.01,
+            "end_time": 26.49,
+            "selected_image_ids": [
+                1157342,
+                395029
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_11766.JPEG",
+                "n02190166\\n02190166_6633.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "And the sky with no clouds",
+            "start_time": 26.49,
+            "end_time": 30.5,
+            "selected_image_ids": [
+                715519,
+                639612,
+                674813,
+                138662
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n01910747\\n01910747_12784.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "The heat was hot and the ground was dry",
+            "start_time": 30.5,
+            "end_time": 34.05,
+            "selected_image_ids": [
+                991980,
+                1227758,
+                1227415,
+                1252270,
+                349808
+            ],
+            "selected_image_paths": [
+                "n04133789\\n04133789_2575.JPEG",
+                "n07802026\\n07802026_7205.JPEG",
+                "n07802026\\n07802026_2234.JPEG",
+                "n09421951\\n09421951_4708.JPEG",
+                "n02115641\\n02115641_8768.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "But the air was full of sound",
+            "start_time": 34.05,
+            "end_time": 38.06,
+            "selected_image_ids": [
+                518726,
+                1158085,
+                1157717,
+                515730,
+                1157737
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n04589890\\n04589890_5774.JPEG",
+                "n04589890\\n04589890_3300.JPEG",
+                "n02676566\\n02676566_10010.JPEG",
+                "n04589890\\n04589890_3420.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "I've been through the desert on a horse with no name",
+            "start_time": 38.06,
+            "end_time": 41.55,
+            "selected_image_ids": [
+                585757,
+                644381,
+                434519
+            ],
+            "selected_image_paths": [
+                "n02879718\\n02879718_12531.JPEG",
+                "n03045698\\n03045698_6534.JPEG",
+                "n02389026\\n02389026_1923.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "It felt good to be out of the rain",
+            "start_time": 41.55,
+            "end_time": 45.65,
+            "selected_image_ids": [
+                972098,
+                986584,
+                1157891,
+                1126394,
+                1045011
+            ],
+            "selected_image_paths": [
+                "n04067472\\n04067472_930.JPEG",
+                "n04120489\\n04120489_1276.JPEG",
+                "n04589890\\n04589890_4295.JPEG",
+                "n04507155\\n04507155_5729.JPEG",
+                "n04275548\\n04275548_9190.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "In the desert you can remember your name",
+            "start_time": 45.65,
+            "end_time": 49.38,
+            "selected_image_ids": [
+                453841,
+                1255242,
+                391032,
+                390559,
+                1251598,
+                391072
+            ],
+            "selected_image_paths": [
+                "n02437312\\n02437312_10535.JPEG",
+                "n09472597\\n09472597_13933.JPEG",
+                "n02172182\\n02172182_4654.JPEG",
+                "n02172182\\n02172182_1818.JPEG",
+                "n09421951\\n09421951_14568.JPEG",
+                "n02172182\\n02172182_4957.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "'Cause there ain't no one for to give you no pain",
+            "start_time": 49.38,
+            "end_time": 53.93,
+            "selected_image_ids": [
+                1072159,
+                1071241
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 53.93,
+            "end_time": 61.72,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285,
+                203146
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG",
+                "n02086910\\n02086910_1456.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 61.72,
+            "end_time": 68.74,
+            "selected_image_ids": [
+                761293,
+                204285,
+                203146
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02087046\\n02087046_2124.JPEG",
+                "n02086910\\n02086910_1456.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "After two days in the desert sun",
+            "start_time": 68.74,
+            "end_time": 72.68,
+            "selected_image_ids": [
+                644628,
+                453841
+            ],
+            "selected_image_paths": [
+                "n03047690\\n03047690_108.JPEG",
+                "n02437312\\n02437312_10535.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "My skin began to turn red",
+            "start_time": 72.68,
+            "end_time": 76.43,
+            "selected_image_ids": [
+                1017361,
+                1157989,
+                1133981
+            ],
+            "selected_image_paths": [
+                "n04209239\\n04209239_10669.JPEG",
+                "n04589890\\n04589890_4920.JPEG",
+                "n04525038\\n04525038_6428.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "After three days in the desert fun",
+            "start_time": 76.43,
+            "end_time": 80.0,
+            "selected_image_ids": [
+                453841,
+                820021,
+                782498,
+                977925,
+                863061
+            ],
+            "selected_image_paths": [
+                "n02437312\\n02437312_10535.JPEG",
+                "n03710721\\n03710721_16842.JPEG",
+                "n03594945\\n03594945_5963.JPEG",
+                "n04086273\\n04086273_26206.JPEG",
+                "n03792972\\n03792972_7053.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "I was looking at a river bed",
+            "start_time": 80.0,
+            "end_time": 83.92,
+            "selected_image_ids": [
+                1251434,
+                1252451,
+                1252040,
+                1251348,
+                1252088,
+                1252233
+            ],
+            "selected_image_paths": [
+                "n09421951\\n09421951_1228.JPEG",
+                "n09421951\\n09421951_9185.JPEG",
+                "n09421951\\n09421951_25361.JPEG",
+                "n09421951\\n09421951_11290.JPEG",
+                "n09421951\\n09421951_27060.JPEG",
+                "n09421951\\n09421951_3684.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "And the story it told of a river that flowed",
+            "start_time": 83.92,
+            "end_time": 87.74,
+            "selected_image_ids": [
+                1249744,
+                591814,
+                145840,
+                26794,
+                1168889,
+                591542,
+                1251880
+            ],
+            "selected_image_paths": [
+                "n09332890\\n09332890_5828.JPEG",
+                "n02894605\\n02894605_65762.JPEG",
+                "n01943899\\n01943899_30289.JPEG",
+                "n01601694\\n01601694_26045.JPEG",
+                "n04606251\\n04606251_10337.JPEG",
+                "n02894605\\n02894605_4457.JPEG",
+                "n09421951\\n09421951_20646.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "Made me sad to think it was dead",
+            "start_time": 87.74,
+            "end_time": 91.39,
+            "selected_image_ids": [
+                44460,
+                57765,
+                391330,
+                466658
+            ],
+            "selected_image_paths": [
+                "n01665541\\n01665541_14802.JPEG",
+                "n01689811\\n01689811_5965.JPEG",
+                "n02172182\\n02172182_7284.JPEG",
+                "n02454379\\n02454379_8483.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "You see",
+            "start_time": 91.39,
+            "end_time": 92.18,
+            "selected_image_ids": [
+                812450,
+                573997
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG",
+                "n02841315\\n02841315_11142.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "I've been through the desert on a horse with no name",
+            "start_time": 92.18,
+            "end_time": 95.45,
+            "selected_image_ids": [
+                585757,
+                644381,
+                434519
+            ],
+            "selected_image_paths": [
+                "n02879718\\n02879718_12531.JPEG",
+                "n03045698\\n03045698_6534.JPEG",
+                "n02389026\\n02389026_1923.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "It felt good to be out of the rain",
+            "start_time": 95.45,
+            "end_time": 99.59,
+            "selected_image_ids": [
+                986584,
+                1157891,
+                1126394,
+                1045011
+            ],
+            "selected_image_paths": [
+                "n04120489\\n04120489_1276.JPEG",
+                "n04589890\\n04589890_4295.JPEG",
+                "n04507155\\n04507155_5729.JPEG",
+                "n04275548\\n04275548_9190.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "In the desert you can remember your name",
+            "start_time": 99.59,
+            "end_time": 103.13,
+            "selected_image_ids": [
+                1255242,
+                391032
+            ],
+            "selected_image_paths": [
+                "n09472597\\n09472597_13933.JPEG",
+                "n02172182\\n02172182_4654.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "Because there ain't no one for to give you no pain",
+            "start_time": 103.13,
+            "end_time": 107.48,
+            "selected_image_ids": [
+                1072159,
+                1071241
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 107.48,
+            "end_time": 115.17,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 115.17,
+            "end_time": 121.72,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "And after nine days I let the horse run free",
+            "start_time": 136.85,
+            "end_time": 141.24,
+            "selected_image_ids": [
+                434553,
+                434376,
+                434415,
+                435564
+            ],
+            "selected_image_paths": [
+                "n02389026\\n02389026_20398.JPEG",
+                "n02389026\\n02389026_12295.JPEG",
+                "n02389026\\n02389026_1428.JPEG",
+                "n02389026\\n02389026_9701.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "'Cause the desert had turned to sea",
+            "start_time": 141.24,
+            "end_time": 144.86,
+            "selected_image_ids": [
+                1253138,
+                1168889,
+                1251824
+            ],
+            "selected_image_paths": [
+                "n09428293\\n09428293_36474.JPEG",
+                "n04606251\\n04606251_10337.JPEG",
+                "n09421951\\n09421951_18917.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "There were plants and birds and rocks and things",
+            "start_time": 144.86,
+            "end_time": 148.44,
+            "selected_image_ids": [
+                1057415,
+                1242363,
+                1249707,
+                62827,
+                1269790,
+                51236
+            ],
+            "selected_image_paths": [
+                "n04326547\\n04326547_4290.JPEG",
+                "n09193705\\n09193705_16116.JPEG",
+                "n09332890\\n09332890_5238.JPEG",
+                "n01695060\\n01695060_23938.JPEG",
+                "n12985857\\n12985857_2590.JPEG",
+                "n01677366\\n01677366_1875.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "There was sand and hills and rings",
+            "start_time": 148.44,
+            "end_time": 152.3,
+            "selected_image_ids": [
+                70481,
+                1251756,
+                1251598,
+                88518
+            ],
+            "selected_image_paths": [
+                "n01729322\\n01729322_18.JPEG",
+                "n09421951\\n09421951_17256.JPEG",
+                "n09421951\\n09421951_14568.JPEG",
+                "n01756291\\n01756291_17270.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "The ocean is a desert with its life underground",
+            "start_time": 152.3,
+            "end_time": 156.07,
+            "selected_image_ids": [
+                141525,
+                1246445,
+                1246901
+            ],
+            "selected_image_paths": [
+                "n01917289\\n01917289_2780.JPEG",
+                "n09256479\\n09256479_1695.JPEG",
+                "n09256479\\n09256479_5403.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "And a perfect disguise above",
+            "start_time": 156.07,
+            "end_time": 159.67,
+            "selected_image_ids": [
+                1072312,
+                1020286,
+                1020431,
+                867503
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_2540.JPEG",
+                "n04229816\\n04229816_1832.JPEG",
+                "n04229816\\n04229816_254.JPEG",
+                "n03803284\\n03803284_15322.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "Under the cities lies a heart made of ground",
+            "start_time": 159.67,
+            "end_time": 163.52,
+            "selected_image_ids": [
+                821078,
+                1079766,
+                643187,
+                629335,
+                869565
+            ],
+            "selected_image_paths": [
+                "n03717622\\n03717622_10062.JPEG",
+                "n04371774\\n04371774_13551.JPEG",
+                "n03042490\\n03042490_5910.JPEG",
+                "n03000134\\n03000134_4744.JPEG",
+                "n03804744\\n03804744_8432.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "But the humans will give no love",
+            "start_time": 163.52,
+            "end_time": 167.38,
+            "selected_image_ids": [
+                328882,
+                326177,
+                330416,
+                977582
+            ],
+            "selected_image_paths": [
+                "n02111500\\n02111500_300.JPEG",
+                "n02111129\\n02111129_2211.JPEG",
+                "n02111889\\n02111889_1976.JPEG",
+                "n04086273\\n04086273_16728.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "You see",
+            "start_time": 167.38,
+            "end_time": 167.96,
+            "selected_image_ids": [
+                812450,
+                1071579
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG",
+                "n04355933\\n04355933_3554.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "I've been through the desert on a horse with no name",
+            "start_time": 167.96,
+            "end_time": 171.42,
+            "selected_image_ids": [
+                585757,
+                644381,
+                434519
+            ],
+            "selected_image_paths": [
+                "n02879718\\n02879718_12531.JPEG",
+                "n03045698\\n03045698_6534.JPEG",
+                "n02389026\\n02389026_1923.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "It felt good to be out of the rain",
+            "start_time": 171.42,
+            "end_time": 175.24,
+            "selected_image_ids": [
+                986584,
+                1157891,
+                1126030
+            ],
+            "selected_image_paths": [
+                "n04120489\\n04120489_1276.JPEG",
+                "n04589890\\n04589890_4295.JPEG",
+                "n04507155\\n04507155_24715.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": "In the desert you can remember your name",
+            "start_time": 175.24,
+            "end_time": 178.91,
+            "selected_image_ids": [
+                453841,
+                1255242,
+                391032,
+                390559
+            ],
+            "selected_image_paths": [
+                "n02437312\\n02437312_10535.JPEG",
+                "n09472597\\n09472597_13933.JPEG",
+                "n02172182\\n02172182_4654.JPEG",
+                "n02172182\\n02172182_1818.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": "'Cause there ain't no one for to give you no pain",
+            "start_time": 178.91,
+            "end_time": 182.88,
+            "selected_image_ids": [
+                1072159,
+                1071241
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG"
+            ]
+        },
+        {
+            "index": 41,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 182.88,
+            "end_time": 190.59,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG"
+            ]
+        },
+        {
+            "index": 42,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 190.59,
+            "end_time": 197.89,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG"
+            ]
+        },
+        {
+            "index": 43,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 197.89,
+            "end_time": 206.39,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG"
+            ]
+        },
+        {
+            "index": 44,
+            "text": "La, la, la lala la la la, la, la",
+            "start_time": 206.39,
+            "end_time": 213.12,
+            "selected_image_ids": [
+                761293,
+                222242,
+                204285
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n02091244\\n02091244_4104.JPEG",
+                "n02087046\\n02087046_2124.JPEG"
+            ]
+        }
+    ]
+}

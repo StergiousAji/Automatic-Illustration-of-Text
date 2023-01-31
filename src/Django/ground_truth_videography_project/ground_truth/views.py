@@ -72,6 +72,7 @@ def home(request):
     return render(request, 'ground_truth/home.html', {'link_form': link_form})
 
 
+distinct_chunks = {}
 def audio(request, audio_slug):
     audio = Audio.objects.get(slug=audio_slug)
     chunks = []
@@ -95,7 +96,7 @@ def audio(request, audio_slug):
             if chunk.exists():
                 print("Updating existing Chunk...")
                 chunk.update(text=lyric.text, audio_id=audio.id, start_time=lyric.time, 
-                    end_time=lyrics[i+1].time)
+                    end_time=lyrics[i+1].time, _image_ids=chunk[0]._image_ids, _selected_ids=chunk[0]._selected_ids)
                 chunk = chunk[0]
             else:
                 chunk = Chunk(index=id, text=lyric.text, audio_id=audio.id, start_time=lyric.time, 
@@ -103,8 +104,15 @@ def audio(request, audio_slug):
                 chunk.save()
 
             chunks.append(chunk)
-            id += 1
 
+            # Store chunks with the same text together.
+            if chunk.text in distinct_chunks:
+                distinct_chunks[chunk.text].append(chunk)
+            else:
+                distinct_chunks[chunk.text] = [chunk]
+            
+            id += 1  
+            
     context = {
         'audio': audio,
         'chunks': chunks,
@@ -128,8 +136,11 @@ def chunk(request, audio_slug, chunk_slug):
     if request.method == "POST":
         post = request.POST.dict()
 
-        chunk.selected_ids = [int(k) for k in post.keys() if k.isdigit()]
-        chunk.save()
+        # Save selected image ids in all chunks with repeating text
+        selected_ids = [int(k) for k in post.keys() if k.isdigit()]
+        for repeat in distinct_chunks[chunk.text]:
+            repeat.selected_ids = selected_ids
+            repeat.save()
 
         redirect_chunk = chunk.slug
         if 'finish' in post:

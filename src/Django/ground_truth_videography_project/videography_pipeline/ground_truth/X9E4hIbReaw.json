@@ -8,30 +8,23 @@
             "text": "Just as you take my hand",
             "start_time": 57.71,
             "end_time": 60.54,
-            "selected_image_paths": [
-                "n03992509\\n03992509_12344.JPEG",
-                "n04133789\\n04133789_8559.JPEG",
-                "n04355933\\n04355933_7248.JPEG",
-                "n04356056\\n04356056_1678.JPEG"
-            ]
+            "selected_image_ids": [],
+            "selected_image_paths": []
         },
         {
             "index": 2,
             "text": "Just as you write my number down",
             "start_time": 60.54,
             "end_time": 63.52,
-            "selected_image_paths": [
-                "n03187595\\n03187595_7795.JPEG",
-                "n03187595\\n03187595_825.JPEG",
-                "n03388183\\n03388183_4661.JPEG",
-                "n03388183\\n03388183_317.JPEG"
-            ]
+            "selected_image_ids": [],
+            "selected_image_paths": []
         },
         {
             "index": 3,
             "text": "Just as the drinks arrive",
             "start_time": 63.52,
             "end_time": 66.41,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -39,6 +32,7 @@
             "text": "Just as they play your favorite song",
             "start_time": 66.41,
             "end_time": 69.36,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -46,6 +40,7 @@
             "text": "As your blather disappears",
             "start_time": 69.36,
             "end_time": 72.16,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -53,6 +48,7 @@
             "text": "No longer wound up like a spring",
             "start_time": 72.16,
             "end_time": 75.25,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -60,6 +56,7 @@
             "text": "Before you've had too much",
             "start_time": 75.25,
             "end_time": 78.01,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -67,6 +64,7 @@
             "text": "Come back in focus again",
             "start_time": 78.01,
             "end_time": 81.07,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -74,6 +72,7 @@
             "text": "The walls are bending shape",
             "start_time": 81.07,
             "end_time": 83.82,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -81,6 +80,7 @@
             "text": "They got a cheshire cat grin",
             "start_time": 83.82,
             "end_time": 86.79,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -88,6 +88,7 @@
             "text": "All blurring into one",
             "start_time": 86.79,
             "end_time": 89.73,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -95,6 +96,7 @@
             "text": "This place is on a mission",
             "start_time": 89.73,
             "end_time": 92.62,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -102,6 +104,7 @@
             "text": "Before the night owl",
             "start_time": 92.62,
             "end_time": 95.57,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -109,6 +112,7 @@
             "text": "Before the animal noises",
             "start_time": 95.57,
             "end_time": 98.79,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -116,6 +120,7 @@
             "text": "Closed circuit cameras",
             "start_time": 98.79,
             "end_time": 101.5,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -123,6 +128,7 @@
             "text": "Before you're comatose",
             "start_time": 101.5,
             "end_time": 105.78,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -130,6 +136,7 @@
             "text": "Before you run away from me",
             "start_time": 127.61,
             "end_time": 130.42,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -137,6 +144,7 @@
             "text": "Before you're lost between the notes",
             "start_time": 130.42,
             "end_time": 133.43,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -144,6 +152,7 @@
             "text": "The beat goes round and round",
             "start_time": 133.43,
             "end_time": 136.1,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -151,6 +160,7 @@
             "text": "The beat goes round and round",
             "start_time": 136.1,
             "end_time": 139.4,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -158,6 +168,7 @@
             "text": "I never really got there",
             "start_time": 139.4,
             "end_time": 142.16,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -165,6 +176,7 @@
             "text": "I just pretended that I had",
             "start_time": 142.16,
             "end_time": 145.06,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -172,6 +184,7 @@
             "text": "Words are blunt instruments",
             "start_time": 145.06,
             "end_time": 147.95,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -179,6 +192,7 @@
             "text": "Words are sawed off shotguns",
             "start_time": 147.95,
             "end_time": 150.81,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -186,6 +200,7 @@
             "text": "Come on and let it out",
             "start_time": 150.81,
             "end_time": 153.77,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -193,6 +208,7 @@
             "text": "Come on and let it out",
             "start_time": 153.77,
             "end_time": 156.71,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -200,6 +216,7 @@
             "text": "Come on and let it out",
             "start_time": 156.71,
             "end_time": 159.63,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -207,6 +224,7 @@
             "text": "Come on and let it out",
             "start_time": 159.63,
             "end_time": 162.54,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -214,6 +232,7 @@
             "text": "Before you run away from me",
             "start_time": 162.54,
             "end_time": 165.44,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -221,6 +240,7 @@
             "text": "Before you're lost between the notes",
             "start_time": 165.44,
             "end_time": 168.31,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -228,6 +248,7 @@
             "text": "Just as you take the mic",
             "start_time": 168.31,
             "end_time": 171.35,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -235,6 +256,7 @@
             "text": "Just as you dance, dance, dance",
             "start_time": 171.35,
             "end_time": 176.14,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -242,6 +264,7 @@
             "text": "Jigsaw falling into place",
             "start_time": 191.58,
             "end_time": 194.23,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -249,6 +272,7 @@
             "text": "So there is nothing to explain",
             "start_time": 194.23,
             "end_time": 197.16,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -256,6 +280,7 @@
             "text": "Regard each other as you pass",
             "start_time": 197.16,
             "end_time": 200.05,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -263,6 +288,7 @@
             "text": "She looks back, you look back",
             "start_time": 200.05,
             "end_time": 203.19,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -270,6 +296,7 @@
             "text": "Not just once",
             "start_time": 203.19,
             "end_time": 206.12,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -277,6 +304,7 @@
             "text": "Not just twice",
             "start_time": 206.12,
             "end_time": 209.06,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -284,6 +312,7 @@
             "text": "Wish away nightmare",
             "start_time": 209.06,
             "end_time": 211.87,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -291,6 +320,7 @@
             "text": "Wish away nightmare",
             "start_time": 211.87,
             "end_time": 214.55,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -298,6 +328,7 @@
             "text": "You got a light you can feel it on your back",
             "start_time": 214.55,
             "end_time": 217.56,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -305,6 +336,7 @@
             "text": "A light you can feel it on your back",
             "start_time": 217.56,
             "end_time": 220.7,
+            "selected_image_ids": [],
             "selected_image_paths": []
         },
         {
@@ -312,11 +344,8 @@
             "text": "Jigsaw falling into place",
             "start_time": 220.7,
             "end_time": 226.55,
-            "selected_image_paths": [
-                "n03598930\\n03598930_4116.JPEG",
-                "n03598930\\n03598930_17579.JPEG",
-                "n03598930\\n03598930_4942.JPEG"
-            ]
+            "selected_image_ids": [],
+            "selected_image_paths": []
         }
     ]
 }

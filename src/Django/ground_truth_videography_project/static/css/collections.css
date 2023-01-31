@@ -1,9 +1,9 @@
 #hdCollections {
     display: flex;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 50px;
     font-family: 'Exo';
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 800;
 }
 
