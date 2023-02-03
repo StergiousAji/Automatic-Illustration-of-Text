@@ -39,7 +39,7 @@ class Audio(models.Model):
         verbose_name_plural = 'Audio Tracks'
 
 class Chunk(models.Model):
-    index = models.IntegerField(unique=True, blank=True)
+    index = models.IntegerField(blank=True)
     text = models.CharField(max_length=200)
     audio = models.ForeignKey(Audio, on_delete=models.CASCADE, default=1)
     start_time = models.FloatField()
@@ -70,8 +70,6 @@ class Chunk(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = f"chunk-{slugify(self.index)}"
-        # Delete any existing records of the same chunk.
-        Chunk.objects.filter(index=self.index).delete()
         super(Chunk, self).save(*args, **kwargs)
 
     def __str__(self):

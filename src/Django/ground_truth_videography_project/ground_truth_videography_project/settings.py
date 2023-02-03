@@ -18,14 +18,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-VIDEOGRAPHY_DIR = os.path.join(BASE_DIR, 'videography_pipeline')
+UTILITIES_DIR = os.path.join(BASE_DIR, 'utilities')
 
 # Points to image dataset directory
 IMAGE_DATASET_DIR = os.path.join(BASE_DIR, 'imagenet-1k')
-
-# TODO: DELETE THESE AS NOT NEEDED ANYMORE
-IMAGE_DATASET_VAL_DIR = os.path.join(BASE_DIR, 'imagenet-1k-val')
-IMAGE_DATASET_TEST_DIR = os.path.join(BASE_DIR, 'imagenet-1k-test')
 
 
 # Quick-start development settings - unsuitable for production
@@ -130,7 +126,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATICFILES_DIRS = [STATIC_DIR, VIDEOGRAPHY_DIR, IMAGE_DATASET_DIR, IMAGE_DATASET_VAL_DIR, IMAGE_DATASET_TEST_DIR]
+STATICFILES_DIRS = [STATIC_DIR, UTILITIES_DIR, IMAGE_DATASET_DIR] 
+
 STATIC_URL = '/static/'
 
 # IMAGE INDICES TO FILTER OUT

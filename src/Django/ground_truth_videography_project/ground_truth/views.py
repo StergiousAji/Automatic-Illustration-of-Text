@@ -8,11 +8,12 @@ from django.conf import settings
 from .models import Audio, Chunk
 from .forms import LinkForm
 
-from videography_pipeline.audio_retriever import clear_directories, download_yt, save_file
-from videography_pipeline.audio_recogniser import recognise_audio, get_coverart_colour
-from videography_pipeline.synced_lyrics_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
-from videography_pipeline.image_retriever import CLIP, index_image_paths
-from videography_pipeline.videography import build_video
+from utilities.audio_retriever import clear_directories, download_yt, save_file
+from utilities.audio_recogniser import recognise_audio, get_coverart_colour
+from utilities.synced_lyrics_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
+from utilities.image_retriever import CLIP, index_image_paths
+from utilities.videography import build_video
+from utilities.ground_truth_builder import build_ground_truth, load_ground_truth
 
 import os
 import pylrc
@@ -20,7 +21,7 @@ import numpy as np
 import json
 
 
-SRC_FOLDER = "videography_pipeline"
+SRC_FOLDER = "utilities"
 IMAGE_PATHS = np.delete(index_image_paths(os.path.relpath(settings.IMAGE_DATASET_DIR)), settings.EXCLUDE)
 IMAGE_VECTOR_PATH = os.path.join(SRC_FOLDER, "image_vectors", "imagenet-1k-vecs-FILTERED.npy")
 
@@ -84,6 +85,7 @@ def audio(request, audio_slug):
 
         lyrics = pylrc.parse(audio.transcript)
         id = 1
+
         for i in range(len(lyrics) - 1):
             # Skip instrumental parts of the song
             if (lyrics[i].text == "♪"):
@@ -107,11 +109,11 @@ def audio(request, audio_slug):
 
             # Store chunks with the same text together.
             if chunk.text in distinct_chunks:
-                distinct_chunks[chunk.text].append(chunk)
+                distinct_chunks[chunk.text].add(chunk.id)
             else:
-                distinct_chunks[chunk.text] = [chunk]
+                distinct_chunks[chunk.text] = {chunk.id}
             
-            id += 1  
+            id += 1
             
     context = {
         'audio': audio,
@@ -124,9 +126,8 @@ def audio(request, audio_slug):
 def chunk(request, audio_slug, chunk_slug):
     audio = Audio.objects.get(slug=audio_slug)
     chunk = Chunk.objects.get(slug=chunk_slug, audio__slug=audio_slug)
-    print(chunk)
 
-    print(len(clip.image_paths))
+    print(chunk)
 
     if chunk.image_ids == []:
         print("Performing query...")
@@ -138,40 +139,11 @@ def chunk(request, audio_slug, chunk_slug):
 
         # Save selected image ids in all chunks with repeating text
         selected_ids = [int(k) for k in post.keys() if k.isdigit()]
-        for repeat in distinct_chunks[chunk.text]:
-            repeat.selected_ids = selected_ids
-            repeat.save()
+        Chunk.objects.filter(id__in=distinct_chunks[chunk.text]).update(_selected_ids = json.dumps(selected_ids))
 
         redirect_chunk = chunk.slug
         if 'finish' in post:
-            ground_truth = {
-                'id': audio.filename,
-                'artist': audio.artist,
-                'title': audio.title,
-            }
-
-            chunks = []
-            for c in Chunk.objects.filter(audio__slug=audio_slug):
-                selected_image_ids = np.array(c.image_ids)[c.selected_ids].tolist() if c.selected_ids != [] else []
-                selected_image_paths = list(clip.image_paths[selected_image_ids])
-                print(selected_image_ids)
-                print(selected_image_paths)
-                chunks.append({
-                    'index': c.index,
-                    'text': c.text,
-                    'start_time': c.start_time,
-                    'end_time': c.end_time,
-                    'selected_image_ids': selected_image_ids,
-                    'selected_image_paths': selected_image_paths,
-                })
-            
-            ground_truth['chunks'] = chunks
-
-            audio.ground_truth = ground_truth
-            audio.save(False)
-
-            with open(os.path.join(SRC_FOLDER, "ground_truth", f"{audio.filename}.json"), "w", encoding='utf-8') as gt_json:
-                json.dump(ground_truth, gt_json, indent=4, ensure_ascii=False)
+            build_ground_truth(audio, Chunk.objects.filter(audio__slug=audio_slug).order_by("index"), clip, SRC_FOLDER)
             
             return redirect(reverse('ground_truth:ground-truth', kwargs={'audio_slug': audio.slug}))
         elif 'previous' in post:
