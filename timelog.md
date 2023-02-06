@@ -152,3 +152,58 @@
 ## 10/01/23
 * 2 hrs - Designing and finishing the Collections page showing all audio tracks stored in database
 * 2 hrs - Designing and finishing the About page
+
+## 12/01/23
+* 0.5 hr - Supervisor meeting
+* 1 hrs - Reading reviewers' issues with the ECIR23 demonstration paper submission
+* 1 hr - Resolving issues and rewriting parts of paper for camera-ready submission
+
+## 14/01/23
+* 2 hrs - Researching FAISS for fast similarity searching
+* 1 hr - Implementing small script with FAISS
+
+## 17/01/23
+* 5 hrs - Added new features to project: Multi-lingual CLIP, Timestamp information in Chunk pages, Dynamic image checkboxes and completed ground truth building process
+
+## 19/01/23
+* 0.5 hr - Supervisor meeting
+* 1 hr - Researching adding text to video generation
+
+## 21/01/23
+* 3 hrs - Implemented YouTube caption extraction to the videography pipeline
+
+## 23/01/23
+* 5 hrs - Added text/lyrics to the video generation pipeline
+* 1 hr - Improved caption conversion to LRC format
+
+## 25/01/23
+* 5 hrs - Added more features: Added Download button to Ground Truth page, Fixed audio model updating bug, and made links more intuitive
+
+## 26/01/23
+* 0.5 hr - Supervisor meeting
+* 2 hrs - Added OpenAI's Whisper Audio-to-Text Transcription as a backup
+
+## 28/01/23
+* 1 hr - Added flag to support both English-only and Multi-lingual CLIP models
+* 1 hr - Added selected image ids and paths to ground truth data
+* 4 hrs - Starting to write Introduction of dissertation
+
+## 30/01/23
+* 2 hrs - Restructured GitHub Project Structure to match template
+* 3 hrs - Building mulitple FAISS indexes with different parameter settings and analysing results against exhaustive searching (Jaccard Similarities and Runtimes)
+
+## 31/01/23
+* 3 hrs - Added functionality to save selected images for all chunks with repeating texts.
+* 2 hrs - Creating Usability survey evaluation forms
+* 2 hrs - Performing PCA to reduce dimensions for FAISS indexing
+
+## 02/02/23
+* 0.5 hr - Supervisor meeting
+* 0.5 hr - Researching SIGIR paper submission deadlines
+
+## 03/02/23
+* 4 hrs - Performed bug fixes: Fixed image indexes not saving bug, final ground truth building bug, abstracted the ground truth building code to its own file
+
+## 06/02/23
+* 4 hrs - Writing Analysis/Requirements of dissertation
+* 1 hr - Added functionality to directly view previously created ground truths

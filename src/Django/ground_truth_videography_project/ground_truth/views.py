@@ -13,7 +13,7 @@ from utilities.audio_recogniser import recognise_audio, get_coverart_colour
 from utilities.synced_lyrics_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
 from utilities.image_retriever import CLIP, index_image_paths
 from utilities.videography import build_video
-from utilities.ground_truth_builder import build_ground_truth, load_ground_truth
+from utilities.ground_truth_builder import build_ground_truth
 
 import os
 import pylrc
@@ -43,7 +43,6 @@ def home(request):
             if link_form.is_valid():
                 yt, audio_path, transcript = download_yt(link_form.cleaned_data['youtube_url'], SRC_FOLDER) 
                 filename = yt.video_id
-        
         elif 'audio_file' in request.FILES:
             audio_file = request.FILES['audio_file']
             # Validate the file is of audio format
@@ -66,7 +65,8 @@ def home(request):
                 print("Transcribing audio with Whisper...")
                 transcript = transcribe_audio(artist, title, SRC_FOLDER, filename)
             
-            audio = Audio(music=music, artist=artist, title=title, filename=filename, transcript=transcript, coverart_colour=coverart_colour, _ground_truth="null")
+            audio = Audio(music=music, artist=artist, title=title, filename=filename, transcript=transcript, 
+                coverart_colour=coverart_colour, _ground_truth="null")
             audio.save(True)
             return redirect(reverse('ground_truth:audio', kwargs={'audio_slug': audio.slug}))
         
@@ -97,8 +97,8 @@ def audio(request, audio_slug):
 
             if chunk.exists():
                 print("Updating existing Chunk...")
-                chunk.update(text=lyric.text, audio_id=audio.id, start_time=lyric.time, 
-                    end_time=lyrics[i+1].time, _image_ids=chunk[0]._image_ids, _selected_ids=chunk[0]._selected_ids)
+                chunk.update(text=lyric.text, audio_id=audio.id, start_time=lyric.time, end_time=lyrics[i+1].time, 
+                    _image_ids=chunk[0]._image_ids, _selected_ids=chunk[0]._selected_ids)
                 chunk = chunk[0]
             else:
                 chunk = Chunk(index=id, text=lyric.text, audio_id=audio.id, start_time=lyric.time, 
@@ -119,6 +119,7 @@ def audio(request, audio_slug):
         'audio': audio,
         'chunks': chunks,
         'instrumental': instrumental,
+        'ground_truth_built': audio.ground_truth != "null",
     }
     return render(request, 'ground_truth/audio.html', context)
 
@@ -139,12 +140,11 @@ def chunk(request, audio_slug, chunk_slug):
 
         # Save selected image ids in all chunks with repeating text
         selected_ids = [int(k) for k in post.keys() if k.isdigit()]
-        Chunk.objects.filter(id__in=distinct_chunks[chunk.text]).update(_selected_ids = json.dumps(selected_ids))
+        Chunk.objects.filter(id__in=distinct_chunks[chunk.text]).update(_selected_ids=json.dumps(selected_ids))
 
         redirect_chunk = chunk.slug
         if 'finish' in post:
-            build_ground_truth(audio, Chunk.objects.filter(audio__slug=audio_slug).order_by("index"), clip, SRC_FOLDER)
-            
+            build_ground_truth(audio, Chunk.objects.filter(audio__slug=audio_slug).order_by("index"), IMAGE_PATHS, SRC_FOLDER)
             return redirect(reverse('ground_truth:ground-truth', kwargs={'audio_slug': audio.slug}))
         elif 'previous' in post:
             redirect_chunk = f"chunk-{chunk.index - 1}"
@@ -171,10 +171,8 @@ def video(request, audio_slug):
     audio_path = os.path.join(SRC_FOLDER, "audio", f"{audio.filename}.mp3")
 
     if not os.path.exists(video_path) and os.path.exists(audio_path):
-        chunks = Chunk.objects.filter(audio__slug=audio_slug).order_by("id")
-
         print("Building Video...")
-        build_video(chunks, clip, audio_path, video_path)
+        build_video(Chunk.objects.filter(audio__slug=audio_slug).order_by("index"), clip, audio_path, video_path)
 
     context = {
         'audio': audio,

@@ -2,7 +2,7 @@ import numpy as np
 import json
 import os
 
-def build_ground_truth(audio, chunks, clip, folder):
+def build_ground_truth(audio, chunks, image_paths, folder):
     ground_truth = {
         'id': audio.filename,
         'artist': audio.artist,
@@ -12,7 +12,7 @@ def build_ground_truth(audio, chunks, clip, folder):
     chunks_info = []
     for c in chunks:
         selected_image_ids = np.array(c.image_ids)[c.selected_ids].tolist() if c.image_ids != [] and c.selected_ids != []  else []
-        selected_image_paths = clip.image_paths[selected_image_ids].tolist()
+        selected_image_paths = image_paths[selected_image_ids].tolist()
         chunks_info.append({
             'index': c.index,
             'text': c.text,
@@ -36,4 +36,3 @@ def load_ground_truth(folder, filename):
             return json.load(gt_json)
     except Exception as ex:
         print(f"\u001b[31m{type(ex).__name__}: {ex.args}\u001b[0m")
-        return None

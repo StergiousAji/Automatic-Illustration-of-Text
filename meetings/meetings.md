@@ -100,3 +100,9 @@
 - Change videography to get top image not random.
 - Make backend to get metrics between ground truth and videography images.
     - Possible metrics: P@1, MRR, nDCG, AP
+
+## Meeting 11 (02/02/23) - 0.35
+
+- Look into and start writing for SIGIR23 call for papers.
+- Showed FAISS analysis and concluded that it was not needed. Exhaustive is fast enough.
+- Possibly add ground truth building percentage done in collections page.

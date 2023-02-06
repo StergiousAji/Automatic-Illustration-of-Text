@@ -1,21 +1,18 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 \documentclass{l4proj}
 
-    
 %==============================================================================
 % Put any additional packages here
-% You can add any packages you want, as long as it does not alter
-% the overall format (e.g. don't change the margins or the reference style).
+% You can add any packages you want, as long as it does not alter the overall format (e.g. don't change the margins or the reference style).
 %
 \usepackage{pdfpages} % if you want to include a PDF for an ethics checklist, for example
-%
-%
+
 
 \begin{document}
 
 %==============================================================================
 %% METADATA
-\title{Automatic Illustration of Text via Multimodal Interaction} % change this to your title
+\title{Automatic Illustration of Text via Multimodal Interaction}
 \author{Stergious Aji (2546916A)}
 \date{\today}
 
@@ -41,160 +38,83 @@
 %==============================================================================
 %% ACKNOWLEDGEMENTS
 \chapter*{Acknowledgements}
-% Enter any acknowledgements here. This is optional; you may leave this blank if you wish,
-% or remove the entire chapter
+% Enter any acknowledgements here. This is optional; you may leave this blank if you wish, or remove the entire chapter
 %
-% We give thanks to the Gods of LaTeX, who in their eternal graciousness, 
-% have granted that this document may compile without errors or overfull hboxes.
-%
+% We give thanks to the Gods of LaTeX, who in their eternal graciousness, have granted that this document may compile without errors or overfull hboxes.
 
 %==============================================================================
-
 % EDUCATION REUSE CONSENT FORM
-% If you consent to your project being shown to future students for educational purposes
-% then insert your name and the date below to  sign the education use form that appears in the front of the document. 
-% You must explicitly give consent if you wish to do so.
+% If you consent to your project being shown to future students for educational purposes then insert your name and the date below to  sign the education use form that appears in the front of the document. You must explicitly give consent if you wish to do so.
 % If you sign, your project may be included in the Hall of Fame if it scores particularly highly.
 %
-% Please note that you are under no obligation to sign 
-% this declaration, but doing so would help future students.
+% Please note that you are under no obligation to sign this declaration, but doing so would help future students.
 
 \def\consentname {Stergious Aji} % your full name
 \def\consentdate {\today} % the date you agree
-
 \educationalconsent
 
 
 %==============================================================================
 \tableofcontents
-
 %==============================================================================
 %% Notes on formatting
 %==============================================================================
-% The first page, abstract and table of contents are numbered using Roman numerals and are not
-% included in the page count. 
+% The first page, abstract and table of contents are numbered using Roman numerals and are not included in the page count. 
 %
-% From now on pages are numbered
-% using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call
-% \pagenumbering{arabic} and this should be called once only in the document. 
+% From now on pages are numbered using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call \pagenumbering{arabic} and this should be called once only in the document. 
 %
 %
 % The first Chapter should then be on page 1. 
 
 % PAGE LIMITS
-% You are allowed 40 pages for a 40 credit project and 30 pages for a 
-% 20 credit report. 
-% This includes everything numbered in Arabic numerals (excluding front matter) up
-% to but *excluding the appendices and bibliography*.
+% You are allowed 40 pages for a 40 credit project and 30 pages for a 20 credit report. This includes everything numbered in Arabic numerals (excluding front matter) up to but *excluding the appendices and bibliography*.
 %
 % FORMATTING
-% You must not alter text size (it is currently 10pt) or alter margins or spacing.
-% Do not alter the bibliography style. 
+% You must not alter text size (it is currently 10pt) or alter margins or spacing. Do not alter the bibliography style. 
 %
-%==================================================================================================================================
+%================================================================================
 %
 % IMPORTANT
-% The chapter headings and structure here are **suggestions**. You don't have to follow this model if
-% it doesn't fit your project. Every project should have an introduction and conclusion,
-% however.  If in doubt, your supervisor can give you specific guidance; their view takes precedence over
-% the structure suggested here.
+% The chapter headings and structure here are **suggestions**. You don't have to follow this model if it doesn't fit your project. Every project should have an introduction and conclusion, however.  If in doubt, your supervisor can give you specific guidance; their view takes precedence over the structure suggested here.
 %
-%==================================================================================================================================
+%================================================================================
 \chapter{Introduction}
-
 % reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
 
-% You can use \todo{} to mark text that needs to be fixed. Anything inside will appear as highlighted 
-% text in the final copy, and you will also get warnings when you compile (so you don't
-% forget to take them out!)
+% Why should the reader care about what are you doing and what are you actually doing?
+This chapter serves to outline the motivations for creating an automatic videography tool, as well as the rationale for a subsequent ground truth builder web application, specifically using multimodal representations of images and text.
 
-\todo{Remove the guidance notes from your dissertation before submitting!}
+% \textbf{Motivate} first, then state the general problem clearly. 
+\section{Motivation}
+\subsection{Automatic Videography}
+Automatic video generation is a broad topic with many applications in today's media-heavy landscape. The rise in video production, both in terms of the number of people making video content and the number of videos being made daily, has motivated more automated systems to aid in this process. This is especially true for music which often has no corresponding video content for many different reasons. For instance, no official music video has been created by the artist due to a lack of funding or song popularity, or the audio track could be digitised from an older format, like vinyl. 
 
-Why should the reader care about what are you doing and what are you actually doing?
-\section{Guidance}
+(VIDEO PLATFORMS: YOUTUBE, TIKTOK ETC.)
 
-\textbf{Motivate} first, then state the general problem clearly. 
+However, a tool like this could be used for more diverse content such as illustrating educational content and podcasts. Studies (CITE) have shown that users are more engaged and take in more information from multimodal content compared to (unary!) content such as text-only or audio-only. Increased engagement means an improved learning experience as a video can encompass three different modes for the same information, including, visual, auditory, and textual simultaneously. This makes it more accessible to people of different learning lifestyles present in the VARK acronym (CITE).
 
-\section{Writing guidance}
-\subsection{Who is the reader?}
+(IMPROVEMENTS TO ANDREW PARKER'S DISS)
 
-This is the key question for any writing. Your reader:
+\subsection{Ground Truth Builder}
+This increase in media consumption and creation has ultimately caused a rise in automated videography systems. However, we found that there is currently no objective procedure for evaluating comparative performances between different systems. More specifically in measuring their accuracy at image retrieving from  text. Image relevance can and has been measured with qualitative user surveys but this can often be very subjective on personal preferences and (current) moods. More importantly, to evaluate a new system, more user studies must be conducted with the same demographic of people if the end goal is to compare against the results of a previously evaluated system. This is impractical, not to mention, very time-consuming and producing non-repeatable and biased evaluations.
 
-\begin{itemize}
-    \item
-    is a trained computer scientist: \emph{don't explain basics}.
-    \item
-    has limited time: \emph{keep on topic}.
-    \item
-    has no idea why anyone would want to do this: \emph{motivate clearly}
-    \item
-    might not know \emph{anything} about your project in particular:
-    \emph{explain your project}.
-    \item
-    but might know precise details and check them: \emph{be precise and
-    strive for accuracy.}
-    \item
-    doesn't know or care about you: \emph{personal discussions are
-    irrelevant}.
-\end{itemize}
+This can be mitigated if instead a set of true labels are made for provided audio sources beforehand which can then be used to evaluate any number of videography systems on those same audio tracks. It is important that the same static image collection is used for ground truth building and evaluating in order to produce repeatable and standardised performance metrics.
 
-Remember, you will be marked by your supervisor and one or more members
-of staff. You might also have your project read by a prize-awarding
-committee or possibly a future employer. Bear that in mind.
+This called for a user-friendly interface to build ground truths for a given audio source which, under the hood, can use the same pipeline as the automated videography system that we are creating.
 
-\subsection{References and style guides}
-There are many style guides on good English writing. You don't need to
-read these, but they will improve how you write.
+\section{Aims}
+This project aims to produce a piece of software that can take any audio source and automatically generate a video from it. The video will consist of relevant imagery corresponding to the textual content present in the audio, as well as, appearing in a timely manner. Additionally, some functionality that lets the user build a ground truth for a given audio source. This will be achieved by letting the user select the set of images that they perceive as the most fitting to the accompanying text or lyric in a given chunk of audio. This set of images will be picked from a top-$k$ which will be retrieved from searching a multimodal space of embedded images and text.
 
-\begin{itemize}
-    \item
-    \emph{How to write a great research paper} \cite{Pey17} (\textbf{recommended}, even though you aren't writing a research paper)
-    \item
-    \emph{How to Write with Style} \cite{Von80}. Short and easy to read. Available online.
-    \item
-    \emph{Style: The Basics of Clarity and Grace} \cite{Wil09} A very popular modern English style guide.
-    \item
-    \emph{Politics and the English Language} \cite{Orw68}  A famous essay on effective, clear writing in English.
-    \item
-    \emph{The Elements of Style} \cite{StrWhi07} Outdated, and American, but a classic.
-    \item
-    \emph{The Sense of Style} \cite{Pin15} Excellent, though quite in-depth.
-\end{itemize}
+Since there is a high priority for precise ground truth building; the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform such as a web application. Additionally, since the target demographic is any user willing to create a video. (REWORD WTF) Appropriate error handling must be in place to guide users from a wide area of technical backgrounds.
 
-\subsubsection{Citation styles}
+(MODULARITY OF BACKEND/FRONTEND TO BE USED WITH ANY IMAGE COLLECTION)
+We also aim to make our system modular, meaning that ground truths can be made and evaluated with any static image collection the user desires, with very minimal configuring required. 
 
-\begin{itemize}
-\item If you are referring to a reference as a noun, then cite it as: ``\citet{Orw68} discusses the role of language in political thought.''
-\item If you are referring implicitly to references, use: ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
-\end{itemize}
-
-There is a complete guide on good citation practice by Peter Coxhead available here: \url{http://www.cs.bham.ac.uk/~pxc/refs/index.html}. 
-If you are unsure about how to cite online sources, please see \citet{UNSWWebsite}. 
-\footnote{Specifying an online resource like \url{https://developer.android.com/studio}
-in a footnote sometimes makes more sense than including it as a formal reference.}
-
-\subsection{Plagiarism warning}
-
-\begin{highlight_title}{WARNING}
-    
-    If you include material from other sources without full and correct attribution, you are commiting plagiarism. The penalties for plagiarism are severe.
-    Quote any included text and cite it correctly. Cite all images, figures, etc. clearly in the caption of the figure.
-\end{highlight_title}
-
-\subsection{Quoting text}
-
-If you are quoting a long passage, use a \texttt{quote} environment:
-
-\begin{quote}
-     If you scribble your thoughts any which way, your readers will surely feel that you care nothing about them. They will mark you down as an egomaniac or a chowderhead -or, worse, they will stop reading you. The most damning revelation you can make about yourself is that you do not know what is interesting and what is not.
-\end{quote} \citep{Von80}
-
-If you are quoting inline, like Simon Peyton-Jones' following remark, use quotation marks ``Conveying the intuition is primary, not
-secondary'' \citep{Pey17}.
+(FIX FALLBACKS FROM PARKER'S DISS)
 
 
-%==================================================================================================================================
+%================================================================================
 \chapter{Background}
 What did other people do, and how is it relevant to what you want to do?
 \section{Guidance}
@@ -211,8 +131,16 @@ What did other people do, and how is it relevant to what you want to do?
       references for further information.
 \end{itemize}
 
-%==================================================================================================================================
+%================================================================================
 \chapter{Analysis/Requirements}
+(USER STORIES?? MOSCOW PRIORITISATION)
+
+This chapter serves to break down the high-level aims of the project in order to produce a list of functional and non-functional requirements, ordered by priority. This will directly determine the design and implementation of the project.
+
+\section{Problems with Previous Thesis}
+The previous Automatic Videography system implemented by Andrew Parker (CAN I MENTION NAME?) (CITE) made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks. Firstly, the metadata from YouTube was found to be unreliable in obtaining the artist's name and the song title of the song. Therefore, this information was acquired from the user inputting the correct details when using the system. This can be problematic since this requires the user to perform more work of researching and correctly typing in this information which is prone to errors. The previous system also relied on many different Application Programming Interfaces (APIs) like YAKE (CITE) for keyword extraction, and Google Images Search (CITE) to download the images. This places high 
+
+
 What is the problem that you want to solve, and how did you arrive at it?
 \section{Guidance}
 Make it clear how you derived the constrained form of your problem via a clear and logical process. 
@@ -225,7 +153,7 @@ In research projects, it will involve developing a design drawing on
 the work established in the background, and stating how the space of possible projects was
 sensibly narrowed down to what you have done.
 
-%==================================================================================================================================
+%================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
 \section{Guidance}
@@ -235,7 +163,7 @@ user interface designs (wireframes/personas/etc.), protocol specifications, algo
 among others. Specific languages, technical choices, libraries and such like should not usually appear in the design. These are implementation details.
 
 
-%==================================================================================================================================
+%================================================================================
 \chapter{Implementation}
 What did you do to implement this idea, and what technical achievements did you make?
 \section{Guidance}
@@ -521,7 +449,8 @@ Discuss what you would do if you could take this further -- where would the inte
 \begin{appendices}
 
 \chapter{Appendices}
-
+ (ETHICS CHECKLIST + INTRODUCTION BRIEF)
+ 
 Use separate appendix chapters for groups of ancillary material that support your dissertation. 
 Typical inclusions in the appendices are:
 

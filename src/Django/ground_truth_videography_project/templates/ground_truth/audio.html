@@ -28,9 +28,15 @@
                     <a href="{% url 'ground_truth:video' audio.slug %}">
                         <button class="btn btn-primary button-start" id="btnGenerate">Generate Video</button>
                     </a>
-                    <a href="{% url 'ground_truth:chunk' audio.slug chunks.0.slug %}">
-                        <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
-                    </a>
+                    {% if audio.ground_truth == "null" %}
+                        <a href="{% url 'ground_truth:chunk' audio.slug chunks.0.slug %}">
+                            <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'ground_truth:ground-truth' audio.slug %}">
+                            <button class="btn btn-primary button-start" id="btnBuild">Build Ground Truth</button>
+                        </a>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
