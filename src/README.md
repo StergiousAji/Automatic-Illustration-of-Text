@@ -10,8 +10,8 @@ This is a prototype application to build automatic videography ground truths for
 ## Installation
 The following commands will show the steps to clone the repository. First navigate to a suitable workspace directory and run:
 ```cmd
-> git clone https://github.com/StergiousAji/Automatic-Videography-Ground-Truth-Builder.git
-> cd Automatic-Videography-Ground-Truth-Builder
+> git clone https://github.com/StergiousAji/Automatic-Illustration-of-Text.git
+> cd Automatic-Illustration-of-Text\src
 ```
 
 Install the necessary packages from the `requirements.txt` file using the following command:
