@@ -26,6 +26,6 @@ Finally, a **local**, static image collection must be present for this applicati
 ## Running
 Once all the installation steps are completed, navigate into the Django project folder and run the following command to start a local instance of the web application:
 ```cmd
-> cd ground_truth_videography_project
+> cd Django\ground_truth_videography_project
 > python manage.py runserver
 ```
