@@ -1,0 +1,483 @@
+{
+    "id": "KQetemT1sWc",
+    "artist": "The Beatles",
+    "title": "Here Comes The Sun (2019 Mix)",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "Here comes the sun, doo-doo-doo-doo",
+            "start_time": 14.6,
+            "end_time": 18.55,
+            "selected_image_ids": [
+                1157890,
+                1126409,
+                1240638,
+                1158896,
+                918316
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_4292.JPEG",
+                "n04507155\\n04507155_5976.JPEG",
+                "n07930864\\n07930864_51314.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n03930313\\n03930313_17778.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "Here comes the sun, and I say",
+            "start_time": 18.55,
+            "end_time": 21.93,
+            "selected_image_ids": [
+                1126409,
+                1157890,
+                1072600,
+                939598,
+                1158896
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n04356056\\n04356056_437.JPEG",
+                "n03976657\\n03976657_3016.JPEG",
+                "n04590129\\n04590129_2089.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "It's alright",
+            "start_time": 21.93,
+            "end_time": 24.08,
+            "selected_image_ids": [
+                364869,
+                991018,
+                333009
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04131690\\n04131690_5581.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "Little darlin', it's been a long, cold, lonely winter",
+            "start_time": 27.47,
+            "end_time": 29.83,
+            "selected_image_ids": [
+                255721,
+                456778,
+                288700,
+                1126534
+            ],
+            "selected_image_paths": [
+                "n02097474\\n02097474_17593.JPEG",
+                "n02441942\\n02441942_18421.JPEG",
+                "n02105251\\n02105251_13710.JPEG",
+                "n04507155\\n04507155_8113.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "Little darlin', it feels like years since it's been here",
+            "start_time": 35.01,
+            "end_time": 37.31,
+            "selected_image_ids": [
+                535131,
+                835129
+            ],
+            "selected_image_paths": [
+                "n02777292\\n02777292_8388.JPEG",
+                "n03759954\\n03759954_3555.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "Here comes the sun, doo-doo-doo-doo",
+            "start_time": 42.33,
+            "end_time": 46.03,
+            "selected_image_ids": [
+                1157890,
+                1126409,
+                1240638,
+                1158896,
+                918316
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_4292.JPEG",
+                "n04507155\\n04507155_5976.JPEG",
+                "n07930864\\n07930864_51314.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n03930313\\n03930313_17778.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "Here comes the sun, and I say",
+            "start_time": 46.03,
+            "end_time": 49.73,
+            "selected_image_ids": [
+                1126409,
+                1157890,
+                1072600,
+                939598,
+                1158896
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n04356056\\n04356056_437.JPEG",
+                "n03976657\\n03976657_3016.JPEG",
+                "n04590129\\n04590129_2089.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "It's alright",
+            "start_time": 49.73,
+            "end_time": 52.21,
+            "selected_image_ids": [
+                364869,
+                991018,
+                333009
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04131690\\n04131690_5581.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "Little darlin', the smile's returning to their faces",
+            "start_time": 59.11,
+            "end_time": 63.45,
+            "selected_image_ids": [
+                364869,
+                1071241,
+                1072159,
+                1080194,
+                200529
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04356056\\n04356056_1678.JPEG",
+                "n04371774\\n04371774_15894.JPEG",
+                "n02086240\\n02086240_2488.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "Little darlin', it seems like years since it's been here",
+            "start_time": 66.45,
+            "end_time": 71.42,
+            "selected_image_ids": [
+                535131,
+                835129
+            ],
+            "selected_image_paths": [
+                "n02777292\\n02777292_8388.JPEG",
+                "n03759954\\n03759954_3555.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "Here comes the sun",
+            "start_time": 74.29,
+            "end_time": 77.81,
+            "selected_image_ids": [
+                1126409,
+                1157890,
+                1240638,
+                1158896,
+                1159622,
+                918316
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n07930864\\n07930864_51314.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n04590129\\n04590129_6700.JPEG",
+                "n03930313\\n03930313_17778.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "Here comes the sun, and I say",
+            "start_time": 77.81,
+            "end_time": 81.58,
+            "selected_image_ids": [
+                1126409,
+                1157890,
+                1072600,
+                939598,
+                1158896
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n04356056\\n04356056_437.JPEG",
+                "n03976657\\n03976657_3016.JPEG",
+                "n04590129\\n04590129_2089.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "It's alright",
+            "start_time": 81.58,
+            "end_time": 84.37,
+            "selected_image_ids": [
+                364869,
+                991018,
+                333009
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04131690\\n04131690_5581.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "Sun, sun, sun, here it comes",
+            "start_time": 96.18,
+            "end_time": 102.06,
+            "selected_image_ids": [
+                1158896,
+                1126621,
+                1072970
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_2089.JPEG",
+                "n04507155\\n04507155_9286.JPEG",
+                "n04356056\\n04356056_6714.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "Sun, sun, sun, here it comes",
+            "start_time": 102.06,
+            "end_time": 108.04,
+            "selected_image_ids": [
+                1158896,
+                1126621,
+                1072970
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_2089.JPEG",
+                "n04507155\\n04507155_9286.JPEG",
+                "n04356056\\n04356056_6714.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "Sun, sun, sun, here it comes",
+            "start_time": 108.04,
+            "end_time": 113.79,
+            "selected_image_ids": [
+                1158896,
+                1126621,
+                1072970
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_2089.JPEG",
+                "n04507155\\n04507155_9286.JPEG",
+                "n04356056\\n04356056_6714.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "Sun, sun, sun, here it comes",
+            "start_time": 113.79,
+            "end_time": 117.23,
+            "selected_image_ids": [
+                1158896,
+                1126621,
+                1072970
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_2089.JPEG",
+                "n04507155\\n04507155_9286.JPEG",
+                "n04356056\\n04356056_6714.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Sun, sun, sun, here it comes",
+            "start_time": 119.64,
+            "end_time": 122.95,
+            "selected_image_ids": [
+                1158896,
+                1126621,
+                1072970
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_2089.JPEG",
+                "n04507155\\n04507155_9286.JPEG",
+                "n04356056\\n04356056_6714.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "Little darlin', I feel that ice is slowly melting",
+            "start_time": 131.72,
+            "end_time": 139.3,
+            "selected_image_ids": [
+                356442,
+                1150972,
+                1243895
+            ],
+            "selected_image_paths": [
+                "n02120079\\n02120079_10947.JPEG",
+                "n04557648\\n04557648_9945.JPEG",
+                "n09229709\\n09229709_2995.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "Little darlin', it seems like years since it's been clear",
+            "start_time": 139.3,
+            "end_time": 146.56,
+            "selected_image_ids": [
+                759611,
+                535131
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n02777292\\n02777292_8388.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "Here comes the sun, doo-doo-doo-doo",
+            "start_time": 146.56,
+            "end_time": 150.43,
+            "selected_image_ids": [
+                1157890,
+                1126409,
+                1240638,
+                1158896,
+                918316
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_4292.JPEG",
+                "n04507155\\n04507155_5976.JPEG",
+                "n07930864\\n07930864_51314.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n03930313\\n03930313_17778.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "Here comes the sun, and I say",
+            "start_time": 150.43,
+            "end_time": 154.33,
+            "selected_image_ids": [
+                1126409,
+                1157890,
+                1072600,
+                939598,
+                1158896
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n04356056\\n04356056_437.JPEG",
+                "n03976657\\n03976657_3016.JPEG",
+                "n04590129\\n04590129_2089.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "It's alright",
+            "start_time": 154.33,
+            "end_time": 160.05,
+            "selected_image_ids": [
+                364869,
+                991018,
+                333009
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04131690\\n04131690_5581.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "Here comes the sun, doo-doo-doo-doo",
+            "start_time": 160.05,
+            "end_time": 163.58,
+            "selected_image_ids": [
+                1157890,
+                1126409,
+                1240638,
+                1158896,
+                918316
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_4292.JPEG",
+                "n04507155\\n04507155_5976.JPEG",
+                "n07930864\\n07930864_51314.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n03930313\\n03930313_17778.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "Here comes the sun",
+            "start_time": 163.58,
+            "end_time": 167.15,
+            "selected_image_ids": [
+                1126409,
+                1157890,
+                1240638,
+                1158896,
+                1159622,
+                918316
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n07930864\\n07930864_51314.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n04590129\\n04590129_6700.JPEG",
+                "n03930313\\n03930313_17778.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "It's alright",
+            "start_time": 167.15,
+            "end_time": 170.46,
+            "selected_image_ids": [
+                364869,
+                991018,
+                333009
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04131690\\n04131690_5581.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "It's alright",
+            "start_time": 172.99,
+            "end_time": 173.79,
+            "selected_image_ids": [
+                364869,
+                991018,
+                333009
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n04131690\\n04131690_5581.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        }
+    ]
+}
