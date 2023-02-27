@@ -1,0 +1,581 @@
+{
+    "id": "S-rB0pHI9fU",
+    "artist": "The Beatles",
+    "title": "Penny Lane",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "In Penny Lane, there is a barber showing photographs",
+            "start_time": 0.27,
+            "end_time": 4.51,
+            "selected_image_ids": [
+                545353,
+                544692,
+                545135,
+                544390,
+                543575
+            ],
+            "selected_image_paths": [
+                "n02791270\\n02791270_6468.JPEG",
+                "n02791270\\n02791270_19013.JPEG",
+                "n02791270\\n02791270_351.JPEG",
+                "n02791270\\n02791270_13145.JPEG",
+                "n02791124\\n02791124_3601.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "Of every head he's had the pleasure to know",
+            "start_time": 4.51,
+            "end_time": 8.83,
+            "selected_image_ids": [
+                587708,
+                1068618,
+                556867
+            ],
+            "selected_image_paths": [
+                "n02883205\\n02883205_31585.JPEG",
+                "n04350905\\n04350905_25588.JPEG",
+                "n02807133\\n02807133_6001.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "And all the people that come and go",
+            "start_time": 8.83,
+            "end_time": 12.82,
+            "selected_image_ids": [
+                692460,
+                535131
+            ],
+            "selected_image_paths": [
+                "n03223299\\n03223299_35269.JPEG",
+                "n02777292\\n02777292_8388.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "Stop and say hello",
+            "start_time": 12.82,
+            "end_time": 17.43,
+            "selected_image_ids": [
+                628310,
+                1177799,
+                1177689,
+                1178479,
+                1178746,
+                1178584,
+                1177083
+            ],
+            "selected_image_paths": [
+                "n03000134\\n03000134_1014.JPEG",
+                "n06794110\\n06794110_7740.JPEG",
+                "n06794110\\n06794110_6537.JPEG",
+                "n06874185\\n06874185_26729.JPEG",
+                "n06874185\\n06874185_35922.JPEG",
+                "n06874185\\n06874185_29191.JPEG",
+                "n06794110\\n06794110_2621.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "On the corner is a banker with a motor car",
+            "start_time": 17.43,
+            "end_time": 21.41,
+            "selected_image_ids": [
+                805263,
+                903594
+            ],
+            "selected_image_paths": [
+                "n03670208\\n03670208_4257.JPEG",
+                "n03891332\\n03891332_4965.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "The little children laugh at him behind his back",
+            "start_time": 21.41,
+            "end_time": 25.74,
+            "selected_image_ids": [
+                900739,
+                772816,
+                333429
+            ],
+            "selected_image_paths": [
+                "n03888605\\n03888605_21951.JPEG",
+                "n03535780\\n03535780_23837.JPEG",
+                "n02112137\\n02112137_6041.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "And the banker never wears a mac",
+            "start_time": 25.74,
+            "end_time": 29.78,
+            "selected_image_ids": [
+                873579,
+                874446,
+                1068926
+            ],
+            "selected_image_paths": [
+                "n03832673\\n03832673_1184.JPEG",
+                "n03832673\\n03832673_3838.JPEG",
+                "n04350905\\n04350905_38104.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "In the pouring rain, very strange",
+            "start_time": 29.78,
+            "end_time": 34.2,
+            "selected_image_ids": [
+                1158082,
+                1158453,
+                1045011,
+                1243625
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_5752.JPEG",
+                "n04589890\\n04589890_9151.JPEG",
+                "n04275548\\n04275548_9190.JPEG",
+                "n09229709\\n09229709_162.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "Penny Lane is in my ears and in my eyes",
+            "start_time": 34.2,
+            "end_time": 38.54,
+            "selected_image_ids": [
+                335350,
+                759611,
+                574307
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02841315\\n02841315_17171.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "There beneath the blue suburban skies",
+            "start_time": 43.08,
+            "end_time": 48.08,
+            "selected_image_ids": [
+                518726,
+                520608,
+                639612,
+                827481,
+                1178285,
+                576028,
+                520899
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n06874185\\n06874185_222.JPEG",
+                "n02843684\\n02843684_3635.JPEG",
+                "n02692877\\n02692877_9602.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "I sit and meanwhile back",
+            "start_time": 48.08,
+            "end_time": 50.85,
+            "selected_image_ids": [
+                268009,
+                324814,
+                42293,
+                1073253,
+                482502,
+                330829
+            ],
+            "selected_image_paths": [
+                "n02099849\\n02099849_7879.JPEG",
+                "n02110958\\n02110958_12819.JPEG",
+                "n01644900\\n01644900_22328.JPEG",
+                "n04356056\\n04356056_9140.JPEG",
+                "n02489166\\n02489166_10972.JPEG",
+                "n02111889\\n02111889_5677.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "In Penny Lane there is a fireman with an hourglass",
+            "start_time": 50.85,
+            "end_time": 54.84,
+            "selected_image_ids": [
+                776224,
+                775593,
+                775182,
+                776097,
+                776197,
+                775866,
+                775608
+            ],
+            "selected_image_paths": [
+                "n03544143\\n03544143_9927.JPEG",
+                "n03544143\\n03544143_2422.JPEG",
+                "n03544143\\n03544143_1279.JPEG",
+                "n03544143\\n03544143_8037.JPEG",
+                "n03544143\\n03544143_9449.JPEG",
+                "n03544143\\n03544143_5413.JPEG",
+                "n03544143\\n03544143_2558.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "And in his pocket is a portrait of the Queen",
+            "start_time": 54.84,
+            "end_time": 59.29,
+            "selected_image_ids": [
+                512813,
+                531363
+            ],
+            "selected_image_paths": [
+                "n02667093\\n02667093_7302.JPEG",
+                "n02769748\\n02769748_11155.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "He likes to keep his fire engine clean",
+            "start_time": 59.29,
+            "end_time": 63.54,
+            "selected_image_ids": [
+                322391,
+                321646,
+                713329,
+                712680,
+                713417
+            ],
+            "selected_image_paths": [
+                "n02110341\\n02110341_9759.JPEG",
+                "n02110341\\n02110341_2769.JPEG",
+                "n03345487\\n03345487_5185.JPEG",
+                "n03345487\\n03345487_1568.JPEG",
+                "n03345487\\n03345487_6490.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "It's a clean machine",
+            "start_time": 63.54,
+            "end_time": 66.97,
+            "selected_image_ids": [
+                1029479,
+                919438
+            ],
+            "selected_image_paths": [
+                "n04252225\\n04252225_24120.JPEG",
+                "n03930630\\n03930630_17841.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "Penny Lane is in my ears and in my eyes",
+            "start_time": 84.41,
+            "end_time": 91.77,
+            "selected_image_ids": [
+                335350,
+                759611,
+                574307
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02841315\\n02841315_17171.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "A four of fish and finger pies",
+            "start_time": 94.09,
+            "end_time": 98.15,
+            "selected_image_ids": [
+                1234878,
+                1234969,
+                1235684,
+                1234472,
+                1235043,
+                1235397,
+                1235317
+            ],
+            "selected_image_paths": [
+                "n07875152\\n07875152_2851.JPEG",
+                "n07875152\\n07875152_328.JPEG",
+                "n07875152\\n07875152_9197.JPEG",
+                "n07875152\\n07875152_1090.JPEG",
+                "n07875152\\n07875152_3628.JPEG",
+                "n07875152\\n07875152_511.JPEG",
+                "n07875152\\n07875152_4780.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "In summer, meanwhile back",
+            "start_time": 98.15,
+            "end_time": 100.92,
+            "selected_image_ids": [
+                1071828,
+                1126621,
+                1073335
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_710.JPEG",
+                "n04507155\\n04507155_9286.JPEG",
+                "n04356056\\n04356056_9928.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "Behind the shelter in the middle of the roundabout",
+            "start_time": 100.92,
+            "end_time": 105.12,
+            "selected_image_ids": [
+                1126522,
+                610474
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_7957.JPEG",
+                "n02965783\\n02965783_2263.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "The pretty nurse is selling poppies from a tray",
+            "start_time": 105.12,
+            "end_time": 109.34,
+            "selected_image_ids": [
+                1267891,
+                528360,
+                759632
+            ],
+            "selected_image_paths": [
+                "n12620546\\n12620546_58479.JPEG",
+                "n02730930\\n02730930_4797.JPEG",
+                "n03485794\\n03485794_708.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "And though she feels as if she's in a play",
+            "start_time": 109.34,
+            "end_time": 113.58,
+            "selected_image_ids": [
+                1159216
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_29003.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "She is anyway",
+            "start_time": 113.58,
+            "end_time": 117.84,
+            "selected_image_ids": [
+                1072159,
+                1159216,
+                759611
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04590129\\n04590129_29003.JPEG",
+                "n03485794\\n03485794_6855.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "In Penny Lane, the barber shaves another customer",
+            "start_time": 117.84,
+            "end_time": 121.98,
+            "selected_image_ids": [
+                544692,
+                545135,
+                545283,
+                545261
+            ],
+            "selected_image_paths": [
+                "n02791270\\n02791270_19013.JPEG",
+                "n02791270\\n02791270_351.JPEG",
+                "n02791270\\n02791270_5240.JPEG",
+                "n02791270\\n02791270_5010.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "We see the banker sitting waiting for a trim",
+            "start_time": 121.98,
+            "end_time": 126.24,
+            "selected_image_ids": [
+                1068817,
+                543499,
+                206586,
+                475507,
+                288956
+            ],
+            "selected_image_paths": [
+                "n04350905\\n04350905_33100.JPEG",
+                "n02791124\\n02791124_3198.JPEG",
+                "n02088094\\n02088094_1829.JPEG",
+                "n02484975\\n02484975_6950.JPEG",
+                "n02105251\\n02105251_2535.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "And then the fireman rushes in",
+            "start_time": 126.24,
+            "end_time": 130.45,
+            "selected_image_ids": [
+                712479,
+                712423
+            ],
+            "selected_image_paths": [
+                "n03345487\\n03345487_12250.JPEG",
+                "n03345487\\n03345487_11512.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "From the pouring rain, very strange",
+            "start_time": 130.45,
+            "end_time": 134.79,
+            "selected_image_ids": [
+                1158082,
+                1158194,
+                1045011,
+                1243625,
+                1157852
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_5752.JPEG",
+                "n04589890\\n04589890_6747.JPEG",
+                "n04275548\\n04275548_9190.JPEG",
+                "n09229709\\n09229709_162.JPEG",
+                "n04589890\\n04589890_4119.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "Penny Lane is in my ears and in my eyes",
+            "start_time": 134.79,
+            "end_time": 143.69,
+            "selected_image_ids": [
+                335350,
+                759611,
+                574307
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02841315\\n02841315_17171.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "There beneath the blue suburban skies",
+            "start_time": 143.69,
+            "end_time": 148.45,
+            "selected_image_ids": [
+                518726,
+                520608,
+                639612,
+                827481,
+                1178285,
+                576028,
+                520899
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n06874185\\n06874185_222.JPEG",
+                "n02843684\\n02843684_3635.JPEG",
+                "n02692877\\n02692877_9602.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "I sit and meanwhile back",
+            "start_time": 148.45,
+            "end_time": 151.45,
+            "selected_image_ids": [
+                268009,
+                324814,
+                42293,
+                1073253,
+                482502,
+                330829
+            ],
+            "selected_image_paths": [
+                "n02099849\\n02099849_7879.JPEG",
+                "n02110958\\n02110958_12819.JPEG",
+                "n01644900\\n01644900_22328.JPEG",
+                "n04356056\\n04356056_9140.JPEG",
+                "n02489166\\n02489166_10972.JPEG",
+                "n02111889\\n02111889_5677.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Penny Lane is in my ears and in my eyes",
+            "start_time": 151.45,
+            "end_time": 160.21,
+            "selected_image_ids": [
+                335350,
+                759611,
+                574307
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02841315\\n02841315_17171.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "There beneath the blue suburban skies",
+            "start_time": 160.21,
+            "end_time": 167.63,
+            "selected_image_ids": [
+                518726,
+                520608,
+                639612,
+                827481,
+                1178285,
+                576028,
+                520899
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n06874185\\n06874185_222.JPEG",
+                "n02843684\\n02843684_3635.JPEG",
+                "n02692877\\n02692877_9602.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "Penny Lane",
+            "start_time": 167.63,
+            "end_time": 168.43,
+            "selected_image_ids": [
+                729578,
+                841466
+            ],
+            "selected_image_paths": [
+                "n03404251\\n03404251_19026.JPEG",
+                "n03770439\\n03770439_6779.JPEG"
+            ]
+        }
+    ]
+}

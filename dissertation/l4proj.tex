@@ -21,7 +21,7 @@
 %==============================================================================
 %% ABSTRACT
 \begin{abstract}
-    This paper describes a system that automatically illustrates textual information present in audio sources and presents a ground truth builder for automatic videography evaluations.
+    This paper describes a system that automatically illustrates textual information present in audio sources, in addition to a ground truth construction interface for automatic videography generation systems.
     
     Users can use this system as a standard automated videography tool that generates videos with relevant imagery appearing in time with the text in the audio. Alternatively, they can build ground truth data for various audio sources. This ground truth would consist of timing information as well as sets of true labelled images for each chunk within the audio.
 
@@ -37,7 +37,7 @@
 
 %==============================================================================
 %% ACKNOWLEDGEMENTS
-\chapter*{Acknowledgements}
+% \chapter*{Acknowledgements}
 % Enter any acknowledgements here. This is optional; you may leave this blank if you wish, or remove the entire chapter
 %
 % We give thanks to the Gods of LaTeX, who in their eternal graciousness, have granted that this document may compile without errors or overfull hboxes.
@@ -83,75 +83,173 @@
 \pagenumbering{arabic} 
 
 % Why should the reader care about what are you doing and what are you actually doing?
-This chapter serves to outline the motivations for creating an automatic videography tool, as well as the rationale for a subsequent ground truth builder web application, specifically using multimodal representations of images and text.
+This chapter serves to outline the motivations for creating an automatic videography tool, as well as the rationale for a subsequent interface for annotating ground truths, specifically using multimodal representations of images and text. 
 
 % \textbf{Motivate} first, then state the general problem clearly. 
-\section{Motivation}
+\section{Motivations}
 \subsection{Automatic Videography}
-Automatic video generation is a broad topic with many applications in today's media-heavy landscape. The rise in video production, both in terms of the number of people making video content and the number of videos being made daily, has motivated more automated systems to aid in this process. This is especially true for music which often has no corresponding video content for many different reasons. For instance, no official music video has been created by the artist due to a lack of funding or song popularity, or the audio track could be digitised from an older format, like vinyl. 
+Text-to-image retrieval is a vast topic that has gained increased interest in recent years, contributing to many real-world applications in today's media-heavy landscape. One of the key areas that have expanded, due to  advancements in image retrieval technology, is automated videography. The rise in video production, both in terms of the number of people making video content and the frequency of videos being made daily \citep{rise_video}, has demanded a drive for more automated systems. This is especially true for music which often has no accompanying video content on popular platforms like \cite{youtube}. This can be for a number of reasons, for instance, no official music video has been created by the artist due to a lack of funding or song popularity, or the audio track could be digitised from an older format, like vinyl. 
 
-(VIDEO PLATFORMS: YOUTUBE, TIKTOK ETC.)
+Furthermore, such a tool is not restricted to just music tracks. It can be useful for illustrating educational content and podcasts. This would not only increase the accessibility of the subject but, studies have shown that users take in more information from multimodal content compared to text-only or audio-only content \citep{benefits_of_mmv}. Increased engagement means an improved learning experience as a video can encompass three different modes of the same information simultaneously including, visual, audial, and textual. This makes it more suited for people of different learning lifestyles present in Fleming's VARK acronym \citep{vark}.
 
-However, a tool like this could be used for more diverse content such as illustrating educational content and podcasts. Studies (CITE) have shown that users are more engaged and take in more information from multimodal content compared to (unary!) content such as text-only or audio-only. Increased engagement means an improved learning experience as a video can encompass three different modes for the same information, including, visual, auditory, and textual simultaneously. This makes it more accessible to people of different learning lifestyles present in the VARK acronym (CITE).
+One of the main motivations for this project is to improve and add on to a previous project, the Automatic Videography of Audio Tracks of Songs by \cite{parker}. This thesis achieved a working automated videography tool, focused on audio tracks sourced from YouTube, however, it suffered from a number of drawbacks that we aim to resolve with this project. A more in-depth review of the thesis is conducted in the Background Section \ref{sec:background_parker}.
 
-(IMPROVEMENTS TO ANDREW PARKER'S DISS)
+\subsection{Ground-Truth Annotation Interface}
+With an evergrowing supply of automatic videography systems, it is important to perform evaluations and compare their relevant performances in completing set tasks. However, we found that, currently, there is a lack of objective procedures for evaluating comparative performances between different systems. More specifically in measuring their accuracy at image retrieval from text. Image relevance can and has been assessed with qualitative user surveys but this can often be very subjective on personal preferences and present moods. More importantly, to evaluate a new system, more user studies must be conducted with the same demographic of people if the goal is to compare against the results of a previously evaluated system. This is impractical, not to mention, time-consuming, and ultimately producing unrepeatable and biased evaluations.
 
-\subsection{Ground Truth Builder}
-This increase in media consumption and creation has ultimately caused a rise in automated videography systems. However, we found that there is currently no objective procedure for evaluating comparative performances between different systems. More specifically in measuring their accuracy at image retrieving from  text. Image relevance can and has been measured with qualitative user surveys but this can often be very subjective on personal preferences and (current) moods. More importantly, to evaluate a new system, more user studies must be conducted with the same demographic of people if the end goal is to compare against the results of a previously evaluated system. This is impractical, not to mention, very time-consuming and producing non-repeatable and biased evaluations.
+This can be mitigated, if instead, a set of true labels are annotated beforehand for provided audio sources which can then be used to evaluate any number of videography systems on those same audio sources. It is vital that a static image collection is used for ground truth constructing and evaluating in order to produce repeatable and standardised performance metrics.
 
-This can be mitigated if instead a set of true labels are made for provided audio sources beforehand which can then be used to evaluate any number of videography systems on those same audio tracks. It is important that the same static image collection is used for ground truth building and evaluating in order to produce repeatable and standardised performance metrics.
+This called for a user-friendly interface to assess the relevance of images from the textual content present in the inputted audio source. Under the hood, this ground-truth constructor interface can use the same pipeline as the automated videography system that we are creating. 
 
-This called for a user-friendly interface to build ground truths for a given audio source which, under the hood, can use the same pipeline as the automated videography system that we are creating.
 
 \section{Aims}
-This project aims to produce a piece of software that can take any audio source and automatically generate a video from it. The video will consist of relevant imagery corresponding to the textual content present in the audio, as well as, appearing in a timely manner. Additionally, some functionality that lets the user build a ground truth for a given audio source. This will be achieved by letting the user select the set of images that they perceive as the most fitting to the accompanying text or lyric in a given chunk of audio. This set of images will be picked from a top-$k$ which will be retrieved from searching a multimodal space of embedded images and text.
+This project aims to produce a piece of software that can take any audio source and automatically generate a video from it. The video will consist of timely imagery corresponding to the textual content present in the audio. In addition, this software will include a novel annotation interface for assessing image relevance from text prompts. This will let the user construct a set of ground truths for each portion of the given audio source. This will be achieved by letting the annotator select the set of images that they perceive as the most fitting to the accompanying text or song lyric in the given chunk of audio. This set of images will be picked from a top-$k$ which will be retrieved using our system.
 
-Since there is a high priority for precise ground truth building; the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform such as a web application. Additionally, since the target demographic is any user willing to create a video. (REWORD WTF) Appropriate error handling must be in place to guide users from a wide area of technical backgrounds.
+Since there is a high priority for precise ground truth construction, the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform. Additionally, since the aim is for this application to be used by anyone, appropriate error handling must be in place to accommodate users from a wide area of technical backgrounds. We also aim to make our system modular in design. This way, more technical users would be able to swap in any static image collection with minimal configuring if required.
 
-(MODULARITY OF BACKEND/FRONTEND TO BE USED WITH ANY IMAGE COLLECTION)
-We also aim to make our system modular, meaning that ground truths can be made and evaluated with any static image collection the user desires, with very minimal configuring required. 
+We aim to use the completed annotation interface to produce ground truths for a pre-selected list of audio sources. This data will be made available in an accessible format for a number of different use cases. Firstly, this data can be used to measure the quality of automated videography systems using standard IR metrics (CITE) like Average Precision, F-Measure and the Normalised Discounted Cumulative Gain (nDCG). However, the data will not be restricted to the task of automatic videography, due to it simply consisting of a set of relevance assessments of images from text. Hence, the data can be used in existing or new text-to-image research in general. A recent example of such a possible use case is investigating the effeciveness of Variable Depth Pooling (CITE), more details are discussed in the Background section (REF).
 
-(FIX FALLBACKS FROM PARKER'S DISS)
+Finally, as stated in our motivations, we wish to fix the limitations of the previous videography generation system by Parker as well as expand upon its functionality. We aim to, generalise the application of the tool to any audio source, not just restrict it to sourcing from YouTube videos. This also means, our tool must be able to support transcription of multiple languages. We aim to tackle the image retrieval process using a different approach that introduces semantics in order to retrieve more relevant images.
+
+In order to justify creating a novel annotation interface, we must first explore existing solutions and their corresponding strengths and limitations.
 
 
 %================================================================================
 \chapter{Background}
-What did other people do, and how is it relevant to what you want to do?
-\section{Guidance}
-\begin{itemize}    
-    \item
-      Don't give a laundry list of references.
-    \item
-      Tie everything you say to your problem.
-    \item
-      Present an argument.
-    \item Think critically; weigh up the contribution of the background and put it in context.    
-    \item
-      \textbf{Don't write a tutorial}; provide background and cite
-      references for further information.
-\end{itemize}
+This chapter serves to lay the foundations in order to provide the needed context to understand the scope of this project. Firstly, an explorative analysis of the history and origins of the field of text-to-image retrieval will be conducted. This will be followed by a discussion of the recent advancements of contrastive learning multimodal models with vision transformers. A thorough review of the previous thesis on automatic videography will be given in order to fully discern the motivations and aims for this project. Next, an outline of what current solutions exist to solve our problem of annotating images from text queries will be provided. Finally, a literature review on recent research on Variable Depth Pooling will be carried out which aims to provide further insight on the weight of the potential data we can produce using our solution.
+
+\section{The History of Text-to-Image Retrieval}
+
+
+
+\section{CLIP}
+
+
+
+\section{Automatic Videography of Audio Tracks of Songs}
+\label{sec:background_parker}
+\subsection{Problems with the Previous Thesis}
+In order to elicit what requirements are necessary, we must look at the problems identified in the previous thesis.
+The previous Automatic Videography system implemented by Andrew Parker made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks. 
+
+Firstly, the metadata from YouTube was found to be unreliable in obtaining the artist's name and the song title of the song. Therefore, this information was acquired from the user inputting the correct details when using the system. This can be problematic since this requires the user to perform more work of researching and correctly typing in this information which is prone to errors. 
+
+The previous system also relied on many different Application Programming Interfaces (APIs) like YAKE (Yet Another Keyword Extractor) \cite{yake}(CITE) for keyword extraction, and Google Images Search \cite{google_images}(CITE) to download the images. This places a high dependency on these APIs which may not be kept maintained or present version collisions with other packages. In fact, the AutoLyrixAlign API \cite{autolyrixalign}(CITE), which was used for Forced Alignment of the transcription with the audio, has been deprecated at the time of writing.
+
+The previous system also suffered from frequent non-relevant images being retrieved. This was because the semantics of the keywords were being ignored when searching through Google Images. Furthermore, because of this, keywords with many meanings in the English language often resulted in the wrong images being retrieved. 
+
+The final problem observed, which directly spawned our idea of ground truth building, was the user evaluations of the final videography system. The user surveys showed a mixed, but generally positive evaluation of the system. However, the highly varying ratings and the answers to the open-ended questions highlighted the extensive time and effort required to conduct qualitative evaluations on automated videography systems which ultimately produced subjective and unrepeatable results. (REWRITE)
+
+Now that we have identified the main [pitfalls] from the previous system, it makes designing the list of requirements for our system a much simpler task.
+
+\subsection{Improvements to the Previous Thesis}
+multilingual
+
+work on any audio source
+
+use semantics with multimodal spaces
+
+
+
+\section{Similar Technologies}
+
+
+
+\section{The Bigger Picture}
+Exploring the background of the project through a review of its history and past accomplishments within the field is essential to establish its significance and justify its existence. By looking at existing solutions to the problem and their contrasting approaches provides valuable insight into which direction we take our project. Nevertheless, it is equally important to envisage the potential applications of our project beyond its primary focus of automated videography. For this reason, we look into recent research that aims to reduce relevance assessment effort by employing query-specific variable depth pooling (CITE) and how ground truths constructed using our proposed annotation tool could be beneficial in this research area.
+
+\subsection{Query-specific Variable Depth Pooling}
+This paper proposes a novel approach to 'pooling', a common practice in IR evaluation in order to retrieve the top-$k$ relevant items using a range of different retrieval systems from a large collection. It is conventional to set the depth, $k$, to a constant regardless of the specific query. However, the central idea presented in the research is that by adjusting the depth depending on the query, the relevance annotation effort can be minimised. The authors suggest the rationale behind this idea is that some queries may have fewer relevant items in the collection, while others may have a larger number. 
+% Therefore, by adapting the depth of the pool to the specific query by estimating its performance, the annotation effort can be reduced considerably.
+
+
+
+
+
+
 
 %================================================================================
 \chapter{Analysis/Requirements}
-(USER STORIES?? MOSCOW PRIORITISATION)
-
 This chapter serves to break down the high-level aims of the project in order to produce a list of functional and non-functional requirements, ordered by priority. This will directly determine the design and implementation of the project.
 
-\section{Problems with Previous Thesis}
-The previous Automatic Videography system implemented by Andrew Parker (CAN I MENTION NAME?) (CITE) made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks. Firstly, the metadata from YouTube was found to be unreliable in obtaining the artist's name and the song title of the song. Therefore, this information was acquired from the user inputting the correct details when using the system. This can be problematic since this requires the user to perform more work of researching and correctly typing in this information which is prone to errors. The previous system also relied on many different Application Programming Interfaces (APIs) like YAKE (CITE) for keyword extraction, and Google Images Search (CITE) to download the images. This places high 
+\section{Requirements Elicitation}
+In order to elicit the list of requirements, a number of user scenarios are created. These are imagined scenarios of users that would directly benefit from such an application. This type of requirements gathering, most commonly used in agile software development projects, places the focus on the end-user, rather than the developer. Therefore, this prioritises the features that an end-user requires to fulfill their goals rather than designing the development process around what is easy to implement. Another benefit of this method is that it mitigates the risk of potential flaws at a very early stage. It is much easier to accommodate any flaws before any design or implementation is undertaken rather than finding them out during the evaluation stages with real users. It gets progressively more difficult to change the existing design the further we are down the development process.
 
 
-What is the problem that you want to solve, and how did you arrive at it?
-\section{Guidance}
-Make it clear how you derived the constrained form of your problem via a clear and logical process. 
+\subsection{User Scenarios}
+\subsubsection{User Scenario 1: Anna} is a young secondary school teacher who has started recording her classes in response to the recent shift in online learning. She regularly posts her recordings to an online platform supported by the school. However, she has had a few complaints from her students that her recordings are not engaging enough and that it is difficult to see what she writes on the board. Anna strives to provide the best for her students and wishes she could make her recordings more engaging by illustrating the concepts she talks about in her audio recordings. However, she does not know anything about video production and is worried about the time required to learn and edit videos daily. She wishes for a tool that automatically illustrates her audio recordings in a swift manner to produce videos with captions.
 
-The analysis chapter explains the process by which you arrive at a concrete design. In software 
-engineering projects, this will include a statement of the requirement capture process and the
-derived requirements.
+\subsubsection{User Scenario 2: William} has recently built two new Automated Videography Generator tools that use differing ranking procedures to retrieve the top images from the text. He has performed some user studies, where he asked a number of users to watch and rate the videos generated by both systems on the same audio tracks. He used A/B testing in order to compare the performances of his two systems. However, the user studies resulted in very mixed results, with some users rating system $A$ highly while others rated system $B$ as better. Furthermore, upon closer inspection, he found that the user ratings varied wildly depending on the audio tracks used. This was problematic since the user studies took over 2 hours to complete and William is unwilling to conduct another when it is unclear if the results would even improve. William wished that he could objectively evaluate his systems against a set of ground truths. He would be able to use this to obtain quantitative metrics for each system that he could compare giving a clear answer to which ranking procedure is better.
 
-In research projects, it will involve developing a design drawing on
-the work established in the background, and stating how the space of possible projects was
-sensibly narrowed down to what you have done.
+\subsubsection{User Scenario 3: Emily} is a software developer who is part of a small team who is building a new Automatic Videography Generator. Her manager has given her the tedious task of creating ground truths for a predetermined set of audio sources from YouTube. This process requires manually annotating images that are the most fitting for the textual content within the audio. This is a very time-consuming process since she must listen to the audio track multiple times in order to accurately transcribe the textual content. Following this, she must manually record the locations of the annotated images in a spreadsheet. Her manager has also assigned a colleague to go double-check each annotation made. She wishes for a tool that automatically transcribes the audio and provides an easy-to-use interface to annotate images that can be edited after the fact. 
+
+
+\subsection{User Stories}
+\begin{itemize}
+    \item As a user of the application, I want to upload audio files, so that I can generate a video from it or construct ground truths for it.
+    \item As a user of the application, I want to specify YouTube URLs, so that its  extracted audio can be used as the source.
+    \item As a user of the application, I want to build and download ground truths, so that I can use them to evaluate my system.
+    \item As a user of the application, I want to edit previously made ground truths, so that I can fix any mistakes made.
+    \item As a user of the application, I want to view the full audio transcription, so that I can annotate specific audio chunks.
+    \item As a user of the application, I want to view and download the generated video, so that I can share it and upload it to any platform.
+\end{itemize}
+
+
+\section{Requirements}
+In order to formalise and prioritise the main requirements identified, the MoSCoW method (CITE) was chosen. Due to the restricted nature of this project, it is not feasible to develop every feature to make the most ideal system, therefore, working on features. 
+It would be ideal to implement every requirement specified, however, this is not 
+
+EXPLAIN FUNCTIONAL AND NON-FUNCTIONAL REQS
+
+\subsection{Functional Requirements}
+\begin{itemize}
+    \item \textbf{Must Have:} Ability to upload an audio file as an input audio source.
+    \item \textbf{Must Have:} Ability to specify a YouTube video URL as an audio source.
+    \item \textbf{Must Have:} Ability to view the full audio transcription.
+    \item \textbf{Must Have:} Ability to generate an illustrated video for any audio source.
+    \item \textbf{Must Have:} Ability to view the top-$k$ retrieved images for a given audio chunk.
+    \item \textbf{Must Have:} Ability to annotate the most-fitting images for a given audio chunk.
+    \item \textbf{Must Have:} Ability to view the text present in a given audio chunk.
+    \item \textbf{Must Have:} Ability to view the constructed ground truth data.
+    \item \textbf{Must Have:} Ability to download the constructed ground truth data in a portable format.
+    \item \textbf{Should Have:} Ability to view previously processed audio sources, generated videos and constructed ground truths.
+    \item \textbf{Should Have:} Ability to edit previously made ground truths.
+    \item \textbf{Should Have:} Ability to support multilingual audio sources.
+    \item \textbf{Could Have:} Ability to load ground truths for editing.
+    \item \textbf{Could Have:} Ability to view the percentage complete for ground truth construction of processed audio sources.
+    \item \textbf{Could Have:} Ability to reconfigure the static image collection location.
+    \item \textbf{Could Have:} Ability to save or skip chunks with repeating textual content when ground truth constructing.
+\end{itemize}
+
+\subsection{Non-Functional Requirements}
+\begin{itemize}
+    \item \textbf{Should Have:} The application being accessible using any Operating System platform.
+    \item \textbf{Should Have:} The application having a presentable user interface that is easy-to-use for any user.
+    \item \textbf{Should Have:} The application with appropriate error handling.
+    \item \textbf{Should Have:} The application displaying progress bars for long loading times.
+    \item \textbf{Should Have:} The application being fast and responsive.
+    \item \textbf{Should Have:} The system being able to recognise music tracks to retrieve the artist name and song title.
+    \item \textbf{Should Have:} The application being able to provide a transcription for any audio source with relative timestamps.
+    \item \textbf{Should Have:} The text-to-image retrieval using semantics in order to retrieve more relevant images.
+    \item \textbf{Should Have:} The videos being generated in a reasonable amount of time.
+    \item \textbf{Should Have:} The images being of high quality in the generated videos.
+    \item \textbf{Could Have:} The application being designed modularly to configure any static image collection.
+    \item \textbf{Could Have:} The videos including text as well as images.
+    \item \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
+    \item \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes.
+\end{itemize}
+
+% What is the problem that you want to solve, and how did you arrive at it?
+% \section{Guidance}
+% Make it clear how you derived the constrained form of your problem via a clear and logical process. 
+
+% The analysis chapter explains the process by which you arrive at a concrete design. In software 
+% engineering projects, this will include a statement of the requirement capture process and the
+% derived requirements.
+
+% In research projects, it will involve developing a design drawing on
+% the work established in the background, and stating how the space of possible projects was
+% sensibly narrowed down to what you have done.
 
 %================================================================================
 \chapter{Design}

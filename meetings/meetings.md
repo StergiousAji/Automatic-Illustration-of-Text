@@ -106,3 +106,18 @@
 - Look into and start writing for SIGIR23 call for papers.
 - Showed FAISS analysis and concluded that it was not needed. Exhaustive is fast enough.
 - Possibly add ground truth building percentage done in collections page.
+
+## Meeting 12 (09/02/23)
+
+- Focus te SIGIR paper from annotators perspective and change system architecture diagram.
+- Lookin into Query expansion for alternative system to evaluate.
+- Captionise images for text-to-text querying as alternative system to evaluate.
+- Change the diagram in the SIGIR to a PDF format.
+- Provide an illustrated walkthrough of an annotation task in SIGIR paper.
+
+## Meeting 13 (23/02/23)
+
+- Asked supervisor to sign Ethics Checklist for usability evaluations with other participants.
+- Read ‘Variable Depth Pooling’ paper and write a literature review for the dissertation.
+- Research into other annotation interfaces to contrast with our own.
+- Rewrite Introduction and motivations in dissertation according to notes

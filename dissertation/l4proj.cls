@@ -53,6 +53,7 @@
 \bibpunct{(}{)}{;}{a}{}{;}
 
 
+
 \usepackage{etoolbox}
 \usepackage[compact]{titlesec} % section heading formatting
 \usepackage{color} % colors
@@ -63,6 +64,11 @@
 % remove dots from ToC
 \usepackage[titles]{tocloft} 
 \renewcommand{\cftdot}{}
+% increase spacing in ToC to avoid ascenders and descenders colliding
+\renewcommand\cftsecafterpnum{\vskip 3pt}
+\renewcommand\cftbeforechapskip{5pt}
+\renewcommand\cftsubsecafterpnum{\vskip 1.5pt}
+\renewcommand\cftchapafterpnum{\vskip 4pt}
 \usepackage[nottoc]{tocbibind}
 
 % from: https://gist.github.com/FelipeCortez/10729134
@@ -218,6 +224,16 @@ textfont=it,tableposition=above]{caption}
   \titlespacing*{\chapter}      
   {0pt}{0pt}{15pt}  
 
+% let us define a definition for unnumbered chapters.
+% so we don't get a numbered bibliography or table of contents
+\titleformat{name=\chapter,numberless}
+            [display]
+            {\normalfont\huge\bfseries\secfont}
+            {}
+            {0pt}
+            {}
+
+
 % Educational consent form
 \newcommand{\educationalconsent}{
     \ifdefined\consentname
@@ -258,11 +274,8 @@ textfont=it,tableposition=above]{caption}
 \end{tcolorbox}
 }
 
-
-
 % adjust margins
 \setlength{\parindent}{0pt}
-
 
 % use (a) in figures
 \captionsetup{subrefformat=parens}
@@ -293,3 +306,12 @@ textfont=it,tableposition=above]{caption}
       \parsep=1pt plus 1pt
       \itemsep=\parsep}
 
+% allow highlighting of text for todo notes
+\usepackage{soul}
+\newcommand{\todo}[1]{\large \hl{TODO: #1}\PackageWarning{TODO:}{#1!}}
+
+% make urls less bulky and ugly
+\renewcommand{\UrlFont}{\ttfamily\small}
+
+% units for nice formatting of numbers
+\usepackage{siunitx}

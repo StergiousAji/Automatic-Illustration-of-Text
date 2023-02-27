@@ -1,0 +1,897 @@
+{
+    "id": "tRcPA7Fzebw",
+    "artist": "David Bowie",
+    "title": "Starman (2002 Remaster)",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "Goodbye love",
+            "start_time": 10.64,
+            "end_time": 15.84,
+            "selected_image_ids": [
+                1158452,
+                959498,
+                706113,
+                1239635,
+                618301,
+                1159216
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_9146.JPEG",
+                "n04033901\\n04033901_17573.JPEG",
+                "n03291819\\n03291819_94725.JPEG",
+                "n07930864\\n07930864_10187.JPEG",
+                "n02978881\\n02978881_14412.JPEG",
+                "n04590129\\n04590129_29003.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "Goodbye love",
+            "start_time": 15.84,
+            "end_time": 18.74,
+            "selected_image_ids": [
+                1158452,
+                959498,
+                706113,
+                1239635,
+                618301,
+                1159216
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_9146.JPEG",
+                "n04033901\\n04033901_17573.JPEG",
+                "n03291819\\n03291819_94725.JPEG",
+                "n07930864\\n07930864_10187.JPEG",
+                "n02978881\\n02978881_14412.JPEG",
+                "n04590129\\n04590129_29003.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "Didn't know what time it was the lights were low oh, oh",
+            "start_time": 20.97,
+            "end_time": 25.79,
+            "selected_image_ids": [
+                681194,
+                681196,
+                1142926,
+                680719,
+                1143103,
+                681112,
+                681007,
+                680983
+            ],
+            "selected_image_paths": [
+                "n03196217\\n03196217_396.JPEG",
+                "n03196217\\n03196217_398.JPEG",
+                "n04548280\\n04548280_7511.JPEG",
+                "n03196217\\n03196217_1135.JPEG",
+                "n04548280\\n04548280_8973.JPEG",
+                "n03196217\\n03196217_3451.JPEG",
+                "n03196217\\n03196217_2775.JPEG",
+                "n03196217\\n03196217_2605.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "I leaned back on my radio",
+            "start_time": 25.79,
+            "end_time": 30.48,
+            "selected_image_ids": [
+                1086393,
+                681095,
+                623535,
+                623990,
+                1086188,
+                1087118
+            ],
+            "selected_image_paths": [
+                "n04392985\\n04392985_2723.JPEG",
+                "n03196217\\n03196217_3352.JPEG",
+                "n02988304\\n02988304_1772.JPEG",
+                "n02988304\\n02988304_59.JPEG",
+                "n04392985\\n04392985_1687.JPEG",
+                "n04392985\\n04392985_9362.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "Some cat was layin' down some rock n roll, lotta soul, he said",
+            "start_time": 30.48,
+            "end_time": 37.9,
+            "selected_image_ids": [
+                91923,
+                516730,
+                1156472
+            ],
+            "selected_image_paths": [
+                "n01770393\\n01770393_11120.JPEG",
+                "n02676566\\n02676566_8694.JPEG",
+                "n04584207\\n04584207_2034.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "Then the loud sound did seem to fade",
+            "start_time": 37.9,
+            "end_time": 42.39,
+            "selected_image_ids": [
+                882964,
+                1157717,
+                883399,
+                1158085,
+                811734
+            ],
+            "selected_image_paths": [
+                "n03857828\\n03857828_3685.JPEG",
+                "n04589890\\n04589890_3300.JPEG",
+                "n03857828\\n03857828_61012.JPEG",
+                "n04589890\\n04589890_5774.JPEG",
+                "n03691459\\n03691459_57590.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "Came back like a slow voice on a wave of phase",
+            "start_time": 42.39,
+            "end_time": 47.26,
+            "selected_image_ids": [
+                834301,
+                1253138,
+                883399
+            ],
+            "selected_image_paths": [
+                "n03759954\\n03759954_17120.JPEG",
+                "n09428293\\n09428293_36474.JPEG",
+                "n03857828\\n03857828_61012.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "That weren't no DJ",
+            "start_time": 47.26,
+            "end_time": 48.84,
+            "selected_image_ids": [
+                623603,
+                623113,
+                624405,
+                624067
+            ],
+            "selected_image_paths": [
+                "n02988304\\n02988304_2053.JPEG",
+                "n02988304\\n02988304_10100.JPEG",
+                "n02988304\\n02988304_9976.JPEG",
+                "n02988304\\n02988304_6668.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "That was hazy cosmic jive",
+            "start_time": 48.84,
+            "end_time": 52.7,
+            "selected_image_ids": [
+                1048366,
+                822448,
+                1157737,
+                139595,
+                1072934
+            ],
+            "selected_image_paths": [
+                "n04286575\\n04286575_32757.JPEG",
+                "n03720891\\n03720891_11398.JPEG",
+                "n04589890\\n04589890_3420.JPEG",
+                "n01910747\\n01910747_7740.JPEG",
+                "n04356056\\n04356056_6479.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "There's a starman",
+            "start_time": 55.9,
+            "end_time": 58.89,
+            "selected_image_ids": [
+                1178408,
+                593054
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_25045.JPEG",
+                "n02895154\\n02895154_37.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "Waiting in the sky",
+            "start_time": 58.89,
+            "end_time": 61.03,
+            "selected_image_ids": [
+                518726,
+                520608,
+                519688,
+                536299,
+                535829
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n02692877\\n02692877_10850.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02782093\\n02782093_2867.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "He'd like to come and meet us",
+            "start_time": 61.03,
+            "end_time": 63.1,
+            "selected_image_ids": [
+                228382,
+                332997,
+                1157527,
+                332941,
+                234729
+            ],
+            "selected_image_paths": [
+                "n02092339\\n02092339_6221.JPEG",
+                "n02112137\\n02112137_17706.JPEG",
+                "n04589890\\n04589890_2022.JPEG",
+                "n02112137\\n02112137_168.JPEG",
+                "n02093859\\n02093859_3711.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "But he thinks he'd blow our minds",
+            "start_time": 63.1,
+            "end_time": 65.56,
+            "selected_image_ids": [
+                978331
+            ],
+            "selected_image_paths": [
+                "n04086273\\n04086273_4573.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "There's a starman",
+            "start_time": 65.56,
+            "end_time": 68.69,
+            "selected_image_ids": [
+                1178408,
+                593054
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_25045.JPEG",
+                "n02895154\\n02895154_37.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "Waiting in the sky",
+            "start_time": 68.69,
+            "end_time": 70.97,
+            "selected_image_ids": [
+                518726,
+                520608,
+                519688,
+                536299,
+                535829
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n02692877\\n02692877_10850.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02782093\\n02782093_2867.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "He's told us not to blow it",
+            "start_time": 70.97,
+            "end_time": 72.89,
+            "selected_image_ids": [
+                753515,
+                977582,
+                554975
+            ],
+            "selected_image_paths": [
+                "n03481172\\n03481172_10237.JPEG",
+                "n04086273\\n04086273_16728.JPEG",
+                "n02804610\\n02804610_17740.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "'Cause he knows it's all worthwhile",
+            "start_time": 72.89,
+            "end_time": 75.04,
+            "selected_image_ids": [
+                587996
+            ],
+            "selected_image_paths": [
+                "n02883205\\n02883205_57396.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "He told me",
+            "start_time": 75.04,
+            "end_time": 76.4,
+            "selected_image_ids": [
+                41152,
+                812450
+            ],
+            "selected_image_paths": [
+                "n01644373\\n01644373_5244.JPEG",
+                "n03692522\\n03692522_15011.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "Let the children lose it",
+            "start_time": 76.4,
+            "end_time": 78.82,
+            "selected_image_ids": [
+                1167282,
+                696511,
+                922507
+            ],
+            "selected_image_paths": [
+                "n04599235\\n04599235_5283.JPEG",
+                "n03250847\\n03250847_3097.JPEG",
+                "n03935335\\n03935335_4206.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "Let the children use it",
+            "start_time": 78.82,
+            "end_time": 81.19,
+            "selected_image_ids": [
+                534236,
+                1014180,
+                878441
+            ],
+            "selected_image_paths": [
+                "n02777292\\n02777292_14804.JPEG",
+                "n04204347\\n04204347_4976.JPEG",
+                "n03840681\\n03840681_7491.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "Let all the children boogie",
+            "start_time": 81.19,
+            "end_time": 84.88,
+            "selected_image_ids": [
+                722244,
+                1156580,
+                899437
+            ],
+            "selected_image_paths": [
+                "n03388043\\n03388043_3473.JPEG",
+                "n04584207\\n04584207_22310.JPEG",
+                "n03888257\\n03888257_22473.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "I had to phone someone",
+            "start_time": 100.12,
+            "end_time": 101.62,
+            "selected_image_ids": [
+                678985,
+                679181,
+                678259,
+                907263,
+                678256
+            ],
+            "selected_image_paths": [
+                "n03187595\\n03187595_5660.JPEG",
+                "n03187595\\n03187595_7795.JPEG",
+                "n03187595\\n03187595_1427.JPEG",
+                "n03902125\\n03902125_27350.JPEG",
+                "n03187595\\n03187595_14140.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "So I picked on you",
+            "start_time": 101.62,
+            "end_time": 104.9,
+            "selected_image_ids": [
+                975270
+            ],
+            "selected_image_paths": [
+                "n04074963\\n04074963_20783.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "Hey, that's far out so you heard him too",
+            "start_time": 104.9,
+            "end_time": 109.63,
+            "selected_image_ids": [
+                1160852
+            ],
+            "selected_image_paths": [
+                "n04591157\\n04591157_6908.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "Switch on the tv, we may pick him up on channel two",
+            "start_time": 109.63,
+            "end_time": 116.65,
+            "selected_image_ids": [
+                1090375,
+                361884,
+                975877,
+                1090082,
+                1090826,
+                1090009,
+                1090945,
+                1090535,
+                975139,
+                975136
+            ],
+            "selected_image_paths": [
+                "n04404412\\n04404412_2393.JPEG",
+                "n02123394\\n02123394_2167.JPEG",
+                "n04074963\\n04074963_6631.JPEG",
+                "n04404412\\n04404412_1758.JPEG",
+                "n04404412\\n04404412_42822.JPEG",
+                "n04404412\\n04404412_15579.JPEG",
+                "n04404412\\n04404412_681.JPEG",
+                "n04404412\\n04404412_27412.JPEG",
+                "n04074963\\n04074963_18300.JPEG",
+                "n04074963\\n04074963_18203.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "Look out your window, I can see his light",
+            "start_time": 116.65,
+            "end_time": 121.4,
+            "selected_image_ids": [
+                362491,
+                1159617,
+                1159789,
+                1159006,
+                1159435
+            ],
+            "selected_image_paths": [
+                "n02123394\\n02123394_6112.JPEG",
+                "n04590129\\n04590129_6654.JPEG",
+                "n04590129\\n04590129_8678.JPEG",
+                "n04590129\\n04590129_22299.JPEG",
+                "n04590129\\n04590129_50896.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "If we can sparkle he may land tonight",
+            "start_time": 121.4,
+            "end_time": 126.02,
+            "selected_image_ids": [
+                1094406,
+                200917,
+                1048311,
+                1243800,
+                1048500,
+                1094590,
+                1048556
+            ],
+            "selected_image_paths": [
+                "n04418357\\n04418357_3044.JPEG",
+                "n02086240\\n02086240_5300.JPEG",
+                "n04286575\\n04286575_30576.JPEG",
+                "n09229709\\n09229709_2581.JPEG",
+                "n04286575\\n04286575_39115.JPEG",
+                "n04418357\\n04418357_45588.JPEG",
+                "n04286575\\n04286575_41490.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "Don't tell your poppa or he'll get us locked up in fright",
+            "start_time": 126.02,
+            "end_time": 132.63,
+            "selected_image_ids": [
+                952253,
+                977570,
+                952078,
+                749636
+            ],
+            "selected_image_paths": [
+                "n04005630\\n04005630_49452.JPEG",
+                "n04086273\\n04086273_16302.JPEG",
+                "n04005630\\n04005630_35336.JPEG",
+                "n03467068\\n03467068_7420.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "There's a starman",
+            "start_time": 134.82,
+            "end_time": 137.75,
+            "selected_image_ids": [
+                1178408,
+                593054
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_25045.JPEG",
+                "n02895154\\n02895154_37.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Waiting in the sky",
+            "start_time": 137.75,
+            "end_time": 139.82,
+            "selected_image_ids": [
+                518726,
+                520608,
+                519688,
+                536299,
+                535829
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n02692877\\n02692877_10850.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02782093\\n02782093_2867.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "He'd like to come and meet us",
+            "start_time": 139.82,
+            "end_time": 142.06,
+            "selected_image_ids": [
+                228382,
+                332997,
+                1157527,
+                332941,
+                234729
+            ],
+            "selected_image_paths": [
+                "n02092339\\n02092339_6221.JPEG",
+                "n02112137\\n02112137_17706.JPEG",
+                "n04589890\\n04589890_2022.JPEG",
+                "n02112137\\n02112137_168.JPEG",
+                "n02093859\\n02093859_3711.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "But he thinks he'd blow our minds",
+            "start_time": 142.06,
+            "end_time": 144.3,
+            "selected_image_ids": [
+                978331
+            ],
+            "selected_image_paths": [
+                "n04086273\\n04086273_4573.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "There's a starman",
+            "start_time": 144.3,
+            "end_time": 147.4,
+            "selected_image_ids": [
+                1178408,
+                593054
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_25045.JPEG",
+                "n02895154\\n02895154_37.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "Waiting in the sky",
+            "start_time": 147.4,
+            "end_time": 149.55,
+            "selected_image_ids": [
+                518726,
+                520608,
+                519688,
+                536299,
+                535829
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n02692877\\n02692877_10850.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02782093\\n02782093_2867.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "He's told us not to blow it",
+            "start_time": 149.55,
+            "end_time": 151.58,
+            "selected_image_ids": [
+                753515,
+                977582,
+                554975
+            ],
+            "selected_image_paths": [
+                "n03481172\\n03481172_10237.JPEG",
+                "n04086273\\n04086273_16728.JPEG",
+                "n02804610\\n02804610_17740.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "'Cause he knows it's all worthwhile",
+            "start_time": 151.58,
+            "end_time": 153.79,
+            "selected_image_ids": [
+                587996
+            ],
+            "selected_image_paths": [
+                "n02883205\\n02883205_57396.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "He told me",
+            "start_time": 153.79,
+            "end_time": 155.15,
+            "selected_image_ids": [
+                41152,
+                812450
+            ],
+            "selected_image_paths": [
+                "n01644373\\n01644373_5244.JPEG",
+                "n03692522\\n03692522_15011.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "Let the children lose it",
+            "start_time": 155.15,
+            "end_time": 157.44,
+            "selected_image_ids": [
+                1167282,
+                696511,
+                922507
+            ],
+            "selected_image_paths": [
+                "n04599235\\n04599235_5283.JPEG",
+                "n03250847\\n03250847_3097.JPEG",
+                "n03935335\\n03935335_4206.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": "Let the children use it",
+            "start_time": 157.44,
+            "end_time": 159.74,
+            "selected_image_ids": [
+                534236,
+                1014180,
+                878441
+            ],
+            "selected_image_paths": [
+                "n02777292\\n02777292_14804.JPEG",
+                "n04204347\\n04204347_4976.JPEG",
+                "n03840681\\n03840681_7491.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": "Let all the children boogie",
+            "start_time": 159.74,
+            "end_time": 162.25,
+            "selected_image_ids": [
+                722244,
+                1156580,
+                899437
+            ],
+            "selected_image_paths": [
+                "n03388043\\n03388043_3473.JPEG",
+                "n04584207\\n04584207_22310.JPEG",
+                "n03888257\\n03888257_22473.JPEG"
+            ]
+        },
+        {
+            "index": 41,
+            "text": "Starman",
+            "start_time": 162.25,
+            "end_time": 164.24,
+            "selected_image_ids": [
+                593054,
+                1073105,
+                1178408
+            ],
+            "selected_image_paths": [
+                "n02895154\\n02895154_37.JPEG",
+                "n04356056\\n04356056_7637.JPEG",
+                "n06874185\\n06874185_25045.JPEG"
+            ]
+        },
+        {
+            "index": 42,
+            "text": "Waiting in the sky",
+            "start_time": 164.24,
+            "end_time": 166.48,
+            "selected_image_ids": [
+                518726,
+                520608,
+                519688,
+                536299,
+                535829
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n02692877\\n02692877_10850.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02782093\\n02782093_2867.JPEG"
+            ]
+        },
+        {
+            "index": 43,
+            "text": "He'd like to come and meet us",
+            "start_time": 166.48,
+            "end_time": 168.74,
+            "selected_image_ids": [
+                228382,
+                332997,
+                1157527,
+                332941,
+                234729
+            ],
+            "selected_image_paths": [
+                "n02092339\\n02092339_6221.JPEG",
+                "n02112137\\n02112137_17706.JPEG",
+                "n04589890\\n04589890_2022.JPEG",
+                "n02112137\\n02112137_168.JPEG",
+                "n02093859\\n02093859_3711.JPEG"
+            ]
+        },
+        {
+            "index": 44,
+            "text": "But he thinks he'd blow our minds",
+            "start_time": 168.74,
+            "end_time": 170.71,
+            "selected_image_ids": [
+                978331
+            ],
+            "selected_image_paths": [
+                "n04086273\\n04086273_4573.JPEG"
+            ]
+        },
+        {
+            "index": 45,
+            "text": "There's a starman",
+            "start_time": 170.71,
+            "end_time": 173.87,
+            "selected_image_ids": [
+                1178408,
+                593054
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_25045.JPEG",
+                "n02895154\\n02895154_37.JPEG"
+            ]
+        },
+        {
+            "index": 46,
+            "text": "Waiting in the sky",
+            "start_time": 173.87,
+            "end_time": 175.92,
+            "selected_image_ids": [
+                518726,
+                520608,
+                519688,
+                536299,
+                535829
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n02692877\\n02692877_10850.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02782093\\n02782093_2867.JPEG"
+            ]
+        },
+        {
+            "index": 47,
+            "text": "He's told us not to blow it",
+            "start_time": 175.92,
+            "end_time": 178.02,
+            "selected_image_ids": [
+                753515,
+                977582,
+                554975
+            ],
+            "selected_image_paths": [
+                "n03481172\\n03481172_10237.JPEG",
+                "n04086273\\n04086273_16728.JPEG",
+                "n02804610\\n02804610_17740.JPEG"
+            ]
+        },
+        {
+            "index": 48,
+            "text": "'Cause he knows it's all worthwhile",
+            "start_time": 178.02,
+            "end_time": 180.04,
+            "selected_image_ids": [
+                587996
+            ],
+            "selected_image_paths": [
+                "n02883205\\n02883205_57396.JPEG"
+            ]
+        },
+        {
+            "index": 49,
+            "text": "He told me",
+            "start_time": 180.04,
+            "end_time": 181.66,
+            "selected_image_ids": [
+                41152,
+                812450
+            ],
+            "selected_image_paths": [
+                "n01644373\\n01644373_5244.JPEG",
+                "n03692522\\n03692522_15011.JPEG"
+            ]
+        },
+        {
+            "index": 50,
+            "text": "Let the children lose it",
+            "start_time": 181.66,
+            "end_time": 183.77,
+            "selected_image_ids": [
+                1167282,
+                696511,
+                922507
+            ],
+            "selected_image_paths": [
+                "n04599235\\n04599235_5283.JPEG",
+                "n03250847\\n03250847_3097.JPEG",
+                "n03935335\\n03935335_4206.JPEG"
+            ]
+        },
+        {
+            "index": 51,
+            "text": "Let the children use it",
+            "start_time": 183.77,
+            "end_time": 186.19,
+            "selected_image_ids": [
+                534236,
+                1014180,
+                878441
+            ],
+            "selected_image_paths": [
+                "n02777292\\n02777292_14804.JPEG",
+                "n04204347\\n04204347_4976.JPEG",
+                "n03840681\\n03840681_7491.JPEG"
+            ]
+        },
+        {
+            "index": 52,
+            "text": "Let all the children boogie",
+            "start_time": 186.19,
+            "end_time": 188.36,
+            "selected_image_ids": [
+                722244,
+                1156580,
+                899437
+            ],
+            "selected_image_paths": [
+                "n03388043\\n03388043_3473.JPEG",
+                "n04584207\\n04584207_22310.JPEG",
+                "n03888257\\n03888257_22473.JPEG"
+            ]
+        }
+    ]
+}

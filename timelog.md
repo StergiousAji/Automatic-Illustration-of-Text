@@ -207,3 +207,42 @@
 ## 06/02/23
 * 4 hrs - Writing Analysis/Requirements of dissertation
 * 1 hr - Added functionality to directly view previously created ground truths
+
+## 07/02/23
+* 2 hrs - Listing and prioritising the requirements of the project formally
+* 2 hrs - Writing up User stories for Requirements section of dissertation
+* 3 hrs - Writing introduction and designing system architecture diagram for SIGIR paper
+
+## 09/02/23
+* 0.5 hr - Supervisor meeting
+* 1 hr - Researching Query Expansion and captionising images for text-to-text querying
+
+## 13/02/23
+* 2 hrs - Redesigning system architecture diagram from annotator's perspective for SIGIR paper
+* 2 hrs - Writing Implementation details in SIGIR paper
+
+## 14/02/23
+* 3 hrs - Writing illustrated walkthrough of annotation task for SIGIR paper
+* 2 hrs - Writing Conclusion and Future Work for SIGIR paper
+
+## 20/02/23
+* 3 hrs - Writing up list of MOSCOW prioritised requirements in dissertation
+* 1.5 hrs - Conducting usability evaluation with four participants
+* 3 hrs - Rewriting SIGIR paper as per notes from supervisor
+
+## 21/02/23
+* 2 hrs - Conducting usability evaluation with six participants
+* 2 hrs - Starting to write Background chapter of dissertation
+
+## 23/02/23
+* 0.5 hr - Supervisor meeting
+* 2 hrs - Reading and summarising Variable Depth Pooling paper
+
+## 25/02/23
+* 2 hrs - Researching and taking notes on other annotation interfaces
+
+## 26/02/23
+* 4 hrs - Rewriting Introduction and motivations in dissertation
+
+## 27/02/23
+* 4 hrs - Writing Background chapter introduction and begining literature review of Variable Depth Pooling paper

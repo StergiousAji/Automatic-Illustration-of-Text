@@ -1,0 +1,1079 @@
+{
+    "id": "aQUlA8Hcv4s",
+    "artist": "Electric Light Orchestra",
+    "title": "Mr. Blue Sky",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "Morning! Today's forecast calls for blue skies",
+            "start_time": 0.63,
+            "end_time": 5.68,
+            "selected_image_ids": [
+                715519,
+                827481,
+                520608,
+                674813,
+                518726,
+                639612,
+                827413,
+                715639,
+                827271
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03729826\\n03729826_7169.JPEG",
+                "n03355925\\n03355925_24294.JPEG",
+                "n03729826\\n03729826_4738.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "The sun is shining in the sky",
+            "start_time": 15.06,
+            "end_time": 18.31,
+            "selected_image_ids": [
+                1159622,
+                1227687,
+                1157890,
+                1158896,
+                716209
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_6700.JPEG",
+                "n07802026\\n07802026_622.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n04590129\\n04590129_2089.JPEG",
+                "n03355925\\n03355925_9405.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "There ain't a cloud in sight",
+            "start_time": 18.31,
+            "end_time": 21.67,
+            "selected_image_ids": [
+                639612,
+                1227687
+            ],
+            "selected_image_paths": [
+                "n03028079\\n03028079_60013.JPEG",
+                "n07802026\\n07802026_622.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "It's stopped raining",
+            "start_time": 21.67,
+            "end_time": 23.18,
+            "selected_image_ids": [
+                1158453,
+                1126443,
+                1126402
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_9151.JPEG",
+                "n04507155\\n04507155_6550.JPEG",
+                "n04507155\\n04507155_587.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "Everybody's in the play",
+            "start_time": 23.18,
+            "end_time": 25.41,
+            "selected_image_ids": [
+                1094165,
+                1094916,
+                1094454,
+                1094109,
+                1094381
+            ],
+            "selected_image_paths": [
+                "n04418357\\n04418357_2085.JPEG",
+                "n04418357\\n04418357_9309.JPEG",
+                "n04418357\\n04418357_3273.JPEG",
+                "n04418357\\n04418357_19642.JPEG",
+                "n04418357\\n04418357_29371.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "And don't you know, it's a beautiful new day",
+            "start_time": 25.41,
+            "end_time": 30.07,
+            "selected_image_ids": [
+                1240638,
+                1157890,
+                1126409,
+                536299
+            ],
+            "selected_image_paths": [
+                "n07930864\\n07930864_51314.JPEG",
+                "n04589890\\n04589890_4292.JPEG",
+                "n04507155\\n04507155_5976.JPEG",
+                "n02782093\\n02782093_4914.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "Hey, hey, hey!",
+            "start_time": 30.07,
+            "end_time": 31.7,
+            "selected_image_ids": [
+                1072159,
+                1071241,
+                759611,
+                1071814,
+                1071117,
+                1072934
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04355933\\n04355933_1654.JPEG",
+                "n04356056\\n04356056_6479.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "Running down the avenue",
+            "start_time": 31.7,
+            "end_time": 34.96,
+            "selected_image_ids": [
+                987342,
+                329084,
+                341809
+            ],
+            "selected_image_paths": [
+                "n04120489\\n04120489_5443.JPEG",
+                "n02111500\\n02111500_4427.JPEG",
+                "n02113799\\n02113799_207.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "See how the sun shines brightly in the city",
+            "start_time": 34.96,
+            "end_time": 39.54,
+            "selected_image_ids": [
+                1158640,
+                1159220,
+                1178747,
+                903852
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_13521.JPEG",
+                "n04590129\\n04590129_29216.JPEG",
+                "n06874185\\n06874185_35956.JPEG",
+                "n03891332\\n03891332_593.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "All the streets where once was pity",
+            "start_time": 39.54,
+            "end_time": 42.45,
+            "selected_image_ids": [
+                1177792,
+                1177774,
+                1177038,
+                1178548
+            ],
+            "selected_image_paths": [
+                "n06794110\\n06794110_753.JPEG",
+                "n06794110\\n06794110_6947.JPEG",
+                "n06794110\\n06794110_2401.JPEG",
+                "n06874185\\n06874185_28192.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "Mr. Blue Sky is living here today!",
+            "start_time": 42.45,
+            "end_time": 46.47,
+            "selected_image_ids": [
+                715519,
+                827481,
+                520608,
+                639612,
+                518726,
+                546443,
+                674813,
+                546194,
+                716209,
+                1178285
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n02793495\\n02793495_4585.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n02793495\\n02793495_22288.JPEG",
+                "n03355925\\n03355925_9405.JPEG",
+                "n06874185\\n06874185_222.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "Hey, hey, hey!",
+            "start_time": 46.47,
+            "end_time": 48.57,
+            "selected_image_ids": [
+                1072159,
+                1071241,
+                759611,
+                1071814,
+                1071117,
+                1072934
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04355933\\n04355933_1654.JPEG",
+                "n04356056\\n04356056_6479.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "Mr. Blue Sky",
+            "start_time": 48.57,
+            "end_time": 50.04,
+            "selected_image_ids": [
+                715519,
+                518726,
+                827481,
+                639612,
+                520608,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "Please tell us why",
+            "start_time": 50.04,
+            "end_time": 51.57,
+            "selected_image_ids": [
+                812691,
+                335350
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_22128.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "You had to hide away for so long (so long)",
+            "start_time": 51.57,
+            "end_time": 56.07,
+            "selected_image_ids": [
+                1158199,
+                759611,
+                1011599,
+                1158853
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_679.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04201297\\n04201297_5990.JPEG",
+                "n04590129\\n04590129_19805.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "Where did we go wrong?",
+            "start_time": 56.07,
+            "end_time": 59.58,
+            "selected_image_ids": [
+                1014183,
+                1177786
+            ],
+            "selected_image_paths": [
+                "n04204347\\n04204347_4995.JPEG",
+                "n06794110\\n06794110_7361.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "Mr. Blue Sky",
+            "start_time": 59.58,
+            "end_time": 61.13,
+            "selected_image_ids": [
+                715519,
+                518726,
+                827481,
+                639612,
+                520608,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Please tell us why",
+            "start_time": 61.13,
+            "end_time": 62.53,
+            "selected_image_ids": [
+                812691,
+                335350
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_22128.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "You had to hide away for so long (so long)",
+            "start_time": 62.53,
+            "end_time": 66.89,
+            "selected_image_ids": [
+                1158199,
+                759611,
+                1011599,
+                1158853
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_679.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04201297\\n04201297_5990.JPEG",
+                "n04590129\\n04590129_19805.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "Where did we go wrong?",
+            "start_time": 66.89,
+            "end_time": 70.07,
+            "selected_image_ids": [
+                1014183,
+                1177786
+            ],
+            "selected_image_paths": [
+                "n04204347\\n04204347_4995.JPEG",
+                "n06794110\\n06794110_7361.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "Hey, you with the pretty face",
+            "start_time": 89.36,
+            "end_time": 91.72,
+            "selected_image_ids": [
+                1072159,
+                926513,
+                1071840,
+                807377,
+                1072014,
+                1072469,
+                1071586,
+                1072985,
+                1071117
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n03942813\\n03942813_8236.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n03676483\\n03676483_18254.JPEG",
+                "n04355933\\n04355933_9482.JPEG",
+                "n04356056\\n04356056_3571.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n04356056\\n04356056_6825.JPEG",
+                "n04355933\\n04355933_1654.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "Welcome to the human race!",
+            "start_time": 91.72,
+            "end_time": 95.17,
+            "selected_image_ids": [
+                692577,
+                692808,
+                692673,
+                692325,
+                692757
+            ],
+            "selected_image_paths": [
+                "n03223299\\n03223299_43986.JPEG",
+                "n03223299\\n03223299_6493.JPEG",
+                "n03223299\\n03223299_50286.JPEG",
+                "n03223299\\n03223299_25590.JPEG",
+                "n03223299\\n03223299_6062.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "A celebration",
+            "start_time": 95.17,
+            "end_time": 96.62,
+            "selected_image_ids": [
+                1161209,
+                1104771,
+                1100962,
+                1149712,
+                734844
+            ],
+            "selected_image_paths": [
+                "n04591713\\n04591713_1658.JPEG",
+                "n04456115\\n04456115_5794.JPEG",
+                "n04442312\\n04442312_7644.JPEG",
+                "n04557648\\n04557648_10302.JPEG",
+                "n03443371\\n03443371_2031.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "Mr. Blue Sky's up there waiting",
+            "start_time": 96.62,
+            "end_time": 99.26,
+            "selected_image_ids": [
+                827481,
+                520608,
+                639612,
+                715197,
+                518726,
+                770490,
+                738059,
+                674813,
+                629517
+            ],
+            "selected_image_paths": [
+                "n03729826\\n03729826_8431.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03355925\\n03355925_15552.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03532672\\n03532672_35955.JPEG",
+                "n03445777\\n03445777_7931.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03000134\\n03000134_763.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "And today is the day we've waited for",
+            "start_time": 99.26,
+            "end_time": 103.5,
+            "selected_image_ids": [
+                364869,
+                775238
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n03544143\\n03544143_13808.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "Ah, ah, ah",
+            "start_time": 103.5,
+            "end_time": 105.27,
+            "selected_image_ids": [
+                364869
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "Oh, Mr. Blue Sky",
+            "start_time": 105.27,
+            "end_time": 107.03,
+            "selected_image_ids": [
+                715519,
+                827481,
+                520608,
+                639612,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "Please tell us why",
+            "start_time": 107.03,
+            "end_time": 108.36,
+            "selected_image_ids": [
+                812691,
+                335350
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_22128.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "You had to hide away for so long (so long)",
+            "start_time": 108.36,
+            "end_time": 112.76,
+            "selected_image_ids": [
+                1158199,
+                759611,
+                1011599,
+                1158853
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_679.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04201297\\n04201297_5990.JPEG",
+                "n04590129\\n04590129_19805.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Where did we go wrong?",
+            "start_time": 112.76,
+            "end_time": 116.51,
+            "selected_image_ids": [
+                1014183,
+                1177786
+            ],
+            "selected_image_paths": [
+                "n04204347\\n04204347_4995.JPEG",
+                "n06794110\\n06794110_7361.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "Hey there Mr. Blue!",
+            "start_time": 116.51,
+            "end_time": 119.09,
+            "selected_image_ids": [
+                362891,
+                925979,
+                18987,
+                822448
+            ],
+            "selected_image_paths": [
+                "n02123597\\n02123597_10086.JPEG",
+                "n03942813\\n03942813_3102.JPEG",
+                "n01537544\\n01537544_349.JPEG",
+                "n03720891\\n03720891_11398.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "We're so pleased to be with you",
+            "start_time": 119.09,
+            "end_time": 121.83,
+            "selected_image_ids": [
+                1160852,
+                364869,
+                200529,
+                990234
+            ],
+            "selected_image_paths": [
+                "n04591157\\n04591157_6908.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n02086240\\n02086240_2488.JPEG",
+                "n04131690\\n04131690_12617.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "Look around, see what you do",
+            "start_time": 121.83,
+            "end_time": 124.52,
+            "selected_image_ids": [
+                812450,
+                574694,
+                574749,
+                574097,
+                574910
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG",
+                "n02841315\\n02841315_2630.JPEG",
+                "n02841315\\n02841315_3045.JPEG",
+                "n02841315\\n02841315_12893.JPEG",
+                "n02841315\\n02841315_4359.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "Everybody smiles at you",
+            "start_time": 124.52,
+            "end_time": 127.07,
+            "selected_image_ids": [
+                990234,
+                364869,
+                1071241,
+                926066,
+                1239732,
+                1218215,
+                1100654,
+                1239726,
+                1222278
+            ],
+            "selected_image_paths": [
+                "n04131690\\n04131690_12617.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n03942813\\n03942813_399.JPEG",
+                "n07930864\\n07930864_13293.JPEG",
+                "n07749582\\n07749582_30701.JPEG",
+                "n04442312\\n04442312_32075.JPEG",
+                "n07930864\\n07930864_13149.JPEG",
+                "n07753592\\n07753592_4371.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "Hey there Mr. Blue!",
+            "start_time": 127.07,
+            "end_time": 129.62,
+            "selected_image_ids": [
+                362891,
+                925979,
+                18987,
+                822448
+            ],
+            "selected_image_paths": [
+                "n02123597\\n02123597_10086.JPEG",
+                "n03942813\\n03942813_3102.JPEG",
+                "n01537544\\n01537544_349.JPEG",
+                "n03720891\\n03720891_11398.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "We're so pleased to be with you",
+            "start_time": 129.62,
+            "end_time": 132.63,
+            "selected_image_ids": [
+                1160852,
+                364869,
+                200529,
+                990234
+            ],
+            "selected_image_paths": [
+                "n04591157\\n04591157_6908.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n02086240\\n02086240_2488.JPEG",
+                "n04131690\\n04131690_12617.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "Look around, see what you do",
+            "start_time": 132.63,
+            "end_time": 134.84,
+            "selected_image_ids": [
+                812450,
+                574694,
+                574749,
+                574097,
+                574910
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG",
+                "n02841315\\n02841315_2630.JPEG",
+                "n02841315\\n02841315_3045.JPEG",
+                "n02841315\\n02841315_12893.JPEG",
+                "n02841315\\n02841315_4359.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "Everybody smiles at you!",
+            "start_time": 134.84,
+            "end_time": 140.23,
+            "selected_image_ids": [
+                990234,
+                926066,
+                1239732,
+                364869,
+                1071241,
+                1218215,
+                1100654,
+                1239726,
+                229569
+            ],
+            "selected_image_paths": [
+                "n04131690\\n04131690_12617.JPEG",
+                "n03942813\\n03942813_399.JPEG",
+                "n07930864\\n07930864_13293.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n07749582\\n07749582_30701.JPEG",
+                "n04442312\\n04442312_32075.JPEG",
+                "n07930864\\n07930864_13149.JPEG",
+                "n02093256\\n02093256_48013.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": "Mr. Blue Sky",
+            "start_time": 140.23,
+            "end_time": 144.49,
+            "selected_image_ids": [
+                715519,
+                518726,
+                827481,
+                639612,
+                520608,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": "Mr. Blue Sky",
+            "start_time": 144.49,
+            "end_time": 149.7,
+            "selected_image_ids": [
+                715519,
+                518726,
+                827481,
+                639612,
+                520608,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 41,
+            "text": "Mr. Blue Sky",
+            "start_time": 149.7,
+            "end_time": 156.49,
+            "selected_image_ids": [
+                715519,
+                518726,
+                827481,
+                639612,
+                520608,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 42,
+            "text": "Mr. Blue, you did it right",
+            "start_time": 156.49,
+            "end_time": 159.46,
+            "selected_image_ids": [
+                362891,
+                229361,
+                925979
+            ],
+            "selected_image_paths": [
+                "n02123597\\n02123597_10086.JPEG",
+                "n02093256\\n02093256_3177.JPEG",
+                "n03942813\\n03942813_3102.JPEG"
+            ]
+        },
+        {
+            "index": 43,
+            "text": "But soon comes Mr. Night",
+            "start_time": 159.46,
+            "end_time": 162.66,
+            "selected_image_ids": [
+                795203,
+                1048495,
+                680719,
+                1244377,
+                901128,
+                1084339
+            ],
+            "selected_image_paths": [
+                "n03637318\\n03637318_29876.JPEG",
+                "n04286575\\n04286575_38978.JPEG",
+                "n03196217\\n03196217_1135.JPEG",
+                "n09229709\\n09229709_5934.JPEG",
+                "n03888605\\n03888605_36494.JPEG",
+                "n04380533\\n04380533_5701.JPEG"
+            ]
+        },
+        {
+            "index": 44,
+            "text": "Creeping over, now his hand is on your shoulder",
+            "start_time": 162.66,
+            "end_time": 166.63,
+            "selected_image_ids": [
+                672607,
+                795873
+            ],
+            "selected_image_paths": [
+                "n03141823\\n03141823_7382.JPEG",
+                "n03642806\\n03642806_13569.JPEG"
+            ]
+        },
+        {
+            "index": 45,
+            "text": "Never mind, I'll remember you this",
+            "start_time": 166.63,
+            "end_time": 170.84,
+            "selected_image_ids": [
+                724019,
+                983685,
+                759611
+            ],
+            "selected_image_paths": [
+                "n03388183\\n03388183_9800.JPEG",
+                "n04116512\\n04116512_73433.JPEG",
+                "n03485794\\n03485794_6855.JPEG"
+            ]
+        },
+        {
+            "index": 46,
+            "text": "I'll remember you this way!",
+            "start_time": 170.84,
+            "end_time": 173.04,
+            "selected_image_ids": [
+                992523,
+                918234,
+                269342
+            ],
+            "selected_image_paths": [
+                "n04133789\\n04133789_8559.JPEG",
+                "n03930313\\n03930313_16952.JPEG",
+                "n02100236\\n02100236_922.JPEG"
+            ]
+        },
+        {
+            "index": 47,
+            "text": "Mr. Blue Sky",
+            "start_time": 173.04,
+            "end_time": 174.12,
+            "selected_image_ids": [
+                715519,
+                518726,
+                827481,
+                639612,
+                520608,
+                674813,
+                770490
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03532672\\n03532672_35955.JPEG"
+            ]
+        },
+        {
+            "index": 48,
+            "text": "Please tell us why",
+            "start_time": 174.12,
+            "end_time": 175.97,
+            "selected_image_ids": [
+                812691,
+                335350
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_22128.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 49,
+            "text": "You had to hide away for so long (so long)",
+            "start_time": 175.97,
+            "end_time": 180.08,
+            "selected_image_ids": [
+                1158199,
+                759611,
+                1011599,
+                1158853
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_679.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04201297\\n04201297_5990.JPEG",
+                "n04590129\\n04590129_19805.JPEG"
+            ]
+        },
+        {
+            "index": 50,
+            "text": "Where did we go wrong?",
+            "start_time": 180.08,
+            "end_time": 183.6,
+            "selected_image_ids": [
+                1014183,
+                1177786
+            ],
+            "selected_image_paths": [
+                "n04204347\\n04204347_4995.JPEG",
+                "n06794110\\n06794110_7361.JPEG"
+            ]
+        },
+        {
+            "index": 51,
+            "text": "Hey there Mr. Blue (sky)",
+            "start_time": 183.6,
+            "end_time": 186.04,
+            "selected_image_ids": [
+                715519,
+                639612,
+                827481,
+                518726,
+                520608,
+                674813,
+                715197
+            ],
+            "selected_image_paths": [
+                "n03355925\\n03355925_20331.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n02692877\\n02692877_4877.JPEG",
+                "n03160309\\n03160309_33618.JPEG",
+                "n03355925\\n03355925_15552.JPEG"
+            ]
+        },
+        {
+            "index": 52,
+            "text": "We're so pleased to be with you (sky)",
+            "start_time": 186.04,
+            "end_time": 188.8,
+            "selected_image_ids": [
+                520608,
+                518726,
+                639612,
+                827481,
+                518925
+            ],
+            "selected_image_paths": [
+                "n02692877\\n02692877_4877.JPEG",
+                "n02690373\\n02690373_2219.JPEG",
+                "n03028079\\n03028079_60013.JPEG",
+                "n03729826\\n03729826_8431.JPEG",
+                "n02690373\\n02690373_3871.JPEG"
+            ]
+        },
+        {
+            "index": 53,
+            "text": "Look around see what you do (blue)",
+            "start_time": 188.8,
+            "end_time": 191.47,
+            "selected_image_ids": [
+                1157669,
+                650575,
+                1159276,
+                1157247,
+                138591
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_2917.JPEG",
+                "n03065424\\n03065424_46265.JPEG",
+                "n04590129\\n04590129_3153.JPEG",
+                "n04589890\\n04589890_10327.JPEG",
+                "n01910747\\n01910747_11727.JPEG"
+            ]
+        },
+        {
+            "index": 54,
+            "text": "Everybody smiles at you",
+            "start_time": 191.47,
+            "end_time": 195.47,
+            "selected_image_ids": [
+                990234,
+                364869,
+                1071241,
+                926066,
+                1239732,
+                1218215,
+                1100654,
+                1239726,
+                1222278
+            ],
+            "selected_image_paths": [
+                "n04131690\\n04131690_12617.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n03942813\\n03942813_399.JPEG",
+                "n07930864\\n07930864_13293.JPEG",
+                "n07749582\\n07749582_30701.JPEG",
+                "n04442312\\n04442312_32075.JPEG",
+                "n07930864\\n07930864_13149.JPEG",
+                "n07753592\\n07753592_4371.JPEG"
+            ]
+        },
+        {
+            "index": 55,
+            "text": "Please turn me over",
+            "start_time": 290.56,
+            "end_time": 295.49,
+            "selected_image_ids": [
+                1178143,
+                359045
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_18745.JPEG",
+                "n02123045\\n02123045_10525.JPEG"
+            ]
+        }
+    ]
+}

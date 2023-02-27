@@ -35,12 +35,13 @@
 
 * **Week 13** Make videography script with moviepy.
 * **Week 14** Design and create Collections and About pages.
-* **Week 15**
-* **Week 16**
-* **Week 17**
-* **Week 19**
-* **Week 20**
-* **Week 21**
-* **Week 22**
+* **Week 15** Edit ECIR Videography paper for camera-ready submission.
+* **Week 16** Write Introduction of dissertation.
+* **Week 17** Write Analysis/Requirements of dissertation.
+* **Week 18** Write a new demonstration paper for SIGIR '23.
+* **Week 19** Write User stories for Requirements of dissertation and conduct Usability Evaluations.
+* **Week 20** Write Background of dissertation.
+* **Week 21** Write Implementation of dissertation.
+* **Week 22** Write Conclusion of dissertation.
 * **Week 23 [TERM ENDS]**
 * **Week 24** Dissertation submission deadline and presentations.

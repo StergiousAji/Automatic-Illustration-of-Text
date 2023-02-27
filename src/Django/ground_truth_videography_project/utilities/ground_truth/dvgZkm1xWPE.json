@@ -1,0 +1,753 @@
+{
+    "id": "dvgZkm1xWPE",
+    "artist": "Coldplay",
+    "title": "Viva La Vida",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "I used to rule the world",
+            "start_time": 12.43,
+            "end_time": 16.43,
+            "selected_image_ids": [
+                1098081,
+                197576,
+                1097745,
+                1098395,
+                1098372
+            ],
+            "selected_image_paths": [
+                "n04429376\\n04429376_29125.JPEG",
+                "n02085782\\n02085782_940.JPEG",
+                "n04429376\\n04429376_15938.JPEG",
+                "n04429376\\n04429376_694.JPEG",
+                "n04429376\\n04429376_619.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "Seas would rise when I gave the word",
+            "start_time": 16.43,
+            "end_time": 19.38,
+            "selected_image_ids": [
+                1168889,
+                591267,
+                1253808,
+                1253138,
+                591462
+            ],
+            "selected_image_paths": [
+                "n04606251\\n04606251_10337.JPEG",
+                "n02894605\\n02894605_31207.JPEG",
+                "n09428293\\n09428293_9486.JPEG",
+                "n09428293\\n09428293_36474.JPEG",
+                "n02894605\\n02894605_39177.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "Now in the morning, I sleep alone",
+            "start_time": 19.38,
+            "end_time": 23.36,
+            "selected_image_ids": [
+                362578,
+                221159,
+                1159259,
+                1065047,
+                1064318,
+                961481
+            ],
+            "selected_image_paths": [
+                "n02123394\\n02123394_6820.JPEG",
+                "n02091134\\n02091134_6603.JPEG",
+                "n04590129\\n04590129_3060.JPEG",
+                "n04344873\\n04344873_38690.JPEG",
+                "n04344873\\n04344873_11087.JPEG",
+                "n04033995\\n04033995_54355.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "Sweep the streets I used to own",
+            "start_time": 23.36,
+            "end_time": 28.43,
+            "selected_image_ids": [
+                594694,
+                1015452,
+                594464,
+                594718
+            ],
+            "selected_image_paths": [
+                "n02906734\\n02906734_900.JPEG",
+                "n04208210\\n04208210_39394.JPEG",
+                "n02906734\\n02906734_4617.JPEG",
+                "n02906734\\n02906734_9599.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "I used to roll the dice",
+            "start_time": 40.12,
+            "end_time": 44.67,
+            "selected_image_ids": [
+                276447,
+                276874,
+                1096033,
+                1095342
+            ],
+            "selected_image_paths": [
+                "n02101556\\n02101556_2918.JPEG",
+                "n02101556\\n02101556_6154.JPEG",
+                "n04423845\\n04423845_5951.JPEG",
+                "n04423845\\n04423845_17233.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "Feel the fear in my enemy's eyes",
+            "start_time": 44.67,
+            "end_time": 47.92,
+            "selected_image_ids": [
+                1008708,
+                362491,
+                1071840,
+                731845,
+                362350,
+                324724
+            ],
+            "selected_image_paths": [
+                "n04192698\\n04192698_27529.JPEG",
+                "n02123394\\n02123394_6112.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n03424325\\n03424325_11583.JPEG",
+                "n02123394\\n02123394_4964.JPEG",
+                "n02110958\\n02110958_11202.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "Listened as the crowd would sing",
+            "start_time": 47.92,
+            "end_time": 51.06,
+            "selected_image_ids": [
+                835325,
+                834785,
+                834361
+            ],
+            "selected_image_paths": [
+                "n03759954\\n03759954_8955.JPEG",
+                "n03759954\\n03759954_21541.JPEG",
+                "n03759954\\n03759954_17686.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "\"Now the old king is dead, long live the king\"",
+            "start_time": 51.06,
+            "end_time": 55.0,
+            "selected_image_ids": [
+                799953
+            ],
+            "selected_image_paths": [
+                "n03658185\\n03658185_17224.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "One minute I held the key",
+            "start_time": 55.0,
+            "end_time": 58.47,
+            "selected_image_ids": [
+                657910,
+                989307
+            ],
+            "selected_image_paths": [
+                "n03109150\\n03109150_2419.JPEG",
+                "n04127249\\n04127249_3436.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "Next, the walls were closed on me",
+            "start_time": 58.47,
+            "end_time": 61.13,
+            "selected_image_ids": [
+                868667,
+                628844,
+                628763,
+                628602
+            ],
+            "selected_image_paths": [
+                "n03804744\\n03804744_18474.JPEG",
+                "n03000134\\n03000134_2580.JPEG",
+                "n03000134\\n03000134_2371.JPEG",
+                "n03000134\\n03000134_1895.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "And I discovered that my castles stand",
+            "start_time": 61.13,
+            "end_time": 65.56,
+            "selected_image_ids": [
+                620669,
+                620992,
+                620983,
+                620794,
+                620824,
+                621051
+            ],
+            "selected_image_paths": [
+                "n02980441\\n02980441_12684.JPEG",
+                "n02980441\\n02980441_2252.JPEG",
+                "n02980441\\n02980441_22027.JPEG",
+                "n02980441\\n02980441_15129.JPEG",
+                "n02980441\\n02980441_15694.JPEG",
+                "n02980441\\n02980441_2540.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "Upon pillars of salt and pillars of sand",
+            "start_time": 65.56,
+            "end_time": 69.46,
+            "selected_image_ids": [
+                990857,
+                1245570,
+                908215,
+                1169171
+            ],
+            "selected_image_paths": [
+                "n04131690\\n04131690_3893.JPEG",
+                "n09246464\\n09246464_41593.JPEG",
+                "n03903868\\n03903868_20523.JPEG",
+                "n04606251\\n04606251_13119.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "I hear Jerusalem bells a-ringing",
+            "start_time": 69.46,
+            "end_time": 72.91,
+            "selected_image_ids": [
+                635457,
+                337173
+            ],
+            "selected_image_paths": [
+                "n03017168\\n03017168_43586.JPEG",
+                "n02113023\\n02113023_6942.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "Roman cavalry choirs are singing",
+            "start_time": 72.91,
+            "end_time": 76.49,
+            "selected_image_ids": [
+                629684,
+                1008878,
+                630581
+            ],
+            "selected_image_paths": [
+                "n03000247\\n03000247_13255.JPEG",
+                "n04192698\\n04192698_35936.JPEG",
+                "n03000247\\n03000247_55088.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "Be my mirror, my sword and shield",
+            "start_time": 76.49,
+            "end_time": 79.93,
+            "selected_image_ids": [
+                893547,
+                912506,
+                800586,
+                808196
+            ],
+            "selected_image_paths": [
+                "n03876231\\n03876231_6601.JPEG",
+                "n03916031\\n03916031_41551.JPEG",
+                "n03658185\\n03658185_9717.JPEG",
+                "n03676483\\n03676483_6993.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "My missionaries in a foreign field",
+            "start_time": 79.93,
+            "end_time": 82.92,
+            "selected_image_ids": [
+                1068769,
+                1069350
+            ],
+            "selected_image_paths": [
+                "n04350905\\n04350905_3127.JPEG",
+                "n04350905\\n04350905_85610.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "For some reason, I can't explain",
+            "start_time": 82.92,
+            "end_time": 86.77,
+            "selected_image_ids": [
+                337173,
+                231528,
+                365026,
+                328882
+            ],
+            "selected_image_paths": [
+                "n02113023\\n02113023_6942.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02124075\\n02124075_5449.JPEG",
+                "n02111500\\n02111500_300.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Once you'd gone, there was never",
+            "start_time": 86.77,
+            "end_time": 89.42,
+            "selected_image_ids": [
+                901663,
+                1177792,
+                1177038,
+                902300,
+                902542
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_1249.JPEG",
+                "n06794110\\n06794110_753.JPEG",
+                "n06794110\\n06794110_2401.JPEG",
+                "n03891251\\n03891251_368.JPEG",
+                "n03891251\\n03891251_5479.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "Never an honest word",
+            "start_time": 89.42,
+            "end_time": 93.13,
+            "selected_image_ids": [
+                891554,
+                989140
+            ],
+            "selected_image_paths": [
+                "n03874599\\n03874599_15537.JPEG",
+                "n04127249\\n04127249_244.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "And that was when I ruled the world",
+            "start_time": 93.13,
+            "end_time": 98.02,
+            "selected_image_ids": [
+                1098081,
+                197576
+            ],
+            "selected_image_paths": [
+                "n04429376\\n04429376_29125.JPEG",
+                "n02085782\\n02085782_940.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "It was a wicked and wild wind",
+            "start_time": 109.94,
+            "end_time": 113.83,
+            "selected_image_ids": [
+                246558,
+                289043,
+                1126443,
+                261618
+            ],
+            "selected_image_paths": [
+                "n02096294\\n02096294_2259.JPEG",
+                "n02105251\\n02105251_31.JPEG",
+                "n04507155\\n04507155_6550.JPEG",
+                "n02098413\\n02098413_8657.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "Blew down the doors to let me in",
+            "start_time": 113.83,
+            "end_time": 116.99,
+            "selected_image_ids": [
+                1011402,
+                277997
+            ],
+            "selected_image_paths": [
+                "n04201297\\n04201297_3681.JPEG",
+                "n02102040\\n02102040_503.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "Shattered windows and the sound of drums",
+            "start_time": 116.99,
+            "end_time": 121.29,
+            "selected_image_ids": [
+                1044933,
+                964697,
+                721813,
+                696911
+            ],
+            "selected_image_paths": [
+                "n04275548\\n04275548_8746.JPEG",
+                "n04040759\\n04040759_13526.JPEG",
+                "n03388043\\n03388043_15351.JPEG",
+                "n03250847\\n03250847_8179.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "People couldn't believe what I'd become",
+            "start_time": 121.29,
+            "end_time": 124.39,
+            "selected_image_ids": [
+                1005912,
+                1070921,
+                587910,
+                597377
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_17689.JPEG",
+                "n04355933\\n04355933_1337.JPEG",
+                "n02883205\\n02883205_4693.JPEG",
+                "n02916936\\n02916936_10710.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "Revolutionaries wait",
+            "start_time": 124.39,
+            "end_time": 128.17,
+            "selected_image_ids": [
+                732629,
+                774933,
+                775175,
+                775497,
+                774942
+            ],
+            "selected_image_paths": [
+                "n03424325\\n03424325_3337.JPEG",
+                "n03544143\\n03544143_10032.JPEG",
+                "n03544143\\n03544143_12711.JPEG",
+                "n03544143\\n03544143_18580.JPEG",
+                "n03544143\\n03544143_10102.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "For my head on a silver plate",
+            "start_time": 128.17,
+            "end_time": 130.86,
+            "selected_image_ids": [
+                1087641,
+                793811
+            ],
+            "selected_image_paths": [
+                "n04398044\\n04398044_17821.JPEG",
+                "n03633091\\n03633091_17073.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "Just a puppet on a lonely string",
+            "start_time": 130.86,
+            "end_time": 135.13,
+            "selected_image_ids": [
+                989148,
+                555846
+            ],
+            "selected_image_paths": [
+                "n04127249\\n04127249_24699.JPEG",
+                "n02804610\\n02804610_9801.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "Oh, who would ever want to be king?",
+            "start_time": 135.13,
+            "end_time": 138.54,
+            "selected_image_ids": [
+                359493,
+                1098146,
+                197576,
+                1098395,
+                1097817,
+                1098081
+            ],
+            "selected_image_paths": [
+                "n02123045\\n02123045_21174.JPEG",
+                "n04429376\\n04429376_3327.JPEG",
+                "n02085782\\n02085782_940.JPEG",
+                "n04429376\\n04429376_694.JPEG",
+                "n04429376\\n04429376_18296.JPEG",
+                "n04429376\\n04429376_29125.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "I hear Jerusalem bells a-ringing",
+            "start_time": 138.54,
+            "end_time": 142.74,
+            "selected_image_ids": [
+                635457,
+                337173
+            ],
+            "selected_image_paths": [
+                "n03017168\\n03017168_43586.JPEG",
+                "n02113023\\n02113023_6942.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Roman cavalry choirs are singing",
+            "start_time": 142.74,
+            "end_time": 146.02,
+            "selected_image_ids": [
+                629684,
+                1008878,
+                630581
+            ],
+            "selected_image_paths": [
+                "n03000247\\n03000247_13255.JPEG",
+                "n04192698\\n04192698_35936.JPEG",
+                "n03000247\\n03000247_55088.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "Be my mirror, my sword and shield",
+            "start_time": 146.02,
+            "end_time": 149.57,
+            "selected_image_ids": [
+                893547,
+                912506,
+                800586,
+                808196
+            ],
+            "selected_image_paths": [
+                "n03876231\\n03876231_6601.JPEG",
+                "n03916031\\n03916031_41551.JPEG",
+                "n03658185\\n03658185_9717.JPEG",
+                "n03676483\\n03676483_6993.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "My missionaries in a foreign field",
+            "start_time": 149.57,
+            "end_time": 152.98,
+            "selected_image_ids": [
+                1068769,
+                1069350
+            ],
+            "selected_image_paths": [
+                "n04350905\\n04350905_3127.JPEG",
+                "n04350905\\n04350905_85610.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "For some reason, I can't explain",
+            "start_time": 152.98,
+            "end_time": 156.3,
+            "selected_image_ids": [
+                337173,
+                231528,
+                365026,
+                328882
+            ],
+            "selected_image_paths": [
+                "n02113023\\n02113023_6942.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02124075\\n02124075_5449.JPEG",
+                "n02111500\\n02111500_300.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "I know Saint Peter won't call my name",
+            "start_time": 156.3,
+            "end_time": 159.54,
+            "selected_image_ids": [
+                1136141,
+                1136077,
+                1136734
+            ],
+            "selected_image_paths": [
+                "n04532106\\n04532106_17863.JPEG",
+                "n04532106\\n04532106_17133.JPEG",
+                "n04532106\\n04532106_8322.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "Never an honest word",
+            "start_time": 159.54,
+            "end_time": 162.9,
+            "selected_image_ids": [
+                891554,
+                989140
+            ],
+            "selected_image_paths": [
+                "n03874599\\n03874599_15537.JPEG",
+                "n04127249\\n04127249_244.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "But that was when I ruled the world",
+            "start_time": 162.9,
+            "end_time": 167.27,
+            "selected_image_ids": [
+                197576
+            ],
+            "selected_image_paths": [
+                "n02085782\\n02085782_940.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "Hear Jerusalem bells a-ringing",
+            "start_time": 179.27,
+            "end_time": 183.96,
+            "selected_image_ids": [
+                635457,
+                635714,
+                635200,
+                634734,
+                635748,
+                635375,
+                635426,
+                635504,
+                634736,
+                634755
+            ],
+            "selected_image_paths": [
+                "n03017168\\n03017168_43586.JPEG",
+                "n03017168\\n03017168_6171.JPEG",
+                "n03017168\\n03017168_28820.JPEG",
+                "n03017168\\n03017168_10648.JPEG",
+                "n03017168\\n03017168_64046.JPEG",
+                "n03017168\\n03017168_38112.JPEG",
+                "n03017168\\n03017168_41977.JPEG",
+                "n03017168\\n03017168_47183.JPEG",
+                "n03017168\\n03017168_10709.JPEG",
+                "n03017168\\n03017168_11182.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "Roman cavalry choirs are singing",
+            "start_time": 186.66,
+            "end_time": 190.07,
+            "selected_image_ids": [
+                629684,
+                1008878,
+                630581
+            ],
+            "selected_image_paths": [
+                "n03000247\\n03000247_13255.JPEG",
+                "n04192698\\n04192698_35936.JPEG",
+                "n03000247\\n03000247_55088.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": "Be my mirror, my sword and shield",
+            "start_time": 190.07,
+            "end_time": 191.87,
+            "selected_image_ids": [
+                893547,
+                912506,
+                800586,
+                808196
+            ],
+            "selected_image_paths": [
+                "n03876231\\n03876231_6601.JPEG",
+                "n03916031\\n03916031_41551.JPEG",
+                "n03658185\\n03658185_9717.JPEG",
+                "n03676483\\n03676483_6993.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": "My missionaries in a foreign field",
+            "start_time": 191.87,
+            "end_time": 195.83,
+            "selected_image_ids": [
+                1068769,
+                1069350
+            ],
+            "selected_image_paths": [
+                "n04350905\\n04350905_3127.JPEG",
+                "n04350905\\n04350905_85610.JPEG"
+            ]
+        },
+        {
+            "index": 41,
+            "text": "For some reason, I can't explain",
+            "start_time": 195.83,
+            "end_time": 198.0,
+            "selected_image_ids": [
+                337173,
+                231528,
+                365026,
+                328882
+            ],
+            "selected_image_paths": [
+                "n02113023\\n02113023_6942.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02124075\\n02124075_5449.JPEG",
+                "n02111500\\n02111500_300.JPEG"
+            ]
+        },
+        {
+            "index": 42,
+            "text": "I know Saint Peter won't call my name",
+            "start_time": 198.0,
+            "end_time": 200.93,
+            "selected_image_ids": [
+                1136141,
+                1136077,
+                1136734
+            ],
+            "selected_image_paths": [
+                "n04532106\\n04532106_17863.JPEG",
+                "n04532106\\n04532106_17133.JPEG",
+                "n04532106\\n04532106_8322.JPEG"
+            ]
+        },
+        {
+            "index": 43,
+            "text": "Never an honest word",
+            "start_time": 200.93,
+            "end_time": 204.8,
+            "selected_image_ids": [
+                891554,
+                989140
+            ],
+            "selected_image_paths": [
+                "n03874599\\n03874599_15537.JPEG",
+                "n04127249\\n04127249_244.JPEG"
+            ]
+        },
+        {
+            "index": 44,
+            "text": "But that was when I ruled the world",
+            "start_time": 204.8,
+            "end_time": 207.35,
+            "selected_image_ids": [
+                197576
+            ],
+            "selected_image_paths": [
+                "n02085782\\n02085782_940.JPEG"
+            ]
+        }
+    ]
+}
