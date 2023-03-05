@@ -1,0 +1,831 @@
+{
+    "id": "Tw0zYd0eIlk",
+    "artist": "Phoebe Bridgers",
+    "title": "Kyoto",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "Day off in Kyoto",
+            "start_time": 5.93,
+            "end_time": 8.15,
+            "selected_image_ids": [
+                1158797,
+                1011873,
+                1011978,
+                787921
+            ],
+            "selected_image_paths": [
+                "n04590129\\n04590129_17925.JPEG",
+                "n04201297\\n04201297_8354.JPEG",
+                "n04201297\\n04201297_9283.JPEG",
+                "n03617480\\n03617480_1007.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "Got bored at the temple",
+            "start_time": 8.15,
+            "end_time": 9.74,
+            "selected_image_ids": [
+                829934,
+                1097822
+            ],
+            "selected_image_paths": [
+                "n03733281\\n03733281_60319.JPEG",
+                "n04429376\\n04429376_18377.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "Looked around at the 7-Eleven",
+            "start_time": 9.74,
+            "end_time": 13.38,
+            "selected_image_ids": [
+                1134382,
+                1135096,
+                1135305,
+                1134248,
+                1134390,
+                1024730,
+                888553,
+                1135163
+            ],
+            "selected_image_paths": [
+                "n04525305\\n04525305_10438.JPEG",
+                "n04525305\\n04525305_402.JPEG",
+                "n04525305\\n04525305_7162.JPEG",
+                "n04525305\\n04525305_10012.JPEG",
+                "n04525305\\n04525305_10455.JPEG",
+                "n04239074\\n04239074_7786.JPEG",
+                "n03871628\\n03871628_9855.JPEG",
+                "n04525305\\n04525305_4781.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "The band took the speed train",
+            "start_time": 13.38,
+            "end_time": 15.53,
+            "selected_image_ids": [
+                599660,
+                599493,
+                598765,
+                598913,
+                599573,
+                599687,
+                599220,
+                599363
+            ],
+            "selected_image_paths": [
+                "n02917067\\n02917067_7556.JPEG",
+                "n02917067\\n02917067_5490.JPEG",
+                "n02917067\\n02917067_13760.JPEG",
+                "n02917067\\n02917067_16100.JPEG",
+                "n02917067\\n02917067_6476.JPEG",
+                "n02917067\\n02917067_8051.JPEG",
+                "n02917067\\n02917067_26379.JPEG",
+                "n02917067\\n02917067_3770.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "Went to the arcade",
+            "start_time": 15.53,
+            "end_time": 17.12,
+            "selected_image_ids": [
+                936434,
+                1108084,
+                787889,
+                787242,
+                640663,
+                1025320,
+                1089450
+            ],
+            "selected_image_paths": [
+                "n03970156\\n03970156_12331.JPEG",
+                "n04462240\\n04462240_18916.JPEG",
+                "n03602883\\n03602883_9880.JPEG",
+                "n03602883\\n03602883_16170.JPEG",
+                "n03032252\\n03032252_46214.JPEG",
+                "n04243546\\n04243546_15864.JPEG",
+                "n04399382\\n04399382_354.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "I wanted to go, but I didn't",
+            "start_time": 17.12,
+            "end_time": 20.34,
+            "selected_image_ids": [
+                1178580,
+                1177295,
+                1177049,
+                1178287,
+                1177792,
+                1176734,
+                1101458
+            ],
+            "selected_image_paths": [
+                "n06874185\\n06874185_29059.JPEG",
+                "n06794110\\n06794110_3709.JPEG",
+                "n06794110\\n06794110_2455.JPEG",
+                "n06874185\\n06874185_2225.JPEG",
+                "n06794110\\n06794110_753.JPEG",
+                "n06794110\\n06794110_1531.JPEG",
+                "n04443257\\n04443257_1743.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "You called me from a payphone",
+            "start_time": 20.34,
+            "end_time": 22.8,
+            "selected_image_ids": [
+                906757,
+                907079,
+                906721,
+                906810,
+                907686,
+                906646,
+                907907,
+                906742,
+                907655,
+                907526
+            ],
+            "selected_image_paths": [
+                "n03902125\\n03902125_13230.JPEG",
+                "n03902125\\n03902125_20807.JPEG",
+                "n03902125\\n03902125_12300.JPEG",
+                "n03902125\\n03902125_14201.JPEG",
+                "n03902125\\n03902125_6247.JPEG",
+                "n03902125\\n03902125_10898.JPEG",
+                "n03902125\\n03902125_9846.JPEG",
+                "n03902125\\n03902125_13009.JPEG",
+                "n03902125\\n03902125_5986.JPEG",
+                "n03902125\\n03902125_4810.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "They still got payphones",
+            "start_time": 22.8,
+            "end_time": 24.78,
+            "selected_image_ids": [
+                906907,
+                907784,
+                907781,
+                906721,
+                906757,
+                906631,
+                907686,
+                907301,
+                907724,
+                734233
+            ],
+            "selected_image_paths": [
+                "n03902125\\n03902125_15556.JPEG",
+                "n03902125\\n03902125_7599.JPEG",
+                "n03902125\\n03902125_75.JPEG",
+                "n03902125\\n03902125_12300.JPEG",
+                "n03902125\\n03902125_13230.JPEG",
+                "n03902125\\n03902125_10645.JPEG",
+                "n03902125\\n03902125_6247.JPEG",
+                "n03902125\\n03902125_2875.JPEG",
+                "n03902125\\n03902125_6611.JPEG",
+                "n03425413\\n03425413_7371.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "It cost a dollar a minute",
+            "start_time": 24.78,
+            "end_time": 27.67,
+            "selected_image_ids": [
+                1144191,
+                1280459,
+                898287,
+                1221863
+            ],
+            "selected_image_paths": [
+                "n04548362\\n04548362_6489.JPEG",
+                "n15075141\\n15075141_2743.JPEG",
+                "n03887697\\n03887697_4764.JPEG",
+                "n07753592\\n07753592_16580.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "To tell me you're getting sober",
+            "start_time": 27.67,
+            "end_time": 29.92,
+            "selected_image_ids": [
+                735562
+            ],
+            "selected_image_paths": [
+                "n03443371\\n03443371_8145.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "And you wrote me a letter",
+            "start_time": 29.92,
+            "end_time": 32.33,
+            "selected_image_ids": [
+                705111,
+                537078,
+                723585,
+                723411,
+                572742,
+                959568,
+                723346,
+                982572,
+                982890,
+                723350
+            ],
+            "selected_image_paths": [
+                "n03291819\\n03291819_13612.JPEG",
+                "n02783161\\n02783161_26753.JPEG",
+                "n03388183\\n03388183_4661.JPEG",
+                "n03388183\\n03388183_317.JPEG",
+                "n02840245\\n02840245_11007.JPEG",
+                "n04033901\\n04033901_20456.JPEG",
+                "n03388183\\n03388183_2728.JPEG",
+                "n04116512\\n04116512_10213.JPEG",
+                "n04116512\\n04116512_20037.JPEG",
+                "n03388183\\n03388183_27515.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "But I don't have to read it",
+            "start_time": 32.33,
+            "end_time": 36.92,
+            "selected_image_ids": [
+                325543,
+                583418,
+                337988,
+                293975,
+                365002
+            ],
+            "selected_image_paths": [
+                "n02110958\\n02110958_5584.JPEG",
+                "n02871525\\n02871525_19946.JPEG",
+                "n02113186\\n02113186_2443.JPEG",
+                "n02105855\\n02105855_11615.JPEG",
+                "n02124075\\n02124075_5204.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "I'm gonna kill you",
+            "start_time": 36.92,
+            "end_time": 41.61,
+            "selected_image_ids": [
+                641340,
+                753515,
+                977939,
+                977570,
+                1129518,
+                641922,
+                641681,
+                977551
+            ],
+            "selected_image_paths": [
+                "n03041632\\n03041632_15063.JPEG",
+                "n03481172\\n03481172_10237.JPEG",
+                "n04086273\\n04086273_26567.JPEG",
+                "n04086273\\n04086273_16302.JPEG",
+                "n04517823\\n04517823_14995.JPEG",
+                "n03041632\\n03041632_44912.JPEG",
+                "n03041632\\n03041632_31483.JPEG",
+                "n04086273\\n04086273_15816.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "If you don't beat me to it",
+            "start_time": 41.61,
+            "end_time": 43.99,
+            "selected_image_ids": [
+                641340,
+                754115,
+                753515
+            ],
+            "selected_image_paths": [
+                "n03041632\\n03041632_15063.JPEG",
+                "n03481172\\n03481172_25812.JPEG",
+                "n03481172\\n03481172_10237.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "Dreaming through Tokyo skies",
+            "start_time": 43.99,
+            "end_time": 50.71,
+            "selected_image_ids": [
+                518726,
+                715519,
+                576028,
+                336987,
+                536299,
+                1157737
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n03355925\\n03355925_20331.JPEG",
+                "n02843684\\n02843684_3635.JPEG",
+                "n02113023\\n02113023_5277.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n04589890\\n04589890_3420.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "I wanted to see the world",
+            "start_time": 50.71,
+            "end_time": 56.13,
+            "selected_image_ids": [
+                1072160,
+                1072600,
+                611299,
+                610906,
+                1072839
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1683.JPEG",
+                "n04356056\\n04356056_437.JPEG",
+                "n02965783\\n02965783_6750.JPEG",
+                "n02965783\\n02965783_4596.JPEG",
+                "n04356056\\n04356056_5824.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "Then I flew over the ocean",
+            "start_time": 56.13,
+            "end_time": 58.87,
+            "selected_image_ids": [
+                1163278,
+                1163139,
+                1163333,
+                1162406,
+                1163329,
+                186708,
+                1163365,
+                1162398
+            ],
+            "selected_image_paths": [
+                "n04592741\\n04592741_5511.JPEG",
+                "n04592741\\n04592741_4011.JPEG",
+                "n04592741\\n04592741_6089.JPEG",
+                "n04592741\\n04592741_10901.JPEG",
+                "n04592741\\n04592741_6045.JPEG",
+                "n02051845\\n02051845_1238.JPEG",
+                "n04592741\\n04592741_6495.JPEG",
+                "n04592741\\n04592741_10846.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "And I changed my mind (woo)",
+            "start_time": 58.87,
+            "end_time": 70.1,
+            "selected_image_ids": [
+                1071840,
+                1072159,
+                1124524
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG",
+                "n04505470\\n04505470_2994.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "Sunset's been a freak show",
+            "start_time": 82.95,
+            "end_time": 85.22,
+            "selected_image_ids": [
+                1157737,
+                1157717,
+                1157918,
+                628741,
+                1178380,
+                1157910,
+                1157558
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_3420.JPEG",
+                "n04589890\\n04589890_3300.JPEG",
+                "n04589890\\n04589890_4450.JPEG",
+                "n03000134\\n03000134_2329.JPEG",
+                "n06874185\\n06874185_24491.JPEG",
+                "n04589890\\n04589890_4409.JPEG",
+                "n04589890\\n04589890_2220.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "On the weekend, so",
+            "start_time": 85.22,
+            "end_time": 87.02,
+            "selected_image_ids": [
+                364869,
+                195956,
+                333009,
+                936328
+            ],
+            "selected_image_paths": [
+                "n02124075\\n02124075_353.JPEG",
+                "n02085620\\n02085620_2246.JPEG",
+                "n02112137\\n02112137_17832.JPEG",
+                "n03970156\\n03970156_10494.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "I've been driving out to the suburbs",
+            "start_time": 87.02,
+            "end_time": 90.38,
+            "selected_image_ids": [
+                610911,
+                1005741,
+                610246,
+                611296
+            ],
+            "selected_image_paths": [
+                "n02965783\\n02965783_4612.JPEG",
+                "n04162706\\n04162706_12964.JPEG",
+                "n02965783\\n02965783_1122.JPEG",
+                "n02965783\\n02965783_6712.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "To park at the Goodwill",
+            "start_time": 90.38,
+            "end_time": 92.49,
+            "selected_image_ids": [
+                903988,
+                1013761,
+                1014223,
+                1013825,
+                1013369
+            ],
+            "selected_image_paths": [
+                "n03891332\\n03891332_6447.JPEG",
+                "n04204347\\n04204347_2660.JPEG",
+                "n04204347\\n04204347_523.JPEG",
+                "n04204347\\n04204347_2973.JPEG",
+                "n04204347\\n04204347_10111.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "And stare at the chemtrails",
+            "start_time": 92.49,
+            "end_time": 94.8,
+            "selected_image_ids": [
+                939513,
+                1040801,
+                953419,
+                518848
+            ],
+            "selected_image_paths": [
+                "n03976657\\n03976657_25369.JPEG",
+                "n04266014\\n04266014_5519.JPEG",
+                "n04008634\\n04008634_24388.JPEG",
+                "n02690373\\n02690373_3167.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "With my little brother",
+            "start_time": 94.8,
+            "end_time": 97.63,
+            "selected_image_ids": [
+                680226,
+                611334,
+                1014007,
+                937359,
+                604334,
+                1021875
+            ],
+            "selected_image_paths": [
+                "n03188531\\n03188531_34694.JPEG",
+                "n02965783\\n02965783_699.JPEG",
+                "n04204347\\n04204347_4021.JPEG",
+                "n03970156\\n03970156_5948.JPEG",
+                "n02948072\\n02948072_33850.JPEG",
+                "n04235860\\n04235860_4328.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "He said you called on his birthday",
+            "start_time": 97.63,
+            "end_time": 99.56,
+            "selected_image_ids": [
+                222059,
+                196004,
+                535364,
+                285207
+            ],
+            "selected_image_paths": [
+                "n02091244\\n02091244_266.JPEG",
+                "n02085620\\n02085620_2665.JPEG",
+                "n02782093\\n02782093_1464.JPEG",
+                "n02104365\\n02104365_3806.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "You were off by like ten days",
+            "start_time": 99.56,
+            "end_time": 101.56,
+            "selected_image_ids": [
+                524863,
+                335350
+            ],
+            "selected_image_paths": [
+                "n02708093\\n02708093_116.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "But you get a few points for tryin'",
+            "start_time": 101.56,
+            "end_time": 104.59,
+            "selected_image_ids": [
+                1006541,
+                1177661,
+                1053263
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_39450.JPEG",
+                "n06794110\\n06794110_6291.JPEG",
+                "n04311174\\n04311174_3657.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "Remember getting the truck fixed",
+            "start_time": 104.59,
+            "end_time": 106.92,
+            "selected_image_ids": [
+                1029479,
+                1107566,
+                1106935,
+                920071,
+                1110595,
+                1110432
+            ],
+            "selected_image_paths": [
+                "n04252225\\n04252225_24120.JPEG",
+                "n04461696\\n04461696_943.JPEG",
+                "n04461696\\n04461696_2316.JPEG",
+                "n03930630\\n03930630_6764.JPEG",
+                "n04467665\\n04467665_30502.JPEG",
+                "n04467665\\n04467665_22573.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "When you let us drive it",
+            "start_time": 106.92,
+            "end_time": 109.18,
+            "selected_image_ids": [
+                1006231,
+                1006541,
+                325057,
+                223286,
+                736703,
+                1005783,
+                523628
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_2739.JPEG",
+                "n04162706\\n04162706_39450.JPEG",
+                "n02110958\\n02110958_16492.JPEG",
+                "n02091467\\n02091467_1905.JPEG",
+                "n03444034\\n03444034_7462.JPEG",
+                "n04162706\\n04162706_13856.JPEG",
+                "n02704792\\n02704792_12258.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Twenty-five felt like flying",
+            "start_time": 109.18,
+            "end_time": 115.48,
+            "selected_image_ids": [
+                772904,
+                1127902,
+                1080130,
+                899047,
+                1079885
+            ],
+            "selected_image_paths": [
+                "n03535780\\n03535780_29706.JPEG",
+                "n04509417\\n04509417_7914.JPEG",
+                "n04371774\\n04371774_15239.JPEG",
+                "n03888257\\n03888257_11587.JPEG",
+                "n04371774\\n04371774_14135.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "I don't forgive you",
+            "start_time": 115.48,
+            "end_time": 120.36,
+            "selected_image_ids": [
+                359315,
+                362865,
+                989140,
+                361175,
+                363804,
+                362159,
+                197379,
+                360427
+            ],
+            "selected_image_paths": [
+                "n02123045\\n02123045_1320.JPEG",
+                "n02123394\\n02123394_9541.JPEG",
+                "n04127249\\n04127249_244.JPEG",
+                "n02123159\\n02123159_619.JPEG",
+                "n02123597\\n02123597_6258.JPEG",
+                "n02123394\\n02123394_3503.JPEG",
+                "n02085782\\n02085782_664.JPEG",
+                "n02123159\\n02123159_1604.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "But please don't hold me to it",
+            "start_time": 120.36,
+            "end_time": 122.73,
+            "selected_image_ids": [
+                483962,
+                41152
+            ],
+            "selected_image_paths": [
+                "n02490219\\n02490219_2199.JPEG",
+                "n01644373\\n01644373_5244.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "Born under Scorpio skies",
+            "start_time": 122.73,
+            "end_time": 129.63,
+            "selected_image_ids": [
+                1157737,
+                1244377,
+                536299,
+                1178380,
+                585721,
+                535946
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_3420.JPEG",
+                "n09229709\\n09229709_5934.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n06874185\\n06874185_24491.JPEG",
+                "n02879718\\n02879718_11579.JPEG",
+                "n02782093\\n02782093_3101.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "I wanted to see the world",
+            "start_time": 129.63,
+            "end_time": 134.94,
+            "selected_image_ids": [
+                1072160,
+                1072600,
+                611299,
+                610906,
+                1072839
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1683.JPEG",
+                "n04356056\\n04356056_437.JPEG",
+                "n02965783\\n02965783_6750.JPEG",
+                "n02965783\\n02965783_4596.JPEG",
+                "n04356056\\n04356056_5824.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "Through your eyes until it happened",
+            "start_time": 134.94,
+            "end_time": 138.18,
+            "selected_image_ids": [
+                1071579,
+                813337,
+                1071414,
+                1072160,
+                1072839
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_3554.JPEG",
+                "n03692522\\n03692522_9039.JPEG",
+                "n04355933\\n04355933_279.JPEG",
+                "n04356056\\n04356056_1683.JPEG",
+                "n04356056\\n04356056_5824.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "Then I changed my mind",
+            "start_time": 138.18,
+            "end_time": 145.46,
+            "selected_image_ids": [
+                1073253,
+                1071840,
+                724019,
+                1071241,
+                1071828
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_9140.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n03388183\\n03388183_9800.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04355933\\n04355933_710.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "Guess I lied",
+            "start_time": 147.85,
+            "end_time": 155.19,
+            "selected_image_ids": [
+                319471,
+                335350,
+                330416
+            ],
+            "selected_image_paths": [
+                "n02110063\\n02110063_6720.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n02111889\\n02111889_1976.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "I'm a liar",
+            "start_time": 155.19,
+            "end_time": 162.58,
+            "selected_image_ids": [
+                1071840,
+                812450,
+                41152
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n03692522\\n03692522_15011.JPEG",
+                "n01644373\\n01644373_5244.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": "Who lies",
+            "start_time": 162.58,
+            "end_time": 169.43,
+            "selected_image_ids": [
+                759611,
+                1071840,
+                926513,
+                812450,
+                989140
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n03942813\\n03942813_8236.JPEG",
+                "n03692522\\n03692522_15011.JPEG",
+                "n04127249\\n04127249_244.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": "'Cause I'm a liar",
+            "start_time": 169.43,
+            "end_time": 174.1,
+            "selected_image_ids": [
+                1071840,
+                759611,
+                926513,
+                1071117
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n03942813\\n03942813_8236.JPEG",
+                "n04355933\\n04355933_1654.JPEG"
+            ]
+        }
+    ]
+}
