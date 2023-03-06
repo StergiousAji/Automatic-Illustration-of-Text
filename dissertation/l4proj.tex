@@ -107,7 +107,9 @@ This project aims to produce a piece of software that can take any audio source 
 
 Since there is a high priority for precise ground truth construction, the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform. Additionally, since the aim is for this application to be used by anyone, appropriate error handling must be in place to accommodate users from a wide area of technical backgrounds. We also aim to make our system modular in design. This way, more technical users would be able to swap in any static image collection with minimal configuring if required.
 
-We aim to use the completed annotation interface to produce ground truths for a pre-selected list of audio sources. This data will be made available in an accessible format for a number of different use cases. Firstly, this data can be used to measure the quality of automated videography systems using standard IR metrics like Average Precision, F-Measure and the Normalised Discounted Cumulative Gain (nDCG). However, the data will not be restricted to the task of automatic videography, due to it simply consisting of a set of relevance assessments of images from text. Hence, the data can be used in existing or new text-to-image research in general. A recent example of such a possible use case is investigating the effeciveness of Variable Depth Pooling (CITE), more details are discussed in the Background section \ref{ssec:pooling}.
+We aim to use the completed annotation interface to produce ground truths for a pre-selected list of audio sources. This data will be made available in an accessible format for a number of different use cases. Firstly, this data can be used to measure the quality of automated videography systems using standard IR metrics like Average Precision, F-Measure and the Normalised Discounted Cumulative Gain (nDCG). 
+
+% However, the data will not be restricted to the task of automatic videography, due to it simply consisting of a set of relevance assessments of images from text. Hence, the data can be used in existing or new text-to-image research in general. A recent example of such a possible use case is investigating the effeciveness of Variable Depth Pooling (CITE), more details are discussed in the Background section \ref{sec:background_pooling}.
 
 Finally, as stated in our motivations, we wish to fix the limitations of the previous videography generation system by Parker as well as expand upon its functionality. We aim to, generalise the application of the tool to any audio source, not just restrict it to sourcing from YouTube videos. This also means, our tool must be able to support transcription of multiple languages. We aim to tackle the image retrieval process using a different approach that introduces semantics in order to retrieve more relevant images.
 
@@ -129,13 +131,14 @@ The field of image retrieval underwent a significant revolution in the late 2010
 
 
 \subsection{CLIP: Transforming the Future of Text-to-Image Retrieval}
-2021 marked the release of OpenAI's Contrastive Language-Image Pre-Training (CLIP) model and paper \citep{radford2021clip}. This is a powerful image-text embedding model based on a transfomer architecture. Transformers are a type of deep neural network that was first introduced in a seminal paper by \cite{vaswani2017attention}. They were originally developed for natural language processing tasks leading to several state-of-the-art, pre-trained systems like BERT \citep{devlin2018bert} and GPT \citep{radford2018gpt}, however, it has since been adapted to other domains, notably computer vision \citep{dosovitskiy2020vit}. These advancements laid the crucial groundwork for the emergence of CLIP.
+\label{sec:background_clip}
+2021 marked the release of OpenAI's Contrastive Language-Image Pre-Training (CLIP) model and paper \citep{radford2021clip}. This is a powerful image-text embedding model based on a transformer architecture. Transformers are a type of deep neural network that was first introduced in a seminal paper by \cite{vaswani2017attention}. They were originally developed for natural language processing tasks leading to several state-of-the-art, pre-trained systems like BERT \citep{devlin2018bert} and GPT \citep{radford2018gpt}, however, it has since been adapted to other domains, notably computer vision \citep{dosovitskiy2020vit}. These advancements laid the crucial groundwork for the emergence of CLIP.
 
 The CLIP model uses a transformer architecture that is similar to the one used in the GPT-2 language model \citep{radford2019gpt2}. The model consists of a stack of transformer encoder layers, each of which consists of a self-attention mechanism followed by a feedforward network. The self-attention mechanism allows the model to attend to different parts of the input sequence and learn relationships between them, while the feedforward network applies non-linear transformations to the input features. The transformer encoder layers are used to process both the text and image inputs, allowing the model to learn a multimodal representation that captures the relationship between them. The text input is tokenized using a byte-pair encoding (BPE) scheme, and the resulting tokens are embedded into a high-dimensional vector space. The image input is processed by a series of convolutional layers, followed by a global average pooling layer that produces a fixed-size feature vector.
 
 The joint text-image representation is learned by attending to both the text and image features using the self-attention mechanism in the transformer layers. The model is trained to predict whether a given image and text pair belong together, using a contrastive loss function that encourages similar pairs to be closer in the representation space than dissimilar pairs. This training objective allows the model to learn a rich and flexible representation of both text and images, which can be used for a wide range of downstream tasks. This flexibility is what makes CLIP more appealing than previous models.
 
-The CLIP model was trained on a dataset of over 400 million images and their associated text descriptions, and achieved state-of-the-art performance on a variety of image classification benchmarks, including ImageNet, COCO, and CIFAR-100. One of the key advantages of the CLIP model is its ability to generalize to new tasks and domains without requiring further training. For example, the authors found that the model was able to perform well on a variety of tasks, such as zero-shot classification, image retrieval and visual reasoning, without any additional fine-tuning. CLIP achieved an impressive top-1 accuracy of 76.3\% on the ImageNet zero-shot benchmark, where the goal is to classify images into novel categories, unseen during training. A significant improvement on the previous state-of-the-art which achieved 11.5\%.
+The CLIP model was trained on a dataset of over 400 million images and their associated text descriptions and achieved state-of-the-art performance on a variety of image classification benchmarks, including ImageNet, COCO, and CIFAR-100. One of the key advantages of the CLIP model is its ability to generalize to new tasks and domains without requiring further training. For example, the authors found that the model was able to perform well on a variety of tasks, such as zero-shot classification, image retrieval, and visual reasoning, without any additional fine-tuning. CLIP achieved an impressive top-1 accuracy of 76.3\% on the ImageNet zero-shot benchmark, where the goal is to classify images into novel categories, unseen during training. A significant improvement on the previous state-of-the-art which achieved 11.5\%.
 
 Overall, the results demonstrate that the CLIP model is capable of learning a rich and flexible representation of both text and images, which allows it to perform well on a wide range of tasks, specifically text-to-image retrieval. The model also has strong generalization capabilities, which make it well-suited for applications where data is often scarce or noisy. This makes CLIP an appealing choice for such a restrictive project as this one.
 
@@ -143,76 +146,93 @@ Overall, the results demonstrate that the CLIP model is capable of learning a ri
 \section{Relevance Assessment}
 One of the main objectives of this project is to develop an interface to construct of a set of known relevant images from text queries. However, this concept of relevance assessment has a deep history involving a variety of viable strategies so this must be investigated in order to find the most suited to achieving our goal.
 
-Relevance assessment is a integral aspect of Information Retrieval (IR) systems that determines the relevance of documents to a user's query. These documents, while most commonly associated with textual data, can encompass various other forms of data including but not limited to images, videos, and music. In IR, relevance refers to the degree to which a document satisfies a user's information need. Relevance assessment is essential in evaluating IR systems as it ensures that the search engine retrieves only the most pertinent documents and presents them to the user in the order of their relevance. 
+Relevance assessment is an integral aspect of Information Retrieval (IR) systems that determines the relevance of documents to a user's query. These documents, while most commonly associated with textual data, can encompass various other forms of data including but not limited to images, videos, and music. In IR, relevance refers to the degree to which a document satisfies a user's information need. Relevance assessment is essential in evaluating IR systems as it ensures that the search engine retrieves only the most pertinent documents and presents them to the user in the order of their relevance. 
 
 \subsection{Origins}
-This concept can be traced back to the early days of IR amidst the rapid expansion of computerised catalogues for military, government and education purposes in the 1950s. With many different classification and indexing strategies emerging, it became increasingly unclear which was the most effective. This was until the Cranfield experiments conducted by \cite{cleverdon1967cranfield} at Cranfield University, England. These experiments pioneered one of the most widely used evaluation frameworks within IR including fundamental techniques such as query formulation and evaluation metrics. One of the key innovations within the Cranfield paradigm was the development of the relevance assessment methodology. This was the idea of using a fixed test collection of queries designed to represent a wide range of information needs, and manually assessed relevant documents for each query. This test collection is then used to evaluate the effectiveness of different IR systems in retrieving those relevant documents. The experiments also introduced the first IR evaluation metrics, including precision and recall, which are still widely used today. 
+This concept can be traced back to the early days of IR amidst the rapid expansion of computerised catalogues for military, government, and education purposes in the 1950s. With many different classification and indexing strategies emerging, it became increasingly unclear which was the most effective. This was until the Cranfield experiments conducted by \cite{cleverdon1967cranfield} at Cranfield University, England. These experiments pioneered one of the most widely used evaluation frameworks within IR including fundamental techniques such as query formulation and evaluation metrics. One of the key innovations within the Cranfield paradigm was the development of the relevance assessment methodology. This was the idea of using a fixed test collection of queries designed to represent a wide range of information needs, and manually assessed relevant documents for each query. This test collection is then used to evaluate the effectiveness of different IR systems in retrieving those relevant documents. The experiments also introduced the first IR evaluation metrics, including precision and recall, which are still widely used today. 
 
-During the early days of IR, it was common to use binary relevance assessments, a simple indication whether a document is relevant or not to a particular query. In the 1970s, researchers explored the use of graded relevance assessments, which allow assessors to assign scores to documents based on their degree of relevance to a query \citep{salton1971smart, robertson1976relvance}. While this method provides a more informative evaluation measure of IR systems, it greatly increases annotation effort and the subjectivity of judgement.
+During the early days of IR, it was common to use binary relevance assessments, a simple indication of whether a document is relevant or not to a particular query. In the 1970s, researchers explored the use of graded relevance assessments, which allow assessors to assign scores to documents based on their degree of relevance to a query \citep{salton1971smart, robertson1976relvance}. While this method provides a more informative evaluation measure of IR systems, it greatly increases annotation effort and the subjectivity of judgment.
 
 \subsection{Techniques}
 Various techniques have been proposed for performing relevance assessments, including manual assessments, crowdsourcing, and automated techniques:
 \begin{itemize}
-    \item Manual assessments involve human assessors who painstakingly look at every document and assign relevance scores based on a predifined criteria and query. This is a very time-consuming and expensive process and often requires expert assessors with specialised knowledge to be able to judge documents accurately. 
+    \item Manual assessments involve human assessors who painstakingly look at every document and assign relevance scores based on predefined criteria and queries. This is a very time-consuming and expensive process and often requires expert assessors with specialised knowledge to be able to judge documents accurately. 
 
     \item Crowdsourcing, on the other hand, involves an open call for a large group of people to assess documents. This can be effective, in generating extensive test collections especially when the documents do not belong to a specific domain of expertise. It also captures a wider range of viewpoints as it brings in assessors from diverse backgrounds. Contrastingly, this can equally bring in bias depending on the assessors' incentives and personal preferences. Finally, this technique makes quality control especially difficult, leading to the potential for fraudulent assessments.
     
-    \item More recently, the use of machine learning approaches are being used to predict relevance of documents based on its content and other features \citep{cao2007ltr}. This technique is much faster and scalable compared to manual annotation, producing more consistent results across multiple evaluations. However, this technique often lacks flexibility to adapt to changing evaluation criteria or different types of data. Furthermore, such a system still needs human validation to ensure its predictions are accurate, this can often lead to a more semi-automated approach.
+    \item More recently, the use of machine learning approaches are being used to predict the relevance of documents based on their content and other features \citep{cao2007ltr}. This technique is much faster and more scalable compared to manual annotation, producing more consistent results across multiple evaluations. However, this technique often lacks the flexibility to adapt to changing evaluation criteria or different types of data. Furthermore, such a system still needs human validation to ensure its predictions are accurate, this can often lead to a more semi-automated approach.
 \end{itemize}
 
-While many more techniques have been developed, manual assessment is still the gold standard in IR evaluation. However, with the exponentially growing size of test collections in the modern day, it is infeasible for humans to judge every document in the corpus for each query. Therefore, strategies such as pooling and most recently, active learning \citep{rahman2020al}, are utilised in order to reduce annotation effort. 
+While many more techniques have been developed, manual assessment is still the gold standard in IR evaluation. However, with the exponentially growing size of document collections in the modern day, it is infeasible for humans to judge every document in the corpus for each query. Therefore, strategies such as pooling and active learning \citep{rahman2020testal}, are utilised in order to reduce annotation effort.
 
 \subsection{Pooling}
-\label{ssec:pooling}
-Pooling is a strategy used for large-scale collections of documents in order to optimise the relevance assessment process. It involves creating a pool of the top-$k$ documents, for a particular query, retrieved from a number of different retrieval systems. The key idea here is that this $k$, which is commonly kept at a constant depth for each information need, is much smaller than the size of the corpus. Meaning that the assessors must only judge the relevance of this small subset of documents while all the others can be labeled as non-relevant. 
+\label{sec:background_pooling}
+Pooling is a popular strategy used for very large-scale collections of documents to optimise the relevance assessment process. It involves creating a pool of the top-$k$ documents, for a particular query, retrieved from a number of different retrieval systems. The key idea here is that this $k$, which is commonly kept at a constant depth for each query, is much smaller than the size of the corpus. This means that the assessors must only judge the relevance of this small subset of documents while all the others can be labeled as non-relevant. Trying to further optimise the pooling strategy itself is an evolving area of research. Papers such as \citep{arampatzis2009stop} and \citep{lien2019assumption} propose ways for determining the optimal cut-off point for the number of ranked documents that would satisfy a user's information need by examining the statistics of score distributions.
 
-(VARIABLE DEPTH POOLING)
+% (VARIABLE DEPTH POOLING)
+% This paper proposes an alternate strategy to pooling, where instead of setting a constant depth, $k$, it should be dependant on the specific query. The rationale behind this central idea is that the number of relevant documents is unlikely to be equal for every query. Some queries are prone to having fewer relevant items in the collection, while others a larger number. The authors hypothesise that this strategy could minimise relevance annotation effort compared to the conventional pooling policy.
 
-This paper proposes an alternate strategy to pooling, where instead of setting a constant depth, $k$, it should be dependant on the specific query. The rationale behind this central idea is that the number of relevant documents is unlikely to be equal for every query. Some queries are prone to having fewer relevant items in the collection, while others a larger number. The authors hypothesise that this strategy could minimise relevance annotation effort compared to the conventional pooling policy.
-
-
-\section{The Previous Thesis}
-\label{sec:background_parker}
-\subsection{Achievements}
-\subsection{Problems with the Previous Thesis}
-In order to elicit what requirements are necessary, we must look at the problems identified in the previous thesis.
-The previous Automatic Videography system implemented by Andrew Parker made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks. 
-
-Firstly, the metadata from YouTube was found to be unreliable in obtaining the artist's name and the song title of the song. Therefore, this information was acquired from the user inputting the correct details when using the system. This can be problematic since this requires the user to perform more work of researching and correctly typing in this information which is prone to errors. 
-
-The previous system also relied on many different Application Programming Interfaces (APIs) like YAKE (Yet Another Keyword Extractor) \cite{yake}(CITE) for keyword extraction, and Google Images Search \cite{google_images}(CITE) to download the images. This places a high dependency on these APIs which may not be kept maintained or present version collisions with other packages. In fact, the AutoLyrixAlign API \cite{autolyrixalign}(CITE), which was used for Forced Alignment of the transcription with the audio, has been deprecated at the time of writing.
-
-The previous system also suffered from frequent non-relevant images being retrieved. This was because the semantics of the keywords were being ignored when searching through Google Images. Furthermore, because of this, keywords with many meanings in the English language often resulted in the wrong images being retrieved. 
-
-The final problem observed, which directly spawned our idea of ground truth building, was the user evaluations of the final videography system. The user surveys showed a mixed, but generally positive evaluation of the system. However, the highly varying ratings and the answers to the open-ended questions highlighted the extensive time and effort required to conduct qualitative evaluations on automated videography systems which ultimately produced subjective and unrepeatable results. (REWRITE)
-
-Now that we have identified the main [pitfalls] from the previous system, it makes designing the list of requirements for our system a much simpler task.
-
-\subsection{Improvements to the Previous Thesis}
-MULTILINGUAL
-
-WORK ON ANY AUDIO SOURCE
-
-USE SEMANTICS WITH MULTIMODAL SPACES
+\subsection{Active Learning}
+Active learning (AL) involves a machine learning approach to iteratively optimise its retrievals by posing queries to a human. These queries are typically in the form of unlabeled data which the human can annotate. The learner can then use this knowledge to find the user's specific information need \citep{burr2012al}. While this approach can be effective in identifying relevant documents, we believe it is not suited for our task. AL is more appropriate for sophisticated supervised learning tasks in which acquiring labeled instances is costly, such as specialised information extraction or speech recognition. In our case, a simple binary relevance assessment is sufficient in tagging images.
 
 
 \section{Related Work}
-Before starting to build our system, it is important to research similar existing solutions to our problem. In this section, we will solely focus on the annotation interface that we plan to develop. By analysing the design and workflow structure that these solutions employ, we can gather ideas and paint a clearer picture of the interface we want to develop. From the research done here, it was evident that most annotation software provide a wide range of different functionality and options. While this is certainly a positive in giving users as much freedom as possible, it can equally be a drawback. In most scenarios, users want to accomplish a single focused task and therefore attempting to learn and navigate a large versatile application can be confusing and time-consuming.
+Before starting to build our system, it is important to look at similar existing solutions to our problem. This section will start off with a deep dive into the previous thesis in order to identify which parts of it we want to build on. Following this, we will focus on the novel annotation interface that we plan to develop by looking at two solutions that could solve a similar problem to the one described in this project. By analysing the design and workflow structure that these solutions employ, we can gather ideas and paint a clearer picture of the interface we want to develop. From the research done here, it was evident that most annotation software provide a wide range of different functionality and options. While this is certainly a positive in giving users as much freedom as possible, it can equally be a drawback. In most scenarios, users want to accomplish a single focused task and therefore attempting to learn and navigate a large versatile application can be confusing and time-consuming.
 
-We chose two different relevance assessment software, namely LabelBox \cite{labelbox} (CITE) and ... Both pieces of software are similar in aspect to that of this project
+The two relevance assessment software we chose to look at are \cite{labelbox} and ... Both pieces of software are similar in aspect to that of this project
 
-\subsection{LabelBox}
-Labelbox is a cloud-based platform for data labeling and annotation. It is used by many companies to build and improve machine learning models. It was founded in 2018 and offers a variety of annotation tools to the user, including image classification, object detection, and segmentation. Their Catalog product allows users to query textTheir image classification tool allows users to label images based on relevant tags or categories, such as "dog" or "cat".
+\subsection{Automatic Videography of Audio Tracks of Songs}
+\label{sec:background_parker}
+The previous project by Andrew Parker supplied an automatic videography system that generated videos for provided music tracks sourced from YouTube videos. The project aimed at providing a tool to ease music video creation and investigate the effects of using multimodal information in enriching songs.
+
+\subsubsection{Achievements}
+The project achieved a simple web interface, shown in Figure \ref{fig:parker_interface}(REF), where users can supply a YouTube video URL, the artist name and song title as well as the alignment method. On submission, the system will download the video and subsequently isolate the audio and video content. The next steps will depend on the chosen alignment method, so each will be explained one by one. There are three alignment methods available:
+\begin{itemize}
+    \item \textbf{Forced Alignment:} This method uses a forced alignment model in order to synchronise the retrieved lyrics of the song to the extracted audio. The lyrics are retrieved from the Genius \cite{genius} database using the supplied song title and artist. A word-level dictionary of timings is returned which is used to place relevant imagery at the correct timestamps during video compilation.
+
+    \item \textbf{Lyrical Analysis:} This method only works for music lyric videos since it works by extracting textual information from the frames of the video using an Optical Character Recognition (OCR) tool. This technique produces phrase-level timings.
+
+    \item \textbf{Caption Extraction:} This method extracts the caption information from the YouTube video directly providing phrase-level alignment information. However, the feasibility of this method hinges on the availability of the captions.
+\end{itemize}
+
+This system scrapes the relevant images from Google Images. However, for this approach to work best, images should be searched by keywords. This requires extracting at most two keywords for each segment within the transcript which this project accomplishes by leveraging YAKE!: Yet Another Keyword Extractor \citep{campos2020yake}. Finally, the alignment information and scraped images are used to compile the final video which is presented to the user.
+
+\subsubsection{Problems}
+Parker's system made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks.
+
+To begin with, the metadata of YouTube videos was deemed unreliable in procuring the artist's name and the song title. Therefore, the system resorts to obtaining this information from user input. However, this can be problematic since it requires the user to undertake additional research and accurately type the information, which can be prone to errors. 
+
+The prior system was also heavily reliant on several Application Programming Interfaces (APIs) such as YAKE! for keyword extraction, pytesseract \citep{pytesseract} for OCR of frames, and Google Images for scraping images just to name a few. This places a high dependency on these APIs which may not be consistently maintained or may cause version conflicts with other packages. In fact, the AutoLyrixAlign API \citep{gupta2020ala}, utilised for the Forced Alignment approach has since been deprecated at the time of writing.
+
+Additionally, the system suffered from recurring instances of irrelevant images being retrieved. This can be attributed to the disregard of the semantic context of the keywords during the search process. Furthermore, keywords with multiple meanings in the English language often yielded incorrect images.
+
+The ultimate problem identified, which directly prompted our idea of ground truth construction, stemmed from the evaluation phase of the project. The user surveys exhibited a mixed, albeit predominantly favorable assessment of the system. Nevertheless, the significant variance in ratings and responses to the open-ended questions emphasised the arduousness of conducting qualitative evaluations on automated videography systems. Furthermore, such evaluations produced biased and non-repeatable outcomes.
+
+\subsubsection{Improvements}
+Now that the main problems have been identified, we must present solutions so that we can gather the appropriate requirements for this project. The first goal is to generalise the system to any type of audio. This involves not being restricted to English sources. Adding support for multiple languages would further our motivation for increased user accessibility to content. Moreover, this would allow easier content creation for many resource-poor languages.
+
+First of all, let us tackle the metadata problem. We want to avoid relying on the user for metadata information for the audio source which means we must acquire this from somewhere else. This data was primarily used to query the Genius database in order to retrieve the lyrics transcription for songs so this data is not required for non-music sources. Therefore, in order to identify the song title and artist, we could use the audio itself as the query. Shazam \citep{wang2006shazam} is an application that can recognise music and movies by listening to a short sample of the audio. It does this by attempting to match the audio's time-frequency signature to one stored in its large catalogue of audio fingerprints to get the correct track information. While this approach would mean an additional API, its benefits of increased automation outweigh the drawbacks.
+
+In order to retrieve more relevant images, it is clear that semantics must be introduced instead of relying on keyword-based searching. Upon researching the recent advancements with CLIP (\ref{sec:background_clip}), we believe this is a viable solution that can mitigate the number of non-relevant images being retrieved.
+
+Lastly, we believe our novel ground-truth annotation interface will address the difficulty of evaluating current and prospective automatic videography systems. The constructed relevance assessments allow for the application of the Cranfield paradigm and computing standard IR metrics. These quantitative measures permit impartial performance comparisons between different systems. More importantly, the experiments can be conducted rapidly and repeatedly without concerns about result consistency.
+
+
+\subsection{Labelbox}
+Labelbox is a cloud-based platform for data labeling and annotation. It is used by many companies to build and improve machine learning models. It was founded in 2018 and offers a variety of annotation tools to the user, including image classification, object detection, and segmentation. Their Catalog product allows users to query text. Their image classification tool allows users to label images based on relevant tags or categories, such as "dog" or "cat".
 
 To assess image relevance from text querying, Labelbox's image classification tool can be used to assign relevant tags or categories to images based on the text query. For example, if the text query is "dog running in the park", the image can be labeled with relevant tags such as "dog", "running", and "park". This can help machine learning models better understand the context and relevance of images to a given text query.
 
 Labelbox also provides customizable interfaces and workflows that can be adapted to specific use cases, as well as tools for managing data quality and consistency. The platform integrates with popular machine learning frameworks and cloud services, allowing companies to streamline their data labeling workflows and accelerate model development.
 
 
+\subsection{Solution \#2}
+
+
 \section{The Bigger Picture}
 (DELETE THIS?)
 
-Exploring the background of the project through a review of the history and past accomplishments within the field is essential to establish its relevance and reason for existing. By looking at current solutions to the problem and their contrasting approaches provides valuable insight into which direction we take our project. Nevertheless, it is equally important to envisage the potential applications of our project beyond its primary focus of automated videography. For this reason, we look into recent research that aims to reduce relevance assessment effort by employing query-specific variable depth pooling (CITE).
+Exploring the background of the project through a review of the history and past accomplishments within the field is essential to establish its relevance and reason for existing. Looking at current solutions to the problem and their contrasting approaches provides valuable insight into which direction we take our project. Nevertheless, it is equally important to envisage the potential applications of our project beyond its primary focus of automated videography. For this reason, we look into recent research that aims to reduce relevance assessment efforts by employing query-specific variable depth pooling (CITE).
 
 
 \section{Summary}
@@ -236,7 +256,7 @@ In order to elicit the list of requirements, a number of user scenarios are crea
 
 \subsubsection{User Scenario 2: William} has recently built two new automated video generation tools that use differing reranking procedures to retrieve the top images from the text. He has performed some user studies, where he asked a number of users to watch and rate the videos generated by both systems on the same audio tracks. He used A/B testing in order to compare the performances of his two systems. However, the user studies resulted in very mixed results, with some users rating system $A$ highly while others rated system $B$ as better. Furthermore, upon closer inspection, he found that the user ratings varied wildly depending on the audio tracks present in the videos. This was problematic since the user studies took over 2 hours to complete and William is unwilling to conduct another when it is unclear if the results would even improve with new participants. William wished that he could objectively evaluate his systems against a fixed test collection of ground truths. He would be able to use this to obtain quantitative metrics for each system that he could compare giving a clear answer to which reranking procedure performs better.
 
-\subsubsection{User Scenario 3: Emily} is a software developer who is part of a small team who is building a new videography tool. Her manager has given her the tedious task of assessing the relevance of images for a predetermined set of audio from videos sourced from YouTube. This process requires manually annotating images that are the most fitting for the textual content existing within the audio. This is a very lengthy process since she must listen to the audio track multiple times in order to accurately transcribe the textual content. Following this, she must manually record the locations of the annotated images in a spreadsheet. Her manager has also assigned a colleague to double-check each annotation made. She wishes for a tool that automatically transcribes the audio and provides an easy-to-use interface to annotate relevant images. She requires that this ground truth could be downloaded in a human readable format. Addtionally, it would be helpful to be able to edit the annotations after the fact, so that her colleague can fix any incorrectly judged images.
+\subsubsection{User Scenario 3: Emily} is a software developer who is part of a small team who is building a new videography tool. Her manager has given her the tedious task of assessing the relevance of images for a predetermined set of audio from videos sourced from YouTube. This process requires manually annotating images that are the most fitting for the textual content existing within the audio. This is a very lengthy process since she must listen to the audio track multiple times in order to accurately transcribe the textual content. Following this, she must manually record the locations of the annotated images in a spreadsheet. Her manager has also assigned a colleague to double-check each annotation made. She wishes for a tool that automatically transcribes the audio and provides an easy-to-use interface to annotate relevant images. She requires that this ground truth could be downloaded in a human-readable format. Additionally, it would be helpful to be able to edit the annotations after the fact, so that her colleague can fix any incorrectly judged images.
 
 
 \subsection{User Stories}
@@ -254,8 +274,8 @@ In order to elicit the list of requirements, a number of user scenarios are crea
 In order to formalise and prioritise the main requirements identified, the MoSCoW method \citep{clegg1994moscow} was chosen. While it would be desirable to develop every feature that could help achieve the project's goal, the project's limitations make it impractical. Therefore, it is crucial to assess each feature's importance by evaluating how much it would contribute to achieving the intended goal. Each feature will fall into one of four categories:
 
 \begin{itemize}
-    \item \textbf{Must Have:} These are essential features that must be implemented to fulfil the project's aim.
-    \item \textbf{Should Have:} These features are highly desirable, but missing them out will not directly lead to a project failure.
+    \item \textbf{Must Have:} These are essential features that must be implemented to fulfill the project's aim.
+    \item \textbf{Should Have:} These features are highly desirable, but missing them will not directly lead to a project failure.
     \item \textbf{Could Have:} These are features that are beneficial but are viewed as extra perks.
     \item \textbf{Won't Have:} These features are not worth pursuing.
 \end{itemize}
@@ -264,28 +284,28 @@ The list is divided into two sections: Functional Requirements, which describe i
 
 \subsection{Functional Requirements}
 \begin{itemize}
-    \item \textbf{Must Have:} Ability to upload an audio file as an input audio source.
-    \item \textbf{Must Have:} Ability to specify a YouTube video URL as an audio source.
-    \item \textbf{Must Have:} Ability to view the full audio transcription.
-    \item \textbf{Must Have:} Ability to generate an illustrated video for any audio source.
-    \item \textbf{Must Have:} Ability to view the top-$k$ retrieved images for a given audio chunk.
-    \item \textbf{Must Have:} Ability to annotate the most-fitting images for a given audio chunk.
-    \item \textbf{Must Have:} Ability to view the text present in a given audio chunk.
-    \item \textbf{Must Have:} Ability to view the constructed ground truth data.
-    \item \textbf{Must Have:} Ability to download the constructed ground truth data in a portable format.
-    \item \textbf{Should Have:} Ability to view previously processed audio sources, generated videos and constructed ground truths.
-    \item \textbf{Should Have:} Ability to edit previously made ground truths.
-    \item \textbf{Should Have:} Ability to upload audio sources of any language.
-    \item \textbf{Could Have:} Ability to load ground truths for editing.
-    \item \textbf{Could Have:} Ability to view the percentage complete for ground truth construction of processed audio sources.
-    \item \textbf{Could Have:} Ability to reconfigure the static image collection location.
-    \item \textbf{Could Have:} Ability to save or skip chunks with repeating textual content when ground truth constructing.
+    \item \textbf{Must Have:} The ability to upload an audio file as an input audio source.
+    \item \textbf{Must Have:} The ability to specify a YouTube video URL as an audio source.
+    \item \textbf{Must Have:} The ability to view the full audio transcription.
+    \item \textbf{Must Have:} The ability to generate an illustrated video for any audio source.
+    \item \textbf{Must Have:} The ability to view the top-$k$ retrieved images for a given audio chunk.
+    \item \textbf{Must Have:} The ability to annotate the most-fitting images for a given audio chunk.
+    \item \textbf{Must Have:} The ability to view the text present in a given audio chunk.
+    \item \textbf{Must Have:} The ability to view the constructed ground truth data.
+    \item \textbf{Must Have:} The ability to download the constructed ground truth data in a portable format.
+    \item \textbf{Should Have:} The ability to view previously processed audio sources, generated videos, and constructed ground truths.
+    \item \textbf{Should Have:} The ability to edit previously made ground truths.
+    \item \textbf{Should Have:} The ability to upload audio sources of any language.
+    \item \textbf{Could Have:} The ability to load ground truths for editing.
+    \item \textbf{Could Have:} The ability to view the percentage complete for ground truth construction of processed audio sources.
+    \item \textbf{Could Have:} The ability to reconfigure the static image collection location.
+    \item \textbf{Could Have:} The ability to save or skip chunks with repeating textual content when ground truth constructing.
 \end{itemize}
 
 \subsection{Non-Functional Requirements}
 \begin{itemize}
     \item \textbf{Should Have:} The application being accessible using any Operating System platform.
-    \item \textbf{Should Have:} The application having a presentable user interface that is easy-to-use for any user.
+    \item \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
     \item \textbf{Should Have:} The application with appropriate error handling.
     \item \textbf{Should Have:} The application displaying progress bars for long loading times.
     \item \textbf{Should Have:} The application being fast and responsive.
@@ -314,12 +334,12 @@ The list is divided into two sections: Functional Requirements, which describe i
 
 %================================================================================
 \chapter{Design}
-This chapter serves to provide the initial design choices including a high-level view of the system workflow and the wireframes of the intended user interface. All decisions will be explained with a general aim to optimise the user experience and fulfil the identified system requirements. Next, a deeper look into the design choices of the internal workings of components. This allows our system to be implemented in any language while maintaining clean and agile software design principles. 
+This chapter serves to provide the initial design choices including a high-level view of the system workflow and the wireframes of the intended user interface. All decisions will be explained with a general aim to optimise the user experience and fulfill the identified system requirements. Next, a deeper look into the design choices of the internal workings of components. This allows our system to be implemented in any language while maintaining clean and agile software design principles. 
 
 \section{High-Level Plan of System}
-In order to start planning out the workflow of our system, it is necessary to simplify and abstract the key components that will make up the backbone of the system. Our system will be comprised of two sub-systems, a automatic videography tool and an ground-truth annotation tool. However, both sub-systems will use the same underlying pipeline. The simplified workflow diagram displayed as Figure \ref{fig:simplified_workflow} shows the basic, black-boxed components that will make up our pipeline: a transcription extractor, a video generator and an annotation interface.
+In order to start planning out the workflow of our system, it is necessary to simplify and abstract the key components that will make up the backbone of the system. Our system will be comprised of two sub-systems, an automatic videography tool, and a ground-truth annotation tool. However, both sub-systems will use the same underlying pipeline. The simplified workflow diagram displayed as Figure \ref{fig:simplified_workflow} shows the basic, black-boxed components that will make up our pipeline: a transcription extractor, a video generator, and an annotation interface.
 
-The user will input an audio source which will be processed to extract a synced transcription of the audio content. Next, the user will have the option to either choose to generate a video or start constructing the ground truth for it. Each option will produce an output which the user can subsequently view and export. In line with the requirements, these outputs will be saved to the database for future editing.
+The user will input an audio source which will be processed to extract a synced transcription of the audio content. Next, the user will have the option to either choose to generate a video or start constructing the ground truth for it. Each option will produce an output that the user can subsequently view and export. In line with the requirements, these outputs will be saved to the database for future editing.
 
 \begin{figure}[h]
     \centering
@@ -329,7 +349,7 @@ The user will input an audio source which will be processed to extract a synced 
 \end{figure}
 
 \subsection{Transcription Extractor}
-Firstly, the user will input an audio source. As stated in the requirements, this can either be in the form of a YouTube video URL or a direct upload of an audio file. This input will be passed along to the Transcription Extractor. This componenet will produce a transcription of the audio with phrase-level timing information. It is vital that this transcription is synced accurately with the audio since this information will be used to place relevant images during the video compilation.
+Firstly, the user will input an audio source. As stated in the requirements, this can either be in the form of a YouTube video URL or a direct upload of an audio file. This input will be passed along to the Transcription Extractor. This component will produce a transcription of the audio with phrase-level timing information. It is vital that this transcription is synced accurately with the audio since this information will be used to place relevant images during the video compilation.
 
 There are a number of ways to retrieve the synced transcription, firstly, we can leverage YouTube's captioning system if the user chooses to input a YouTube video URL. We cannot always rely on this since captions are not guaranteed to be present. Secondly, for music, it is possible to retrieve synced lyrics from open-source databases, however, this would require identifying the artist name and track title. In order to avoid the YouTube metadata problem from the previous thesis (REF) and allow this to function if the user uploaded an audio file, we must process the audio to recognise and retrieve the track information. Finally, we still require a backup audio transcription tool for non-music audio sources or containing no YouTube captions. This workflow is depicted in Figure \ref{fig:transcription_extractor}.
 
@@ -341,7 +361,7 @@ There are a number of ways to retrieve the synced transcription, firstly, we can
 \end{figure}
 
 \subsection{Video Generator}
-This component should activate when the user chooses to generate a video. It will take in the audio and the synced transcription which will be divided into phrase-level chunks. Now, the videography tool should retrieve a top-$1$ relevant image for each chunk and sequence them into a video according to the timestamp information present. The audio should then be added to this rendered video which will subsequently be outputed for the user to view and export. Since, it is common for some phrases to be repeated, especially in music, we may want to retrieve different images for each repeated phrase. Our main goal is to produce a video that is engaging to the user. In these cases, we can simply retrieve next relevant image in our collection.
+This component should activate when the user chooses to generate a video. It will take in the audio and the synced transcription which will be divided into phrase-level chunks. Now, the videography tool should retrieve a top-$1$ relevant image for each chunk and sequence them into a video according to the timestamp information present. The audio should then be added to this rendered video which will subsequently be outputted for the user to view and export. Since, it is common for some phrases to be repeated, especially in music, we may want to retrieve different images for each repeated phrase. Our main goal is to produce a video that is engaging to the user. In these cases, we can simply retrieve the next relevant image in our collection.
 
 \subsection{Annotation Interface}
 The Annotation Interface will consist of a system workflow of its own since the user will be actively interacting with the interface in order to incrementally construct the ground truth for the audio. Figure \ref{fig:annotation_interface} presents the workflow that an annotator would follow.
@@ -353,9 +373,9 @@ The Annotation Interface will consist of a system workflow of its own since the 
     \label{fig:annotation_interface}
 \end{figure}
 
-Since one of our requirements specify a static image collection, this gives the benefit of being able to pre-process the entire collection since we know that the images are not going to change. Additionally, since we want include semantics of text and images, we must embed all the images into a multimodal space in which text can also be embedded into.
+Since one of our requirements specifies a static image collection, this gives the benefit of being able to pre-process the entire collection since we know that the images are not going to change. Additionally, since we want to include the semantics of text and images, we must embed all the images into a multimodal space in which text can also be embedded into.
 
-Firstly, the annotator would select an audio chunk to assess. This freedom to choose which part of the audio to annotate is essential in order to facilitate the requirement of editing annotations. However, it can be assumed that the annotator will construct the ground truth in the order of the audio. Once a chunk is selected, the top-$k$ images will be retrieved and shown to the assessor by embedding the chunk text and performing a search in the multimodal vector space. The annotator is then expected to identify and label the images that they judge as the most fitting to the chunk text. This process will be repeated for every chunk of the audio until a completed ground truth set is constructed which will be outputted to the annotator in an accessilbe format.
+Firstly, the annotator would select an audio chunk to assess. This freedom to choose which part of the audio to annotate is essential in order to facilitate the requirement of editing annotations. However, it can be assumed that the annotator will construct the ground truth in the order of the audio. Once a chunk is selected, the top-$k$ images will be retrieved and shown to the assessor by embedding the chunk text and performing a search in the multimodal vector space. The annotator is then expected to identify and label the images that they judge as the most fitting to the chunk text. This process will be repeated for every chunk of the audio until a completed ground truth set is constructed which will be outputted to the annotator in an accessible format.
 
 
 \section{User Interface Design}
