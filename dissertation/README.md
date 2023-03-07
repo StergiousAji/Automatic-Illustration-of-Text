@@ -2,7 +2,7 @@
 
 Provides `l4proj.cls`, the standard LaTeX template for Honours Individual Projects.
 
-![Preview of the layout](images/l4proj.png)
+![Preview of the layout](figures/l4proj.png)
 
 ## Notes on formatting
 
