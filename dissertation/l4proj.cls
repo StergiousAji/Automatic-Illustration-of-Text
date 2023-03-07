@@ -150,7 +150,7 @@ textfont=it,tableposition=above]{caption}
 
       % the logo, full page width
       \vspace{1in}
-      \includegraphics[width=\linewidth]{images/CompSci_colour.pdf}
+      \includegraphics[width=\linewidth]{figures/CompSci_colour.pdf}
       \vskip 0.5em
       \color{UniBlue}
       {\large \sffamily Honours Individual Project Dissertation}\\ 

@@ -88,14 +88,14 @@ This chapter serves to outline the motivations for creating an automatic videogr
 % \textbf{Motivate} first, then state the general problem clearly. 
 \section{Motivations}
 \subsection{Automatic Videography of Audio}
-Text-to-image retrieval is a vast topic that has gained increased interest in recent years, contributing to many real-world applications in today's media-heavy landscape. One of the key areas that have expanded, due to  advancements in image retrieval technology, is automated videography. The rise in video production \citep{tprisevideo} has demanded a drive for more automated systems, especially in the realm of music. On popular platforms like \cite{youtube}, music content often lacks accompanying video content, which can be due to various reasons, such as a lack of funding, song popularity, or the music track could be digitised from an older format, like vinyl. 
+Text-to-image retrieval is a topic that has gained increased interest in recent years due to the advent of new deep-learning approaches that has considerably outperformed prior work. Following this, these advancements have illuminated new innovation into areas like automatic content creation. The rise in video production \citep{tprisevideo} has demanded a drive for more automated systems, especially in the realm of music. On popular platforms like \cite{youtube}, music often lacks accompanying video content which can be due to various reasons such as a lack of funding and resources or song popularity. More commonly, many older music tracks that previously only existed in analogue formats have been digitised to be uploaded to the platform.
 
-Moreover, this tool has applications beyond music tracks, as it can effectively enhance educational materials and podcasts. By incorporating multiple modes of information, such as visual, audio, and text, it can increase the accessibility of the subject and improve users engagement and retention of the material. According to the study by \citep{benefits_of_mmv} participants who watched a video lecture with both visual and auditory content outperformed those who watched a lecture with only one of those elements. As a result, incorporating video into educational materials can provide a more comprehensive learning experience that caters to the diverse learning styles identified in Fleming's VARK acronym \citep{vark}.
+Moreover, this tool has applications beyond music tracks, as it can effectively enhance educational materials and podcasts. By incorporating multiple modes of information, such as visual, audio, and textual, it can increase the accessibility of the subject and improve user engagement and retention. According to the study by \citep{benefits_of_mmv} participants who watched a video lecture with both visual and auditory content outperformed those who watched a lecture with only one of those elements. As a result, incorporating video into educational materials could provide a better learning experience that caters to the diverse learning styles identified in Fleming's VARK acronym \citep{vark}.
 
-One of the main motivations of this project is to build on and enhance previous work on the Automatic Videography of Audio Tracks of Songs by \cite{parker}. Parker's thesis achieved a functioning automated videography tool, focused on audio tracks sourced from YouTube, however, it suffered from a number of drawbacks that we aim to resolve with this project. A more in-depth review of the thesis is conducted in Section \ref{sec:background_parker} of the Background.
+One of the main motivations of this project is to build on and enhance previous work on the Automatic Videography of Audio Tracks of Songs by \cite{parker}. Parker's thesis achieved a functioning video generation tool, focused on audio tracks sourced from YouTube, however, it suffered from a number of drawbacks that we aim to resolve with this project. A more in-depth review of the thesis is conducted in Section \ref{sec:background_parker} of the Background.
 
 \subsection{Ground-Truth Annotation Interface}
-With an evergrowing supply of automatic videography systems, it is important to perform evaluations and compare their relevant performances in completing set tasks. However, we found that, currently, there is a lack of objective procedures for evaluating comparative performances between different systems. More specifically in measuring their accuracy at image retrieval from text. Image relevance can and has been assessed with qualitative user surveys but this can often be very subjective on personal preferences and present moods. More importantly, to evaluate a new system, more user studies must be conducted with the same demographic of people if the goal is to compare against the results of a previously evaluated system. This is impractical, not to mention, time-consuming, and ultimately producing unrepeatable and biased evaluations.
+With an evergrowing supply of automatic videography systems, it is important to perform evaluations and compare their relative performances. Nevertheless, we have found that there is a lack of objective procedures for evaluating comparative performances between different videography systems. More specifically in measuring their accuracy at image retrieval from text. Image relevance can and has been assessed with qualitative user surveys but this can often be very subjective and sensitive to personal preferences and present moods. More importantly, to evaluate a new system, further user studies must be conducted with the same demographic of people if the goal is to compare against the results of a previously evaluated system. This is impractical, not to mention, time-consuming, ultimately producing unrepeatable and biased results.
 
 This can be mitigated, if instead, a set of true labels are annotated beforehand for provided audio sources which can then be used to evaluate any number of videography systems on those same audio sources. It is vital that a static image collection is used for ground truth constructing and evaluating in order to produce repeatable and standardised performance metrics.
 
@@ -105,29 +105,35 @@ This called for a user-friendly interface to assess the relevance of images from
 \section{Aims}
 This project aims to produce a piece of software that can take any audio source and automatically generate a video from it. The video will consist of timely imagery corresponding to the textual content present in the audio. In addition, this software will include a novel annotation interface for assessing image relevance from text prompts. This will let the user construct a set of ground truths for each portion of the given audio source. This will be achieved by letting the annotator select the set of images that they perceive as the most fitting to the accompanying text or song lyric in the given chunk of audio. This set of images will be picked from a top-$k$ which will be retrieved using our system.
 
-Since there is a high priority for precise ground truth construction, the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform. Additionally, since the aim is for this application to be used by anyone, appropriate error handling must be in place to accommodate users from a wide area of technical backgrounds. We also aim to make our system modular in design. This way, more technical users would be able to swap in any static image collection with minimal configuring if required.
+Since there is a high priority for precise ground truth construction, the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform. Additionally, since the aim is for anyone to use this application, appropriate error handling must be in place to accommodate users from a wide range of technical backgrounds. We also aim to make our system modular in design. This way, more technical users would be able to swap in any image collection with minimal configuring if required.
 
-We aim to use the completed annotation interface to produce ground truths for a pre-selected list of audio sources. This data will be made available in an accessible format for a number of different use cases. Firstly, this data can be used to measure the quality of automated videography systems using standard IR metrics like Average Precision, F-Measure and the Normalised Discounted Cumulative Gain (nDCG). 
-
-% However, the data will not be restricted to the task of automatic videography, due to it simply consisting of a set of relevance assessments of images from text. Hence, the data can be used in existing or new text-to-image research in general. A recent example of such a possible use case is investigating the effeciveness of Variable Depth Pooling (CITE), more details are discussed in the Background section \ref{sec:background_pooling}.
+We aim to provide a set of completed ground truths for a pre-defined list of audio sources using our annotation interface. This data will be made available in an accessible format so that it can be used to measure the quality of existing and future videography systems using standard Information Retrieval (IR) metrics like Average Precision, F-Measure and Normalised Discounted Cumulative Gain (nDCG).
 
 Finally, as stated in our motivations, we wish to fix the limitations of the previous videography generation system by Parker as well as expand upon its functionality. We aim to, generalise the application of the tool to any audio source, not just restrict it to sourcing from YouTube videos. This also means, our tool must be able to support transcription of multiple languages. We aim to tackle the image retrieval process using a different approach that introduces semantics in order to retrieve more relevant images.
+
+% However, the data will not be restricted to the task of automatic videography, due to it simply consisting of a set of relevance assessments of images from text. Hence, the data can be used in existing or new text-to-image research in general. A recent example of such a possible use case is investigating the effeciveness of Variable Depth Pooling (CITE), more details are discussed in the Background section \ref{sec:background_pooling}.
 
 % In order to justify creating a novel annotation interface, we must first explore existing solutions and their corresponding strengths and limitations.
 
 
 %================================================================================
 \chapter{Background}
-This chapter serves to lay the foundations in order to provide the needed context to understand the scope of this project. Firstly, an explorative analysis of the history and origins of the field of text-to-image retrieval will be conducted. This will be followed by a discussion of the recent advancements of contrastive learning multimodal models with vision transformers. A thorough review of the previous thesis on automatic videography will be given in order to fully discern the motivations and aims for this project. Next, an outline of what current solutions exist to solve our problem of annotating images from text queries will be provided. Finally, a literature review on recent research on Variable Depth Pooling will be carried out which aims to provide further insight on the weight of the potential data we can produce using our solution.
+This chapter serves to lay the foundations in order to contextualise this project within the field of Information Retrieval (IR). Firstly, a look into the origins of the field, specifically text-to-image retrieval, will be conducted. This will be followed by a discussion of the recent advancements in computer vision to allow multimodal representations of images with natural language. We will briefly look into the history of relevance assessment to ground our problem of evaluating IR systems and justify our proposed approach. Next, the previous thesis on automatic videography will be critiqued, with the aim of identifying its merits and shortcomings. This will form the basis for which our project will build upon. Finally, an outline of what current solutions exist to solve our problem of assessing the relevance of images from text queries will be provided.
 
-\section{The History of Text-to-Image Retrieval}
-Text-to-image retrieval is a field of research that has evolved over several decades to facilitate the efficient searching and retrieval of images based on textual queries. The earliest text-based image retrieval (TBIR) systems were developed in the 1990s, including the VIR (Visual Information Retrieval) systems developed by \cite{datta2001cbir}. These systems relied on simple keyword-based queries to search for images, with results often of low quality due to the limited ability of the systems to accurately interpret the user's intent. Moreover, this method suffers from many disadvantages: Firstly, annotating large databases manually is not practical. Secondly, since end users must provide annotations, this method is prone to human perception biases. Lastly, these annotations are limited to a single language and cannot be easily applied to other languages.
+\section{The History of Image Retrieval}
+Image retrieval is an important branch within the field of IR that has evolved over several decades to facilitate the efficient search and retrieval of images from a database. With the vast size of image collections nowadays in academia, gove
+
+The earliest systems relied 
+
+(REWRITE)
+
+The earliest text-based image retrieval (TBIR) systems were developed in the 1990s, including the VIR (Visual Information Retrieval) framework developed by \cite{datta2001cbir}. These systems relied on simple keyword-based queries to search for images, with results often of low quality due to the limited ability of the systems to accurately interpret the user's intent. Moreover, this method suffered from many disadvantages: Firstly, annotating large databases manually is not practical. Secondly, since end users must provide annotations, this method is prone to human perception biases. Lastly, these annotations are limited to a single language and cannot be easily applied to other languages.
 
 (GIVE SUMMARY OF PAPERS AND PROS/CONS)
 
-In the 2000s, researchers developed more sophisticated approaches to text-to-image retrieval, incorporating techniques from natural language processing (NLP) and computer vision. This led to the development of more advanced retrieval models that could accurately match textual queries with semantically relevant images. Some notable works in this period include the Language of Pictures system by \cite{lavrenko2003lop}, the Cross-Media Relevance Models (CMRM) by \cite{rasiwasia2010cmmr}, and the Text-Guided Attention Model (TGAM) by \cite{gao2018tgam}.
+In the 2000s, researchers developed more sophisticated approaches for text-to-image retrieval, incorporating techniques from natural language processing (NLP) and computer vision. This led to the development of more advanced retrieval models that could accurately match textual queries with semantically relevant images. Some notable works in this period include the Language of Pictures system by \cite{lavrenko2003lop}, the Cross-Media Relevance Models (CMRM) by \cite{rasiwasia2010cmmr}, and the Text-Guided Attention Model (TGAM) by \cite{gao2018tgam}.
 
-The field of image retrieval underwent a significant revolution in the late 2010s with the emergence of deep learning-based retrieval models. These models are trained using large datasets of text and images and can learn complex semantic representations that capture the meaning of both the textual queries and the visual content of the images. Some notable works in this period include the Deep Visual-Semantic Alignments (DVSA) model by \cite{karpathy2015dvsa}, the Neural Image Caption (NIC) model by \cite{vinyals2015nic}, and the StackGAN model by \cite{zhang2017stackgan}.
+The field of image retrieval underwent a significant revolution in the late 2010s with the emergence of deep learning-based approaches. These models are trained using large datasets of text and images and can learn complex semantic representations that capture the meaning of both the textual queries and the visual content of the images. Some notable works in this period include the Deep Visual-Semantic Alignments (DVSA) model by \cite{karpathy2015dvsa} and the Neural Image Caption (NIC) model by \cite{vinyals2015nic}. This even spawned new areas of research with the concept of image synthesis using AI. The StackGAN model by \cite{zhang2017stackgan}.
 
 
 \subsection{CLIP: Transforming the Future of Text-to-Image Retrieval}
@@ -146,7 +152,7 @@ Overall, the results demonstrate that the CLIP model is capable of learning a ri
 \section{Relevance Assessment}
 One of the main objectives of this project is to develop an interface to construct of a set of known relevant images from text queries. However, this concept of relevance assessment has a deep history involving a variety of viable strategies so this must be investigated in order to find the most suited to achieving our goal.
 
-Relevance assessment is an integral aspect of Information Retrieval (IR) systems that determines the relevance of documents to a user's query. These documents, while most commonly associated with textual data, can encompass various other forms of data including but not limited to images, videos, and music. In IR, relevance refers to the degree to which a document satisfies a user's information need. Relevance assessment is essential in evaluating IR systems as it ensures that the search engine retrieves only the most pertinent documents and presents them to the user in the order of their relevance. 
+Relevance assessment is an integral aspect of IR systems that determines the relevance of documents to a user's query. These documents, while most commonly associated with textual data, can encompass various other forms of data including but not limited to images, videos, and music. In IR, relevance refers to the degree to which a document satisfies a user's information need. Relevance assessment is essential in evaluating IR systems as it ensures that the search engine retrieves only the most pertinent documents and presents them to the user in the order of their relevance. 
 
 \subsection{Origins}
 This concept can be traced back to the early days of IR amidst the rapid expansion of computerised catalogues for military, government, and education purposes in the 1950s. With many different classification and indexing strategies emerging, it became increasingly unclear which was the most effective. This was until the Cranfield experiments conducted by \cite{cleverdon1967cranfield} at Cranfield University, England. These experiments pioneered one of the most widely used evaluation frameworks within IR including fundamental techniques such as query formulation and evaluation metrics. One of the key innovations within the Cranfield paradigm was the development of the relevance assessment methodology. This was the idea of using a fixed test collection of queries designed to represent a wide range of information needs, and manually assessed relevant documents for each query. This test collection is then used to evaluate the effectiveness of different IR systems in retrieving those relevant documents. The experiments also introduced the first IR evaluation metrics, including precision and recall, which are still widely used today. 
@@ -179,14 +185,14 @@ Active learning (AL) involves a machine learning approach to iteratively optimis
 \section{Related Work}
 Before starting to build our system, it is important to look at similar existing solutions to our problem. This section will start off with a deep dive into the previous thesis in order to identify which parts of it we want to build on. Following this, we will focus on the novel annotation interface that we plan to develop by looking at two solutions that could solve a similar problem to the one described in this project. By analysing the design and workflow structure that these solutions employ, we can gather ideas and paint a clearer picture of the interface we want to develop. From the research done here, it was evident that most annotation software provide a wide range of different functionality and options. While this is certainly a positive in giving users as much freedom as possible, it can equally be a drawback. In most scenarios, users want to accomplish a single focused task and therefore attempting to learn and navigate a large versatile application can be confusing and time-consuming.
 
-The two relevance assessment software we chose to look at are \cite{labelbox} and ... Both pieces of software are similar in aspect to that of this project
+The two relevance assessment software we chose to look at are \cite{labelbox} and \cite{superannotate}. Both pieces of software are similar in aspect to the annotation tool proposed in this project, however they each have advantages and limitations which further motivate the requirement for our application.
 
 \subsection{Automatic Videography of Audio Tracks of Songs}
 \label{sec:background_parker}
 The previous project by Andrew Parker supplied an automatic videography system that generated videos for provided music tracks sourced from YouTube videos. The project aimed at providing a tool to ease music video creation and investigate the effects of using multimodal information in enriching songs.
 
 \subsubsection{Achievements}
-The project achieved a simple web interface, shown in Figure \ref{fig:parker_interface}(REF), where users can supply a YouTube video URL, the artist name and song title as well as the alignment method. On submission, the system will download the video and subsequently isolate the audio and video content. The next steps will depend on the chosen alignment method, so each will be explained one by one. There are three alignment methods available:
+The project achieved a simple web interface, shown in Figure \ref{fig:parker_interface}, where users can supply a YouTube video URL, the artist name and song title as well as the alignment method. On submission, the system will download the video and subsequently isolate the audio and video content. The next steps will depend on the chosen alignment method, so each will be explained one by one. There are three alignment methods available:
 \begin{itemize}
     \item \textbf{Forced Alignment:} This method uses a forced alignment model in order to synchronise the retrieved lyrics of the song to the extracted audio. The lyrics are retrieved from the Genius \cite{genius} database using the supplied song title and artist. A word-level dictionary of timings is returned which is used to place relevant imagery at the correct timestamps during video compilation.
 
@@ -196,6 +202,13 @@ The project achieved a simple web interface, shown in Figure \ref{fig:parker_int
 \end{itemize}
 
 This system scrapes the relevant images from Google Images. However, for this approach to work best, images should be searched by keywords. This requires extracting at most two keywords for each segment within the transcript which this project accomplishes by leveraging YAKE!: Yet Another Keyword Extractor \citep{campos2020yake}. Finally, the alignment information and scraped images are used to compile the final video which is presented to the user.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/parker_interface.pdf}
+    \caption{An example of using the user interface from the preceding system}
+    \label{fig:parker_interface}
+\end{figure}
 
 \subsubsection{Problems}
 Parker's system made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks.
@@ -215,32 +228,53 @@ First of all, let us tackle the metadata problem. We want to avoid relying on th
 
 In order to retrieve more relevant images, it is clear that semantics must be introduced instead of relying on keyword-based searching. Upon researching the recent advancements with CLIP (\ref{sec:background_clip}), we believe this is a viable solution that can mitigate the number of non-relevant images being retrieved.
 
-Lastly, we believe our novel ground-truth annotation interface will address the difficulty of evaluating current and prospective automatic videography systems. The constructed relevance assessments allow for the application of the Cranfield paradigm and computing standard IR metrics. These quantitative measures permit impartial performance comparisons between different systems. More importantly, the experiments can be conducted rapidly and repeatedly without concerns about result consistency.
+Lastly, we believe our novel ground-truth annotation interface will address the difficulty of evaluating current and future automatic videography systems. The constructed relevance assessments allow for the application of the Cranfield paradigm and computing standard IR metrics. These quantitative measures permit impartial performance comparisons between different systems. More importantly, the experiments can be conducted rapidly and repeatedly without concerns about result consistency. This focus
 
 
 \subsection{Labelbox}
-Labelbox is a cloud-based platform for data labeling and annotation. It is used by many companies to build and improve machine learning models. It was founded in 2018 and offers a variety of annotation tools to the user, including image classification, object detection, and segmentation. Their Catalog product allows users to query text. Their image classification tool allows users to label images based on relevant tags or categories, such as "dog" or "cat".
+\label{sec:labelbox}
+Labelbox is a cloud-based platform for data labeling and annotation. It is used by many companies to build and improve machine learning models. Founded in 2018, it offers a range of annotation tools including image classification, object detection, and segmentation. Its image classification tool allows users to label images with relevant tags or categories, such as "dog" or "cat". For our specific task, Labelbox allows users to query for specific concepts using natural language, which returns a ranked list of relevant images. The user can then select the most appropriate images by checking a box and save them for export. An example of this process can be seen in Figure \ref{fig:labelbox_interface}, where an annotator marks relevant images for the concept, \emph{"painting of cocktails"}.
 
-To assess image relevance from text querying, Labelbox's image classification tool can be used to assign relevant tags or categories to images based on the text query. For example, if the text query is "dog running in the park", the image can be labeled with relevant tags such as "dog", "running", and "park". This can help machine learning models better understand the context and relevance of images to a given text query.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/labelbox_interface.pdf}
+    \caption{Relevance assessment of the concept "painting of cocktails" using the Labelbox interface}
+    \label{fig:labelbox_interface}
+\end{figure}
 
-Labelbox also provides customizable interfaces and workflows that can be adapted to specific use cases, as well as tools for managing data quality and consistency. The platform integrates with popular machine learning frameworks and cloud services, allowing companies to streamline their data labeling workflows and accelerate model development.
+One of the most appealing feature that Labelbox offers is allowing users to customise the embedding model for similarity searching and aesthetic score, as illustrated in Figure \ref{fig:labelbox_model}. Currently, Labelbox only supports the CLIP ViT-B/32 model for images. However, the platform is designed to be compatible with any model that can be configured using their well-documented API.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/labelbox_model.pdf}
+    \caption{Labelbox providing the option to customise the image-text embedding model}
+    \label{fig:labelbox_model}
+\end{figure}
+
+The platform also integrates with popular machine learning frameworks and cloud services, allowing companies to streamline their data labeling workflows and accelerate model development. However, even with the platforms slick design, it still requires time to learn how to navigate through just due to the sheer number of features available. 
 
 
-\subsection{Solution \#2}
+\subsection{SuperAnnotate}
+Founded in 2017, SuperAnnotate is another cloud-based platform for computer vision and machine learning, designed to help users create high-quality image datasets for training and testing models. The platform allows users to annotate images with bounding boxes, polygons, keypoints, and other labels, as well as to collaborate with other annotators and manage their data. The company has since grown rapidly and has been used by companies and researchers across diverse industries including autonomous vehicles, medical imaging, and agriculture.
+
+SuperAnnotate is not just restricted to images, it also offers tools for annotating audio, video, LiDAR and any custom data formats like PDFs or HTML. However, the platform's comprehensive feature set is only accessible via a paid subscription model, which may not be ideal for individuals who require a single tool like image relevance assessment. Figure \ref{fig:superannotate_interface} depicts SuperAnnotate's interface to query images using natural language, similar to Labelbox (\ref{sec:labelbox}). The interface also allows placing tags in order to filter the retrieved images by specific attributes such as traffic lights that only show red. However, unlike Labelbox, SuperAnnotate does not provide an off-the-shelf embedding model, necessitating users to feed the model themselves.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/superannotate_interface.pdf}
+    \caption{Relevance assessment of the concept "Traffic Lights" using SuperAnnotate's interface}
+    \label{fig:superannotate_interface}
+\end{figure}
 
 
-\section{The Bigger Picture}
-(DELETE THIS?)
-
-Exploring the background of the project through a review of the history and past accomplishments within the field is essential to establish its relevance and reason for existing. Looking at current solutions to the problem and their contrasting approaches provides valuable insight into which direction we take our project. Nevertheless, it is equally important to envisage the potential applications of our project beyond its primary focus of automated videography. For this reason, we look into recent research that aims to reduce relevance assessment efforts by employing query-specific variable depth pooling (CITE).
+% \section{The Bigger Picture}
+% Exploring the background of the project through a review of the history and past accomplishments within the field is essential to establish its relevance and reason for existing. Looking at current solutions to the problem and their contrasting approaches provides valuable insight into which direction we take our project. Nevertheless, it is equally important to envisage the potential applications of our project beyond its primary focus of automated videography. For this reason, we look into recent research that aims to reduce relevance assessment efforts by employing query-specific variable depth pooling (CITE).
 
 
 \section{Summary}
+Exploring the background of the project through a review of the history and past accomplishments within the field is essential to establish its relevance and reason for existing. Looking at current solutions to the problem and their contrasting approaches provide valuable insights into the direction we should take our project. This is made explicit by our explorative dissection of the previous system as we propose potential solutions for its limitations. The advent of OpenAI's CLIP and Whisper \citep{whisper} models allow for a unique approach to the videography pipeline that could expand its current capabilities.
 
-
-
-
-
+Regarding the annotation interfaces, both applications we reviewed share an intuitive interface design including clear checkmarks to indicate images tagged as relevant by the user. Nonetheless, even with the vast feature set that these systems offer, it still requires a lot of manual effort to complete the presented in this project. To exemplify, the assessor must first listen and transcribe the audio and subsequently input and annotate every segment within the transcript one by one. We believe our solution could streamline this procedure by automating the transcription process and making it easier to view and assess different audio segments within the interface itself.
 
 
 %================================================================================
@@ -343,7 +377,7 @@ The user will input an audio source which will be processed to extract a synced 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{simplified_architecture.pdf}
+    \includegraphics[width=1\textwidth]{figures/simplified_architecture.pdf}
     \caption{Simplified workflow diagram showing the basic high-level design of our system}
     \label{fig:simplified_workflow}
 \end{figure}
@@ -355,7 +389,7 @@ There are a number of ways to retrieve the synced transcription, firstly, we can
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{transcription_extractor.pdf}
+    \includegraphics[width=1\textwidth]{figures/transcription_extractor.pdf}
     \caption{Internal view of the Transcription Extractor component}
     \label{fig:transcription_extractor}
 \end{figure}
@@ -368,7 +402,7 @@ The Annotation Interface will consist of a system workflow of its own since the 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{annotation_interface.pdf}
+    \includegraphics[width=1\textwidth]{figures/annotation_interface.pdf}
     \caption{Internal view of the Annotation Interface workflow}
     \label{fig:annotation_interface}
 \end{figure}
@@ -418,7 +452,7 @@ You may include multiple figures in one float, as in Figure \ref{fig:synthetic},
 % Figures are important. Use them well.
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
+    \includegraphics[width=0.5\linewidth]{figures/relu.pdf}    
 
     \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
     $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
@@ -434,7 +468,7 @@ You may include multiple figures in one float, as in Figure \ref{fig:synthetic},
 \begin{figure}[htb] 
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{images/synthetic.png}
+        \includegraphics[width=\textwidth]{figures/synthetic.png}
         \caption{Synthetic image, black on white.}
         \label{fig:syn1}
     \end{subfigure}
@@ -638,7 +672,7 @@ See the file \texttt{guide\_to\_visualising.pdf} for further information and gui
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1.0\linewidth]{images/boxplot_finger_distance.pdf}    
+    \includegraphics[width=1.0\linewidth]{figures/boxplot_finger_distance.pdf}    
 
     \caption{Average number of fingers detected by the touch sensor at different heights above the surface, averaged over all gestures. Dashed lines indicate
     the true number of fingers present. The Box plots include bootstrapped uncertainty notches for the median. It is clear that the device is biased toward 
