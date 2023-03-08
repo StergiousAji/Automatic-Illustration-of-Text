@@ -8,6 +8,7 @@
 \usepackage{pdfpages} % if you want to include a PDF for an ethics checklist, for example
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{float}
 
 \begin{document}
 
@@ -93,14 +94,14 @@ This chapter serves to outline the motivations for creating an automatic videogr
 \subsection{Automatic Videography of Audio}
 Text-to-image retrieval is a topic that has gained increased interest in recent years due to the advent of new deep-learning approaches that has considerably outperformed prior work. Following this, these advancements have illuminated new innovation into areas like automatic content creation. The rise in video production \citep{tprisevideo} has demanded a drive for more automated systems, especially in the realm of music. On popular platforms like \cite{youtube}, music often lacks accompanying video content which can be due to various reasons such as a lack of funding and resources or song popularity. More commonly, many older music tracks that previously only existed in analogue formats have been digitised to be uploaded to the platform.
 
-Moreover, this tool has applications beyond music tracks, as it can effectively enhance educational materials and podcasts. By incorporating multiple modes of information, such as visual, audio, and textual, it can increase the accessibility of the subject and improve user engagement and retention. According to the study by \citep{benefits_of_mmv} participants who watched a video lecture with both visual and auditory content outperformed those who watched a lecture with only one of those elements. As a result, incorporating video into educational materials could provide a better learning experience that caters to the diverse learning styles identified in Fleming's VARK acronym \citep{vark}.
+Moreover, this tool has applications beyond music tracks, as it can effectively enhance educational materials and podcasts. Incorporating multiple modes of information, such as visual, audio, and textual, can increase the accessibility of the subject and improve user engagement and retention. According to the study by \citep{benefits_of_mmv} participants who watched a video lecture with both visual and auditory content outperformed those who watched a lecture with only one of those elements. As a result, incorporating video into educational materials could provide a better learning experience that caters to the diverse learning styles identified in Fleming's VARK acronym \citep{vark}.
 
 One of the main motivations of this project is to build on and enhance previous work on the Automatic Videography of Audio Tracks of Songs by \cite{parker}. Parker's thesis achieved a functioning video generation tool, focused on audio tracks sourced from YouTube, however, it suffered from a number of drawbacks that we aim to resolve with this project. A more in-depth review of the thesis is conducted in Section \ref{sec:background_parker} of the Background.
 
 \subsection{Ground-Truth Annotation Interface}
 With an evergrowing supply of automatic videography systems, it is important to perform evaluations and compare their relative performances. Nevertheless, we have found that there is a lack of objective procedures for evaluating comparative performances between different videography systems. More specifically in measuring their accuracy at image retrieval from text. Image relevance can and has been assessed with qualitative user surveys but this can often be very subjective and sensitive to personal preferences and present moods. More importantly, to evaluate a new system, further user studies must be conducted with the same demographic of people if the goal is to compare against the results of a previously evaluated system. This is impractical, not to mention, time-consuming, ultimately producing unrepeatable and biased results.
 
-This can be mitigated, if instead, a set of true labels are annotated beforehand for provided audio sources which can then be used to evaluate any number of videography systems on those same audio sources. It is vital that a static image collection is used for ground truth constructing and evaluating in order to produce repeatable and standardised performance metrics.
+This can be mitigated if instead, a set of true labels are annotated beforehand for provided audio sources which can then be used to evaluate any number of videography systems on those same audio sources. It is vital that a static image collection is used for ground truth constructing and evaluating in order to produce repeatable and standardised performance metrics.
 
 This called for a user-friendly interface to assess the relevance of images from the textual content present in the inputted audio source. Under the hood, this ground-truth constructor interface can use the same pipeline as the automated videography system that we are creating. 
 
@@ -110,9 +111,9 @@ This project aims to produce a piece of software that can take any audio source 
 
 Since there is a high priority for precise ground truth construction, the software must be intuitive to use with clear instructions for the user to follow. We must, therefore, aim to produce a user-friendly interface in an easily accessible platform. Additionally, since the aim is for anyone to use this application, appropriate error handling must be in place to accommodate users from a wide range of technical backgrounds. We also aim to make our system modular in design. This way, more technical users would be able to swap in any image collection with minimal configuring if required.
 
-We aim to provide a set of completed ground truths for a pre-defined list of audio sources using our annotation interface. This data will be made available in an accessible format so that it can be used to measure the quality of existing and future videography systems using standard Information Retrieval (IR) metrics like Average Precision, F-Measure and Normalised Discounted Cumulative Gain (nDCG).
+We aim to provide a set of completed ground truths for a pre-defined list of audio sources using our annotation interface. This data will be made available in an accessible format so that it can be used to measure the quality of existing and future videography systems using standard Information Retrieval (IR) metrics like Average Precision, F-Measure, and Normalised Discounted Cumulative Gain (nDCG).
 
-Finally, as stated in our motivations, we wish to fix the limitations of the previous videography generation system by Parker as well as expand upon its functionality. We aim to, generalise the application of the tool to any audio source, not just restrict it to sourcing from YouTube videos. This also means, our tool must be able to support transcription of multiple languages. We aim to tackle the image retrieval process using a different approach that introduces semantics in order to retrieve more relevant images.
+Finally, as stated in our motivations, we wish to fix the limitations of the previous videography generation system by Parker as well as expand upon its functionality. We aim to, generalise the application of the tool to any audio source, not just restrict it to sourcing from YouTube videos. This also means, our tool must be able to support the transcription of multiple languages. We aim to tackle the image retrieval process using a different approach that introduces semantics in order to retrieve more relevant images.
 
 % However, the data will not be restricted to the task of automatic videography, due to it simply consisting of a set of relevance assessments of images from text. Hence, the data can be used in existing or new text-to-image research in general. A recent example of such a possible use case is investigating the effeciveness of Variable Depth Pooling (CITE), more details are discussed in the Background section \ref{sec:background_pooling}.
 
@@ -124,9 +125,9 @@ Finally, as stated in our motivations, we wish to fix the limitations of the pre
 This chapter serves to lay the foundations in order to contextualise this project within the field of Information Retrieval (IR). Firstly, a look into the origins of the field, specifically text-to-image retrieval, will be conducted. This will be followed by a discussion of the recent advancements in computer vision to allow multimodal representations of images with natural language. We will briefly look into the history of relevance assessment to ground our problem of evaluating IR systems and justify our proposed approach. Next, the previous thesis on automatic videography will be critiqued, with the aim of identifying its merits and shortcomings. This will form the basis for which our project will build upon. Finally, an outline of what current solutions exist to solve our problem of assessing the relevance of images from text queries will be provided.
 
 \section{The History of Image Retrieval}
-Image retrieval is an important branch within the field of IR which has evolved the past several decades. Recent years have witnessed an exponentially growing collection of images, spanning across various domains such as academia, medicine, social media, and military. This makes it all the more imperative that efficient mechanisms are in place to scour these databases. The earliest such mechanisms can be traced back to the 1970s. Known plainly as Text-Based Image Retrieval (TBIR) systems, they relied on keyword-based querying of a relational database \citep{chang1979tbir}. Consequently, every image in the database had to be labeled with appropriate keywords and a description. This was a popular framework at the time, but with the exponential growth of datasets, manual annotation became infeasible. Moreoever, the results were often of low quality due to the limited ability of the systems to accurately interpret the user's intent, and the subjectivity of human perception during annotation.
+Image retrieval is an important branch within the field of IR which has evolved over the past several decades. Recent years have witnessed an exponentially growing collection of images, spanning various domains such as academia, medicine, social media, and the military. This makes it all the more imperative that efficient mechanisms are in place to scour these databases. The earliest such mechanisms can be traced back to the 1970s. Known plainly as Text-Based Image Retrieval (TBIR) systems, they relied on keyword-based querying of a relational database \citep{chang1979tbir}. Consequently, every image in the database had to be labeled with appropriate keywords and a description. This was a popular framework at the time, but with the exponential growth of datasets, manual annotation became infeasible. Moreover, the results were often of low quality due to the limited ability of the systems to accurately interpret the user's intent, and the subjectivity of human perception during annotation.
 
-Fortunately, researchers at the time also began looking into the application of computer vision to solve the task. The key idea involved extracting visual features from the images like the colour, texture and shape and utilising this to index them into the database. This made it possible to use images as the search criteria in order to find images with similar features \citep{chang1981pictorial}. This approach later became known as Content-Based Image Retrieval (CBIR) as better image processing techniques emerged in the 1990s allowing easier extraction of features. Furthermore, as the capability to extract additional visual characteristics improved, images started being represented in increasingly higher dimensions. This often led to data sparsity problems in which the movement into higher dimensions caused similar data points to drift apart as the volume of the space grew too quickly for the data to keep up. A well-known phenomena coined as the \emph{'curse of dimensionality'} \citep{bellman1957dp}.
+Fortunately, researchers at the time also began looking into the application of computer vision to solve the task. The key idea involved extracting visual features from the images like the colour, texture and shape and utilising this to index them into the database. This made it possible to use images as the search criteria in order to find images with similar features \citep{chang1981pictorial}. This approach later became known as Content-Based Image Retrieval (CBIR) as better image processing techniques emerged in the 1990s allowing easier extraction of features. Furthermore, as the capability to extract additional visual characteristics improved, images started being represented in increasingly higher dimensions. This often led to data sparsity problems in which the movement into higher dimensions caused similar data points to drift apart as the volume of the space grew too quickly for the data to keep up. A well-known phenomenon coined as the \emph{'curse of dimensionality'} \citep{bellman1957dp}.
 
 In the 2000s, researchers developed more sophisticated approaches for text-to-image retrieval, incorporating techniques from natural language processing (NLP) and computer vision. This led to the development of more advanced retrieval models that could accurately match textual queries with semantically relevant images. Some notable works in this period include the Language of Pictures system by \cite{lavrenko2003lop}, the Cross-Media Relevance Models (CMRM) by \cite{rasiwasia2010cmmr}, and the Text-Guided Attention Model (TGAM) by \cite{gao2018tgam}.
 
@@ -180,9 +181,9 @@ Active learning (AL) involves a machine learning approach to iteratively optimis
 
 
 \section{Related Work}
-Before starting to build our system, it is important to look at similar existing solutions to our problem. This section will start off with a deep dive into the previous thesis in order to identify which parts of it we want to build on. Following this, we will focus on the novel annotation interface that we plan to develop by looking at two solutions that could solve a similar problem to the one described in this project. By analysing the design and workflow structure that these solutions employ, we can gather ideas and paint a clearer picture of the interface we want to develop. From the research done here, it was evident that most annotation software provide a wide range of different functionality and tools. While this is certainly a positive in giving users as much freedom as possible, it can equally be a drawback. In most scenarios, users want to focus on a single task and therefore attempting to learn and navigate a large versatile application can be confusing and waste of time and resources.
+Before starting to build our system, it is important to look at similar existing solutions to our problem. This section will start off with a deep dive into the previous thesis in order to identify which parts of it we want to build on. Following this, we will focus on the novel annotation interface that we plan to develop by looking at two solutions that could solve a similar problem to the one described in this project. By analysing the design and workflow structure that these solutions employ, we can gather ideas and paint a clearer picture of the interface we want to develop. From the research done here, it was evident that most annotation software provide a wide range of different functionality and tools. While this is certainly a positive in giving users as much freedom as possible, it can equally be a drawback. In most scenarios, users want to focus on a single task and therefore attempting to learn and navigate a large versatile application can be confusing and a waste of time and resources.
 
-The two relevance assessment software we chose to look at are \cite{labelbox} and \cite{superannotate}. Both pieces of software are similar in aspect to the annotation tool proposed in this project, however they each have advantages and limitations which further motivate the requirement for our application.
+The two relevance assessment software we chose to look at are \cite{labelbox} and \cite{superannotate}. Both pieces of software are similar in aspect to the annotation tool proposed in this project, however, they each have advantages and limitations which further motivate the requirement for our application.
 
 \subsection{Automatic Videography of Audio Tracks of Songs}
 \label{sec:background_parker}
@@ -253,7 +254,8 @@ The platform also integrates with popular machine learning frameworks and cloud 
 
 
 \subsection{SuperAnnotate}
-Founded in 2017, SuperAnnotate is another cloud-based platform for computer vision and machine learning, designed to help users create high-quality image datasets for training and testing models. The platform allows annotation of images with bounding boxes, polygons, keypoints, among others, as well as the ability to collaborate with other annotators on the fly. The platform has since grown rapidly and has been used by companies and researchers across diverse industries including autonomous vehicles, medical imaging, and agriculture.
+\label{sec:superannotate}
+Founded in 2017, SuperAnnotate is another cloud-based platform for computer vision and machine learning, designed to help users create high-quality image datasets for training and testing models. The platform allows the annotation of images with bounding boxes, polygons, or keypoints, among others, as well as the ability to collaborate with other annotators on the fly. The platform has since grown rapidly and has been used by companies and researchers across diverse industries including autonomous vehicles, medical imaging, and agriculture.
 
 SuperAnnotate is not just restricted to images, it also offers tools for annotating audio, video, LiDAR and any custom data formats like PDFs or HTML. However, the platform's comprehensive feature set is only accessible via a paid subscription model, which may not be ideal for individuals who require a single tool such as image relevance assessing. Figure \ref{fig:superannotate_interface} depicts SuperAnnotate's interface to query images using natural language, similar to Labelbox (\ref{sec:labelbox}). The interface also allows placing tags in order to filter the retrieved images by specific attributes such as traffic lights that only show red. However, unlike Labelbox, SuperAnnotate does not provide an off-the-shelf embedding model, necessitating users to feed a model themselves.
 
@@ -330,27 +332,28 @@ The list is divided into two sections: Functional Requirements, which describe i
     \item \label{req:12} \textbf{Should Have:} The ability to upload audio sources of any language.
     \item \label{req:13} \textbf{Could Have:} The ability to load ground truths for editing.
     \item \label{req:14} \textbf{Could Have:} The ability to reconfigure the static image collection location.
-    \item \label{req:15} \textbf{Could Have:*} The ability to view the percentage complete for ground truth construction of processed audio sources.
-    \item \label{req:16} \textbf{Could Have:*} The ability to save or skip chunks with repeating textual content when ground truth constructing.
+    \item \label{req:15} \textbf{*Could Have:} The ability to view the percentage complete for ground truth construction of processed audio sources.
+    \item \label{req:16} \textbf{*Could Have:} The ability to save or skip chunks with repeating textual content when ground truth constructing.
+    \item \label{req:17} \textbf{*Could Have:} The ability to view the timestamp information of audio chunks.
 \end{enumerate}
 
 \subsection{Non-Functional Requirements}
 \begin{enumerate}[resume]
-    \item \label{req:17} \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.
-    \item \label{req:18} \textbf{Should Have:} The application being accessible from any Operating System platform.
-    \item \label{req:19} \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
-    \item \label{req:20} \textbf{Should Have:} The application with appropriate error handling.
-    \item \label{req:21} \textbf{Should Have:} The application displaying progress bars for long loading times.
-    \item \label{req:22} \textbf{Should Have:} The application being fast and responsive.
-    \item \label{req:23} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item \label{req:24} \textbf{Should Have:} The application being able to provide a transcription for any audio source with relative timestamps.
-    \item \label{req:25} \textbf{Should Have:} The text-to-image retrieval using semantics in order to retrieve more relevant images.
-    \item \label{req:26} \textbf{Should Have:} The videos being generated in a reasonable amount of time.
-    \item \label{req:27} \textbf{Should Have:} The images being of high quality in the generated videos.
-    \item \label{req:28} \textbf{Could Have:} The application being designed modularly to configure any static image collection.
-    \item \label{req:29} \textbf{Could Have:} The videos including text as well as images.
-    \item \label{req:30} \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
-    \item \label{req:31} \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes
+    \item \label{req:18} \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.
+    \item \label{req:19} \textbf{Should Have:} The application being accessible from any Operating System platform.
+    \item \label{req:20} \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
+    \item \label{req:21} \textbf{Should Have:} The application with appropriate error handling.
+    \item \label{req:22} \textbf{Should Have:} The application displaying progress bars for long loading times.
+    \item \label{req:23} \textbf{Should Have:} The application being fast and responsive.
+    \item \label{req:24} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
+    \item \label{req:25} \textbf{Should Have:} The application being able to provide a transcription for any audio source with relative timestamps.
+    \item \label{req:26} \textbf{Should Have:} The text-to-image retrieval using semantics in order to retrieve more relevant images.
+    \item \label{req:27} \textbf{Should Have:} The videos being generated in a reasonable amount of time.
+    \item \label{req:28} \textbf{Should Have:} The images being of high quality in the generated videos.
+    \item \label{req:29} \textbf{Could Have:} The application being designed modularly to configure any static image collection.
+    \item \label{req:30} \textbf{Could Have:} The videos including text as well as images.
+    \item \label{req:31} \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
+    \item \label{req:32} \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes.
     
 \end{enumerate}
 
@@ -413,7 +416,7 @@ The Annotation Interface will consist of a system workflow of its own since the 
     \label{fig:annotation_interface}
 \end{figure}
 
-Since one of our requirements specifies a static image collection (\textbf{\#\ref{req:17}}), this gives the benefit of being able to pre-process the entire collection since we know that the images are not going to change. Additionally, since we want to include the semantics of text and images, we must embed all the images into a multimodal space in which text can also be embedded into.
+Since one of our requirements specifies a static image collection (\textbf{\#\ref{req:18}}), this gives the benefit of being able to pre-process the entire collection since we know that the images are not going to change. Additionally, since we want to include the semantics of text and images, we must embed all the images into a multimodal space in which text can also be embedded into.
 
 Firstly, the annotator would select an audio chunk to assess. This freedom to choose which part of the audio to annotate is essential in order to facilitate the requirement of editing annotations (\textbf{\#\ref{req:11}}). However, it can be assumed that the annotator will construct the ground truth in the order of the audio. Once a chunk is selected, the top-$k$ images will be retrieved and shown to the assessor by embedding the chunk text and performing a search in the multimodal vector space. The annotator is then expected to identify and label the images that they judge as the most fitting to the chunk text. This process will be repeated for every chunk of the audio until a completed ground truth set is constructed which will be outputted to the annotator in an accessible format.
 
@@ -424,9 +427,9 @@ The user interface (UI) became a critical part of our application due to its imp
 \subsection{Home Page}
 The simplified workflow outlined in Figure \ref{fig:simplified_workflow} will be used as the basis to form the various pages within the application. Firstly, we require a page for the user to enter the audio source to initiate the process. Hence, this 'home' page will require a way for the user to upload an audio file from their local machine (\textbf{\#\ref{req:1}}), as well as a text field to take in a YouTube video URL (\textbf{\#\ref{req:2}}). Appropriate validation is necessary to handle erroneous inputs such as incompatible file formats or URLs not from the YouTube domain. More importantly, these errors should be clearly displayed to the user so that they can respond accordingly. An initial design of the Home page can be seen in Figure \ref{fig:home_page}. 
 
-In addition to taking inputs from the user, we also include a navigation bar with intended links to an 'About' page and a 'Collecions' page. Since, we want our application to be open to anyone wanting to generate videos or develop ground truths, we believe an About page is necessary to provide information about the interface and how to use it. The link to a Collections page spawned to satisfy the potential to save processed audio sources and generated videos (\textbf{\#\ref{req:10}}). Furthermore, since these links are required to be easily accessible, we include this navigation bar in subsequent pages.
+In addition to taking inputs from the user, we also include a navigation bar with intended links to an 'About' page and a 'Collecions' page. Since we want our application to be open to anyone wanting to generate videos or develop ground truths, we believe an About page is necessary to provide information about the interface and how to use it. The link to a Collections page spawned to satisfy the potential to save processed audio sources and generated videos (\textbf{\#\ref{req:10}}). Furthermore, since these links are required to be easily accessible, we include this navigation bar on subsequent pages.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{figures/home_page.pdf}
     \caption{An initial prototype for the Home page, illustrating how the user can input an audio source.}
@@ -434,11 +437,11 @@ In addition to taking inputs from the user, we also include a navigation bar wit
 \end{figure}
 
 \subsection{Audio Page}
-Once the audio source is submitted, the Transcription Extracter component should produce a full transcription of the audio. This should lead into the next page displaying the results of the audio processing with the two different options of where to proceed next. More specifically, the user can choose to generate the video with the 'Generate Video' button, or start constructing a ground truth with the 'Build Ground Truth' button. The full transcription should also be shown to fulfil requirement \textbf{\#\ref{req:3}}. 
+Once the audio source is submitted, the Transcription Extracter component should produce a full transcription of the audio. This should lead into the next page displaying the results of the audio processing with the two different options of where to proceed next. More specifically, the user can choose to generate the video with the 'Generate Video' button, or start constructing a ground truth with the 'Build Ground Truth' button. The full transcription should also be shown to fulfill requirement \textbf{\#\ref{req:3}}. 
 
-Aside from this, to save the audio processing result in a database, it must be uniquely identifiable. This led to the idea of associating the audio source to a Title and an optional Author. In the case where the audio is sourced from a file uploaded by the user, the title can simply be the filename. Whenever the audio is extracted from a non-music YouTube video, the title and author can be taken from the YouTube metadata. Finally, for music tracks, the title and author fields can be filled with the recognised track information such as the song title and artist name respectively. Our design shown in Figure \ref{fig:audio_page} also includes an associated image since we believe this could be visually appealing and satisfy the requirement to be able to differentiate collected audio sources (\textbf{\#\ref{req:29}}). This could simply be the video thumbnail for YouTube sources while for music tracks, the image field can be satisfied by its corresponding cover art. 
+Aside from this, to save the audio processing result in a database, it must be uniquely identifiable. This led to the idea of associating the audio source to a Title and an optional Author. In the case where the audio is sourced from a file uploaded by the user, the title can simply be the filename. Whenever the audio is extracted from a non-music YouTube video, the title and author can be taken from the YouTube metadata. Finally, for music tracks, the title and author fields can be filled with the recognised track information such as the song title and artist name respectively. Our design shown in Figure \ref{fig:audio_page} also includes an associated image since we believe this could be visually appealing and satisfy the requirement to be able to differentiate collected audio sources (\textbf{\#\ref{req:31}}). This could simply be the video thumbnail for YouTube sources while for music tracks, the image field can be satisfied by its corresponding cover art. 
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{figures/audio_page.pdf}
     \caption{An initial prototype for the Audio page showing the resulting transcript after processing the audio.}
@@ -446,9 +449,9 @@ Aside from this, to save the audio processing result in a database, it must be u
 \end{figure}
 
 \subsection{Video Page}
-The Video page will be rendered when the user clicks on the 'Generate Video' button from the Audio page. This page will provide an embedded video so that the user could view the video on the interface itself instead of forcing them to download to view it. This page will be minimalistic in design, as illustrated in Figure \ref{fig:video_page}, and the 'Author - Title' divider will be utilised as the link back to the Audio result page. Once the video is generated, this will be saved in the backend for easy access. Prior to the rendering of this page, we intend to provide a descriptive loading screen since it is expected that the video compilation will take several minutes as made evident by the previous system. This intermediate loading page adheres to our listed requirements (\textbf{\#\ref{req:21}}) giving estimated time of completion while simultaneously preventing the user from interacting with other parts of the interface during video generation.
+The Video page will be rendered when the user clicks on the 'Generate Video' button from the Audio page. This page will provide an embedded video so that the user could view the video on the interface itself instead of forcing them to download to view it. This page will be minimalistic in design, as illustrated in Figure \ref{fig:video_page}, and the 'Author - Title' divider will be utilised as the link back to the Audio result page. Once the video is generated, this will be saved in the backend for easy access. Prior to the rendering of this page, we intend to provide a descriptive loading screen since it is expected that the video compilation will take several minutes as made evident by the previous system. This intermediate loading page adheres to our listed requirements (\textbf{\#\ref{req:22}}) giving an estimated time of completion while simultaneously preventing the user from interacting with other parts of the interface during video generation.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{figures/video_page.pdf}
     \caption{An initial prototype for the Video page providing the generated video.}
@@ -456,19 +459,21 @@ The Video page will be rendered when the user clicks on the 'Generate Video' but
 \end{figure}
 
 \subsection{Chunk Page}
-BLEH
+Alternatively, the user can choose to construct the ground truth for the audio source by clicking on the 'Build Ground Truth' button on the resulting Audio page. This should subsequently navigate the user to the first audio chunk page. This should show the text present within that chunk and the retrieved top-$k$ images using the system. As seen in the Figure \ref{fig:chunk_page}, we picked a depth $k=10$ since it is small enough for the assessor to efficiently comb through for the most relevant images. This is especially true when this task must be repeated for every chunk in the audio source. We want to avoid a burdensome experience that could affect the quality of relevance assessments (CITE). However, we found that this cut-off point is highly dependent on the effectiveness of the retrieval system and the textual query discussed in the Implementation (REF).
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{figures/chunk_page.pdf}
     \caption{An initial prototype for the Chunk pages that provide the ability to assess the relevance of retrieved images for specific audio chunks.}
     \label{fig:chunk_page}
 \end{figure}
 
-\subsection{Ground-Truth Page}
-BLEH
+We chose to use a binary relevance assessment strategy where the assessor must only mark relevant images meaning unmarked images are considered irrelevent. This is faster than a graded relevance system which requires significant thought which may discourage accurate assessments. This is also backed by approaches employed by similar technologies (\ref{sec:labelbox} \& \ref{sec:superannotate}). However, it does call in question of what the assessor should do if all top-10 images are irrelevant to the chunk text, this is discussed in (REF). In addition to these interactable images, the page includes 'Previous' and 'Next' buttons to easily navigate to bordering chunk pages. We also intend to save the user's assessments when these buttons are pressed in order to reduce annotation effort and allow editing of previous chunks (\textbf{\#\ref{req:11}}). Not to mention to allow the possibility of skipping chunks with repeating textual contents (\textbf{\#\ref{req:16}}).
 
-\begin{figure}[h]
+\subsection{Ground-Truth Page}
+Once all audio chunks have been annotated, the system should render a resulting Ground-Truth page similar to Figure \ref{fig:ground_truth_page}. This will consist of a small preview of the ground-truth data and some functionality to download the constructed data. While the ground-truth data may be technical, we intend to deliver it in a human-readable format so that assessors can perform last minute checks if required. The preview feature also enables retrieval system designers to peek at the format of the ground truths to aid in the evaluation process.
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/ground_truth_page.pdf}
     \caption{An initial prototype for the Ground-Truth Page providing a preview of the constructed ground truth available for download.}
