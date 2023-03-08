@@ -6,7 +6,8 @@
 % You can add any packages you want, as long as it does not alter the overall format (e.g. don't change the margins or the reference style).
 %
 \usepackage{pdfpages} % if you want to include a PDF for an ethics checklist, for example
-
+\usepackage{enumitem}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -21,6 +22,8 @@
 %==============================================================================
 %% ABSTRACT
 \begin{abstract}
+    (TODO)
+
     This paper describes a system that automatically illustrates textual information present in audio sources, in addition to a ground truth construction interface for automatic videography generation systems.
     
     Users can use this system as a standard automated videography tool that generates videos with relevant imagery appearing in time with the text in the audio. Alternatively, they can build ground truth data for various audio sources. This ground truth would consist of timing information as well as sets of true labelled images for each chunk within the audio.
@@ -207,6 +210,7 @@ The system scrapes the relevant images from Google Images. However, for this app
 \subsubsection{Problems}
 Parker's system made many achievements in generating complementary videos for audio tracks. However, it was restricted to the YouTube platform and emerged with a number of unforeseen drawbacks.
 
+\label{par:metadata_problem}
 To begin with, the metadata of YouTube videos was deemed unreliable in procuring the artist's name and the song title. Therefore, the system resorts to obtaining this information from user input. However, this can be problematic since it requires the user to undertake additional research and accurately type the information, which can be prone to errors. 
 
 The prior system was also heavily reliant on several Application Programming Interfaces (APIs) such as YAKE! for keyword extraction, pytesseract \citep{pytesseract} for OCR of frames, and Google Images for scraping images just to name a few. This places a high dependency on these APIs which may not be consistently maintained or may cause version conflicts with other packages. In fact, the AutoLyrixAlign API \citep{gupta2020ala}, utilised for the Forced Alignment approach has since been deprecated at the time of writing.
@@ -275,7 +279,7 @@ Regarding the annotation interfaces, both applications we reviewed share an intu
 \chapter{Analysis/Requirements}
 This chapter serves to break down the high-level aims of the project in order to produce a list of functional and non-functional requirements, ordered by priority. This will directly determine the design and implementation of the project.
 
-\section{Requirements Elicitation}
+\section{Requirement Elicitation}
 In order to elicit the list of requirements, a number of user scenarios are created. These are imagined scenarios of users that would directly benefit from such an application. This type of requirements gathering, most commonly used in agile software development projects, places the focus on the end-user, rather than the developer. Therefore, this prioritises the features that an end-user requires to fulfill their goals rather than designing the development process around what is easy to implement. Another benefit of this method is that it mitigates the risk of potential flaws at a very early stage. It is much easier to accommodate any flaws before any design or implementation is undertaken rather than finding them out during the evaluation stages with real users. It gets progressively more difficult to change the existing design the further we are down the development process.
 
 
@@ -289,12 +293,12 @@ In order to elicit the list of requirements, a number of user scenarios are crea
 
 \subsection{User Stories}
 \begin{itemize}
-    \item As a user of the application, I want to upload audio files, so that I can generate a video from it or construct ground truths for it.
-    \item As a user of the application, I want to specify YouTube video URLs, so that its extracted audio can be used as the source.
-    \item As a user of the application, I want to build and download the set of ground truths, so that I can use them to evaluate my system.
-    \item As a user of the application, I want to edit previously made ground truths, so that I can fix any mistakes made.
-    \item As a user of the application, I want to view the full audio transcription, so that I can annotate specific parts of the audio.
-    \item As a user of the application, I want to view and download the generated video, so that I can share it and upload it to any platform.
+    \item \emph{As a user} of the application, \emph{I want to} upload audio files, \emph{so that} I can generate a video from it or construct ground truths for it.
+    \item \emph{As a user} of the application, \emph{I want to} specify YouTube video URLs, \emph{so that} its extracted audio can be used as the source.
+    \item \emph{As a user} of the application, \emph{I want to} build and download the set of ground truths, \emph{so that} I can use them to evaluate my system.
+    \item \emph{As an user} of the application, \emph{I want to} edit previously made ground truths, \emph{so that} I can fix any mistakes made.
+    \item \emph{As a user} of the application, \emph{I want} to view the full audio transcription, \emph{so that} I can annotate specific parts of the audio.
+    \item \emph{As a user} of the application, \emph{I want to} view and download the generated video, \emph{so that} I can share it and upload it to any platform.
 \end{itemize}
 
 
@@ -308,45 +312,51 @@ In order to formalise and prioritise the main requirements identified, the MoSCo
     \item \textbf{Won't Have:} These features are not worth pursuing.
 \end{itemize}
 
-The list is divided into two sections: Functional Requirements, which describe interactive features, and Non-Functional Requirements, which describe program properties that users cannot interact with.
+The list is divided into two sections: Functional Requirements, which describe interactive features, and Non-Functional Requirements, which describe program properties that users cannot interact with. Requirements marked by an \textbf{*} were added at later stages in the project development as new feature ideas emerged.
 
 \subsection{Functional Requirements}
-\begin{itemize}
-    \item \textbf{Must Have:} The ability to upload an audio file as an input audio source.
-    \item \textbf{Must Have:} The ability to specify a YouTube video URL as an audio source.
-    \item \textbf{Must Have:} The ability to view the full audio transcription.
-    \item \textbf{Must Have:} The ability to generate an illustrated video for any audio source.
-    \item \textbf{Must Have:} The ability to view the top-$k$ retrieved images for a given audio chunk.
-    \item \textbf{Must Have:} The ability to annotate the most-fitting images for a given audio chunk.
-    \item \textbf{Must Have:} The ability to view the text present in a given audio chunk.
-    \item \textbf{Must Have:} The ability to view the constructed ground truth data.
-    \item \textbf{Must Have:} The ability to download the constructed ground truth data in a portable format.
-    \item \textbf{Should Have:} The ability to view previously processed audio sources, generated videos, and constructed ground truths.
-    \item \textbf{Should Have:} The ability to edit previously made ground truths.
-    \item \textbf{Should Have:} The ability to upload audio sources of any language.
-    \item \textbf{Could Have:} The ability to load ground truths for editing.
-    \item \textbf{Could Have:} The ability to view the percentage complete for ground truth construction of processed audio sources.
-    \item \textbf{Could Have:} The ability to reconfigure the static image collection location.
-    \item \textbf{Could Have:} The ability to save or skip chunks with repeating textual content when ground truth constructing.
-\end{itemize}
+\begin{enumerate}
+    \item \label{req:1} \textbf{Must Have:} The ability to upload an audio file as an input audio source.
+    \item \label{req:2} \textbf{Must Have:} The ability to specify a YouTube video URL as an audio source.
+    \item \label{req:3} \textbf{Must Have:} The ability to view the full audio transcription.
+    \item \label{req:4} \textbf{Must Have:} The ability to generate an illustrated video for any audio source.
+    \item \label{req:5} \textbf{Must Have:} The ability to view the top-$k$ retrieved images for a given audio chunk.
+    \item \label{req:6} \textbf{Must Have:} The ability to annotate the most-fitting images for a given audio chunk.
+    \item \label{req:7} \textbf{Must Have:} The ability to view the text present in a given audio chunk.
+    \item \label{req:8} \textbf{Must Have:} The ability to view the constructed ground truth data.
+    \item \label{req:9} \textbf{Must Have:} The ability to download the constructed ground truth data in a portable format.
+    \item \label{req:10} \textbf{Should Have:} The ability to view previously processed audio sources, generated videos, and constructed ground truths.
+    \item \label{req:11} \textbf{Should Have:} The ability to edit previously made ground truths.
+    \item \label{req:12} \textbf{Should Have:} The ability to upload audio sources of any language.
+    \item \label{req:13} \textbf{Could Have:} The ability to load ground truths for editing.
+    \item \label{req:14} \textbf{Could Have:} The ability to reconfigure the static image collection location.
+    \item \label{req:15} \textbf{Could Have:*} The ability to view the percentage complete for ground truth construction of processed audio sources.
+    \item \label{req:16} \textbf{Could Have:*} The ability to save or skip chunks with repeating textual content when ground truth constructing.
+\end{enumerate}
 
 \subsection{Non-Functional Requirements}
-\begin{itemize}
-    \item \textbf{Should Have:} The application being accessible using any Operating System platform.
-    \item \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
-    \item \textbf{Should Have:} The application with appropriate error handling.
-    \item \textbf{Should Have:} The application displaying progress bars for long loading times.
-    \item \textbf{Should Have:} The application being fast and responsive.
-    \item \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item \textbf{Should Have:} The application being able to provide a transcription for any audio source with relative timestamps.
-    \item \textbf{Should Have:} The text-to-image retrieval using semantics in order to retrieve more relevant images.
-    \item \textbf{Should Have:} The videos being generated in a reasonable amount of time.
-    \item \textbf{Should Have:} The images being of high quality in the generated videos.
-    \item \textbf{Could Have:} The application being designed modularly to configure any static image collection.
-    \item \textbf{Could Have:} The videos including text as well as images.
-    \item \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
-    \item \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes
-\end{itemize}
+\begin{enumerate}[resume]
+    \item \label{req:17} \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.
+    \item \label{req:18} \textbf{Should Have:} The application being accessible from any Operating System platform.
+    \item \label{req:19} \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
+    \item \label{req:20} \textbf{Should Have:} The application with appropriate error handling.
+    \item \label{req:21} \textbf{Should Have:} The application displaying progress bars for long loading times.
+    \item \label{req:22} \textbf{Should Have:} The application being fast and responsive.
+    \item \label{req:23} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
+    \item \label{req:24} \textbf{Should Have:} The application being able to provide a transcription for any audio source with relative timestamps.
+    \item \label{req:25} \textbf{Should Have:} The text-to-image retrieval using semantics in order to retrieve more relevant images.
+    \item \label{req:26} \textbf{Should Have:} The videos being generated in a reasonable amount of time.
+    \item \label{req:27} \textbf{Should Have:} The images being of high quality in the generated videos.
+    \item \label{req:28} \textbf{Could Have:} The application being designed modularly to configure any static image collection.
+    \item \label{req:29} \textbf{Could Have:} The videos including text as well as images.
+    \item \label{req:30} \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
+    \item \label{req:31} \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes
+    
+\end{enumerate}
+
+
+\section{Summary}
+TODO
 
 % What is the problem that you want to solve, and how did you arrive at it?
 % \section{Guidance}
@@ -362,6 +372,8 @@ The list is divided into two sections: Functional Requirements, which describe i
 
 %================================================================================
 \chapter{Design}
+(REFERENCE REQUIREMENTS DIRECTLY)
+
 This chapter serves to provide the initial design choices including a high-level view of the system workflow and the wireframes of the intended user interface. All decisions will be explained with a general aim to optimise the user experience and fulfill the identified system requirements. Next, a deeper look into the design choices of the internal workings of components. This allows our system to be implemented in any language while maintaining clean and agile software design principles. 
 
 \section{High-Level Plan of System}
@@ -379,11 +391,11 @@ The user will input an audio source which will be processed to extract a synced 
 \subsection{Transcription Extractor}
 Firstly, the user will input an audio source. As stated in the requirements, this can either be in the form of a YouTube video URL or a direct upload of an audio file. This input will be passed along to the Transcription Extractor. This component will produce a transcription of the audio with phrase-level timing information. It is vital that this transcription is synced accurately with the audio since this information will be used to place relevant images during the video compilation.
 
-There are a number of ways to retrieve the synced transcription, firstly, we can leverage YouTube's captioning system if the user chooses to input a YouTube video URL. We cannot always rely on this since captions are not guaranteed to be present. Secondly, for music, it is possible to retrieve synced lyrics from open-source databases, however, this would require identifying the artist name and track title. In order to avoid the YouTube metadata problem from the previous thesis (REF) and allow this to function if the user uploaded an audio file, we must process the audio to recognise and retrieve the track information. Finally, we still require a backup audio transcription tool for non-music audio sources or containing no YouTube captions. This workflow is depicted in Figure \ref{fig:transcription_extractor}.
+There are a number of ways to retrieve the synced transcription, firstly, we can leverage YouTube's captioning system if the user chooses to input a YouTube video URL. We cannot always rely on this since captions are not guaranteed to be present. Secondly, for music, it is possible to retrieve synced lyrics from open-source databases, however, this would require identifying the artist name and track title. In order to avoid the YouTube metadata problem from the previous thesis \ref{par:metadata_problem} and allow this to function if the user uploaded an audio file, we must process the audio to recognise and retrieve the track information. Finally, we still require a backup audio transcription tool for non-music audio sources or containing no YouTube captions. This workflow is depicted in Figure \ref{fig:transcription_extractor}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{figures/transcription_extractor.pdf}
+    \includegraphics[width=0.8\textwidth]{figures/transcription_extractor.pdf}
     \caption{Internal view of the Transcription Extractor component}
     \label{fig:transcription_extractor}
 \end{figure}
@@ -396,28 +408,76 @@ The Annotation Interface will consist of a system workflow of its own since the 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{figures/annotation_interface.pdf}
-    \caption{Internal view of the Annotation Interface workflow}
+    \includegraphics[width=0.95\textwidth]{figures/annotation_interface.pdf}
+    \caption{Internal view of the Annotation Interface architecture}
     \label{fig:annotation_interface}
 \end{figure}
 
-Since one of our requirements specifies a static image collection, this gives the benefit of being able to pre-process the entire collection since we know that the images are not going to change. Additionally, since we want to include the semantics of text and images, we must embed all the images into a multimodal space in which text can also be embedded into.
+Since one of our requirements specifies a static image collection (\textbf{\#\ref{req:17}}), this gives the benefit of being able to pre-process the entire collection since we know that the images are not going to change. Additionally, since we want to include the semantics of text and images, we must embed all the images into a multimodal space in which text can also be embedded into.
 
-Firstly, the annotator would select an audio chunk to assess. This freedom to choose which part of the audio to annotate is essential in order to facilitate the requirement of editing annotations. However, it can be assumed that the annotator will construct the ground truth in the order of the audio. Once a chunk is selected, the top-$k$ images will be retrieved and shown to the assessor by embedding the chunk text and performing a search in the multimodal vector space. The annotator is then expected to identify and label the images that they judge as the most fitting to the chunk text. This process will be repeated for every chunk of the audio until a completed ground truth set is constructed which will be outputted to the annotator in an accessible format.
+Firstly, the annotator would select an audio chunk to assess. This freedom to choose which part of the audio to annotate is essential in order to facilitate the requirement of editing annotations (\textbf{\#\ref{req:11}}). However, it can be assumed that the annotator will construct the ground truth in the order of the audio. Once a chunk is selected, the top-$k$ images will be retrieved and shown to the assessor by embedding the chunk text and performing a search in the multimodal vector space. The annotator is then expected to identify and label the images that they judge as the most fitting to the chunk text. This process will be repeated for every chunk of the audio until a completed ground truth set is constructed which will be outputted to the annotator in an accessible format.
 
 
 \section{User Interface Design}
+The user interface (UI) became a critical part of our application due to its importance within our task specification. Hence, ensuring our design was intuitive even for untrained users, to enable the freedom to crowdsource proved to be a challenge. Competing in the field with major annotation platforms only mounted more incentive to design an interface that is unique yet familiar. Furthermore, it was important to ensure pages within the UI remained uncluttered. For this reason, before any development started, we started prototyping interface designs using \cite{figma}.
 
 \subsection{Home Page}
+The simplified workflow outlined in Figure \ref{fig:simplified_workflow} will be used as the basis to form the various pages within the application. Firstly, we require a page for the user to enter the audio source to initiate the process. Hence, this 'home' page will require a way for the user to upload an audio file from their local machine (\textbf{\#\ref{req:1}}), as well as a text field to take in a YouTube video URL (\textbf{\#\ref{req:2}}). Appropriate validation is necessary to handle erroneous inputs such as incompatible file formats or URLs not from the YouTube domain. More importantly, these errors should be clearly displayed to the user so that they can respond accordingly. An initial design of the Home page can be seen in Figure \ref{fig:home_page}. 
+
+In addition to taking inputs from the user, we also include a navigation bar with intended links to an 'About' page and a 'Collecions' page. Since, we want our application to be open to anyone wanting to generate videos or develop ground truths, we believe an About page is necessary to provide information about the interface and how to use it. The link to a Collections page spawned to satisfy the potential to save processed audio sources and generated videos (\textbf{\#\ref{req:10}}). Furthermore, since these links are required to be easily accessible, we include this navigation bar in subsequent pages.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/home_page.pdf}
+    \caption{An initial prototype for the Home page, illustrating how the user can input an audio source.}
+    \label{fig:home_page}
+\end{figure}
 
 \subsection{Audio Page}
+Once the audio source is submitted, the Transcription Extracter component should produce a full transcription of the audio. This should lead into the next page displaying the results of the audio processing with the two different options of where to proceed next. More specifically, the user can choose to generate the video with the 'Generate Video' button, or start constructing a ground truth with the 'Build Ground Truth' button. The full transcription should also be shown to fulfil requirement \textbf{\#\ref{req:3}}. 
 
-\subsection{Chunk Page}
+Aside from this, to save the audio processing result in a database, it must be uniquely identifiable. This led to the idea of associating the audio source to a Title and an optional Author. In the case where the audio is sourced from a file uploaded by the user, the title can simply be the filename. Whenever the audio is extracted from a non-music YouTube video, the title and author can be taken from the YouTube metadata. Finally, for music tracks, the title and author fields can be filled with the recognised track information such as the song title and artist name respectively. Our design shown in Figure \ref{fig:audio_page} also includes an associated image since we believe this could be visually appealing and satisfy the requirement to be able to differentiate collected audio sources (\textbf{\#\ref{req:29}}). This could simply be the video thumbnail for YouTube sources while for music tracks, the image field can be satisfied by its corresponding cover art. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/audio_page.pdf}
+    \caption{An initial prototype for the Audio page showing the resulting transcript after processing the audio.}
+    \label{fig:audio_page}
+\end{figure}
 
 \subsection{Video Page}
+The Video page will be rendered when the user clicks on the 'Generate Video' button from the Audio page. This page will provide an embedded video so that the user could view the video on the interface itself instead of forcing them to download to view it. This page will be minimalistic in design, as illustrated in Figure \ref{fig:video_page}, and the 'Author - Title' divider will be utilised as the link back to the Audio result page. Once the video is generated, this will be saved in the backend for easy access. Prior to the rendering of this page, we intend to provide a descriptive loading screen since it is expected that the video compilation will take several minutes as made evident by the previous system. This intermediate loading page adheres to our listed requirements (\textbf{\#\ref{req:21}}) giving estimated time of completion while simultaneously preventing the user from interacting with other parts of the interface during video generation.
 
-\subsection{Ground Truth Page}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/video_page.pdf}
+    \caption{An initial prototype for the Video page providing the generated video.}
+    \label{fig:video_page}
+\end{figure}
 
+\subsection{Chunk Page}
+BLEH
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/chunk_page.pdf}
+    \caption{An initial prototype for the Chunk pages that provide the ability to assess the relevance of retrieved images for specific audio chunks.}
+    \label{fig:chunk_page}
+\end{figure}
+
+\subsection{Ground-Truth Page}
+BLEH
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/ground_truth_page.pdf}
+    \caption{An initial prototype for the Ground-Truth Page providing a preview of the constructed ground truth available for download.}
+    \label{fig:ground_truth_page}
+\end{figure}
+
+
+\section{Summary}
+TODO
 
 
 % How is this problem to be approached, without reference to specific implementation details? 
