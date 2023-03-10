@@ -10,7 +10,7 @@ from .forms import LinkForm
 
 from utilities.audio_retriever import clear_directories, download_yt, save_file
 from utilities.audio_recogniser import recognise_audio, get_coverart_colour
-from utilities.synced_lyrics_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
+from utilities.synced_transcription_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
 from utilities.image_retriever import CLIP, index_image_paths
 from utilities.videography import build_video
 from utilities.ground_truth_builder import build_ground_truth
