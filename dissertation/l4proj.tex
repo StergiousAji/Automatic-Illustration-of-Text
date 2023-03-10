@@ -499,20 +499,44 @@ This chapter will provide an detailed look into the implementation of the projec
 
 \section{Software Development Process}
 \subsection{Version Control}
-GitHub was used as the version control system. 
+\cite{github} was the chosen technology to host the remote copy of the repository and version controlling throughout the implementation. This ensured all code was regularly backed up, providing a layer of security against local data loss or corruption. In addition, it provided a detailed tracking of the project's development, allowing the freedom to go back to previous versions if necessary. Since this was an individual project every feature was developed sequentially making branching unnecessary due to the lack of potential merging conflicts. However, branching was utilised at the beginning of the project when it was unclear which direction the project should be taken. For instance, several options for the image collection were considered, most notably taking them from the \cite{wikimedia_commons} or \cite{imagenet}, each stored in separate branches.
 
-\subsection{Application Framework}
-Django and MVT design pattern
+\subsection{Application Framework and Language Choice}
+It was decided the project should be developed as a web application due to the system requirement \textbf{\#\ref{req:19}}. A web application can be easily deployed to the internet making it accessilbe to everyone regardless of the type of device used or operating system. Additionally, it has the benefit of not having the requirement of downloading large executable files.
+
+Python \citep{python} was the main programming language chosen due to its flexibility and huge selection of libraries allowing rapid development of such a time-constrained project. Popular libraries such as NumPy \citep{harris2020numpy} offer a wide range of optimised functions for data processing and manipulation. Furthermore, this decision led to the idea of developing the web application using \cite{django}, a popular Python web framework.
+
+Django follows a Model-View-Template (MVT) design architecture illustrated in Figure \ref{fig:django_architecture}. It consists of three fundamental components:
+\begin{itemize}
+    \item The \textbf{Model} manages the the data stored in a relational database.
+    \item The \textbf{View} communicates with both the model and template in order to complete and send back a HTTP response to the client corresponding to their HTTP request.
+    \item The \textbf{Template} acts as the frontend of the application providing dynamic HTML webpages to the client.
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/django_architecture.pdf}
+    \caption{An architecture diagram showing the MVT design pattern of Django web applications.}
+    \label{fig:django_architecture}
+\end{figure}
+
+Django has an intermediary component that catches the client's HTTP requests to pattern match requested URLs to the correct view. The view then fetches data from the models, stored in the backend, and renders a template back to the client.
 
 
 \section{Backend Structure}
 \subsection{Static Image Collection}
-ImageNet-1k
+In line with requirement \textbf{\#\ref{req:18}}, several sources for image collections were considered. Out of those, there were two notable sources: the Wikimedia Commons and ImageNet. Wikimedia Commons hosts a range of images that are more importantly captioned with accurate textual descriptions. In addition to the latest multimodal, multilingual image-text dataset released by \cite{srinivasan2021wit}, a research group within Google. It appeared to be an appealing option as it allowed the flexibility to train our own image-text model using the provided textual descriptions. However, complications arose in downloading the dataset. We found that in order to save space, the dataset only included image URLs meaning that the images must be programmitically downloaded one by one. After weeks of testing, even going as far as parallelising the download process, we deemed this effort as infeasible due its slow pace. 
+
+We ultimately decided on the procuring the collection from ImageNet, an open-source image database containing over 14 million images. Moreover, it provided many smaller subsets of the database that allowed understanding of CLIP's pre-training model architecture. The ImageNet-1k subset was the chosen collection that we used for our project which spanned over 1 million images allowing reasonable pre-processing times while also being large enough for satisfactory image retrievals.
 
 \subsection{Models}
+Our application consists of only two models: Audio and Chunks. As depicted in the Entity Relation (ER) diagram in Figure \ref{fig:models_schema}, each Audio object will consist of 0 or more Chunk objects. This was to accommodate for purely instrumental audio tracks which would contain no transcription. While this is not useful for our current application domain, we believed this feature could be expanded upon in future iterations where the audio content itself could be used in the videography process.
+
 \subsubsection{Audio}
+The Audio model will hold all information associated to inputted audio sources after processing is complete. This includes the artist/author name, title, transcript and the ground truth. A boolean flag for whether the audio is a music track or not will be used to course the appropriate processing steps. The file name field will be used to find corresponding files stored in the static directory, such as the audio, cover art image or the transcript files. 
 
 \subsubsection{Chunk}
+The Chunk model will consist of specific information about the segment in the audio such as the text present, start and end times and finally the top-10 and labelled images. It will hold a foreign key that references the appropriate Audio object.
 
 \begin{figure}
     \centering
