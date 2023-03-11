@@ -460,7 +460,7 @@ The Video page will be rendered when the user clicks on the 'Generate Video' but
 \end{figure}
 
 \subsection{Chunk Page}
-Alternatively, the user can choose to construct the ground truth for the audio source by clicking on the 'Build Ground Truth' button on the resulting Audio page. This should subsequently navigate the user to the first audio chunk page. This should show the text present within that chunk and the retrieved top-$k$ images using the system (\textbf{\#\ref{req:5}}, \textbf{\#\ref{req:7}}). As seen in the Figure \ref{fig:chunk_page}, we picked a depth $k=10$ since it is small enough for the assessor to efficiently comb through for the most relevant images. This is especially true when this task must be repeated for every chunk in the audio source. We want to avoid a burdensome experience that could affect the quality of relevance assessments (CITE). However, we found that this cut-off point is highly dependent on the effectiveness of the retrieval system and the textual query discussed in the Implementation (REF).
+Alternatively, the user can choose to construct the ground truth for the audio source by clicking on the 'Build Ground Truth' button on the resulting Audio page. This should subsequently navigate the user to the first audio chunk page. This should show the text present within that chunk and the retrieved top-$k$ images using the system (\textbf{\#\ref{req:5}}, \textbf{\#\ref{req:7}}). As seen in Figure \ref{fig:chunk_page}, we picked a depth $k=10$ since it is small enough for the assessor to efficiently comb through for the most relevant images. This is especially true when this task must be repeated for every chunk in the audio source. We want to avoid a burdensome experience that could affect the quality of relevance assessments (CITE). However, we found that this cut-off point is highly dependent on the effectiveness of the retrieval system and the textual query discussed in the Implementation (REF).
 
 \begin{figure}
     \centering
@@ -469,10 +469,10 @@ Alternatively, the user can choose to construct the ground truth for the audio s
     \label{fig:chunk_page}
 \end{figure}
 
-We chose to use a binary relevance assessment strategy where the assessor must only mark relevant images meaning unmarked images are considered irrelevent (\textbf{\#\ref{req:6}}). This is faster than a graded relevance system which requires significant thought which may discourage accurate assessments. This is also backed by approaches employed by similar technologies (\ref{sec:labelbox} \& \ref{sec:superannotate}). However, it does call in question of what the assessor should do if all top-10 images are irrelevant to the chunk text, this is discussed in (REF). In addition to these interactable images, the page includes 'Previous' and 'Next' buttons to easily navigate to bordering chunk pages. We also intend to save the user's assessments when these buttons are pressed in order to reduce annotation effort and allow editing of previous chunks (\textbf{\#\ref{req:11}}). Not to mention to allow the possibility of skipping chunks with repeating textual contents (\textbf{\#\ref{req:16}}).
+We chose to use a binary relevance assessment strategy where the assessor must only mark relevant images meaning unmarked images are considered irrelevent (\textbf{\#\ref{req:6}}). This is faster than a graded relevance system which requires significant thought which may discourage accurate assessments. This is also backed by approaches employed by similar technologies (\ref{sec:labelbox} \& \ref{sec:superannotate}). However, it does call in question of what the assessor should do if all top-10 images are irrelevant to the chunk text, this is discussed in (REF). In addition to these interactive images, the page includes 'Previous' and 'Next' buttons to easily navigate to bordering chunk pages. We also intend to save the user's assessments when these buttons are pressed in order to reduce annotation effort and allow editing of previous chunks (\textbf{\#\ref{req:11}}). Not to mention to allow the possibility of skipping chunks with repeating textual contents (\textbf{\#\ref{req:16}}).
 
 \subsection{Ground-Truth Page}
-Once all audio chunks have been annotated, the system should render a resulting Ground-Truth page similar to Figure \ref{fig:ground_truth_page}. This will consist of a small preview of the ground-truth data and some functionality to download the constructed data (\textbf{\#\ref{req:8}}, \textbf{\#\ref{req:9}}). While the ground-truth data may be technical, we intend to deliver it in a human-readable format so that assessors can perform last minute checks if required. The preview feature also enables retrieval system designers to peek at the format of the ground truths to aid in the evaluation process.
+Once all audio chunks have been annotated, the system should render a resulting Ground-Truth page similar to Figure \ref{fig:ground_truth_page}. This will consist of a small preview of the ground-truth data and some functionality to download the constructed data (\textbf{\#\ref{req:8}}, \textbf{\#\ref{req:9}}). While the ground-truth data may be technical, we intend to deliver it in a human-readable format so that assessors can perform last-minute checks if required. The preview feature also enables retrieval system designers to peek at the format of the ground truths to aid in the evaluation process.
 
 \begin{figure}[H]
     \centering
@@ -495,21 +495,21 @@ This chapter provided a comprehensive overview of the design choices made across
 
 %================================================================================
 \chapter{Implementation}
-This chapter will provide an detailed look into the implementation of the project. The rationale behind all technology choices and their involvement to achieve our desired product will be explained here. 
+This chapter will provide a detailed look into the implementation of the project. The rationale behind all technology choices and their involvement to achieve our desired product will be explained here. 
 
 \section{Software Development Process}
 \subsection{Version Control}
 \cite{github} was the chosen technology to host the remote copy of the repository and version controlling throughout the implementation. This ensured all code was regularly backed up, providing a layer of security against local data loss or corruption. In addition, it provided a detailed tracking of the project's development, allowing the freedom to go back to previous versions if necessary. Since this was an individual project every feature was developed sequentially making branching unnecessary due to the lack of potential merging conflicts. However, branching was utilised at the beginning of the project when it was unclear which direction the project should be taken. For instance, several options for the image collection were considered, most notably taking them from the \cite{wikimedia_commons} or \cite{imagenet}, each stored in separate branches.
 
 \subsection{Application Framework and Language Choice}
-It was decided the project should be developed as a web application due to the system requirement \textbf{\#\ref{req:19}}. A web application can be easily deployed to the internet making it accessilbe to everyone regardless of the type of device used or operating system. Additionally, it has the benefit of not having the requirement of downloading large executable files.
+It was decided the project should be developed as a web application due to the system requirement \textbf{\#\ref{req:19}}. A web application can be easily deployed to the internet making it accessible to everyone regardless of the type of device used or operating system. Additionally, it has the benefit of not having the requirement of downloading large executable files.
 
-Python \citep{python} was the main programming language chosen due to its flexibility and huge selection of libraries allowing rapid development of such a time-constrained project. Popular libraries such as NumPy \citep{harris2020numpy} offer a wide range of optimised functions for data processing and manipulation. Furthermore, this decision led to the idea of developing the web application using \cite{django}, a popular Python web framework.
+Python \citep{python} was the main programming language chosen due to its flexibility and a huge selection of libraries allowing rapid development of such a time-constrained project. Popular libraries such as NumPy \citep{harris2020numpy} offer a wide range of optimised functions for data processing and manipulation. Furthermore, this decision led to the idea of developing the web application using \cite{django}, a popular Python web framework.
 
 Django follows a Model-View-Template (MVT) design architecture illustrated in Figure \ref{fig:django_architecture}. It consists of three fundamental components:
 \begin{itemize}
-    \item The \textbf{Model} manages the the data stored in a relational database.
-    \item The \textbf{View} communicates with both the model and template in order to complete and send back a HTTP response to the client corresponding to their HTTP request.
+    \item The \textbf{Model} manages the data stored in a relational database.
+    \item The \textbf{View} communicates with both the model and template in order to complete and send back an HTTP response to the client corresponding to their HTTP request.
     \item The \textbf{Template} acts as the frontend of the application providing dynamic HTML webpages to the client.
 \end{itemize}
 
@@ -520,23 +520,23 @@ Django follows a Model-View-Template (MVT) design architecture illustrated in Fi
     \label{fig:django_architecture}
 \end{figure}
 
-Django has an intermediary component that catches the client's HTTP requests to pattern match requested URLs to the correct view. The view then fetches data from the models, stored in the backend, and renders a template back to the client.
+Django has an intermediary component that catches the client's HTTP requests to pattern-match requested URLs to the correct view. The view then fetches data from the models stored in the backend, and renders a template back to the client.
 
 
 \section{Backend Structure}
 \subsection{Static Image Collection}
-In line with requirement \textbf{\#\ref{req:18}}, several sources for image collections were considered. Out of those, there were two notable sources: the Wikimedia Commons and ImageNet. Wikimedia Commons hosts a range of images that are more importantly captioned with accurate textual descriptions. In addition to the latest multimodal, multilingual image-text dataset released by \cite{srinivasan2021wit}, a research group within Google. It appeared to be an appealing option as it allowed the flexibility to train our own image-text model using the provided textual descriptions. However, complications arose in downloading the dataset. We found that in order to save space, the dataset only included image URLs meaning that the images must be programmitically downloaded one by one. After weeks of testing, even going as far as parallelising the download process, we deemed this effort as infeasible due its slow pace. 
+In line with requirement \textbf{\#\ref{req:18}}, several sources for image collections were considered. Out of those, there were two notable sources: the Wikimedia Commons and ImageNet. Wikimedia Commons hosts a range of images that are more importantly captioned with accurate textual descriptions. In addition to the latest multimodal, multilingual image-text dataset released by \cite{srinivasan2021wit}, a research group within Google. It appeared to be an appealing option as it allowed the flexibility to train our own image-text model using the provided textual descriptions. However, complications arose in downloading the dataset. We found that in order to save space, the dataset only included image URLs meaning that the images must be programmatically downloaded one by one. After weeks of testing, even going as far as parallelising the download process, we deemed this effort as infeasible due to its slow pace. 
 
-We ultimately decided on the procuring the collection from ImageNet, an open-source image database containing over 14 million images. Moreover, it provided many smaller subsets of the database that allowed understanding of CLIP's pre-training model architecture. The ImageNet-1k subset was the chosen collection that we used for our project which spanned over 1 million images allowing reasonable pre-processing times while also being large enough for satisfactory image retrievals.
+We ultimately decided on procuring the collection from ImageNet, an open-source image database containing over 14 million images. Moreover, it provided many smaller subsets of the database that allowed a familiarisation with CLIP's pre-training model architecture. The ImageNet-1k subset was the chosen collection that we used for our project which spanned over 1 million images allowing reasonable pre-processing times while also being large enough for satisfactory image retrievals.
 
 \subsection{Models}
 Our application consists of only two models: Audio and Chunks. As depicted in the Entity Relation (ER) diagram in Figure \ref{fig:models_schema}, each Audio object will consist of 0 or more Chunk objects. This was to accommodate for purely instrumental audio tracks which would contain no transcription. While this is not useful for our current application domain, we believed this feature could be expanded upon in future iterations where the audio content itself could be used in the videography process.
 
 \subsubsection{Audio}
-The Audio model will hold all information associated to inputted audio sources after processing is complete. This includes the artist/author name, title, transcript and the ground truth. A boolean flag for whether the audio is a music track or not will be used to course the appropriate processing steps. The file name field will be used to find corresponding files stored in the static directory, such as the audio, cover art image or the transcript files. 
+The Audio model will hold all information associated with inputted audio sources after processing is complete. This includes the artist/author's name, title, transcript, and the ground truth. A boolean flag for whether the audio is a music track or not will be used to course the appropriate processing steps. The file name field will be used to find corresponding files stored in the static directory, such as the audio, cover art image, or transcript files. 
 
 \subsubsection{Chunk}
-The Chunk model will consist of specific information about the segment in the audio such as the text present, start and end times and finally the top-10 and labelled images. It will hold a foreign key that references the appropriate Audio object.
+The Chunk model will consist of specific information about the segment in the audio such as the text present, start and end times and finally the top-10 and labeled images. It will hold a foreign key that references the appropriate Audio object
 
 \begin{figure}
     \centering
@@ -546,22 +546,43 @@ The Chunk model will consist of specific information about the segment in the au
 \end{figure}
 
 
-\section{System Components}
+\section{Program Structure}
+All the main functionality is performed in the View component, represented by the file, \textbf{view.py}. However, each individual component outlined in the system architecture are abstracted into their own Python file in order to adhere to best software engineering practices. Each file, found in the \lstinline|utilities| folder, provides the required functions to accomplish a single task. This makes locating and adding functionality much easier comparative to an unorganised program structure.
+
 \subsection{Audio Retriever}
+Represented in the \textbf{audio\_retriever.py} file, this component lends functions that will be used to extract the audio file from the user's submission on the Home page. Firstly, the \textbf{\lstinline|home|} view will clear the \lstinline|audio| and \lstinline|transcript| directories in order to save space. Next, the client's HTTP POST request will be analysed to extract the YouTube video URL or uploaded audio file. In the case of the YouTube video URL, the \textbf{\lstinline|download_yt|} function is called in order to isolate and download the audio from the video using the library pytube \citep{pytube}. This function also retrieves the English or Automated English captions if present as well as saving the thumnail picture as the cover art, since these can be pulled from the resulting \textbf{\lstinline|pytube.Youtube|} object. Alternatively, in the case of a file upload, the file will be validated if it's of an audio format and then saved into the \lstinline|audio| folder for further processing.
+
 
 \subsection{Audio Recogniser}
+Now that the audio source is saved within the \lstinline|audio| folder, it can be processed in order to identify its track title and artist name assuming it is a music track. The \textbf{\lstinline|recognise_audio|} function attempts to match the audio source to a known music track using ShazamAPI \citep{shazamapi}. This API also provides obtaining the cover art for successful recognitions, meaning that this cover art is downloaded and saved within the \lstinline|coverart| folder. In addition to this, at later iterations it was decided to use the primary colour of the cover art to further visually differentiate audio sources (\textbf{\#\ref{req:31}}). For this the library ColorThief \citep{colorthief} to use image processing to identify the primary colour of the cover art which is then used in all links to the associated Audio page.
 
 \subsection{Synced Transcription Retriever}
+This component holds multiple strategies to obtain a synced transcription of the audio in the LyRiCs (LRC) file format \citep{lrc}. The first method is retrieving the synced lyrics from the Musixmatch platform \citep{musixmatch} which holds an extensive database of song lyrics that are aligned with the song itself. The database is queried using the identified song title and artist name. If successsful, the lyrics are saved within the \lstinline|transcript| folder, as well as the external database within the Audio model. Evidently, this method only works with music tracks and so the component also provides the capability of robust audio-to-text transcription, leveraging OpenAI's Whisper model \citep{whipser}. Due to the memory limitations, only the \emph{'small'} model is loaded which was found to frequently misidentify words, hence its last resort status.  The resulting transcription is then formatted into the required LRC format.
+
+This the last processing step within the \textbf{\lstinline|home|} view which will conclude by instantiating a new Audio object using the obtained information. For non-music, the title field is filled in with the YouTube video title or uploaded file name. While the artist field being the video creator or simply left as empty for uploaded files. Finally, the user is redirected to the Audio page.
+
+The \textbf{\lstinline|audio|} view divides the transcript using the phrase-level timings and initialises new Chunk objects for each segment denoted by new lines in the rendered Audio page. Each new line is clickable link to the corresponding Chunk page. 
+
+(HANDLING INSTRUMENTALS)
 
 \subsection{Image Retriever}
+The \textbf{\lstinline|image_retriever.py|} file is responsible for image pre-processing and retrieval. In order to facilitate the freedom to configure the type of pre-trained CLIP model to use, a custom \textbf{\lstinline{CLIP}} class was made. This class holds properties such as the loaded model, tokenizer and processor, as well as the file paths for all images and their corresponding embedding vectors. We chose to use the CLIP ViT-B/32 model for its moderate size for reasonable loading times and its high performance. However, this model was trained with only English text and so to accommodate our requirement to support multiple languages (\textbf{\#\ref{req:12}}), we use a compatible Multilingual CLIP model that supports 100 languages, XLM-Roberta Large ViT-B/32 \citep{mclip}. Due to limited memory capacity, only one model can be loaded at one time so a Boolean flag is used to decide which model is loaded. Both models encode images and text into 512 dimensions of latent space. 
+
+All images in the collection were pre-processed and embedded in batches using the pre-trained CLIP model and processor, to create a normalised NumPy matrix. This matrix was subsequently saved in a file so that it can be loaded into memory on application start-up. 
+
+The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector with every image vector. These similarity scores are subsequently sorted in descending order to get the 10 images that score the highest with the text query which is then rendered to the user in the Chunk page. In order to save unnecessary computation, these image indices are saved in the database associated to the Chunk object.
 
 \subsection{Video Compiler}
+The video compiler component implemented in the \textbf{\lstinline|videography.py|} file, takes care of generating the video primarily using the library MoviePy \citep{moviepy}. The video is built incrementally, by selecting the top-1 image for each chunk and concatenating \textbf{\lstinline|ImageClip|s} in sequence, with their durations being the difference between the chunk start and end timestamps. \textbf{\lstinline|TextClip|s} showing the chunk text are placed below corresponding images. Parts of the audio lacking spoken words are filled with blank \textbf{\lstinline|ColorClip|s}. Lastly, the audio source is added to the final \textbf{\lstinline|VideoClip|} which is then written into an MP4 file in the \lstinline|video| folder. This file is then embedded into the Video page template for the user to watch the generated video.
+
+\subsection{Relevance Assessment Interface}
+(SELECTING IMAGE PROCESS)
 
 \subsection{Ground-Truth Builder}
+The ground truth is only built when the user clicks the 'Finish' button on the last chunk of the transcript. The ground truth, much like the video generation, is built chunk by chunk, appending to a Python dictionary storing relevant information of the audio source and chunks. The indices of the assessed images are stored here as well as their corresponding file paths in order to ease evaluation. In order to release the data in a human-readable and easily accessible format (\textbf{\#\ref{req:9}}), the resulting Python dictionary is translated into JavaScript Object Notation (JSON) \citep{json}. This format is an open standard format that is language-independant. A preview of the data is subsequently rendered in the Ground-Truth page.
 
-\section{Views}
 
-\section{Templates}
+\section{Summary}
 
 % What did you do to implement this idea, and what technical achievements did you make?
 % \section{Guidance}

@@ -12,6 +12,7 @@ class CLIP:
         self.device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
         
         self.model_id = model_id
+        self.multilingual = multilingual
         self.multilingual_model_id = multilingual_model_id
 
         if multilingual:
@@ -59,10 +60,13 @@ class CLIP:
             np.save(image_vectors_path, self.image_vectors)
 
     def query_prompt(self, prompt, top=10):
-        inputs = self.tokeniser(prompt, return_tensors="pt").to(self.device)
-        text_embeddings = self.model.get_text_features(**inputs).cpu().detach().numpy()
+        text_embeddings = None
 
-        # text_embeddings = self.model.forward(prompt, self.tokeniser).cpu().detach().numpy()
+        if not self.multilingual:
+            inputs = self.tokeniser(prompt, return_tensors="pt").to(self.device)
+            text_embeddings = self.model.get_text_features(**inputs).cpu().detach().numpy()
+        else:
+            text_embeddings = self.model.forward(prompt, self.tokeniser).cpu().detach().numpy()
 
         # Compute cosine similarity scores between prompt text and images
         scores = np.dot(text_embeddings, self.image_vectors.T)

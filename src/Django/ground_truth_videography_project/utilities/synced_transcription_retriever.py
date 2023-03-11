@@ -24,12 +24,6 @@ def seconds_to_time(total_seconds):
     seconds = total_seconds - minutes*60
     return f"{minutes}:{seconds:05.2f}"
 
-
-def get_transcript_length(transcript):
-    lyrics = pylrc.parse(transcript)
-    mins, secs, mills = unpackTimecode(f"[{lyrics.length}]")
-    return sum([0, mins*60, secs, mills/1000])
-
 def transcribe_audio(artist, title, folder, filename):
     model = whisper.load_model("small")
     transcription = model.transcribe(os.path.join(folder, "audio", f"{filename}.mp3"))
@@ -43,3 +37,8 @@ def transcribe_audio(artist, title, folder, filename):
         transcript.write(lrc_string)
     
     return lrc_string
+
+def get_transcript_length(transcript):
+    lyrics = pylrc.parse(transcript)
+    mins, secs, mills = unpackTimecode(f"[{lyrics.length}]")
+    return sum([0, mins*60, secs, mills/1000])
