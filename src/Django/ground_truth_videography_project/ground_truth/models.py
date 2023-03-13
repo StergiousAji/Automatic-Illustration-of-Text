@@ -36,7 +36,7 @@ class Audio(models.Model):
         return f"{self.artist} - {self.title}"
     
     class Meta:
-        verbose_name_plural = 'Audio Tracks'
+        verbose_name_plural = 'Audio Sources'
 
 class Chunk(models.Model):
     index = models.IntegerField(blank=True)

@@ -31,6 +31,7 @@ def recognise_audio(filepath, filename, retries=1):
     if "images" in recognised:
         imageURL = recognised["images"]["coverart"]
         parent_folder = os.path.split(os.path.split(filepath)[0])[0]
+        print(parent_folder)
         save_coverart(imageURL, filename, parent_folder)
     
     return title, artist

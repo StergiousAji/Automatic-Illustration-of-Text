@@ -1,7 +1,7 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 \documentclass{l4proj}
 
-%==============================================================================
+%==================================================================================================
 % Put any additional packages here
 % You can add any packages you want, as long as it does not alter the overall format (e.g. don't change the margins or the reference style).
 %
@@ -14,7 +14,7 @@
 
 \begin{document}
 
-%==============================================================================
+%==================================================================================================
 %% METADATA
 \title{Automatic Illustration of Text via Multimodal Interaction}
 \author{Stergious Aji (2546916A)}
@@ -22,7 +22,7 @@
 
 \maketitle
 
-%==============================================================================
+%==================================================================================================
 %% ABSTRACT
 \begin{abstract}
     (TODO)
@@ -41,14 +41,14 @@
     % ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
 \end{abstract}
 
-%==============================================================================
+%==================================================================================================
 %% ACKNOWLEDGEMENTS
 % \chapter*{Acknowledgements}
 % Enter any acknowledgements here. This is optional; you may leave this blank if you wish, or remove the entire chapter
 %
 % We give thanks to the Gods of LaTeX, who in their eternal graciousness, have granted that this document may compile without errors or overfull hboxes.
 
-%==============================================================================
+%==================================================================================================
 % EDUCATION REUSE CONSENT FORM
 % If you consent to your project being shown to future students for educational purposes then insert your name and the date below to  sign the education use form that appears in the front of the document. You must explicitly give consent if you wish to do so.
 % If you sign, your project may be included in the Hall of Fame if it scores particularly highly.
@@ -60,11 +60,11 @@
 \educationalconsent
 
 
-%==============================================================================
+%==================================================================================================
 \tableofcontents
-%==============================================================================
+%==================================================================================================
 %% Notes on formatting
-%==============================================================================
+%==================================================================================================
 % The first page, abstract and table of contents are numbered using Roman numerals and are not included in the page count. 
 %
 % From now on pages are numbered using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call \pagenumbering{arabic} and this should be called once only in the document. 
@@ -78,12 +78,12 @@
 % FORMATTING
 % You must not alter text size (it is currently 10pt) or alter margins or spacing. Do not alter the bibliography style. 
 %
-%================================================================================
+%==================================================================================================
 %
 % IMPORTANT
 % The chapter headings and structure here are **suggestions**. You don't have to follow this model if it doesn't fit your project. Every project should have an introduction and conclusion, however.  If in doubt, your supervisor can give you specific guidance; their view takes precedence over the structure suggested here.
 %
-%================================================================================
+%==================================================================================================
 \chapter{Introduction}
 % reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
@@ -122,7 +122,7 @@ Finally, as stated in our motivations, we wish to fix the limitations of the pre
 % In order to justify creating a novel annotation interface, we must first explore existing solutions and their corresponding strengths and limitations.
 
 
-%================================================================================
+%==================================================================================================
 \chapter{Background}
 This chapter serves to lay the foundations in order to contextualise this project within the field of Information Retrieval (IR). Firstly, a look into the origins of the field, specifically text-to-image retrieval, will be conducted. This will be followed by a discussion of the recent advancements in computer vision to allow multimodal representations of images with natural language. We will briefly look into the history of relevance assessment to ground our problem of evaluating IR systems and justify our proposed approach. Next, the previous thesis on automatic videography will be critiqued, with the aim of identifying its merits and shortcomings. This will form the basis for which our project will build upon. Finally, an outline of what current solutions exist to solve our problem of assessing the relevance of images from text queries will be provided.
 
@@ -279,7 +279,7 @@ Exploring the background of the project through a review of the history and past
 Regarding the annotation interfaces, both applications we reviewed share an intuitive interface design including clear checkmarks to indicate images tagged as relevant by the user. Nonetheless, even with the vast feature set that these systems offer, it still requires a lot of manual effort to complete the presented task in this project. To exemplify, the assessor must first listen and transcribe an audio source and subsequently input and annotate every segment within the transcript one by one. We believe our solution could streamline this procedure by automating the transcription process and making it easier to view and assess different audio segments within the interface itself.
 
 
-%================================================================================
+%==================================================================================================
 \chapter{Analysis/Requirements}
 \label{chap:requirements}
 This chapter serves to break down the high-level aims of the project in order to produce a list of functional and non-functional requirements, ordered by priority. This will directly determine the design and implementation of the project.
@@ -349,8 +349,8 @@ The list is divided into two sections: Functional Requirements, which describe i
     \item \label{req:22} \textbf{Should Have:} The application displaying progress bars for long loading times.
     \item \label{req:23} \textbf{Should Have:} The application being fast and responsive.
     \item \label{req:24} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item \label{req:25} \textbf{Should Have:} The application being able to provide a transcription for any audio source with relative timestamps.
-    \item \label{req:26} \textbf{Should Have:} The text-to-image retrieval using semantics in order to retrieve more relevant images.
+    \item \label{req:25} \textbf{Should Have:} The application being able to provide a transcription for any audio source including phrase-level timestamps.
+    \item \label{req:26} \textbf{Should Have:} The text-to-image retrieval system only retrieving relevant images by leveraging semantics of natural language as well as visual features.
     \item \label{req:27} \textbf{Should Have:} The videos being generated in a reasonable amount of time.
     \item \label{req:28} \textbf{Should Have:} The images being of high quality in the generated videos.
     \item \label{req:29} \textbf{Could Have:} The application being designed modularly to configure any static image collection.
@@ -376,7 +376,7 @@ This chapter presented a detailed outline of the essential features for the proj
 % the work established in the background, and stating how the space of possible projects was
 % sensibly narrowed down to what you have done.
 
-%================================================================================
+%==================================================================================================
 \chapter{Design}
 (TODO: REFERENCE REQUIREMENTS DIRECTLY)
 
@@ -495,7 +495,7 @@ This chapter provided a comprehensive overview of the design choices made across
 % among others. Specific languages, technical choices, libraries and such like should not usually appear in the design. These are implementation details.
 
 
-%================================================================================
+%==================================================================================================
 \chapter{Implementation}
 This chapter will provide a detailed look into the implementation of the project. The rationale behind all technology choices and their involvement to achieve our desired product will be explained here. 
 
@@ -551,7 +551,7 @@ The Chunk model consists of specific information about the segment in the audio 
 
 
 \section{Program Structure}
-All the main functionality is performed in the View component, represented by the file, \textbf{view.py}. However, each individual component outlined in the system architecture are abstracted into their own Python file in order to adhere to best software engineering practices. Each file, found in the \lstinline|utilities| folder, provides the required functions to accomplish a single task. This makes locating and adding functionality much easier comparative to an unorganised program structure.
+All the main functionality is performed in the View component, represented by the file, \textbf{views.py}. However, each individual component outlined in the system architecture are abstracted into their own Python file in order to adhere to best software engineering practices. Each file, found in the \lstinline|utilities| folder, provides the required functions to accomplish a single task. This makes locating and adding functionality much easier comparative to an unorganised program structure.
 
 \subsection{Audio Retriever}
 Represented in the \textbf{audio\_retriever.py} file, this component lends functions that will be used to extract the audio file from the user's submission on the Home page. Firstly, the \textbf{\lstinline|home|} view will clear the \lstinline|audio| and \lstinline|transcript| directories in order to save space. Next, the client's HTTP POST request will be analysed to extract the YouTube video URL or uploaded audio file. In the case of the YouTube video URL, the \textbf{\lstinline|download_yt|} function is called in order to isolate and download the audio from the video using the library pytube \citep{pytube}. This function also retrieves the English or Automated English captions if present as well as saving the thumnail picture as the cover art, since these can be pulled from the resulting \textbf{\lstinline|pytube.Youtube|} object. Alternatively, in the case of a file upload, the file will be validated if it's of an audio format and then saved into the \lstinline|audio| folder for further processing.
@@ -575,12 +575,14 @@ The \textbf{image\_retriever.py} file is responsible for image pre-processing an
 All images in the collection were pre-processed and embedded in batches using the pre-trained CLIP model and processor, to create a normalised NumPy matrix. This matrix was subsequently saved in a file so that it can be loaded into memory on application start-up. 
 
 \label{sec:image_retriever:par:query_prompt}
-The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector with every image vector stored in the matrix. Since all vectors are normalised beforehand by their Euclidean (L2) norm as demonstrated in Equation \ref{eq:euclidean_norm}, the cosine similarity score is simply the dot product between the vectors, accomplished with \textbf{\lstinline{numpy.dot(text_emb, image_embs.T)}}. 
+The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector with every image vector stored in the matrix. Since all vectors are normalised beforehand by their Euclidean (L2) norm as demonstrated in Equation \ref{eq:euclidean_normalisation}, the cosine similarity score is simply the dot product between the vectors, accomplished with \textbf{\lstinline{numpy.dot(text_emb, image_embs.T)}}. 
+
+$$\text{normalise}(\vec{x}) = \frac{\vec{x}}{\norm{\vec{x}}_2}$$
 
 \begin{equation}
     \norm{\vec{x}}_2 = \sqrt{\sum_{i=1}^N \abs{x_i}^2} = \sqrt{x_1^2 + x_2^2 + ... + x_N^2}
-    \label{eq:euclidean_norm}
-\end{equation}    
+    \label{eq:euclidean_normalisation}
+\end{equation}
 
 These similarity scores are subsequently sorted in descending order to get the 10 images that scored the highest with the text query which is then listed to the user on the Chunk page. In order to save unnecessary computation, these image indices are saved in the database associated to the Chunk object.
 
@@ -590,9 +592,10 @@ Following the wireframes laid out during the design, the annotator can click on 
 
 All annotated images are saved within the Chunk object when the user submits a HTTP POST request which can occur when the 'Previous' or 'Next' buttons are pressed. This allows previously annotated Chunks to be viewed and amended fulfilling requirement \textbf{\#\ref{req:11}}. Additionally, throughout testing it was found to be burdensome to annotate chunks with repeating textual content, leading to the addition of requirement \textbf{\#\ref{req:16}}. This feature greatly reduced annotation effort and efficiency since all duplicate chunks can be updated at once and skipped during relevance assessment.
 
-(TESTING TO DETERMINE BEST $K$)
-
 The full ground truth can only be viewed when the user clicks the 'Finish' button on the last chunk of the transcript. The ground truth is built chunk by chunk, appending to a Python dictionary storing relevant information of the audio source and chunks. The indices of the assessed images are stored here as well as their corresponding file paths in order to ease evaluation. In order to release the data in a human-readable and easily accessible format (\textbf{\#\ref{req:9}}), the resulting Python dictionary is serialised into JavaScript Object Notation (JSON) \citep{json}. This format is an open standard format that is language-independant. A preview of the data is subsequently rendered in the Ground-Truth page with a clear button to download it.
+
+\subsubsection{Determining Pooling Depth}
+The final pooling depth of $k=10$ was determined through trial and error, since it was difficult to estimate the effectiveness of CLIP models on multi-conceptual text prompts that is so common in spoken language and especially song lyrics. Retrieving the top-10 images was determined to be the ideal depth that is able to be fit in one page without excessive rescaling as well as not increasing relevance assessment effort. However, it was noticed that in rare occasions of extreme ambiguity of text, more images were required to be assessed to find any relevance. This was also picked up during user evaluations in (REF) where it may be beneficial to increase $k$ for very abstract ideas.
 
 
 \subsection{Video Compiler}
@@ -786,74 +789,79 @@ This chapter described the steps taken in manifesting the blueprint designs into
 
 % \end{lstlisting}
 
-%==================================================================================================================================
+%==================================================================================================
 \chapter{Evaluation} 
-(PCA TO IMPROVE EXHAUSTIVE SEARCH)
+(FAISS)
 
-How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
-
-\section{Guidance}
-\begin{itemize}
-    \item
-        Ask specific questions that address the general problem.
-    \item
-        Answer them with precise evidence (graphs, numbers, statistical
-        analysis, qualitative analysis).
-    \item
-        Be fair and be scientific.
-    \item
-        The key thing is to show that you know how to evaluate your work, not
-        that your work is the most amazing product ever.
-\end{itemize}
-
-\section{Evidence}
-Make sure you present your evidence well. Use appropriate visualisations, 
-reporting techniques and statistical analysis, as appropriate. The point is not
-to dump all the data you have but to present an argument well supported by evidence gathered.
-
-If you use numerical evidence, specify reasonable numbers of significant digits; don't state ``18.41141\% of users were successful'' if you only had 20 users. If you average \textit{anything}, present both a measure of central tendency (e.g. mean, median) \textit{and} a measure of spread (e.g. standard deviation, min/max, interquartile range).
-
-You can use \texttt{siunitx} to define units, space numbers neatly, and set the precision for the whole LaTeX document. 
-
-% setup siunitx to have two decimal places
-\sisetup{
-	round-mode = places,
-	round-precision = 2
-}
-
-For example, these numbers will appear with two decimal places: \num{3.141592}, \num{2.71828}, and this one will appear with reasonable spacing \num{1000000}.
+(VIDEO GENERATION RUNTIME EXPERIMENTS)
 
 
 
-If you use statistical procedures, make sure you understand the process you are using,
-and that you check the required assumptions hold in your case. 
 
-If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
-\begin{itemize}
-\item Label everything correctly (axis, title, units).
-\item Caption thoroughly.
-\item Reference in text.
-\item \textbf{Include appropriate display of uncertainty (e.g. error bars, Box plot)}
-\item Minimize clutter.
-\end{itemize}
+% How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
-See the file \texttt{guide\_to\_visualising.pdf} for further information and guidance.
+% \section{Guidance}
+% \begin{itemize}
+%     \item
+%         Ask specific questions that address the general problem.
+%     \item
+%         Answer them with precise evidence (graphs, numbers, statistical
+%         analysis, qualitative analysis).
+%     \item
+%         Be fair and be scientific.
+%     \item
+%         The key thing is to show that you know how to evaluate your work, not
+%         that your work is the most amazing product ever.
+% \end{itemize}
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1.0\linewidth]{figures/boxplot_finger_distance.pdf}    
+% \section{Evidence}
+% Make sure you present your evidence well. Use appropriate visualisations, 
+% reporting techniques and statistical analysis, as appropriate. The point is not
+% to dump all the data you have but to present an argument well supported by evidence gathered.
 
-    \caption{Average number of fingers detected by the touch sensor at different heights above the surface, averaged over all gestures. Dashed lines indicate
-    the true number of fingers present. The Box plots include bootstrapped uncertainty notches for the median. It is clear that the device is biased toward 
-    undercounting fingers, particularly at higher $z$ distances.
-    }
+% If you use numerical evidence, specify reasonable numbers of significant digits; don't state ``18.41141\% of users were successful'' if you only had 20 users. If you average \textit{anything}, present both a measure of central tendency (e.g. mean, median) \textit{and} a measure of spread (e.g. standard deviation, min/max, interquartile range).
 
-    % use the notation fig:name to cross reference a figure
-    \label{fig:boxplot} 
-\end{figure}
+% You can use \texttt{siunitx} to define units, space numbers neatly, and set the precision for the whole LaTeX document. 
+
+% % setup siunitx to have two decimal places
+% \sisetup{
+% 	round-mode = places,
+% 	round-precision = 2
+% }
+
+% For example, these numbers will appear with two decimal places: \num{3.141592}, \num{2.71828}, and this one will appear with reasonable spacing \num{1000000}.
 
 
-%==================================================================================================================================
+
+% If you use statistical procedures, make sure you understand the process you are using,
+% and that you check the required assumptions hold in your case. 
+
+% If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
+% \begin{itemize}
+% \item Label everything correctly (axis, title, units).
+% \item Caption thoroughly.
+% \item Reference in text.
+% \item \textbf{Include appropriate display of uncertainty (e.g. error bars, Box plot)}
+% \item Minimize clutter.
+% \end{itemize}
+
+% See the file \texttt{guide\_to\_visualising.pdf} for further information and guidance.
+
+% \begin{figure}[htb]
+%     \centering
+%     \includegraphics[width=1.0\linewidth]{figures/boxplot_finger_distance.pdf}    
+
+%     \caption{Average number of fingers detected by the touch sensor at different heights above the surface, averaged over all gestures. Dashed lines indicate
+%     the true number of fingers present. The Box plots include bootstrapped uncertainty notches for the median. It is clear that the device is biased toward 
+%     undercounting fingers, particularly at higher $z$ distances.
+%     }
+
+%     % use the notation fig:name to cross reference a figure
+%     \label{fig:boxplot} 
+% \end{figure}
+
+
+%==================================================================================================
 \chapter{Conclusion}    
 Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee). This chapter should be short in most dissertations; maybe one to three pages.
 \section{Guidance}
@@ -880,10 +888,7 @@ Discuss what went well and what didn't and how you would do things differently i
 \section{Future work}
 Discuss what you would do if you could take this further -- where would the interesting directions to go next be? (e.g. you got another year to work on it, or you started a company to work on this, or you pursued a PhD on this topic)
 
-%==================================================================================================================================
-%
-% 
-%==================================================================================================================================
+%==================================================================================================
 %  APPENDICES  
 
 \begin{appendices}
@@ -917,7 +922,7 @@ submitted separately.
 
 \end{appendices}
 
-%==================================================================================================================================
+%==================================================================================================
 %   BIBLIOGRAPHY   
 
 % The bibliography style is agsm (Harvard)

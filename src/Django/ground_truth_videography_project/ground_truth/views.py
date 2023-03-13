@@ -19,6 +19,7 @@ import os
 import pylrc
 import numpy as np
 import json
+import time
 
 
 SRC_FOLDER = "utilities"
@@ -48,7 +49,7 @@ def home(request):
             # Validate the file is of audio format
             if 'audio' in audio_file.content_type:
                 audio_path = save_file(audio_file, os.path.join(SRC_FOLDER, 'audio'))
-                filename = audio_file.name.split('.')[0]
+                filename = audio_file.name.rsplit('.', 1)[0]
         
         if audio_path:
             title, artist = recognise_audio(audio_path, filename)
@@ -83,26 +84,26 @@ def audio(request, audio_slug):
     if audio.transcript:
         instrumental = "♪ Instrumental ♪" in audio.transcript
 
-        lyrics = pylrc.parse(audio.transcript)
+        transcript = pylrc.parse(audio.transcript)
         id = 1
 
-        for i in range(len(lyrics) - 1):
+        for i in range(len(transcript) - 1):
             # Skip instrumental parts of the song
-            if (lyrics[i].text == "♪"):
+            if (transcript[i].text == "♪"):
                 continue
             
-            lyric = lyrics[i]
-            print(f"Chunk {id}: {lyric.text}")
+            line = transcript[i]
+            print(f"Chunk {id}: {line.text}")
             chunk = Chunk.objects.filter(index=id, audio__slug=audio.slug)
 
             if chunk.exists():
                 print("Updating existing Chunk...")
-                chunk.update(text=lyric.text, audio_id=audio.id, start_time=lyric.time, end_time=lyrics[i+1].time, 
+                chunk.update(text=line.text, audio_id=audio.id, start_time=line.time, end_time=transcript[i+1].time, 
                     _image_ids=chunk[0]._image_ids, _selected_ids=chunk[0]._selected_ids)
                 chunk = chunk[0]
             else:
-                chunk = Chunk(index=id, text=lyric.text, audio_id=audio.id, start_time=lyric.time, 
-                    end_time=lyrics[i+1].time, _image_ids="[]", _selected_ids="[]")
+                chunk = Chunk(index=id, text=line.text, audio_id=audio.id, start_time=line.time, 
+                    end_time=transcript[i+1].time, _image_ids="[]", _selected_ids="[]")
                 chunk.save()
 
             chunks.append(chunk)
@@ -191,3 +192,53 @@ def about(request):
 
 def collections(request):
     return render(request, 'ground_truth/collections.html', {'audio_tracks': Audio.objects.all()})
+
+def experiment(request):
+    experiment_path = os.path.join(SRC_FOLDER, 'experiment')
+    results = {'chunks': [], 'start': [], 'end': []}
+
+    for audio_path in os.listdir(os.path.join(experiment_path, 'audio')):
+        filename = audio_path.rsplit('.', 1)[0]
+        print(filename)
+        audio_path = os.path.join(experiment_path, 'audio', audio_path)
+        print(audio_path)
+        title, artist = recognise_audio(audio_path, filename)
+        transcript = get_synced_lyrics(title, artist, experiment_path, filename)
+
+        audio = Audio(music=True, artist=artist, title=title, filename=filename, transcript=transcript, 
+                coverart_colour=get_coverart_colour(filename, experiment_path), _ground_truth="null")
+        audio.save(True)
+
+        transcript = pylrc.parse(audio.transcript)
+        id = 1
+        for i in range(len(transcript) - 1):      
+            line = transcript[i]
+            print(f"Chunk {id}: {line.text}")
+            chunk = Chunk.objects.filter(index=id, audio__slug=audio.slug)
+            if chunk.exists():
+                print("Updating existing Chunk...")
+                chunk.update(text=line.text, audio_id=audio.id, start_time=line.time, end_time=transcript[i+1].time, 
+                    _image_ids=chunk[0]._image_ids, _selected_ids=chunk[0]._selected_ids)
+                chunk = chunk[0]
+            else:
+                chunk = Chunk(index=id, text=line.text, audio_id=audio.id, start_time=line.time, 
+                    end_time=transcript[i+1].time, _image_ids="[]", _selected_ids="[]")
+                chunk.save()
+            id += 1
+        
+        chunks = list(Chunk.objects.filter(audio__slug=audio.slug))
+        video_path = os.path.join(experiment_path, 'video', f"{audio.filename}.mp4")
+        
+        # ----- VIDEO GENERATION RUNTIME EXPERIMENT ------
+        results['chunks'].append(len(chunks))
+        results['start'].append(time.time())
+        build_video(chunks, clip, audio_path, video_path)
+        results['end'].append(time.time())
+        # -------------- END OF EXPERIMENT ---------------
+        with open(os.path.join(experiment_path, 'results', "experiment.json"), "a") as file:
+            json.dump(results, file)
+
+    print(results['chunks'])
+    print(results['start'])
+
+    return HttpResponse("Experiments Done")

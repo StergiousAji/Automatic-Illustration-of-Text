@@ -1,0 +1,729 @@
+{
+    "id": "wTlOIQHwtJU",
+    "artist": "Weezer",
+    "title": "In the Garage",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "I've got a Dungeon Master's Guide",
+            "start_time": 10.69,
+            "end_time": 15.66,
+            "selected_image_ids": [
+                799953,
+                365002,
+                1095747,
+                982949,
+                1175808
+            ],
+            "selected_image_paths": [
+                "n03658185\\n03658185_17224.JPEG",
+                "n02124075\\n02124075_5204.JPEG",
+                "n04423845\\n04423845_3156.JPEG",
+                "n04116512\\n04116512_22449.JPEG",
+                "n06785654\\n06785654_2174.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "I've got a 12-sided die",
+            "start_time": 15.66,
+            "end_time": 20.66,
+            "selected_image_ids": [
+                538051,
+                915694
+            ],
+            "selected_image_paths": [
+                "n02786058\\n02786058_11457.JPEG",
+                "n03929660\\n03929660_19825.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "I've got Kitty Pryde and Nightcrawler too",
+            "start_time": 20.66,
+            "end_time": 25.94,
+            "selected_image_ids": [
+                1107710,
+                1173972,
+                1174118,
+                1174351,
+                1174979,
+                1108396
+            ],
+            "selected_image_paths": [
+                "n04462240\\n04462240_10983.JPEG",
+                "n06596364\\n06596364_10269.JPEG",
+                "n06596364\\n06596364_12574.JPEG",
+                "n06596364\\n06596364_15153.JPEG",
+                "n06596364\\n06596364_5999.JPEG",
+                "n04462240\\n04462240_3696.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "Waiting there for me, yes, I do",
+            "start_time": 25.94,
+            "end_time": 30.61,
+            "selected_image_ids": [
+                200888,
+                266541
+            ],
+            "selected_image_paths": [
+                "n02086240\\n02086240_5119.JPEG",
+                "n02099712\\n02099712_6825.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "I do",
+            "start_time": 30.61,
+            "end_time": 34.07,
+            "selected_image_ids": [
+                41152,
+                231528,
+                364869
+            ],
+            "selected_image_paths": [
+                "n01644373\\n01644373_5244.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02124075\\n02124075_353.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "I've got posters on the wall",
+            "start_time": 34.07,
+            "end_time": 38.81,
+            "selected_image_ids": [
+                1142028,
+                1129886,
+                974443,
+                582606,
+                852594,
+                1144924
+            ],
+            "selected_image_paths": [
+                "n04548280\\n04548280_1425.JPEG",
+                "n04517823\\n04517823_22409.JPEG",
+                "n04070727\\n04070727_4802.JPEG",
+                "n02870880\\n02870880_4676.JPEG",
+                "n03782006\\n03782006_39517.JPEG",
+                "n04550184\\n04550184_34147.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "My favorite rock group KISS",
+            "start_time": 38.81,
+            "end_time": 43.92,
+            "selected_image_ids": [
+                1083455,
+                1083600,
+                825113,
+                825350
+            ],
+            "selected_image_paths": [
+                "n04380533\\n04380533_1739.JPEG",
+                "n04380533\\n04380533_2325.JPEG",
+                "n03724870\\n03724870_13384.JPEG",
+                "n03724870\\n03724870_18054.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "I've got Ace Frehley, I've got Peter Criss",
+            "start_time": 43.92,
+            "end_time": 49.74,
+            "selected_image_ids": [
+                825350,
+                825113,
+                1083455
+            ],
+            "selected_image_paths": [
+                "n03724870\\n03724870_18054.JPEG",
+                "n03724870\\n03724870_13384.JPEG",
+                "n04380533\\n04380533_1739.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "Waiting there for me, yes, I do",
+            "start_time": 49.74,
+            "end_time": 54.04,
+            "selected_image_ids": [
+                200888,
+                266541
+            ],
+            "selected_image_paths": [
+                "n02086240\\n02086240_5119.JPEG",
+                "n02099712\\n02099712_6825.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "I do",
+            "start_time": 54.04,
+            "end_time": 57.11,
+            "selected_image_ids": [
+                41152,
+                231528,
+                364869
+            ],
+            "selected_image_paths": [
+                "n01644373\\n01644373_5244.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02124075\\n02124075_353.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "In the garage, I feel safe",
+            "start_time": 57.11,
+            "end_time": 62.15,
+            "selected_image_ids": [
+                735962,
+                1021139,
+                732493,
+                1015906,
+                957023,
+                987832
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n04229816\\n04229816_9841.JPEG",
+                "n03424325\\n03424325_27931.JPEG",
+                "n04208210\\n04208210_8599.JPEG",
+                "n04023962\\n04023962_17448.JPEG",
+                "n04125021\\n04125021_11693.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "No one cares about my ways",
+            "start_time": 62.15,
+            "end_time": 66.98,
+            "selected_image_ids": [
+                1006083,
+                335350,
+                1071840,
+                359315
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_21391.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n02123045\\n02123045_1320.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "In the garage where I belong",
+            "start_time": 66.98,
+            "end_time": 72.03,
+            "selected_image_ids": [
+                735962,
+                847379,
+                1047408,
+                942994,
+                343081,
+                811571,
+                695485,
+                842017
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n03776460\\n03776460_20031.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03982430\\n03982430_20010.JPEG",
+                "n02113978\\n02113978_5871.JPEG",
+                "n03691459\\n03691459_47519.JPEG",
+                "n03249569\\n03249569_50867.JPEG",
+                "n03770679\\n03770679_15487.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "No one hears me sing this song",
+            "start_time": 72.03,
+            "end_time": 76.76,
+            "selected_image_ids": [
+                472472,
+                834168,
+                776606
+            ],
+            "selected_image_paths": [
+                "n02483362\\n02483362_21998.JPEG",
+                "n03759954\\n03759954_13404.JPEG",
+                "n03584254\\n03584254_2719.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "In the garage",
+            "start_time": 76.76,
+            "end_time": 81.5,
+            "selected_image_ids": [
+                735962,
+                550074,
+                1024263,
+                1047408,
+                853767
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n02797295\\n02797295_3191.JPEG",
+                "n04239074\\n04239074_30919.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03785016\\n03785016_2668.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "I've got an electric guitar",
+            "start_time": 91.85,
+            "end_time": 96.89,
+            "selected_image_ids": [
+                702092,
+                700976,
+                701901,
+                701067,
+                702126,
+                515749,
+                702246
+            ],
+            "selected_image_paths": [
+                "n03272010\\n03272010_7092.JPEG",
+                "n03272010\\n03272010_1067.JPEG",
+                "n03272010\\n03272010_652.JPEG",
+                "n03272010\\n03272010_11822.JPEG",
+                "n03272010\\n03272010_7401.JPEG",
+                "n02676566\\n02676566_108.JPEG",
+                "n03272010\\n03272010_9938.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "I play my stupid songs",
+            "start_time": 96.89,
+            "end_time": 101.72,
+            "selected_image_ids": [
+                515730,
+                516259,
+                701830,
+                915850,
+                915590
+            ],
+            "selected_image_paths": [
+                "n02676566\\n02676566_10010.JPEG",
+                "n02676566\\n02676566_6335.JPEG",
+                "n03272010\\n03272010_6241.JPEG",
+                "n03929660\\n03929660_2330.JPEG",
+                "n03929660\\n03929660_17654.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "I write these stupid words",
+            "start_time": 101.72,
+            "end_time": 105.06,
+            "selected_image_ids": [
+                537078,
+                983021,
+                723346,
+                723585,
+                723032,
+                723350,
+                723616,
+                910497,
+                724019
+            ],
+            "selected_image_paths": [
+                "n02783161\\n02783161_26753.JPEG",
+                "n04116512\\n04116512_24326.JPEG",
+                "n03388183\\n03388183_2728.JPEG",
+                "n03388183\\n03388183_4661.JPEG",
+                "n03388183\\n03388183_1618.JPEG",
+                "n03388183\\n03388183_27515.JPEG",
+                "n03388183\\n03388183_4961.JPEG",
+                "n03908714\\n03908714_12673.JPEG",
+                "n03388183\\n03388183_9800.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "And I love every one",
+            "start_time": 105.06,
+            "end_time": 107.57,
+            "selected_image_ids": [
+                536988,
+                1239635,
+                1239680,
+                959498,
+                1158452,
+                1018206
+            ],
+            "selected_image_paths": [
+                "n02783161\\n02783161_22404.JPEG",
+                "n07930864\\n07930864_10187.JPEG",
+                "n07930864\\n07930864_1163.JPEG",
+                "n04033901\\n04033901_17573.JPEG",
+                "n04589890\\n04589890_9146.JPEG",
+                "n04209239\\n04209239_6828.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "Waiting there for me, yes, I do",
+            "start_time": 107.57,
+            "end_time": 112.05,
+            "selected_image_ids": [
+                200888,
+                266541
+            ],
+            "selected_image_paths": [
+                "n02086240\\n02086240_5119.JPEG",
+                "n02099712\\n02099712_6825.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "I do",
+            "start_time": 112.05,
+            "end_time": 114.96,
+            "selected_image_ids": [
+                41152,
+                231528,
+                364869
+            ],
+            "selected_image_paths": [
+                "n01644373\\n01644373_5244.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02124075\\n02124075_353.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "In the garage, I feel safe",
+            "start_time": 114.96,
+            "end_time": 119.8,
+            "selected_image_ids": [
+                735962,
+                1021139,
+                732493,
+                1015906,
+                957023,
+                987832
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n04229816\\n04229816_9841.JPEG",
+                "n03424325\\n03424325_27931.JPEG",
+                "n04208210\\n04208210_8599.JPEG",
+                "n04023962\\n04023962_17448.JPEG",
+                "n04125021\\n04125021_11693.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "No one cares about my ways",
+            "start_time": 119.8,
+            "end_time": 124.97,
+            "selected_image_ids": [
+                1006083,
+                335350,
+                1071840,
+                359315
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_21391.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n02123045\\n02123045_1320.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "In the garage where I belong",
+            "start_time": 124.97,
+            "end_time": 129.83,
+            "selected_image_ids": [
+                735962,
+                847379,
+                1047408,
+                942994,
+                343081,
+                811571,
+                695485,
+                842017
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n03776460\\n03776460_20031.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03982430\\n03982430_20010.JPEG",
+                "n02113978\\n02113978_5871.JPEG",
+                "n03691459\\n03691459_47519.JPEG",
+                "n03249569\\n03249569_50867.JPEG",
+                "n03770679\\n03770679_15487.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "No one hears me sing this song",
+            "start_time": 129.83,
+            "end_time": 134.81,
+            "selected_image_ids": [
+                472472,
+                834168,
+                776606
+            ],
+            "selected_image_paths": [
+                "n02483362\\n02483362_21998.JPEG",
+                "n03759954\\n03759954_13404.JPEG",
+                "n03584254\\n03584254_2719.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "In the garage",
+            "start_time": 134.81,
+            "end_time": 139.87,
+            "selected_image_ids": [
+                735962,
+                550074,
+                1024263,
+                1047408,
+                853767
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n02797295\\n02797295_3191.JPEG",
+                "n04239074\\n04239074_30919.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03785016\\n03785016_2668.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "In the garage",
+            "start_time": 139.87,
+            "end_time": 144.64,
+            "selected_image_ids": [
+                735962,
+                550074,
+                1024263,
+                1047408,
+                853767
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n02797295\\n02797295_3191.JPEG",
+                "n04239074\\n04239074_30919.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03785016\\n03785016_2668.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "In the garage, I feel safe",
+            "start_time": 167.95,
+            "end_time": 172.82,
+            "selected_image_ids": [
+                735962,
+                1021139,
+                732493,
+                1015906,
+                957023,
+                987832
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n04229816\\n04229816_9841.JPEG",
+                "n03424325\\n03424325_27931.JPEG",
+                "n04208210\\n04208210_8599.JPEG",
+                "n04023962\\n04023962_17448.JPEG",
+                "n04125021\\n04125021_11693.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "No one cares about my ways",
+            "start_time": 172.82,
+            "end_time": 177.9,
+            "selected_image_ids": [
+                1006083,
+                335350,
+                1071840,
+                359315
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_21391.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n02123045\\n02123045_1320.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "In the garage where I belong",
+            "start_time": 177.9,
+            "end_time": 182.85,
+            "selected_image_ids": [
+                735962,
+                847379,
+                1047408,
+                942994,
+                343081,
+                811571,
+                695485,
+                842017
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n03776460\\n03776460_20031.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03982430\\n03982430_20010.JPEG",
+                "n02113978\\n02113978_5871.JPEG",
+                "n03691459\\n03691459_47519.JPEG",
+                "n03249569\\n03249569_50867.JPEG",
+                "n03770679\\n03770679_15487.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "No one hears me sing this song",
+            "start_time": 182.85,
+            "end_time": 187.51,
+            "selected_image_ids": [
+                472472,
+                834168,
+                776606
+            ],
+            "selected_image_paths": [
+                "n02483362\\n02483362_21998.JPEG",
+                "n03759954\\n03759954_13404.JPEG",
+                "n03584254\\n03584254_2719.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "In the garage, I feel safe",
+            "start_time": 187.51,
+            "end_time": 192.57,
+            "selected_image_ids": [
+                735962,
+                1021139,
+                732493,
+                1015906,
+                957023,
+                987832
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n04229816\\n04229816_9841.JPEG",
+                "n03424325\\n03424325_27931.JPEG",
+                "n04208210\\n04208210_8599.JPEG",
+                "n04023962\\n04023962_17448.JPEG",
+                "n04125021\\n04125021_11693.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "No one laughs about my ways",
+            "start_time": 192.57,
+            "end_time": 197.61,
+            "selected_image_ids": [
+                333009,
+                335346,
+                197379,
+                290176,
+                195956
+            ],
+            "selected_image_paths": [
+                "n02112137\\n02112137_17832.JPEG",
+                "n02112706\\n02112706_282.JPEG",
+                "n02085782\\n02085782_664.JPEG",
+                "n02105412\\n02105412_2386.JPEG",
+                "n02085620\\n02085620_2246.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "In the garage where I belong",
+            "start_time": 197.61,
+            "end_time": 202.36,
+            "selected_image_ids": [
+                735962,
+                847379,
+                1047408,
+                942994,
+                343081,
+                811571,
+                695485,
+                842017
+            ],
+            "selected_image_paths": [
+                "n03444034\\n03444034_16343.JPEG",
+                "n03776460\\n03776460_20031.JPEG",
+                "n04285008\\n04285008_7243.JPEG",
+                "n03982430\\n03982430_20010.JPEG",
+                "n02113978\\n02113978_5871.JPEG",
+                "n03691459\\n03691459_47519.JPEG",
+                "n03249569\\n03249569_50867.JPEG",
+                "n03770679\\n03770679_15487.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "No one hears me, no one hears me",
+            "start_time": 202.36,
+            "end_time": 207.38,
+            "selected_image_ids": [
+                1078084,
+                933601,
+                335350,
+                932945
+            ],
+            "selected_image_paths": [
+                "n04370456\\n04370456_9865.JPEG",
+                "n03958227\\n03958227_6398.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n03958227\\n03958227_11062.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "No one hears me, no one hears me",
+            "start_time": 207.38,
+            "end_time": 212.29,
+            "selected_image_ids": [
+                1078084,
+                933601,
+                335350,
+                932945
+            ],
+            "selected_image_paths": [
+                "n04370456\\n04370456_9865.JPEG",
+                "n03958227\\n03958227_6398.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n03958227\\n03958227_11062.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "No one hears me sing this song",
+            "start_time": 212.29,
+            "end_time": 217.27,
+            "selected_image_ids": [
+                472472,
+                834168,
+                776606
+            ],
+            "selected_image_paths": [
+                "n02483362\\n02483362_21998.JPEG",
+                "n03759954\\n03759954_13404.JPEG",
+                "n03584254\\n03584254_2719.JPEG"
+            ]
+        }
+    ]
+}
