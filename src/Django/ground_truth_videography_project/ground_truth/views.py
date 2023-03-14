@@ -10,7 +10,7 @@ from .forms import LinkForm
 
 from utilities.audio_retriever import clear_directories, download_yt, save_file
 from utilities.audio_recogniser import recognise_audio, get_coverart_colour
-from utilities.synced_transcription_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio
+from utilities.synced_transcription_retriever import get_synced_lyrics, seconds_to_time, transcribe_audio, get_transcript_length
 from utilities.image_retriever import CLIP, index_image_paths
 from utilities.videography import build_video
 from utilities.ground_truth_builder import build_ground_truth
@@ -192,53 +192,3 @@ def about(request):
 
 def collections(request):
     return render(request, 'ground_truth/collections.html', {'audio_tracks': Audio.objects.all()})
-
-def experiment(request):
-    experiment_path = os.path.join(SRC_FOLDER, 'experiment')
-    results = {'chunks': [], 'start': [], 'end': []}
-
-    for audio_path in os.listdir(os.path.join(experiment_path, 'audio')):
-        filename = audio_path.rsplit('.', 1)[0]
-        print(filename)
-        audio_path = os.path.join(experiment_path, 'audio', audio_path)
-        print(audio_path)
-        title, artist = recognise_audio(audio_path, filename)
-        transcript = get_synced_lyrics(title, artist, experiment_path, filename)
-
-        audio = Audio(music=True, artist=artist, title=title, filename=filename, transcript=transcript, 
-                coverart_colour=get_coverart_colour(filename, experiment_path), _ground_truth="null")
-        audio.save(True)
-
-        transcript = pylrc.parse(audio.transcript)
-        id = 1
-        for i in range(len(transcript) - 1):      
-            line = transcript[i]
-            print(f"Chunk {id}: {line.text}")
-            chunk = Chunk.objects.filter(index=id, audio__slug=audio.slug)
-            if chunk.exists():
-                print("Updating existing Chunk...")
-                chunk.update(text=line.text, audio_id=audio.id, start_time=line.time, end_time=transcript[i+1].time, 
-                    _image_ids=chunk[0]._image_ids, _selected_ids=chunk[0]._selected_ids)
-                chunk = chunk[0]
-            else:
-                chunk = Chunk(index=id, text=line.text, audio_id=audio.id, start_time=line.time, 
-                    end_time=transcript[i+1].time, _image_ids="[]", _selected_ids="[]")
-                chunk.save()
-            id += 1
-        
-        chunks = list(Chunk.objects.filter(audio__slug=audio.slug))
-        video_path = os.path.join(experiment_path, 'video', f"{audio.filename}.mp4")
-        
-        # ----- VIDEO GENERATION RUNTIME EXPERIMENT ------
-        results['chunks'].append(len(chunks))
-        results['start'].append(time.time())
-        build_video(chunks, clip, audio_path, video_path)
-        results['end'].append(time.time())
-        # -------------- END OF EXPERIMENT ---------------
-        with open(os.path.join(experiment_path, 'results', "experiment.json"), "a") as file:
-            json.dump(results, file)
-
-    print(results['chunks'])
-    print(results['start'])
-
-    return HttpResponse("Experiments Done")
