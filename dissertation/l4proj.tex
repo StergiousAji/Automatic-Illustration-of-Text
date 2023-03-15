@@ -10,6 +10,7 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{physics, amsmath, amssymb, graphicx, fancyvrb}
+\usepackage{multirow}
 
 
 \begin{document}
@@ -797,7 +798,12 @@ This chapter described the steps taken in manifesting the blueprint designs into
 
 (SHOULD ASSESSORS PICK CLEAR IMAGES)
 
-
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/videography_timed_experiment.png}
+    \caption{describe}
+    \label{fig:videography_timed}
+\end{figure}
 
 % How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
@@ -922,18 +928,110 @@ submitted separately.
 \chapter{Video Generation Experiment}
 \begin{table}
     \centering
-    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
-    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:operators}
-    \rowcolors{2}{}{gray!3}
-    \begin{tabular}{| c | c | c |}
-    \hline
-    Hello & There & High \\
-    \hline
-    And & Dry & go \\
-    \hline
+    % \rowcolors{2}{}{gray!3}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Audio Source} & \textbf{Runtime \lstinline|(mm:ss)|} & \textbf{Number of Chunks} \\
+        \hline
+        \hline
+        1 & 04:37 & 61 \\
+        \hline
+        2 & 02:25 & 42 \\
+        \hline
+        3 & 02:26 & 62 \\
+        \hline
+        4 & 03:58 & 81 \\
+        \hline
+        5 & 04:34 & 80 \\
+        \hline
+        6 & 04:30 & 62 \\
+        \hline
+        7 & 02:03 & 34 \\
+        \hline
+        8 & 03:10 & 36 \\
+        \hline
+        9 & 04:23 & 53 \\
+        \hline
+        10 & 03:26 & 69 \\
+        \hline
+        11 & 04:05 & 74 \\
+        \hline
+        12 & 03:08 & 51 \\
+        \hline
+        13 & 04:38 & 36 \\
+        \hline
+        14 & 04:04 & 21 \\
+        \hline
+        15 & 03:49 & 37 \\
+        \hline
+        16 & 03:20 & 38 \\
+        \hline
+        17 & 02:10 & 26 \\
+        \hline
+        18 & 04:09 & 43 \\
+        \hline
+        19 & 03:49 & 26 \\
+        \hline
+        20 & 04:40 & 26 \\
+        \hline
     \end{tabular}
+    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
+    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:audio_sources}
 \end{table}
 
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{Audio Source}} & 
+        \multicolumn{2}{|c|}{\textbf{Video Generation Time \lstinline|(mm:ss)|}} \\
+        \cline{2-3} & \textbf{Previous System} & \textbf{Current System} \\ 
+        \hline
+        \hline
+        1 & 08:47 & 04:55 \\
+        \hline
+        2 & 06:55 & 02:30 \\
+        \hline
+        3 & 09:48 & 03:02 \\
+        \hline
+        4 & 12:32 & 07:10 \\
+        \hline
+        5 & 12:24 & 07:36 \\
+        \hline
+        6 & 09:48 & 06:09 \\
+        \hline
+        7 & 05:46 & 03:05 \\
+        \hline
+        8 & 06:03 & 04:43 \\
+        \hline
+        9 & 08:30 & 06:58 \\
+        \hline
+        10 & 10:49 & 05:08 \\
+        \hline
+        11 & 11:32 & 07:12 \\
+        \hline
+        12 & 08:13 & 04:16 \\
+        \hline
+        13 & 06:03 & 03:60 \\
+        \hline
+        14 & 03:54 & 02:48 \\
+        \hline
+        15 & 06:12 & 02:44 \\
+        \hline
+        16 & 06:21 & 03:35 \\
+        \hline
+        17 & 04:37 & 02:33 \\
+        \hline
+        18 & 07:04 & 04:04 \\
+        \hline
+        19 & 04:37 & 03:49 \\
+        \hline
+        20 & 04:37 & 03:15 \\
+        \hline
+    \end{tabular}
+    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
+    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:videography_times}
+\end{table}
 \end{appendices}
 
 %==================================================================================================
