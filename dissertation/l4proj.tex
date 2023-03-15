@@ -350,11 +350,11 @@ The list is divided into two sections: Functional Requirements, which describe i
     \item \label{req:22} \textbf{Should Have:} The application displaying progress bars for long loading times.
     \item \label{req:23} \textbf{Should Have:} The application being fast and responsive.
     \item \label{req:24} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item \label{req:25} \textbf{Should Have:} The application being able to provide a transcription for any audio source including phrase-level timestamps.
+    \item \label{req:25} \textbf{Should Have:} The application being able to transcribe any audio source with phrase-level timestamps.
     \item \label{req:26} \textbf{Should Have:} The text-to-image retrieval system only retrieving relevant images by leveraging semantics of natural language as well as visual features.
-    \item \label{req:27} \textbf{Should Have:} The videos being generated in a reasonable amount of time.
+    \item \label{req:27} \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
     \item \label{req:28} \textbf{Should Have:} The images being of high quality in the generated videos.
-    \item \label{req:29} \textbf{Could Have:} The application being designed modularly to configure any static image collection.
+    \item \label{req:29} \textbf{Could Have:} The application being designed with extensibility in mind so that the image collection can be reconfigured.
     \item \label{req:30} \textbf{Could Have:} The videos including text as well as images.
     \item \label{req:31} \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
     \item \label{req:32} \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes.
@@ -576,13 +576,34 @@ The \textbf{image\_retriever.py} file is responsible for image pre-processing an
 All images in the collection were pre-processed and embedded in batches using the pre-trained CLIP model and processor, to create a normalised NumPy matrix. This matrix was subsequently saved in a file so that it can be loaded into memory on application start-up. 
 
 \label{sec:image_retriever:par:query_prompt}
-The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector with every image vector stored in the matrix. Since all vectors are normalised beforehand by their Euclidean (L2) norm as demonstrated in Equation \ref{eq:euclidean_normalisation}, the cosine similarity score is simply the dot product between the vectors, accomplished with \textbf{\lstinline{numpy.dot(text_emb, image_embs.T)}}. 
-
-$$\text{normalise}(\vec{x}) = \frac{\vec{x}}{\norm{\vec{x}}_2}$$
+The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector, $\vec{t}$ with every image vector stored in the matrix, $\mathbf{I}$. Since all vectors are normalised beforehand by their Euclidean (L2) norm as demonstrated in Equation \ref{eq:euclidean_normalisation}, the cosine similarity score is simply the dot product between the vectors (Equation \ref{eq:dot_product}), accomplished with \textbf{\lstinline{numpy.dot(text_emb, image_embs.T)}}. 
 
 \begin{equation}
-    \norm{\vec{x}}_2 = \sqrt{\sum_{i=1}^N \abs{x_i}^2} = \sqrt{x_1^2 + x_2^2 + ... + x_N^2}
+\begin{align*}
+    \text{normalise}&(\vec{x}) = \frac{\vec{x}}{\norm{\vec{x}}_2} \\
+    \norm{\vec{x}}_2 = \sqrt{\sum_{i=1}^N \abs{x_i}^2} =& \sqrt{x_1^2 + x_2^2 + ... + x_N^2}
     \label{eq:euclidean_normalisation}
+\end{align*}
+\end{equation}
+
+\begin{equation}
+\begin{align*}
+    \vec{t} \cdot \mathbf{I}^T &= 
+    \begin{bmatrix}
+        t_1  & t_2 & \cdots & t_N
+    \end{bmatrix}
+    \begin{bmatrix}
+        i_{11} & i_{12} & \cdots & i_{1N} \\
+        i_{21} & i_{22} & \cdots & i_{2N} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        i_{M1} & i_{M2} & \cdots & i_{MN}
+    \end{bmatrix}^T \\
+    &=
+    \begin{bmatrix}
+        \sum_{j=1}^N t_ji_{1j} & \sum_{j=1}^N t_ji_{2j} & \cdots & \sum_{j=1}^N t_ji_{Mj}
+    \end{bmatrix}
+    \label{eq:dot_product}
+\end{align*}
 \end{equation}
 
 These similarity scores are subsequently sorted in descending order to get the 10 images that scored the highest with the text query which is then listed to the user on the Chunk page. In order to save unnecessary computation, these image indices are saved in the database associated to the Chunk object.
@@ -792,11 +813,49 @@ This chapter described the steps taken in manifesting the blueprint designs into
 
 %==================================================================================================
 \chapter{Evaluation} 
-(FAISS)
+This chapter serves to evaluate the fully implemented application by looking at how many of the requirements specified in Chapter \ref{chap:requirements} have been fulfilled. This chapter will be split into two sections, one evaluating the Automatic Videography tool and looking to improve its efficiency, as well as comparing it against the prior system. The latter half will involve evaluating the usability of the relevance assessment interface. 
+
+Since this product is not designed to address an easily quantifiable problem, but rather intended to aid users in their creative pursuits and the construction of test collections, some requirements are more challenging to assess for their fulfillment compared to others. Non-functional requirements are particularly challenging because unlike functional requirements, which can be either implemented or not, non-functional requirements are often more subjective. Various experiments must be conducted in order to answer our question by gathering empirical measures. It is inevitable that some level of subjective judgment based on the experimental results will be necessary, but efforts will be made to approach the highest degree of objectivity.
 
 (VIDEO GENERATION RUNTIME EXPERIMENTS)
 
 (SHOULD ASSESSORS PICK CLEAR IMAGES)
+
+\section{Automatic Videography}
+\subsection{Improving Retrieval Efficiency with FAISS}
+The current image retrieval system involves meticulous similarity search and sort operations which poses serious scalability issues with larger image collections or running multiple videography pipelines. Therefore more efficient strategies to retrieving the top 10 images were analysied including Facebook's AI Similarity Search (FAISS) (CITE). This library offers a range of efficient indexing strategies for fast similarity searching with the key idea of clustering similar documents into cells so that the entire dataset does not need to be queried. In our case we required the inner product indexing method, \textbf{\lstinline|faiss.IndexFlatIP|}, to match CLIP's training process which included maximising the cosine similarity of feature vectors. This path ultimately lead to a dead end due to huge decline in retrieval accuracy, even with the remarkable 98\% decrease in the mean search time compared to the exhaustive search. 
+
+Experiments were conducted to evaluate different parameter tunings for the inverted file index with a Product Quantizer encoding, \textbf{\lstinline|faiss.IndexIVFPQ|}, and the retrieval performances compared to the exhaustive approach. The indexed collections were tested on a set of 10 audio sources which provided a total of 399 phrase-level text prompts. Three sets of values were used for the \textbf{\lstinline|nlist|} parameter namely, 2048, 4096 and 16 384. This parameter determines the number of Voronoi cells to partition the index of image vectors. It is common to pick a value that is a power of 2 that is close to $4\sqrt{M}$, where $M$ is the total number of document vectors. Our filtered static collection consists of 1 281 121 images resulting in a recommended value that is close to the second test value. 
+
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Indexing Method} & \textbf{Mean Retrieval Time (s)} & \textbf{Mean Jaccard Similarity} \\
+        \hline
+        \hline
+        Flat (Exhaustive) & 0.2833 & - \\
+        \hline
+        IndexIVFPQ (\emph{nlist=2048}) & 0.0024 & 0.0 \\
+        \hline
+        IndexIVFPQ (\emph{nlist=4096}) & 0.0035 & 0.0 \\
+        \hline
+        IndexIVFPQ (\emph{nlist=16384}) & 0.0094 & 0.0 \\
+        \hline
+    \end{tabular}
+    
+    \caption{ The results of the FAISS experiment to find the best indexing configuration to expedite the search and retrieval process. The experiment was tested on $399$ text prompts extracted from $10$ audio sources. The mean time to retrieve the top ten images from a text prompt is shown for each strategy as well as the mean Jaccard similarity of the retrievals against the original Flat index method. All retrievals were performed using an \lstinline|nprobe| $=20$.}
+    \label{tab:faiss_experiment}
+\end{table}
+
+Table \ref{faiss_experiment} outlines the results of the experiment including the mean retrieval times to obtain the top 10 images for all 399 text queries. The mean Jaccard similarities shown was used to determine the accuracy of the retrievals by measuring the overlaps of retrievals against the original exhaustive approach. From the results, it is evident that while the configurations are able to retrieve images over 30 times faster than the original approach, it achieved a 0\% accuracy within the top ten images. This elicited inspecting the quality of images retrieved by the different FAISS systems. 
+
+(SHOW RESULTS?)
+
+(PCA??)
+
+\subsection{Video Generation Time Testing}
+Requirement \textbf{\#\ref{req:1}}
 
 \begin{figure}
     \centering
@@ -804,6 +863,14 @@ This chapter described the steps taken in manifesting the blueprint designs into
     \caption{describe}
     \label{fig:videography_timed}
 \end{figure}
+
+
+\section{Ground-Truth Annotation Interface}
+\subsection{Usability Testing}
+
+\section{Requirement Fulfillment}
+
+\section{Summary}
 
 % How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
@@ -1032,8 +1099,12 @@ submitted separately.
     \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
     captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:videography_times}
 \end{table}
-\end{appendices}
 
+
+\chapter{Ethics Checklist}
+\includepdf[pages=-]{ethics_checklist.pdf}
+
+\end{appendices}
 %==================================================================================================
 %   BIBLIOGRAPHY   
 
