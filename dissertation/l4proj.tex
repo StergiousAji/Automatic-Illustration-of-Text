@@ -1,7 +1,7 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 \documentclass{l4proj}
 
-%==================================================================================================
+%==================================================================================================s
 % Put any additional packages here
 % You can add any packages you want, as long as it does not alter the overall format (e.g. don't change the margins or the reference style).
 %
@@ -9,8 +9,12 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{float}
-\usepackage{physics, amsmath, amssymb, graphicx, fancyvrb}
-\usepackage{multirow}
+\usepackage{physics, amssymb, graphicx, fancyvrb}
+\usepackage{multirow, siunitx}
+
+\definecolor{forestgreen}{RGB}{1, 140, 65}
+\definecolor{brickred}{RGB}{173, 2, 2}
+\definecolor{golden}{RGB}{207, 159, 4}
 
 
 \begin{document}
@@ -350,15 +354,14 @@ The list is divided into two sections: Functional Requirements, which describe i
     \item \label{req:22} \textbf{Should Have:} The application displaying progress bars for long loading times.
     \item \label{req:23} \textbf{Should Have:} The application being fast and responsive.
     \item \label{req:24} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item \label{req:25} \textbf{Should Have:} The application being able to transcribe any audio source with phrase-level timestamps.
-    \item \label{req:26} \textbf{Should Have:} The text-to-image retrieval system only retrieving relevant images by leveraging semantics of natural language as well as visual features.
+    \item \label{req:25} \textbf{Should Have:} The application being able to transcribe any audio source providing phrase-level timestamps.
+    \item \label{req:26} \textbf{Should Have:} The system retrieving more relevant images by leveraging semantics of natural language as well as visual features.
     \item \label{req:27} \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
     \item \label{req:28} \textbf{Should Have:} The images being of high quality in the generated videos.
     \item \label{req:29} \textbf{Could Have:} The application being designed with extensibility in mind so that the image collection can be reconfigured.
     \item \label{req:30} \textbf{Could Have:} The videos including text as well as images.
     \item \label{req:31} \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
     \item \label{req:32} \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes.
-    
 \end{enumerate}
 
 
@@ -578,6 +581,7 @@ All images in the collection were pre-processed and embedded in batches using th
 \label{sec:image_retriever:par:query_prompt}
 The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector, $\vec{t}$ with every image vector stored in the matrix, $\mathbf{I}$. Since all vectors are normalised beforehand by their Euclidean (L2) norm as demonstrated in Equation \ref{eq:euclidean_normalisation}, the cosine similarity score is simply the dot product between the vectors (Equation \ref{eq:dot_product}), accomplished with \textbf{\lstinline{numpy.dot(text_emb, image_embs.T)}}. 
 
+(TODO: FIX EQUATION AND ALIGN THING)
 \begin{equation}
 \begin{align*}
     \text{normalise}&(\vec{x}) = \frac{\vec{x}}{\norm{\vec{x}}_2} \\
@@ -600,7 +604,7 @@ The top 10 images are dynamically retrieved when a Chunk page is requested, hand
     \end{bmatrix}^T \\
     &=
     \begin{bmatrix}
-        \sum_{j=1}^N t_ji_{1j} & \sum_{j=1}^N t_ji_{2j} & \cdots & \sum_{j=1}^N t_ji_{Mj}
+        \left( \sum_{j=1}^N t_ji_{1j} \right) & \left( \sum_{j=1}^N t_ji_{2j} \right) & \cdots & \left( \sum_{j=1}^N t_ji_{Mj} \right)
     \end{bmatrix}
     \label{eq:dot_product}
 \end{align*}
@@ -817,15 +821,11 @@ This chapter serves to evaluate the fully implemented application by looking at 
 
 Since this product is not designed to address an easily quantifiable problem, but rather intended to aid users in their creative pursuits and the construction of test collections, some requirements are more challenging to assess for their fulfillment compared to others. Non-functional requirements are particularly challenging because unlike functional requirements, which can be either implemented or not, non-functional requirements are often more subjective. Various experiments must be conducted in order to answer our question by gathering empirical measures. It is inevitable that some level of subjective judgment based on the experimental results will be necessary, but efforts will be made to approach the highest degree of objectivity.
 
-(VIDEO GENERATION RUNTIME EXPERIMENTS)
-
-(SHOULD ASSESSORS PICK CLEAR IMAGES)
-
 \section{Automatic Videography}
 \subsection{Improving Retrieval Efficiency with FAISS}
-The current image retrieval system involves meticulous similarity search and sort operations which poses serious scalability issues with larger image collections or running multiple videography pipelines. Therefore more efficient strategies to retrieving the top 10 images were analysied including Facebook's AI Similarity Search (FAISS) (CITE). This library offers a range of efficient indexing strategies for fast similarity searching with the key idea of clustering similar documents into cells so that the entire dataset does not need to be queried. In our case we required the inner product indexing method, \textbf{\lstinline|faiss.IndexFlatIP|}, to match CLIP's training process which included maximising the cosine similarity of feature vectors. This path ultimately lead to a dead end due to huge decline in retrieval accuracy, even with the remarkable 98\% decrease in the mean search time compared to the exhaustive search. 
+The current image retrieval system involves meticulous similarity search and sort operations which poses serious scalability issues with larger image collections or running multiple videography pipelines. Therefore more efficient strategies to retrieving the images were analysied including Facebook's AI Similarity Search (FAISS) (CITE). This library offers a range of efficient indexing strategies for fast similarity searching with the key idea of clustering similar documents into cells so that the entire dataset does not need to be queried. In our case we required the inner product indexing method, \textbf{\lstinline|faiss.IndexFlatIP|}, to match CLIP's training process which included maximising the cosine similarity of feature vectors. This path ultimately lead to a dead end due to huge decline in retrieval accuracy, even with the remarkable 98\% decrease in the mean search time compared to the exhaustive search. 
 
-Experiments were conducted to evaluate different parameter tunings for the inverted file index with a Product Quantizer encoding, \textbf{\lstinline|faiss.IndexIVFPQ|}, and the retrieval performances compared to the exhaustive approach. The indexed collections were tested on a set of 10 audio sources which provided a total of 399 phrase-level text prompts. Three sets of values were used for the \textbf{\lstinline|nlist|} parameter namely, 2048, 4096 and 16 384. This parameter determines the number of Voronoi cells to partition the index of image vectors. It is common to pick a value that is a power of 2 that is close to $4\sqrt{M}$, where $M$ is the total number of document vectors. Our filtered static collection consists of 1 281 121 images resulting in a recommended value that is close to the second test value. 
+Experiments were conducted to evaluate different parameter tunings for the inverted file index with a Product Quantizer encoding, \textbf{\lstinline|faiss.IndexIVFPQ|}, and the retrieval performances compared to the exhaustive approach. The indexed collections were tested on a set of 10 audio sources which provided a total of 399 phrase-level text prompts. Three sets of values were used for the \textbf{\lstinline|nlist|} parameter namely, 2048, 4096 and 16 384. This parameter determines the number of Voronoi cells to partition the index of image vectors. It is common to pick a value that is a power of 2 that is close to $4\sqrt{M}$, where $M$ is the total number of document vectors. Our filtered static collection consists of 1281121 images resulting in a recommended value that is close to the second test value. 
 
 \begin{table}
     \centering
@@ -848,27 +848,119 @@ Experiments were conducted to evaluate different parameter tunings for the inver
     \label{tab:faiss_experiment}
 \end{table}
 
-Table \ref{faiss_experiment} outlines the results of the experiment including the mean retrieval times to obtain the top 10 images for all 399 text queries. The mean Jaccard similarities shown was used to determine the accuracy of the retrievals by measuring the overlaps of retrievals against the original exhaustive approach. From the results, it is evident that while the configurations are able to retrieve images over 30 times faster than the original approach, it achieved a 0\% accuracy within the top ten images. This elicited inspecting the quality of images retrieved by the different FAISS systems. 
+Table \ref{tab:faiss_experiment} outlines the results of the experiment including the mean retrieval times to obtain the top 10 images for all 399 text queries. The mean Jaccard similarities shown was used to determine the accuracy of the retrievals by measuring the overlaps of retrievals against the original exhaustive approach. From the results, it is evident that while the configurations are able to retrieve images over 30 times faster than the original approach, it achieved a 0\% accuracy within the top ten images. This elicited inspecting the quality of images retrieved by the different FAISS systems which showed some relevance as seen in Figure (REF) for the text query \emph{"I'll be the light to guide you"} although in most cases the images were entirely irrelevant to the prompt making the FAISS systems infeasible for our task. We believe more work is required to make this project's videography system more scalable by experimenting with other FAISS indexing strategies.
 
-(SHOW RESULTS?)
+(TODO: FIND BETTER PROMPT AND CHANGE TO PDF)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/exhaustive_retrievals.png}
+    \caption{Exhaustive}
+    \includegraphics[width=1\textwidth]{figures/faiss_retrievals.png}
+    \caption{The top three images retrieved by the IndexIVFPQ (nlist=16384) system, ordered by their similarity score to the text query: "I'll be the light to guide you".}
+    \label{fig:faiss_retrievals}
+\end{figure}
 
-(PCA??)
+(TODO: PCA??)
 
 \subsection{Video Generation Time Testing}
-Requirement \textbf{\#\ref{req:1}}
+(WHAT IS THIS?: specifically for the automated videography process since an exhaustive approach is necessary for the most accurate retrievals for ground truth construction)
+
+Despite the unsuccessful efforts in improving retrieval speeds with FAISS, one of the biggest motivations for this project was to improve on the limitations of the previous automatic videography system. This led to the non-functional requirement \textbf{\#\ref{req:27}}:
+
+\begin{itemize}
+    \item \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
+\end{itemize}
+
+In order to check if this requirement has been satisfied, experiments must be conducted in order to find and compare the average time taken to generate a video using both systems. This experiment was run with 20 audio sources each of varying lengths, averaging around 3 minutes and 20 seconds (Standard Deviation: $\sigma = 0.84$ mins), and number of phrase-level chunks. The mean number of chunks present per source was 47.9 ($\sigma = 18.4$ chunks) with an overall total of 958 chunks and images being retrieved during the experiment. This was done as the time taken for a video compilation to complete is determined by the number of MoviePy clips required. This number of clips was found to be dependent on \textbf{\emph{both}} the number of phrase-level chunks present and the audio length, as made evident by Figure \ref{fig:videography_against_wchunks}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.76\textwidth]{figures/video_generation_against_wchunks.pdf}
+    \caption{Graph showing the general relationship between the video generation time, and the number of chunks present in audio sources, weighted by the audio runtime. The data was plotted from the video generation times using the current system on 20 distinct audio sources.}
+    \label{fig:videograph_agaist_wchunks}
+\end{figure}
+
+This is the case because the clips can consist of \textbf{\lstinline|ImageClip|s} and \textbf{\lstinline|TextClip|s} which is dependant on the number of chunks present, as well as, \textbf{\lstinline|ColorClip|s} which are dependent on the audio length since it is used to fill gaps between the chunks. Therefore, in order to minimise the affect of both the number of chunks and the audio runtime of sources, a diverse range of sources were picked that are representative of the tool's usecase. 
+
+Table \ref{tab:videography_times} in the Appendix lists the resulting video generation times for all 20 sources on both the previous and current systems, however, a summary is shown in the form of box plots in Figure \ref{fig:videography_timed}. As shown, the current system generates videos
+42\% faster than the previous system on average. The current system achieved a mean video generation time of 4 minutes 29 seconds ($\sigma = 1.65$ min), while the latter, 7 minutes 44 seconds ($\sigma = 2.63$ min). It is interesting to note that the prior system's times varies a lot more than this project's videography system. This is most likely due to the fact that it required downloading images from Google's image catalogue meaning that it's retrieval time is dependent on turbulent internet speeds. In contrast, this system has the benefit of retrieving from a locally stored collection.
+
+In summary, the experiment results empirically show that the non-functional requirement \textbf{\#\ref{req:27}} has been successfully fulfilled. Considering that this system elevates video compilation time with the addition of \textbf{\lstinline|TextClip|s}, something that the preceding system lacked, the results are promising. However, this can be improved dramatically by using a smarter indexing strategy using resources such as FAISS providing faster similarity search times than the exhaustive approach used currently.
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{figures/videography_timed_experiment.png}
-    \caption{describe}
+    \includegraphics[width=1\textwidth]{figures/videography_timed_experiment.pdf}
+    \caption{Box plot showing a comparative summary of the video generation times for both the preceding and current videography systems, tested on 20 distinct audio sources.}
     \label{fig:videography_timed}
 \end{figure}
+
+(TODO: SHOW COMPARISON OF VIDEOS (HIGHER QUALITY))
 
 
 \section{Ground-Truth Annotation Interface}
 \subsection{Usability Testing}
+This project aimed to produce an interface that eases relevance assessment of images from text for videography tasks. Hence, one of the requirements was that the interface should be intuitive so that any user can perform a relevance assessment in order to construct ground truths for a given audio source. To test this non-functional requirement \textbf{\#\ref{req:20}}:
+
+\begin{itemize}
+    \item \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
+\end{itemize}
+
+A usability survey must be conducted with a diverse set of users that represents the target demographic. 16 participants took part in our user study, where they were each given a single task to complete using the developed web application. A replica of the briefing form given to each participant can be found in Appendix \ref{app:usability_eval_brief}. In summary, each participant was given an audio source picked from a predefined list of music tracks and educational videos on YouTube. The participant was then expected to find and input the required information in order to start constructing a ground truth using the application. No specifics were provided in how to complete the task since the study was measuring the usability of the interface, meaning that participants must navigate the website by only using the information presented. All participants were given a maximum of 10 minutes however, it was not expected for them to complete the relevance assessment for the full audio since the sources varied in length and total chunk counts. However, from prior testing it was expected that most participants could complete 85-90\% of the ground truths for audio sources averaging around 45-50 chunks.
+
+Once the participants finished their alloted tasks, they were asked to complete a survey asking questions about their experience with the interface. A copy of the survey form is provided in Appendix \ref{app:usability_survey}.
+
+(TODO: SHOULD ASSESSORS PICK CLEAR IMAGES)
+
+(TODO: REF ETHICS CHECKLIST)
+
 
 \section{Requirement Fulfillment}
+Now that the more idiosyncratic requirements have been fully evaluated, the subsequent step is to examine each requirement listed in Chapter \ref{chap:requirements} to form a conclusive assessment of how effectively the project has accomplished its goals.
+
+\subsection{Functional Requirements}
+(TODO: ENSURE NUMBERS ARE BLACK)
+\begin{enumerate}
+    \color{forestgreen}
+    \item $\checkmark$ \textbf{Must Have:} The ability to upload an audio file as an input audio source.
+    \item $\checkmark$ \textbf{Must Have:} The ability to specify a YouTube video URL as an audio source.
+    \item $\checkmark$ \textbf{Must Have:} The ability to view the full audio transcription.
+    \item $\checkmark$ \textbf{Must Have:} The ability to generate an illustrated video for any audio source.
+    \item $\checkmark$ \textbf{Must Have:} The ability to view the top-$k$ retrieved images for a given audio chunk.
+    \item $\checkmark$ \textbf{Must Have:} The ability to annotate the most-fitting images for a given audio chunk.
+    \item $\checkmark$ \textbf{Must Have:} The ability to view the text present in a given audio chunk.
+    \item $\checkmark$ \textbf{Must Have:} The ability to view the constructed ground truth data.
+    \item $\checkmark$ \textbf{Must Have:} The ability to download the constructed ground truth data in a portable format.
+    \item $\checkmark$ \textbf{Should Have:} The ability to view previously processed audio sources, generated videos, and constructed ground truths.
+    \item $\checkmark$ \textbf{Should Have:} The ability to edit previously made ground truths.
+    \item $\checkmark$ \textbf{Should Have:} The ability to upload audio sources of any language.
+    \item {\color{brickred} $\times$ \textbf{Could Have:} The ability to load ground truths for editing.}
+    \item {\color{golden} $\sim$ \textbf{Could Have:} The ability to reconfigure the static image collection location.}
+    \item {\color{brickred} $\times$ \textbf{*Could Have:} The ability to view the percentage complete for ground truth construction of processed audio sources.}
+    \item $\checkmark$ \textbf{*Could Have:} The ability to save or skip chunks with repeating textual content when ground truth constructing.
+    \item $\checkmark$ \textbf{*Could Have:} The ability to view the timestamp information of audio chunks.
+\end{enumerate}
+
+\subsection{Non-Functional Requirements}
+\begin{enumerate}[resume]
+    \color{ForestGreen}
+    \item $\checkmark$ \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.
+    \item $\checkmark$ \textbf{Should Have:} The application being accessible from any Operating System platform.
+    \item $\checkmark$ \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
+    \item $\checkmark$ \textbf{Should Have:} The application with appropriate error handling.
+    \item {\color{brickred} $\times$  \textbf{Should Have:} The application displaying progress bars for long loading times.}
+    \item $\checkmark$ \textbf{Should Have:} The application being fast and responsive.
+    \item $\checkmark$ \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
+    \item $\checkmark$ \textbf{Should Have:} The application being able to transcribe any audio source providing phrase-level timestamps.
+    \item $\checkmark$ \textbf{Should Have:} The system retrieving more relevant images by leveraging semantics of natural language as well as visual features.
+    \item $\checkmark$ \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
+    \item $\checkmark$ \textbf{Should Have:} The images being of high quality in the generated videos.
+    \item $\checkmark$ \textbf{Could Have:} The application being designed with extensibility in mind so that the image collection can be reconfigured.
+    \item $\checkmark$ \textbf{Could Have:} The videos including text as well as images.
+    \item $\checkmark$ \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
+    \item {\color{brickred} $\times$  \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes.}
+\end{enumerate}
+
+(TODO: SUMMARISE)
 
 \section{Summary}
 
@@ -968,8 +1060,6 @@ Discuss what you would do if you could take this further -- where would the inte
 \begin{appendices}
 
 \chapter{Appendices}
- (ETHICS CHECKLIST + INTRODUCTION BRIEF)
- 
 Use separate appendix chapters for groups of ancillary material that support your dissertation. 
 Typical inclusions in the appendices are:
 
@@ -991,8 +1081,7 @@ Your equivalent of \texttt{readme.md} should be included.
 
 \textbf{Don't include your source code in the appendices}. It will be
 submitted separately.
-
-\chapter{Video Generation Experiment}
+\chapter{Video Generation Time Experiment}
 \begin{table}
     \centering
     % \rowcolors{2}{}{gray!3}
@@ -1042,8 +1131,7 @@ submitted separately.
         20 & 04:40 & 26 \\
         \hline
     \end{tabular}
-    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
-    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:audio_sources}
+    \caption{TODO: DESCRIBE}\label{tab:audio_sources}
 \end{table}
 
 \begin{table}
@@ -1096,13 +1184,28 @@ submitted separately.
         20 & 04:37 & 03:15 \\
         \hline
     \end{tabular}
-    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
-    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:videography_times}
+    \caption{TODO: DESCRIBE}\label{tab:videography_times}
 \end{table}
 
 
-\chapter{Ethics Checklist}
+\chapter{Ethics Checklist Form}
+\label{app:ethics_checklist}
 \includepdf[pages=-]{ethics_checklist.pdf}
+
+
+\chapter{Usability Evaluation Brief}
+\label{app:usability_eval_brief}
+\includepdf[pages=-]{usability_evaluation_task.pdf}
+
+
+\chapter{Usability Survey Form}
+\label{app:usability_survey}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/usability_survey.pdf}
+    \caption{TODO: DESCRIBE}
+    \label{fig:usability_survey}
+\end{figure}
 
 \end{appendices}
 %==================================================================================================
