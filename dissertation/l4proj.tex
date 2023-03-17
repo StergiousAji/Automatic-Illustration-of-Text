@@ -234,6 +234,10 @@ First of all, let us tackle the metadata problem. We want to avoid relying on th
 
 In order to retrieve more relevant images, it is clear that semantics must be introduced instead of relying on keyword-based searching. Upon researching the recent advancements with CLIP (\ref{sec:background_clip}), we believe this is a viable solution that can mitigate the number of non-relevant images being retrieved.
 
+(VIDEO GENERATION TIME)
+
+(VIDEO QUALITY)
+
 Lastly, we believe our novel ground-truth annotation interface will address the difficulty of evaluating current and future automatic videography systems. The constructed relevance assessments allow for the application of the Cranfield paradigm and computing standard IR metrics. These quantitative measures permit impartial performance comparisons between different systems. More importantly, the experiments can be conducted rapidly and repeatedly without concerns about result consistency.
 
 
@@ -349,15 +353,15 @@ The list is divided into two sections: Functional Requirements, which describe i
 \begin{enumerate}[resume]
     \item \label{req:18} \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.
     \item \label{req:19} \textbf{Should Have:} The application being accessible from any Operating System platform.
-    \item \label{req:20} \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
+    \item \label{req:20} \textbf{Should Have:} The application having a presentable user interface that is easy for any user to understand and learn quickly.
     \item \label{req:21} \textbf{Should Have:} The application with appropriate error handling.
-    \item \label{req:22} \textbf{Should Have:} The application displaying progress bars for long loading times.
-    \item \label{req:23} \textbf{Should Have:} The application being fast and responsive.
-    \item \label{req:24} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item \label{req:25} \textbf{Should Have:} The application being able to transcribe any audio source providing phrase-level timestamps.
-    \item \label{req:26} \textbf{Should Have:} The system retrieving more relevant images by leveraging semantics of natural language as well as visual features.
-    \item \label{req:27} \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
-    \item \label{req:28} \textbf{Should Have:} The images being of high quality in the generated videos.
+    \item \label{req:22} \textbf{Should Have:} The application being fast and responsive.
+    \item \label{req:23} \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
+    \item \label{req:24} \textbf{Should Have:} The application being able to transcribe any audio source providing phrase-level timestamps.
+    \item \label{req:25} \textbf{Should Have:} The system retrieving more relevant images by leveraging semantics of natural language as well as visual features.
+    \item \label{req:26} \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
+    \item \label{req:27} \textbf{Should Have:} The generated video having a higher resolution than the prior system.
+    \item \label{req:28} \textbf{Should Have:} The application displaying progress bars for long loading times.
     \item \label{req:29} \textbf{Could Have:} The application being designed with extensibility in mind so that the image collection can be reconfigured.
     \item \label{req:30} \textbf{Could Have:} The videos including text as well as images.
     \item \label{req:31} \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
@@ -382,7 +386,7 @@ This chapter presented a detailed outline of the essential features for the proj
 
 %==================================================================================================
 \chapter{Design}
-(TODO: REFERENCE REQUIREMENTS DIRECTLY)
+(TODO: REFERENCE REQUIREMENTS DIRECTLY AND CHECK CORRECT REFS)
 
 This chapter serves to provide the initial design choices including a high-level view of the system workflow and the wireframes of the intended user interface. All decisions will be explained with a general aim to optimise the user experience and fulfill the identified system requirements. Next, a deeper look into the design choices of the internal workings of components. This allows our system to be implemented in any language while maintaining clean and agile software design principles. 
 
@@ -534,7 +538,7 @@ Django has an intermediary component that catches the client's HTTP requests to 
 \subsection{Static Image Collection}
 In line with requirement \textbf{\#\ref{req:18}}, several sources for image collections were considered. Out of those, there were two notable sources: the Wikimedia Commons and ImageNet. Wikimedia Commons hosts a range of images that are more importantly captioned with accurate textual descriptions. In addition to the latest multimodal, multilingual image-text dataset released by \cite{srinivasan2021wit}, a research group within Google. It appeared to be an appealing option as it allowed the flexibility to train our own image-text model using the provided textual descriptions. However, complications arose in downloading the dataset. We found that in order to save space, the dataset only included image URLs meaning that the images must be programmatically downloaded one by one. After weeks of testing, even going as far as parallelising the download process, we deemed this effort as infeasible due to its slow pace. 
 
-We ultimately decided on procuring the collection from ImageNet, an open-source image database containing over 14 million images, available in zipped formats. Moreover, it provided many smaller subsets of the database that allowed the chance to familiarise ourselves with the CLIP's pre-training model architecture. The ImageNet-1k subset was the chosen collection for our project which spanned over 1 million images allowing reasonable pre-processing times while also being large enough for satisfactory image retrieval results.
+We ultimately decided on procuring the collection from ImageNet, an open-source image database containing over 14 million images, available in zipped formats. Moreover, it provided many smaller subsets of the database that allowed the chance to familiarise ourselves with the CLIP's pre-training model architecture. The ImageNet-1k subset was the chosen collection for our project which spanned over 1.1 million images allowing reasonable pre-processing times while also being large enough for satisfactory image retrieval results.
 
 
 \subsection{Models}
@@ -581,18 +585,18 @@ All images in the collection were pre-processed and embedded in batches using th
 \label{sec:image_retriever:par:query_prompt}
 The top 10 images are dynamically retrieved when a Chunk page is requested, handled by the \textbf{\lstinline{chunk}} view. The \textbf{\lstinline{query_prompt}} function takes in a text prompt, tokenizes it and embeds it into the 512-dimensional feature space using the pre-loaded model and tokenizer. Following this, an exhaustive similarity search is performed, this involves calculating the cosine similarity between the embedded text vector, $\vec{t}$ with every image vector stored in the matrix, $\mathbf{I}$. Since all vectors are normalised beforehand by their Euclidean (L2) norm as demonstrated in Equation \ref{eq:euclidean_normalisation}, the cosine similarity score is simply the dot product between the vectors (Equation \ref{eq:dot_product}), accomplished with \textbf{\lstinline{numpy.dot(text_emb, image_embs.T)}}. 
 
-(TODO: FIX EQUATION AND ALIGN THING)
+(TODO: CODE SNIPPETS)
 \begin{equation}
-\begin{align*}
+\begin{split}
     \text{normalise}&(\vec{x}) = \frac{\vec{x}}{\norm{\vec{x}}_2} \\
     \norm{\vec{x}}_2 = \sqrt{\sum_{i=1}^N \abs{x_i}^2} =& \sqrt{x_1^2 + x_2^2 + ... + x_N^2}
     \label{eq:euclidean_normalisation}
-\end{align*}
+\end{split}
 \end{equation}
 
 \begin{equation}
-\begin{align*}
-    \vec{t} \cdot \mathbf{I}^T &= 
+\begin{split}
+    \textbf{\lstinline|cos_sim|}(\vec{t}, \mathbf{I}) &= \vec{t} \cdot \mathbf{I}^T = 
     \begin{bmatrix}
         t_1  & t_2 & \cdots & t_N
     \end{bmatrix}
@@ -607,7 +611,7 @@ The top 10 images are dynamically retrieved when a Chunk page is requested, hand
         \left( \sum_{j=1}^N t_ji_{1j} \right) & \left( \sum_{j=1}^N t_ji_{2j} \right) & \cdots & \left( \sum_{j=1}^N t_ji_{Mj} \right)
     \end{bmatrix}
     \label{eq:dot_product}
-\end{align*}
+\end{split}
 \end{equation}
 
 These similarity scores are subsequently sorted in descending order to get the 10 images that scored the highest with the text query which is then listed to the user on the Chunk page. In order to save unnecessary computation, these image indices are saved in the database associated to the Chunk object.
@@ -823,7 +827,7 @@ Since this product is not designed to address an easily quantifiable problem, bu
 
 \section{Automatic Videography}
 \subsection{Improving Retrieval Efficiency with FAISS}
-The current image retrieval system involves meticulous similarity search and sort operations which poses serious scalability issues with larger image collections or running multiple videography pipelines. Therefore more efficient strategies to retrieving the images were analysied including Facebook's AI Similarity Search (FAISS) (CITE). This library offers a range of efficient indexing strategies for fast similarity searching with the key idea of clustering similar documents into cells so that the entire dataset does not need to be queried. In our case we required the inner product indexing method, \textbf{\lstinline|faiss.IndexFlatIP|}, to match CLIP's training process which included maximising the cosine similarity of feature vectors. This path ultimately lead to a dead end due to huge decline in retrieval accuracy, even with the remarkable 98\% decrease in the mean search time compared to the exhaustive search. 
+The current image retrieval system involves meticulous similarity search and sort operations which poses serious scalability issues with larger image collections or running multiple videography pipelines. Therefore more efficient strategies to retrieving the images were analysied including Facebook's AI Similarity Search (FAISS) \cite{johnson2019faiss}. This library offers a range of efficient indexing strategies for fast similarity searching with the key idea of clustering similar documents into cells so that the entire dataset does not need to be queried. In our case we required the inner product indexing method, \textbf{\lstinline|faiss.IndexFlatIP|}, to match CLIP's training process which included maximising the cosine similarity of feature vectors. This path ultimately lead to a dead end due to huge decline in retrieval accuracy, even with the remarkable 98\% decrease in the mean search time compared to the exhaustive search. 
 
 Experiments were conducted to evaluate different parameter tunings for the inverted file index with a Product Quantizer encoding, \textbf{\lstinline|faiss.IndexIVFPQ|}, and the retrieval performances compared to the exhaustive approach. The indexed collections were tested on a set of 10 audio sources which provided a total of 399 phrase-level text prompts. Three sets of values were used for the \textbf{\lstinline|nlist|} parameter namely, 2048, 4096 and 16 384. This parameter determines the number of Voronoi cells to partition the index of image vectors. It is common to pick a value that is a power of 2 that is close to $4\sqrt{M}$, where $M$ is the total number of document vectors. Our filtered static collection consists of 1281121 images resulting in a recommended value that is close to the second test value. 
 
@@ -871,7 +875,7 @@ Despite the unsuccessful efforts in improving retrieval speeds with FAISS, one o
     \item \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
 \end{itemize}
 
-In order to check if this requirement has been satisfied, experiments must be conducted in order to find and compare the average time taken to generate a video using both systems. This experiment was run with 20 audio sources each of varying lengths, averaging around 3 minutes and 20 seconds (Standard Deviation: $\sigma = 0.84$ mins), and number of phrase-level chunks. The mean number of chunks present per source was 47.9 ($\sigma = 18.4$ chunks) with an overall total of 958 chunks and images being retrieved during the experiment. This was done as the time taken for a video compilation to complete is determined by the number of MoviePy clips required. This number of clips was found to be dependent on \textbf{\emph{both}} the number of phrase-level chunks present and the audio length, as made evident by Figure \ref{fig:videography_against_wchunks}.
+In order to check if this requirement has been satisfied, experiments must be conducted in order to find and compare the average time taken to generate a video using both systems. This experiment was run with 20 audio sources each of varying lengths, averaging around 3 minutes and 20 seconds (Standard Deviation: $\sigma = 0.84$ min), and number of phrase-level chunks. The mean number of chunks present per source was 47.9 ($\sigma = 18.4$ chunks) with an overall total of 958 chunks and images being retrieved during the experiment. This was done as the time taken for a video compilation to complete is determined by the number of MoviePy clips required. This number of clips was found to be dependent on \textbf{\emph{both}} the number of phrase-level chunks present and the audio length, as made evident by Figure \ref{fig:videography_against_wchunks}.
 
 \begin{figure}[H]
     \centering
@@ -894,7 +898,25 @@ In summary, the experiment results empirically show that the non-functional requ
     \label{fig:videography_timed}
 \end{figure}
 
-(TODO: SHOW COMPARISON OF VIDEOS (HIGHER QUALITY))
+
+\subsection{Video Quality Testing}
+Another requirement of the project was \textbf{\#\ref{req:28}}:
+
+\begin{itemize}
+    \item \textbf{Should Have:} The generated video having a higher resolution than the prior system.
+\end{itemize}
+
+The previous system restricted the resolution of images to 200 by 100 pixels due to the high disparity of image sizes downloaded from Google which caused compatibility issues with MoviePy's video compilation implementation. This resulted in numerous complaints about breaking immersion during its user evaluation phase. To address this issue, a potential solution is to minimise this disparity by filtering images with outlier resolutions from the dataset. Fortunately, the ImageNet-1k dataset, which this project employs, already addresses this concern by providing images with consistent resolutions to streamline machine learning tasks. Experiments conducted identified that the images stored in the collection had a mean resolution of ($473.0 \times 405.5$) with a standard deviation of 208.1 pixels among the widths and 178.7 pixels along the heights.
+Hence, the quality of videos did not become a concern during this project. Figure \ref{fig:video_quality_comp} comparing the quality of videos produced demonstrates that this requirement has been addressed.
+
+(TODO: ADD PREVIOUS SYSTEM VIDEO)
+\begin{figure}
+    \centering
+    % \includegraphics[width=1\textwidth]{figures/kyoto_quality_p.pdf}
+    \includegraphics[width=1\textwidth]{figures/kyoto_quality_c.pdf}
+    \caption{Comparison of the quality of videos generated by the previous (Left) and current (Right) videography systems.}
+    \label{fig:video_quality_comp}
+\end{figure}
 
 
 \section{Ground-Truth Annotation Interface}
@@ -902,61 +924,75 @@ In summary, the experiment results empirically show that the non-functional requ
 This project aimed to produce an interface that eases relevance assessment of images from text for videography tasks. Hence, one of the requirements was that the interface should be intuitive so that any user can perform a relevance assessment in order to construct ground truths for a given audio source. To test this non-functional requirement \textbf{\#\ref{req:20}}:
 
 \begin{itemize}
-    \item \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
+    \item \textbf{Should Have:} The application having a presentable user interface that is easy for any user to understand and learn quickly.
 \end{itemize}
 
-A usability survey must be conducted with a diverse set of users that represents the target demographic. 16 participants took part in our user study, where they were each given a single task to complete using the developed web application. A replica of the briefing form given to each participant can be found in Appendix \ref{app:usability_eval_brief}. In summary, each participant was given an audio source picked from a predefined list of music tracks and educational videos on YouTube. The participant was then expected to find and input the required information in order to start constructing a ground truth using the application. No specifics were provided in how to complete the task since the study was measuring the usability of the interface, meaning that participants must navigate the website by only using the information presented. All participants were given a maximum of 10 minutes however, it was not expected for them to complete the relevance assessment for the full audio since the sources varied in length and total chunk counts. However, from prior testing it was expected that most participants could complete 85-90\% of the ground truths for audio sources averaging around 45-50 chunks.
+A usability survey must be conducted with a diverse set of users that represents the target demographic. 16 participants took part in the user study, where they were each given a single task to complete using the developed web application. The study complied with the Ethics Checklist outlined by the School of Computing Science as all data collected was anonymised and no personal data were collected. A signed copy of this checklist can be found in Appendix \ref{app:ethics_checklist}. 
 
-Once the participants finished their alloted tasks, they were asked to complete a survey asking questions about their experience with the interface. A copy of the survey form is provided in Appendix \ref{app:usability_survey}.
+A template of the briefing form given to each participant can be found in Appendix \ref{app:usability_eval_brief}. In summary, each participant was given an audio source picked from a predefined list of music tracks and educational videos on YouTube. The participant was then expected to find and input the required information in order to start constructing a ground truth using the application. No specifics were provided in how to complete the task since the study was measuring the usability of the interface, meaning that participants must navigate the website by only using the information presented. All participants were given a maximum of 10 minutes however, it was not expected for them to complete the relevance assessment for the full audio since the sources varied in length and total chunk counts. However, from prior testing it was expected that most participants could complete 85-90\% of the ground truths for audio sources averaging around 50-55 chunks.
 
-(TODO: SHOULD ASSESSORS PICK CLEAR IMAGES)
+\subsubsection{Usability Rating}
+Once the participants finished their alloted tasks, they were asked to complete a survey asking questions about their experience with the interface. A copy of the survey form is provided in Appendix \ref{app:usability_survey}. The first question involved rating the overall intuitiveness of the interface design out of 5, where the higher the rating, the higher the participants found the application easy to navigate through. The participants rated the usability of the site 4.4 out of 5 on average, with a standard deviation of 0.5 since all participants either chose 4 or a 5 as shown in Figure \ref{fig:rating_distribution}. This is a promising score, however, this is not sufficient to fully check off our requirement and so the rest of the survey consisted of open-ended questions. These aimed to determine specifics of what participants liked or didn't as well as allowing them to feed additional features that could benefit the application in future iterations.
 
-(TODO: REF ETHICS CHECKLIST)
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/rating_distribution.pdf}
+    \caption{Bar graph showing the distribution of participant ratings regarding the intuitiveness of the interface.}
+    \label{fig:rating_distribution}
+\end{figure}
+
+\subsubsection{Issues and Improvements}
+The next two questions intended to uncover any issues and ways to improve the existing system. Untrained users are more susceptible to encounter bugs because they must engage with the system more extensively to learn how to use it. 7 out of the 16 participants were able to complete their tasks without any problems, however the rest experienced one of four distinct issues. The most common issue experienced was a failure after the user interacted with the application during the execution of a background process. This was commonly found to occur during time intensive routines such as the audio processing after a source is submitted, and the initial retrieval of images. This was a problem that was foreseen during the design phase and intended to be circumvented by displaying a separate loading screen. It's purpose would be two-fold, it would block further user interactions with the frontend and exhibit the estimated time of completion. However, due to time constraints, fully implementing this feature was not feasible when there were many more features were prioritised higher that required attention. In hindsight, this can be viewed as the biggest limitation to the current implementation which should be fixed in the next iteration.
+
+Three participants highlighted that they experienced occurances where none of the images retrieved were relevant to the concepts described in the chunk text. They noted that it this made it difficult to ascertain how to proceed, either pick no images or pick at least one that exhibits some notion of the concept. From observation, this most frequently occured when the text prompt itself was ambiguous describing abstract ideas that are difficult to illustrate.
+To exemplify, text prompts such as \emph{"Let it go"} or non-lexical words like \emph{"oh oh/la-la"} that are so common in song lyrics are particularly to delineate. It is also important to note that the ImageNet-1k dataset, while reasonably large consisting of over 1.1 million images, only covers 1 thousand \emph{'synsets'} as the name suggests. This means that it cannot cover niche concepts simply due to the fact that it does not have enough images that cover a broad enough ranage of ideas. This suggests that a larger image dataset could improve retrieval results, not to mention, utilising a larger pre-trained CLIP model.
+
+Some minor issues mentioned in the survey were confusion as to which YouTube video URL to input. One participant was observed to attain the URL by right-clicking on the video rather than from the browser address bar. This resulted in a validation error on form submission since the URL pattern (\lstinline|https://youtu.be/...|) was slightly different to the expected pattern (\lstinline|https://www.youtube.com/watch?v=...|). This can be easily resolved by either making it clearer which type of URL is required or modify the validation check to allow both types. One participant was unable to navigate back to the Audio page once within a specific Chunk. This can be due the Audio link being hidden behind the 'Author - Title' banner which is only perceived as a link on hover. This can be also be fixed by adding a more explicit 'Back' button to the page. Lastly, in one of the evaluations, a participant expressed uncertainty about whether to annotate images that effectively conveyed the semantics of the text prompt but were slightly blurred in appearance. This underscores the subjective nature of relevance assessment tasks, as ultimately, it is the end viewer's perception that matters which can not be defined precisely. A graded relevance assessment or the removal of blurry images from the dataset could help alleviate this ambiguity, however, more studies must be done to find the best solution.
+
+\subsubsection{Future Feature Ideas}
+
 
 
 \section{Requirement Fulfillment}
 Now that the more idiosyncratic requirements have been fully evaluated, the subsequent step is to examine each requirement listed in Chapter \ref{chap:requirements} to form a conclusive assessment of how effectively the project has accomplished its goals.
 
 \subsection{Functional Requirements}
-(TODO: ENSURE NUMBERS ARE BLACK)
 \begin{enumerate}
-    \color{forestgreen}
-    \item $\checkmark$ \textbf{Must Have:} The ability to upload an audio file as an input audio source.
-    \item $\checkmark$ \textbf{Must Have:} The ability to specify a YouTube video URL as an audio source.
-    \item $\checkmark$ \textbf{Must Have:} The ability to view the full audio transcription.
-    \item $\checkmark$ \textbf{Must Have:} The ability to generate an illustrated video for any audio source.
-    \item $\checkmark$ \textbf{Must Have:} The ability to view the top-$k$ retrieved images for a given audio chunk.
-    \item $\checkmark$ \textbf{Must Have:} The ability to annotate the most-fitting images for a given audio chunk.
-    \item $\checkmark$ \textbf{Must Have:} The ability to view the text present in a given audio chunk.
-    \item $\checkmark$ \textbf{Must Have:} The ability to view the constructed ground truth data.
-    \item $\checkmark$ \textbf{Must Have:} The ability to download the constructed ground truth data in a portable format.
-    \item $\checkmark$ \textbf{Should Have:} The ability to view previously processed audio sources, generated videos, and constructed ground truths.
-    \item $\checkmark$ \textbf{Should Have:} The ability to edit previously made ground truths.
-    \item $\checkmark$ \textbf{Should Have:} The ability to upload audio sources of any language.
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to upload an audio file as an input audio source.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to specify a YouTube video URL as an audio source.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to view the full audio transcription.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to generate an illustrated video for any audio source.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to view the top-$k$ retrieved images for a given audio chunk.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to annotate the most-fitting images for a given audio chunk.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to view the text present in a given audio chunk.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to view the constructed ground truth data.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The ability to download the constructed ground truth data in a portable format.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The ability to view previously processed audio sources, generated videos, and constructed ground truths.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The ability to edit previously made ground truths.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The ability to upload audio sources of any language.}
     \item {\color{brickred} $\times$ \textbf{Could Have:} The ability to load ground truths for editing.}
     \item {\color{golden} $\sim$ \textbf{Could Have:} The ability to reconfigure the static image collection location.}
     \item {\color{brickred} $\times$ \textbf{*Could Have:} The ability to view the percentage complete for ground truth construction of processed audio sources.}
-    \item $\checkmark$ \textbf{*Could Have:} The ability to save or skip chunks with repeating textual content when ground truth constructing.
-    \item $\checkmark$ \textbf{*Could Have:} The ability to view the timestamp information of audio chunks.
+    \item {\color{forestgreen} $\checkmark$ \textbf{*Could Have:} The ability to save or skip chunks with repeating textual content when ground truth constructing.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{*Could Have:} The ability to view the timestamp information of audio chunks.}
 \end{enumerate}
 
 \subsection{Non-Functional Requirements}
 \begin{enumerate}[resume]
-    \color{ForestGreen}
-    \item $\checkmark$ \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.
-    \item $\checkmark$ \textbf{Should Have:} The application being accessible from any Operating System platform.
-    \item $\checkmark$ \textbf{Should Have:} The application having a presentable user interface that is easy to use for any user.
-    \item $\checkmark$ \textbf{Should Have:} The application with appropriate error handling.
+    \item {\color{forestgreen} $\checkmark$ \textbf{Must Have:} The system using a static collection of images for repeatably consistent ground truth construction.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The application being accessible from any Operating System platform.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The application having a presentable user interface that is easy for any user to understand and learn quickly.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The application with appropriate error handling.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The application being fast and responsive.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The application being able to transcribe any audio source providing phrase-level timestamps.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The system retrieving more relevant images by leveraging semantics of natural language as well as visual features.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Should Have:} The generated video having a higher resolution than the prior system.}
     \item {\color{brickred} $\times$  \textbf{Should Have:} The application displaying progress bars for long loading times.}
-    \item $\checkmark$ \textbf{Should Have:} The application being fast and responsive.
-    \item $\checkmark$ \textbf{Should Have:} The system being able to recognise music tracks to automatically retrieve the artist name and song title.
-    \item $\checkmark$ \textbf{Should Have:} The application being able to transcribe any audio source providing phrase-level timestamps.
-    \item $\checkmark$ \textbf{Should Have:} The system retrieving more relevant images by leveraging semantics of natural language as well as visual features.
-    \item $\checkmark$ \textbf{Should Have:} The videos being generated in a more reasonable amount of time than the prior system.
-    \item $\checkmark$ \textbf{Should Have:} The images being of high quality in the generated videos.
-    \item $\checkmark$ \textbf{Could Have:} The application being designed with extensibility in mind so that the image collection can be reconfigured.
-    \item $\checkmark$ \textbf{Could Have:} The videos including text as well as images.
-    \item $\checkmark$ \textbf{Could Have:} The application visually differentiating between previously processed audio sources.
+    \item {\color{forestgreen} $\checkmark$ \textbf{Could Have:} The application being designed with extensibility in mind so that the image collection can be reconfigured.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Could Have:} The videos including text as well as images.}
+    \item {\color{forestgreen} $\checkmark$ \textbf{Could Have:} The application visually differentiating between previously processed audio sources.}
     \item {\color{brickred} $\times$  \textbf{Could Have:} The system performing tempo or beat analysis to appropriately time image changes.}
 \end{enumerate}
 

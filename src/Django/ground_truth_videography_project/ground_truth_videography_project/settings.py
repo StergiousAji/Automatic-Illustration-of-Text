@@ -126,8 +126,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATICFILES_DIRS = [STATIC_DIR, UTILITIES_DIR, IMAGE_DATASET_DIR] 
-
+STATICFILES_DIRS = [STATIC_DIR, UTILITIES_DIR, ]
+# STATIC_ROOT = 'staticfiles/'
+STATICFILES_DIRS.append(IMAGE_DATASET_DIR)
 STATIC_URL = '/static/'
 
 # IMAGE INDICES TO FILTER OUT
