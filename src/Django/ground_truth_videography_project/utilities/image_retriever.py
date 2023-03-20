@@ -59,16 +59,16 @@ class CLIP:
             np.save(image_vectors_path, self.image_vectors)
 
     def query_prompt(self, prompt, top=10):
-        text_embeddings = None
+        text_embedding = None
 
         if not self.multilingual:
             inputs = self.tokeniser(prompt, return_tensors="pt").to(self.device)
-            text_embeddings = self.model.get_text_features(**inputs).cpu().detach().numpy()
+            text_embedding = self.model.get_text_features(**inputs).cpu().detach().numpy()
         else:
-            text_embeddings = self.model.forward(prompt, self.tokeniser).cpu().detach().numpy()
+            text_embedding = self.model.forward(prompt, self.tokeniser).cpu().detach().numpy()
 
         # Compute cosine similarity scores between prompt text and images
-        scores = np.dot(text_embeddings, self.image_vectors.T)
+        scores = np.dot(text_embedding, self.image_vectors.T)
 
         most_similar = np.argsort(-scores[0])[:top].tolist()
         for i in most_similar:

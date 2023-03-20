@@ -19,7 +19,6 @@ import os
 import pylrc
 import numpy as np
 import json
-import time
 
 
 SRC_FOLDER = "utilities"
