@@ -29,7 +29,6 @@ class CLIP:
         self.load_image_vectors(image_vectors_path)
     
     def process_images(self, image_vectors_path, batch_size=16):
-        self.model = CLIPModel.from_pretrained(self.model_id).to(self.device)
         self.processor = CLIPProcessor.from_pretrained(self.model_id)
 
         self.image_vectors = None
