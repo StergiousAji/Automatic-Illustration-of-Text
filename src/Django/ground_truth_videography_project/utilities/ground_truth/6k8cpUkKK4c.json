@@ -1,0 +1,661 @@
+{
+    "id": "6k8cpUkKK4c",
+    "artist": "Bruno Mars",
+    "title": "Count On Me",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "Oh-oh",
+            "start_time": 2.31,
+            "end_time": 5.12,
+            "selected_image_ids": [
+                1088841,
+                337173
+            ],
+            "selected_image_paths": [
+                "n04399382\\n04399382_21501.JPEG",
+                "n02113023\\n02113023_6942.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "If you ever find yourself stuck in the middle of the sea",
+            "start_time": 5.12,
+            "end_time": 10.2,
+            "selected_image_ids": [
+                805847,
+                1078946,
+                1026718,
+                1027515,
+                1026527,
+                1027307,
+                191441
+            ],
+            "selected_image_paths": [
+                "n03673027\\n03673027_11324.JPEG",
+                "n04371430\\n04371430_5046.JPEG",
+                "n04251144\\n04251144_19210.JPEG",
+                "n04251144\\n04251144_9870.JPEG",
+                "n04251144\\n04251144_14996.JPEG",
+                "n04251144\\n04251144_5635.JPEG",
+                "n02066245\\n02066245_7691.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "I'll sail the world to find you",
+            "start_time": 10.2,
+            "end_time": 15.77,
+            "selected_image_ids": [
+                928138,
+                1170677,
+                928796,
+                1170267,
+                1171341,
+                928852,
+                1000338,
+                1170546
+            ],
+            "selected_image_paths": [
+                "n03947888\\n03947888_15600.JPEG",
+                "n04612504\\n04612504_2613.JPEG",
+                "n03947888\\n03947888_48934.JPEG",
+                "n04612504\\n04612504_125.JPEG",
+                "n04612504\\n04612504_9881.JPEG",
+                "n03947888\\n03947888_618.JPEG",
+                "n04147183\\n04147183_7975.JPEG",
+                "n04612504\\n04612504_1935.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "If you ever find yourself lost in the dark and you can't see",
+            "start_time": 15.77,
+            "end_time": 21.15,
+            "selected_image_ids": [
+                1048495,
+                804376,
+                1177792,
+                1017737
+            ],
+            "selected_image_paths": [
+                "n04286575\\n04286575_38978.JPEG",
+                "n03666591\\n03666591_61781.JPEG",
+                "n06794110\\n06794110_753.JPEG",
+                "n04209239\\n04209239_14480.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "I'll be the light to guide you",
+            "start_time": 21.15,
+            "end_time": 28.24,
+            "selected_image_ids": [
+                804376,
+                827349,
+                803931,
+                803924,
+                826511,
+                803892,
+                804162
+            ],
+            "selected_image_paths": [
+                "n03666591\\n03666591_61781.JPEG",
+                "n03729826\\n03729826_6174.JPEG",
+                "n03666591\\n03666591_35739.JPEG",
+                "n03666591\\n03666591_35587.JPEG",
+                "n03729826\\n03729826_17527.JPEG",
+                "n03666591\\n03666591_34452.JPEG",
+                "n03666591\\n03666591_43480.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "We'll find out what we're made of",
+            "start_time": 28.24,
+            "end_time": 32.21,
+            "selected_image_ids": [
+                812450
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "When we are called to help our friends in need",
+            "start_time": 32.21,
+            "end_time": 37.15,
+            "selected_image_ids": [
+                1126155,
+                1125398
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_31961.JPEG",
+                "n04507155\\n04507155_10185.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "You can count on me like one, two, three",
+            "start_time": 37.15,
+            "end_time": 42.7,
+            "selected_image_ids": [
+                1072159,
+                1071241,
+                1005741,
+                902511
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04162706\\n04162706_12964.JPEG",
+                "n03891251\\n03891251_505.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "I'll be there",
+            "start_time": 42.7,
+            "end_time": 45.78,
+            "selected_image_ids": [
+                1071840,
+                1072159
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "And I know when I need it, I can count on you like four, three, two",
+            "start_time": 45.78,
+            "end_time": 53.16,
+            "selected_image_ids": [
+                1071241,
+                662004,
+                902511,
+                337571
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_211.JPEG",
+                "n03124170\\n03124170_5078.JPEG",
+                "n03891251\\n03891251_505.JPEG",
+                "n02113186\\n02113186_11124.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "And you'll be there",
+            "start_time": 53.16,
+            "end_time": 56.48,
+            "selected_image_ids": [
+                309133,
+                1071875,
+                439237
+            ],
+            "selected_image_paths": [
+                "n02108000\\n02108000_640.JPEG",
+                "n04355933\\n04355933_762.JPEG",
+                "n02396427\\n02396427_5122.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "'Cause that's what friends are supposed to do, oh, yeah",
+            "start_time": 56.48,
+            "end_time": 60.84,
+            "selected_image_ids": [
+                902511,
+                581635,
+                992523,
+                662004
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_505.JPEG",
+                "n02869837\\n02869837_7963.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n03124170\\n03124170_5078.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "Ooh-ooh-ooh-ooh",
+            "start_time": 60.84,
+            "end_time": 63.48,
+            "selected_image_ids": [
+                476970,
+                364869,
+                1072469,
+                200529
+            ],
+            "selected_image_paths": [
+                "n02486261\\n02486261_7322.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04356056\\n04356056_3571.JPEG",
+                "n02086240\\n02086240_2488.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "Ooh-ooh-ooh-ooh, ooh, yeah, yeah",
+            "start_time": 63.48,
+            "end_time": 65.31,
+            "selected_image_ids": [
+                1072469,
+                333009,
+                476970
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_3571.JPEG",
+                "n02112137\\n02112137_17832.JPEG",
+                "n02486261\\n02486261_7322.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "If you tossin' and you're turnin' and you just can't fall asleep",
+            "start_time": 70.03,
+            "end_time": 75.15,
+            "selected_image_ids": [
+                196111,
+                195956,
+                337411,
+                894752,
+                359315,
+                364869,
+                1064318
+            ],
+            "selected_image_paths": [
+                "n02085620\\n02085620_3310.JPEG",
+                "n02085620\\n02085620_2246.JPEG",
+                "n02113023\\n02113023_9660.JPEG",
+                "n03877472\\n03877472_4701.JPEG",
+                "n02123045\\n02123045_1320.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04344873\\n04344873_11087.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "I'll sing a song beside you",
+            "start_time": 75.15,
+            "end_time": 80.66,
+            "selected_image_ids": [
+                1077630,
+                515766,
+                515826,
+                834678
+            ],
+            "selected_image_paths": [
+                "n04370456\\n04370456_4340.JPEG",
+                "n02676566\\n02676566_11110.JPEG",
+                "n02676566\\n02676566_12434.JPEG",
+                "n03759954\\n03759954_20594.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "And if you ever forget how much you really mean to me",
+            "start_time": 80.66,
+            "end_time": 85.61,
+            "selected_image_ids": [
+                662004,
+                992523,
+                1089321,
+                1071661,
+                902511,
+                1088702
+            ],
+            "selected_image_paths": [
+                "n03124170\\n03124170_5078.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n04399382\\n04399382_32079.JPEG",
+                "n04355933\\n04355933_4599.JPEG",
+                "n03891251\\n03891251_505.JPEG",
+                "n04399382\\n04399382_15569.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Every day I will remind you, oh",
+            "start_time": 85.61,
+            "end_time": 92.95,
+            "selected_image_ids": [
+                1071840,
+                1072159,
+                926513
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG",
+                "n03942813\\n03942813_8236.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "We'll find out what we're made of",
+            "start_time": 92.95,
+            "end_time": 96.85,
+            "selected_image_ids": [
+                812450
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_15011.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "When we are called to help our friends in need",
+            "start_time": 96.85,
+            "end_time": 102.03,
+            "selected_image_ids": [
+                1126155,
+                1125398
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_31961.JPEG",
+                "n04507155\\n04507155_10185.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "You can count on me like one, two, three",
+            "start_time": 102.03,
+            "end_time": 107.48,
+            "selected_image_ids": [
+                1072159,
+                1071241,
+                1005741,
+                902511
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04162706\\n04162706_12964.JPEG",
+                "n03891251\\n03891251_505.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "I'll be there",
+            "start_time": 107.48,
+            "end_time": 110.54,
+            "selected_image_ids": [
+                1071840,
+                1072159
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "And I know when I need it, I can count on you like four, three, two",
+            "start_time": 110.54,
+            "end_time": 117.99,
+            "selected_image_ids": [
+                1071241,
+                662004,
+                902511,
+                337571
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_211.JPEG",
+                "n03124170\\n03124170_5078.JPEG",
+                "n03891251\\n03891251_505.JPEG",
+                "n02113186\\n02113186_11124.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "And you'll be there",
+            "start_time": 117.99,
+            "end_time": 121.12,
+            "selected_image_ids": [
+                309133,
+                1071875,
+                439237
+            ],
+            "selected_image_paths": [
+                "n02108000\\n02108000_640.JPEG",
+                "n04355933\\n04355933_762.JPEG",
+                "n02396427\\n02396427_5122.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "'Cause that's what friends are supposed to do, oh, yeah",
+            "start_time": 121.12,
+            "end_time": 125.54,
+            "selected_image_ids": [
+                902511,
+                581635,
+                992523,
+                662004
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_505.JPEG",
+                "n02869837\\n02869837_7963.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n03124170\\n03124170_5078.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "Ooh-ooh-ooh-ooh",
+            "start_time": 125.54,
+            "end_time": 128.18,
+            "selected_image_ids": [
+                476970,
+                364869,
+                1072469,
+                200529
+            ],
+            "selected_image_paths": [
+                "n02486261\\n02486261_7322.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04356056\\n04356056_3571.JPEG",
+                "n02086240\\n02086240_2488.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "Ooh-ooh-ooh-ooh, ooh, yeah, yeah",
+            "start_time": 128.18,
+            "end_time": 134.95,
+            "selected_image_ids": [
+                1072469,
+                333009,
+                476970
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_3571.JPEG",
+                "n02112137\\n02112137_17832.JPEG",
+                "n02486261\\n02486261_7322.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "You'll always have my shoulder when you cry",
+            "start_time": 134.95,
+            "end_time": 145.23,
+            "selected_image_ids": [
+                362159,
+                902836,
+                870096
+            ],
+            "selected_image_paths": [
+                "n02123394\\n02123394_3503.JPEG",
+                "n03891251\\n03891251_927.JPEG",
+                "n03814639\\n03814639_2902.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "I'll never let go, never say goodbye",
+            "start_time": 145.23,
+            "end_time": 153.73,
+            "selected_image_ids": [
+                662004,
+                992523,
+                1089321
+            ],
+            "selected_image_paths": [
+                "n03124170\\n03124170_5078.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n04399382\\n04399382_32079.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "You know",
+            "start_time": 153.73,
+            "end_time": 155.38,
+            "selected_image_ids": [
+                926513,
+                812450
+            ],
+            "selected_image_paths": [
+                "n03942813\\n03942813_8236.JPEG",
+                "n03692522\\n03692522_15011.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "You can count on me like one, two, three",
+            "start_time": 155.38,
+            "end_time": 161.16,
+            "selected_image_ids": [
+                1072159,
+                1071241,
+                1005741,
+                902511
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04162706\\n04162706_12964.JPEG",
+                "n03891251\\n03891251_505.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "I'll be there",
+            "start_time": 161.16,
+            "end_time": 164.35,
+            "selected_image_ids": [
+                1071840,
+                1072159
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "And I know when I need it I can count on you like four, three, two",
+            "start_time": 164.35,
+            "end_time": 172.07,
+            "selected_image_ids": [
+                1071241,
+                364869,
+                1136141,
+                662004
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_211.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04532106\\n04532106_17863.JPEG",
+                "n03124170\\n03124170_5078.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "And you'll be there",
+            "start_time": 172.07,
+            "end_time": 175.12,
+            "selected_image_ids": [
+                309133,
+                1071875,
+                439237
+            ],
+            "selected_image_paths": [
+                "n02108000\\n02108000_640.JPEG",
+                "n04355933\\n04355933_762.JPEG",
+                "n02396427\\n02396427_5122.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "'Cause that's what friends are supposed to do, oh, yeah",
+            "start_time": 175.12,
+            "end_time": 179.61,
+            "selected_image_ids": [
+                902511,
+                581635,
+                992523,
+                662004
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_505.JPEG",
+                "n02869837\\n02869837_7963.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n03124170\\n03124170_5078.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "Ooh-ooh-ooh-ooh",
+            "start_time": 179.61,
+            "end_time": 182.21,
+            "selected_image_ids": [
+                476970,
+                364869,
+                1072469,
+                200529
+            ],
+            "selected_image_paths": [
+                "n02486261\\n02486261_7322.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04356056\\n04356056_3571.JPEG",
+                "n02086240\\n02086240_2488.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "Ooh-ooh-ooh-ooh, ooh",
+            "start_time": 182.21,
+            "end_time": 185.84,
+            "selected_image_ids": [
+                476970,
+                333009,
+                1072469
+            ],
+            "selected_image_paths": [
+                "n02486261\\n02486261_7322.JPEG",
+                "n02112137\\n02112137_17832.JPEG",
+                "n04356056\\n04356056_3571.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "You can count on me 'cause I can count on you",
+            "start_time": 185.84,
+            "end_time": 186.3,
+            "selected_image_ids": [
+                1071241,
+                992523,
+                662004
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_211.JPEG",
+                "n04133789\\n04133789_8559.JPEG",
+                "n03124170\\n03124170_5078.JPEG"
+            ]
+        }
+    ]
+}

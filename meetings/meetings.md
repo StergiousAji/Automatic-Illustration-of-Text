@@ -121,3 +121,12 @@
 - Read ‘Variable Depth Pooling’ paper and write a literature review for the dissertation.
 - Research into other annotation interfaces to contrast with our own.
 - Rewrite Introduction and motivations in dissertation according to notes
+
+## Meeting 14 (02/03/23)
+
+- Talk about the variable depth pooling as a specific avenue to pooling (old method).
+- Talk about new idea of active learning vs. pooling.
+- Talk about FAISS as separate system and how it didn’t have any overlap with current system.
+- Always ask why did I do it this way, contextualise everything.
+- CLIP uses mutlimodal transformers, early days used static word and image vectors and alignment (NIPS paper).
+- Deploy web app to work on static song collections ([Railway](https://railway.app/)).
