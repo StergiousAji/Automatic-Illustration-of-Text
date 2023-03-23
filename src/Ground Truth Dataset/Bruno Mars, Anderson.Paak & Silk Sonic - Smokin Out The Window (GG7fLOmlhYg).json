@@ -1,0 +1,1011 @@
+{
+    "id": "GG7fLOmlhYg",
+    "artist": "Bruno Mars, Anderson.Paak & Silk Sonic",
+    "title": "Smokin Out The Window",
+    "chunks": [
+        {
+            "index": 1,
+            "text": " WAIT A MINUTE THIS LOVE STARTED OUT SO TENDER, SO SWEET ",
+            "start_time": 1.3,
+            "end_time": 4.14,
+            "selected_image_ids": [
+                269342,
+                335350,
+                618301,
+                461307,
+                1239635,
+                360130,
+                364869,
+                195956
+            ],
+            "selected_image_paths": [
+                "n02100236\\n02100236_922.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n02978881\\n02978881_14412.JPEG",
+                "n02443484\\n02443484_704.JPEG",
+                "n07930864\\n07930864_10187.JPEG",
+                "n02123045\\n02123045_8391.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n02085620\\n02085620_2246.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": " BUT NOW SHE GOT ME ",
+            "start_time": 4.14,
+            "end_time": 5.1,
+            "selected_image_ids": [
+                335350,
+                936328,
+                196111
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n03970156\\n03970156_10494.JPEG",
+                "n02085620\\n02085620_3310.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": " SMOKIN OUT THE WINDOW ",
+            "start_time": 5.1,
+            "end_time": 11.68,
+            "selected_image_ids": [
+                803380,
+                611188
+            ],
+            "selected_image_paths": [
+                "n03666591\\n03666591_15612.JPEG",
+                "n02965783\\n02965783_5999.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": " MUST HAVE SPENT 35, $45,000 UP IN TIFFANY'S (OH NO) ",
+            "start_time": 11.68,
+            "end_time": 17.22,
+            "selected_image_ids": [
+                750298,
+                627165,
+                1060412,
+                730245,
+                794118,
+                580150
+            ],
+            "selected_image_paths": [
+                "n03476684\\n03476684_16742.JPEG",
+                "n02999410\\n02999410_12404.JPEG",
+                "n04332243\\n04332243_11605.JPEG",
+                "n03404251\\n03404251_8277.JPEG",
+                "n03633091\\n03633091_2581.JPEG",
+                "n02865351\\n02865351_5195.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": " GOT HER BAD --- KIDS RUNNIN ROUND MY WHOLE CRIB LIKE IT'S CHUCK E CHEESE ",
+            "start_time": 17.22,
+            "end_time": 21.75,
+            "selected_image_ids": [
+                303164,
+                813232,
+                1072585,
+                531229
+            ],
+            "selected_image_paths": [
+                "n02107312\\n02107312_2303.JPEG",
+                "n03692522\\n03692522_7537.JPEG",
+                "n04356056\\n04356056_4289.JPEG",
+                "n02749479\\n02749479_8201.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": " (WHOA, WHOA) ",
+            "start_time": 21.75,
+            "end_time": 23.06,
+            "selected_image_ids": [
+                337173,
+                365026,
+                1072469
+            ],
+            "selected_image_paths": [
+                "n02113023\\n02113023_6942.JPEG",
+                "n02124075\\n02124075_5449.JPEG",
+                "n04356056\\n04356056_3571.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": " PUT ME IN A JAM WITH HER EX-MAN IN THE UFC ",
+            "start_time": 23.06,
+            "end_time": 27.66,
+            "selected_image_ids": [
+                957267
+            ],
+            "selected_image_paths": [
+                "n04023962\\n04023962_24979.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": " CAN'T BELIEVE IT (CAN'T BELIEVE IT) ",
+            "start_time": 27.66,
+            "end_time": 30.4,
+            "selected_image_ids": [
+                761293,
+                855778
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n03787032\\n03787032_1125.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": " I'M IN DISBELIEF ",
+            "start_time": 30.4,
+            "end_time": 32.37,
+            "selected_image_ids": [
+                202795,
+                362083,
+                197576,
+                482502
+            ],
+            "selected_image_paths": [
+                "n02086910\\n02086910_10080.JPEG",
+                "n02123394\\n02123394_2953.JPEG",
+                "n02085782\\n02085782_940.JPEG",
+                "n02489166\\n02489166_10972.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": " THIS ----- GOT ME PAYIN HER RENT, PAYIN FOR TRIPS, ",
+            "start_time": 32.37,
+            "end_time": 36.5,
+            "selected_image_ids": [
+                609339,
+                303164,
+                853813
+            ],
+            "selected_image_paths": [
+                "n02963159\\n02963159_19863.JPEG",
+                "n02107312\\n02107312_2303.JPEG",
+                "n03785016\\n03785016_28841.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": " DIAMONDS ON HER NECK, DIAMONDS ON HER WRISTS ",
+            "start_time": 36.5,
+            "end_time": 38.84,
+            "selected_image_ids": [
+                627165,
+                1128432,
+                871939
+            ],
+            "selected_image_paths": [
+                "n02999410\\n02999410_12404.JPEG",
+                "n04515003\\n04515003_24501.JPEG",
+                "n03814906\\n03814906_4890.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": " AND HERE I AM ALL ALONE (ALL ALONE) ",
+            "start_time": 38.84,
+            "end_time": 42.44,
+            "selected_image_ids": [
+                901663,
+                1010966,
+                1158199,
+                902415,
+                482502
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_1249.JPEG",
+                "n04201297\\n04201297_11588.JPEG",
+                "n04589890\\n04589890_679.JPEG",
+                "n03891251\\n03891251_4345.JPEG",
+                "n02489166\\n02489166_10972.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": " I'M SO COLD, I'M SO COLD, YOU GOT ME OUT HERE ",
+            "start_time": 42.44,
+            "end_time": 46.08,
+            "selected_image_ids": [
+                730031,
+                255721,
+                729937,
+                456778,
+                1020185
+            ],
+            "selected_image_paths": [
+                "n03404251\\n03404251_602.JPEG",
+                "n02097474\\n02097474_17593.JPEG",
+                "n03404251\\n03404251_516.JPEG",
+                "n02441942\\n02441942_18421.JPEG",
+                "n04229816\\n04229816_1552.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": " SMOKIN OUT THE WINDOW (SMOKING OUT THE WINDOW) ",
+            "start_time": 46.08,
+            "end_time": 51.25,
+            "selected_image_ids": [
+                803380,
+                611188,
+                1159761
+            ],
+            "selected_image_paths": [
+                "n03666591\\n03666591_15612.JPEG",
+                "n02965783\\n02965783_5999.JPEG",
+                "n04590129\\n04590129_8396.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": " SINGING HOW COULD SHE DO THIS TO ME (HOW COULD SHE DO THIS TO ME) ",
+            "start_time": 51.25,
+            "end_time": 57.36,
+            "selected_image_ids": [
+                835325,
+                1049124,
+                1077630,
+                804147
+            ],
+            "selected_image_paths": [
+                "n03759954\\n03759954_8955.JPEG",
+                "n04296562\\n04296562_13379.JPEG",
+                "n04370456\\n04370456_4340.JPEG",
+                "n03666591\\n03666591_42891.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": " OH I THOUGHT THAT GIRL BELONGED TO ONLY ME ",
+            "start_time": 57.36,
+            "end_time": 62.86,
+            "selected_image_ids": [
+                1072159,
+                1176164,
+                335350,
+                1006083,
+                759611,
+                1071586,
+                1072206,
+                1072469
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n06785654\\n06785654_4748.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04162706\\n04162706_21391.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n04356056\\n04356056_18966.JPEG",
+                "n04356056\\n04356056_3571.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": " BUT I WAS WRONG ",
+            "start_time": 62.86,
+            "end_time": 65.9,
+            "selected_image_ids": [
+                983021,
+                989140,
+                936328
+            ],
+            "selected_image_paths": [
+                "n04116512\\n04116512_24326.JPEG",
+                "n04127249\\n04127249_244.JPEG",
+                "n03970156\\n03970156_10494.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": " CUZ SHE BELONG TO EVERYBODY, EVERYBODY ",
+            "start_time": 65.9,
+            "end_time": 76.14,
+            "selected_image_ids": [
+                1072159,
+                1071840,
+                1071241,
+                1071828,
+                915626,
+                1072014,
+                1071814,
+                1071586,
+                1072985
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04355933\\n04355933_710.JPEG",
+                "n03929660\\n03929660_18352.JPEG",
+                "n04355933\\n04355933_9482.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n04356056\\n04356056_6825.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": " JUST THE OTHER NIGHT SHE WAS GRIPPIN ON ME TIGHT ",
+            "start_time": 76.14,
+            "end_time": 78.81,
+            "selected_image_ids": [
+                943602,
+                841276
+            ],
+            "selected_image_paths": [
+                "n03982430\\n03982430_32997.JPEG",
+                "n03770439\\n03770439_4509.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": " SCREAMIN HERCULES (HERCULES, HERCULES) ",
+            "start_time": 78.81,
+            "end_time": 81.68,
+            "selected_image_ids": [
+                1008912,
+                673827,
+                697135,
+                672917,
+                697608,
+                586433,
+                231340
+            ],
+            "selected_image_paths": [
+                "n04192698\\n04192698_37451.JPEG",
+                "n03146219\\n03146219_5054.JPEG",
+                "n03255030\\n03255030_10490.JPEG",
+                "n03146219\\n03146219_10946.JPEG",
+                "n03255030\\n03255030_22284.JPEG",
+                "n02879718\\n02879718_29905.JPEG",
+                "n02093428\\n02093428_8589.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": " GOT ME IN THE CLUB LOOKING FOR A NEW LOVE SOMEONE HELP ME PLEASE ",
+            "start_time": 81.68,
+            "end_time": 85.75,
+            "selected_image_ids": [
+                841276,
+                1072469,
+                840593,
+                840654,
+                589801,
+                597377,
+                840413
+            ],
+            "selected_image_paths": [
+                "n03770439\\n03770439_4509.JPEG",
+                "n04356056\\n04356056_3571.JPEG",
+                "n03770439\\n03770439_14963.JPEG",
+                "n03770439\\n03770439_16437.JPEG",
+                "n02892767\\n02892767_14639.JPEG",
+                "n02916936\\n02916936_10710.JPEG",
+                "n03770439\\n03770439_1104.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": " (HELP ME PLEASE, HELP ME PLEASE) ",
+            "start_time": 85.75,
+            "end_time": 87.69,
+            "selected_image_ids": [
+                759611,
+                330416,
+                989140
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n02111889\\n02111889_1976.JPEG",
+                "n04127249\\n04127249_244.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": " BABY WHY YOU DOIN THIS, WHY YOU DOIN THIS TO ME, GIRL ",
+            "start_time": 87.69,
+            "end_time": 93.73,
+            "selected_image_ids": [
+                1006083,
+                559515
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_21391.JPEG",
+                "n02808440\\n02808440_64158.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": " NOT TO BE DRAMATIC BUT I WANNA DIE ",
+            "start_time": 93.73,
+            "end_time": 96.83,
+            "selected_image_ids": [
+                202795,
+                1160374,
+                426975
+            ],
+            "selected_image_paths": [
+                "n02086910\\n02086910_10080.JPEG",
+                "n04591157\\n04591157_3782.JPEG",
+                "n02342885\\n02342885_14141.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": " THIS ----- GOT ME PAYING HER RENT, PAYING FOR TRIPS, ",
+            "start_time": 96.83,
+            "end_time": 101.03,
+            "selected_image_ids": [
+                303164,
+                609339,
+                627747
+            ],
+            "selected_image_paths": [
+                "n02107312\\n02107312_2303.JPEG",
+                "n02963159\\n02963159_19863.JPEG",
+                "n02999410\\n02999410_3819.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": " DIAMONDS ON HER NECK, DIAMONDS ON HER WRISTS ",
+            "start_time": 101.03,
+            "end_time": 103.3,
+            "selected_image_ids": [
+                627165,
+                1128432,
+                871939
+            ],
+            "selected_image_paths": [
+                "n02999410\\n02999410_12404.JPEG",
+                "n04515003\\n04515003_24501.JPEG",
+                "n03814906\\n03814906_4890.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": " AND HERE I AM ALL ALONE. (ALL ALONE) ",
+            "start_time": 103.3,
+            "end_time": 107.04,
+            "selected_image_ids": [
+                901663,
+                1010966,
+                902415,
+                1158199,
+                902542,
+                482502
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_1249.JPEG",
+                "n04201297\\n04201297_11588.JPEG",
+                "n03891251\\n03891251_4345.JPEG",
+                "n04589890\\n04589890_679.JPEG",
+                "n03891251\\n03891251_5479.JPEG",
+                "n02489166\\n02489166_10972.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": " I'M SO COLD, I'M SO COLD. ",
+            "start_time": 107.04,
+            "end_time": 108.81,
+            "selected_image_ids": [
+                730031,
+                1020185,
+                255721,
+                1020445,
+                1077399,
+                1020381
+            ],
+            "selected_image_paths": [
+                "n03404251\\n03404251_602.JPEG",
+                "n04229816\\n04229816_1552.JPEG",
+                "n02097474\\n02097474_17593.JPEG",
+                "n04229816\\n04229816_2650.JPEG",
+                "n04370456\\n04370456_2170.JPEG",
+                "n04229816\\n04229816_2305.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": " YOU GOT ME OUT HERE ",
+            "start_time": 108.81,
+            "end_time": 110.54,
+            "selected_image_ids": [
+                753515,
+                1029479,
+                439237,
+                219908
+            ],
+            "selected_image_paths": [
+                "n03481172\\n03481172_10237.JPEG",
+                "n04252225\\n04252225_24120.JPEG",
+                "n02396427\\n02396427_5122.JPEG",
+                "n02091032\\n02091032_6271.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": " SMOKIN OUT THE WINDOW ",
+            "start_time": 110.54,
+            "end_time": 112.11,
+            "selected_image_ids": [
+                803380,
+                611188
+            ],
+            "selected_image_paths": [
+                "n03666591\\n03666591_15612.JPEG",
+                "n02965783\\n02965783_5999.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": " (SMOKIN OUT THE WINDOW OF THE BENZO, THE BENZO) ",
+            "start_time": 112.11,
+            "end_time": 115.71,
+            "selected_image_ids": [
+                803380,
+                329414,
+                611188
+            ],
+            "selected_image_paths": [
+                "n03666591\\n03666591_15612.JPEG",
+                "n02111500\\n02111500_6590.JPEG",
+                "n02965783\\n02965783_5999.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": " SINGIN HOW COULD SHE DO THIS TO ME (HOW COULD SHE DO THIS) ",
+            "start_time": 115.71,
+            "end_time": 121.79,
+            "selected_image_ids": [
+                1049124,
+                840672
+            ],
+            "selected_image_paths": [
+                "n04296562\\n04296562_13379.JPEG",
+                "n03770439\\n03770439_16705.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": " OH I THOUGHT THAT GIRL BELONGED TO ONLY ME ",
+            "start_time": 121.79,
+            "end_time": 125.12,
+            "selected_image_ids": [
+                1072159,
+                1176164,
+                335350,
+                1006083,
+                759611,
+                1071586,
+                1072206,
+                1072469
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n06785654\\n06785654_4748.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04162706\\n04162706_21391.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n04356056\\n04356056_18966.JPEG",
+                "n04356056\\n04356056_3571.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": " (ONE THINGS FO SHO, ONE THINGS FOR SHO) ",
+            "start_time": 125.12,
+            "end_time": 127.79,
+            "selected_image_ids": [
+                807377,
+                936328
+            ],
+            "selected_image_paths": [
+                "n03676483\\n03676483_18254.JPEG",
+                "n03970156\\n03970156_10494.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": " BUT I WAS WRONG (I WAS WRONG) ",
+            "start_time": 127.79,
+            "end_time": 131.63,
+            "selected_image_ids": [
+                989140,
+                759611,
+                333009
+            ],
+            "selected_image_paths": [
+                "n04127249\\n04127249_244.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": " CAUSE SHE BELONG TO EVERYBODY,",
+            "start_time": 131.63,
+            "end_time": 135.2,
+            "selected_image_ids": [
+                1072159,
+                1071840,
+                1071828,
+                1071241,
+                915626,
+                1072014,
+                1071586,
+                1071814,
+                1072206,
+                1072985
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n04355933\\n04355933_710.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n03929660\\n03929660_18352.JPEG",
+                "n04355933\\n04355933_9482.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04356056\\n04356056_18966.JPEG",
+                "n04356056\\n04356056_6825.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "(YEAH, SHE BELONG TO EVERYBODY) EVERYBODY ",
+            "start_time": 135.2,
+            "end_time": 137.37,
+            "selected_image_ids": [
+                1072159,
+                1071840,
+                1156221,
+                1006083,
+                915626,
+                1071814,
+                1071241,
+                808196,
+                834301
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n04584207\\n04584207_14690.JPEG",
+                "n04162706\\n04162706_21391.JPEG",
+                "n03929660\\n03929660_18352.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n03676483\\n03676483_6993.JPEG",
+                "n03759954\\n03759954_17120.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": " (THAT GIRL YES SHE BELONG TO EVERYBODY) ",
+            "start_time": 137.37,
+            "end_time": 140.74,
+            "selected_image_ids": [
+                1071840,
+                1072159,
+                1156221,
+                1072206,
+                1071586,
+                915626,
+                1071814,
+                1071828,
+                807377
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG",
+                "n04584207\\n04584207_14690.JPEG",
+                "n04356056\\n04356056_18966.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n03929660\\n03929660_18352.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04355933\\n04355933_710.JPEG",
+                "n03676483\\n03676483_18254.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": " OH NO ",
+            "start_time": 140.74,
+            "end_time": 143.21,
+            "selected_image_ids": [
+                1088841,
+                231528,
+                330461,
+                362083,
+                337173
+            ],
+            "selected_image_paths": [
+                "n04399382\\n04399382_21501.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n02111889\\n02111889_227.JPEG",
+                "n02123394\\n02123394_2953.JPEG",
+                "n02113023\\n02113023_6942.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": " LOOK HERE BABY I HOPE YOU FIND WHATEVER IT IS THAT YOU NEED ",
+            "start_time": 143.21,
+            "end_time": 146.71,
+            "selected_image_ids": [
+                812851,
+                812450,
+                574444,
+                813232,
+                812431,
+                575031
+            ],
+            "selected_image_paths": [
+                "n03692522\\n03692522_31282.JPEG",
+                "n03692522\\n03692522_15011.JPEG",
+                "n02841315\\n02841315_20796.JPEG",
+                "n03692522\\n03692522_7537.JPEG",
+                "n03692522\\n03692522_1474.JPEG",
+                "n02841315\\n02841315_6148.JPEG"
+            ]
+        },
+        {
+            "index": 41,
+            "text": " BUT I ALSO HOPE THAT YOUR TRIFLING --- ",
+            "start_time": 146.71,
+            "end_time": 149.48,
+            "selected_image_ids": [
+                197379,
+                203146,
+                364869,
+                196111,
+                219831
+            ],
+            "selected_image_paths": [
+                "n02085782\\n02085782_664.JPEG",
+                "n02086910\\n02086910_1456.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n02085620\\n02085620_3310.JPEG",
+                "n02091032\\n02091032_5638.JPEG"
+            ]
+        },
+        {
+            "index": 42,
+            "text": " IS WALKING ROUND BAREFOOT IN THESE STREETS, LOOKOUT ",
+            "start_time": 149.48,
+            "end_time": 151.95,
+            "selected_image_ids": [
+                644702,
+                992350,
+                829983,
+                992196,
+                808487,
+                991414,
+                808958,
+                538805
+            ],
+            "selected_image_paths": [
+                "n03047690\\n03047690_1402.JPEG",
+                "n04133789\\n04133789_5941.JPEG",
+                "n03733281\\n03733281_6826.JPEG",
+                "n04133789\\n04133789_4474.JPEG",
+                "n03680355\\n03680355_1158.JPEG",
+                "n04133789\\n04133789_11566.JPEG",
+                "n03680355\\n03680355_24577.JPEG",
+                "n02786058\\n02786058_9023.JPEG"
+            ]
+        },
+        {
+            "index": 43,
+            "text": " GIRL IT BREAKS MY HEART THAT YOU AIN'T RIGHT HERE WITH ME ",
+            "start_time": 151.95,
+            "end_time": 156.86,
+            "selected_image_ids": [
+                1005741,
+                759611,
+                335350,
+                1072159,
+                1159216
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_12964.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04356056\\n04356056_1678.JPEG",
+                "n04590129\\n04590129_29003.JPEG"
+            ]
+        },
+        {
+            "index": 44,
+            "text": " NOW I GOTTA GIVE YOU BACK (GOTTA GIVE YOU BACK) TO THE CITY ",
+            "start_time": 156.86,
+            "end_time": 161.69,
+            "selected_image_ids": [
+                1005741,
+                1143044,
+                920362,
+                335350
+            ],
+            "selected_image_paths": [
+                "n04162706\\n04162706_12964.JPEG",
+                "n04548280\\n04548280_8433.JPEG",
+                "n03933933\\n03933933_12625.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 45,
+            "text": " OH, YOU GOT ME ",
+            "start_time": 161.69,
+            "end_time": 163.3,
+            "selected_image_ids": [
+                1071840,
+                936328
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n03970156\\n03970156_10494.JPEG"
+            ]
+        },
+        {
+            "index": 46,
+            "text": " SMOKIN OUT THE WINDOW ",
+            "start_time": 163.3,
+            "end_time": 168.47,
+            "selected_image_ids": [
+                803380,
+                611188
+            ],
+            "selected_image_paths": [
+                "n03666591\\n03666591_15612.JPEG",
+                "n02965783\\n02965783_5999.JPEG"
+            ]
+        },
+        {
+            "index": 47,
+            "text": " SINGING HOW COULD SHE DO THIS TO ME ",
+            "start_time": 168.47,
+            "end_time": 172.34,
+            "selected_image_ids": [
+                1077630,
+                835325
+            ],
+            "selected_image_paths": [
+                "n04370456\\n04370456_4340.JPEG",
+                "n03759954\\n03759954_8955.JPEG"
+            ]
+        },
+        {
+            "index": 48,
+            "text": " (HOW COULD SHE DO THIS BABY?) ",
+            "start_time": 172.34,
+            "end_time": 174.54,
+            "selected_image_ids": [
+                870096,
+                810219
+            ],
+            "selected_image_paths": [
+                "n03814639\\n03814639_2902.JPEG",
+                "n03690938\\n03690938_4024.JPEG"
+            ]
+        },
+        {
+            "index": 49,
+            "text": " OH I THOUGHT THAT GIRL BELONGED TO ONLY ME ",
+            "start_time": 174.54,
+            "end_time": 180.01,
+            "selected_image_ids": [
+                1072159,
+                1176164,
+                335350,
+                1006083,
+                759611,
+                1071586,
+                1072206,
+                1072469
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n06785654\\n06785654_4748.JPEG",
+                "n02112706\\n02112706_283.JPEG",
+                "n04162706\\n04162706_21391.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n04356056\\n04356056_18966.JPEG",
+                "n04356056\\n04356056_3571.JPEG"
+            ]
+        },
+        {
+            "index": 50,
+            "text": " BUT I WAS WRONG (I WAS WRONG) ",
+            "start_time": 180.01,
+            "end_time": 182.91,
+            "selected_image_ids": [
+                989140,
+                759611,
+                333009
+            ],
+            "selected_image_paths": [
+                "n04127249\\n04127249_244.JPEG",
+                "n03485794\\n03485794_6855.JPEG",
+                "n02112137\\n02112137_17832.JPEG"
+            ]
+        },
+        {
+            "index": 51,
+            "text": " CAUSE SHE BELONG TO EVERYBODY (SHE BELONG TO EVERYBODY) ",
+            "start_time": 182.91,
+            "end_time": 191.22,
+            "selected_image_ids": [
+                1071840,
+                1072159,
+                915626,
+                1071814,
+                1071241,
+                1156221,
+                1071828,
+                1071586,
+                808196,
+                1072014
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04356056\\n04356056_1678.JPEG",
+                "n03929660\\n03929660_18352.JPEG",
+                "n04355933\\n04355933_6878.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04584207\\n04584207_14690.JPEG",
+                "n04355933\\n04355933_710.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n03676483\\n03676483_6993.JPEG",
+                "n04355933\\n04355933_9482.JPEG"
+            ]
+        },
+        {
+            "index": 52,
+            "text": " SHE BELONG TO EVERYBODY ",
+            "start_time": 191.22,
+            "end_time": 192.62,
+            "selected_image_ids": [
+                1072159,
+                1071840,
+                1071828,
+                1072014,
+                1071241,
+                1072206,
+                915626,
+                1071586,
+                808196,
+                1156221
+            ],
+            "selected_image_paths": [
+                "n04356056\\n04356056_1678.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n04355933\\n04355933_710.JPEG",
+                "n04355933\\n04355933_9482.JPEG",
+                "n04355933\\n04355933_211.JPEG",
+                "n04356056\\n04356056_18966.JPEG",
+                "n03929660\\n03929660_18352.JPEG",
+                "n04355933\\n04355933_36.JPEG",
+                "n03676483\\n03676483_6993.JPEG",
+                "n04584207\\n04584207_14690.JPEG"
+            ]
+        }
+    ]
+}

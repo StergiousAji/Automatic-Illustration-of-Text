@@ -1,0 +1,425 @@
+{
+    "id": "6W6HhdqA95w",
+    "artist": "Radiohead",
+    "title": "How to Disappear Completely",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "That there, that's not me",
+            "start_time": 41.56,
+            "end_time": 60.0,
+            "selected_image_ids": [
+                328882,
+                1071840
+            ],
+            "selected_image_paths": [
+                "n02111500\\n02111500_300.JPEG",
+                "n04355933\\n04355933_7248.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "I go where I please",
+            "start_time": 60.0,
+            "end_time": 78.97,
+            "selected_image_ids": [
+                1177792,
+                1177786,
+                1177038,
+                1177049,
+                628310,
+                1178287,
+                535131,
+                1177211
+            ],
+            "selected_image_paths": [
+                "n06794110\\n06794110_753.JPEG",
+                "n06794110\\n06794110_7361.JPEG",
+                "n06794110\\n06794110_2401.JPEG",
+                "n06794110\\n06794110_2455.JPEG",
+                "n03000134\\n03000134_1014.JPEG",
+                "n06874185\\n06874185_2225.JPEG",
+                "n02777292\\n02777292_8388.JPEG",
+                "n06794110\\n06794110_3225.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "I walk through walls",
+            "start_time": 78.97,
+            "end_time": 87.08,
+            "selected_image_ids": [
+                541139,
+                868667,
+                1057919,
+                541049
+            ],
+            "selected_image_paths": [
+                "n02788148\\n02788148_43712.JPEG",
+                "n03804744\\n03804744_18474.JPEG",
+                "n04326547\\n04326547_9655.JPEG",
+                "n02788148\\n02788148_39378.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "I float down the Liffey",
+            "start_time": 87.08,
+            "end_time": 92.86,
+            "selected_image_ids": [
+                524591,
+                606699,
+                888741,
+                1149694,
+                1014021,
+                1043256
+            ],
+            "selected_image_paths": [
+                "n02704792\\n02704792_5686.JPEG",
+                "n02951358\\n02951358_15424.JPEG",
+                "n03873416\\n03873416_14100.JPEG",
+                "n04557648\\n04557648_10171.JPEG",
+                "n04204347\\n04204347_4095.JPEG",
+                "n04273569\\n04273569_27.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "I'm not here",
+            "start_time": 97.11,
+            "end_time": 105.87,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "This isn't happening",
+            "start_time": 105.87,
+            "end_time": 115.1,
+            "selected_image_ids": [
+                1094328,
+                1029479,
+                1142319
+            ],
+            "selected_image_paths": [
+                "n04418357\\n04418357_2728.JPEG",
+                "n04252225\\n04252225_24120.JPEG",
+                "n04548280\\n04548280_3224.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "I'm not here",
+            "start_time": 115.1,
+            "end_time": 124.55,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "I'm not here",
+            "start_time": 124.55,
+            "end_time": 134.34,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "In a little while",
+            "start_time": 134.34,
+            "end_time": 143.15,
+            "selected_image_ids": [
+                774986,
+                774942,
+                1058295,
+                775175,
+                1143133
+            ],
+            "selected_image_paths": [
+                "n03544143\\n03544143_10741.JPEG",
+                "n03544143\\n03544143_10102.JPEG",
+                "n04328186\\n04328186_18447.JPEG",
+                "n03544143\\n03544143_12711.JPEG",
+                "n04548280\\n04548280_9322.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "I'll be gone",
+            "start_time": 143.15,
+            "end_time": 152.48,
+            "selected_image_ids": [
+                1071840,
+                1005741,
+                37839
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04162706\\n04162706_12964.JPEG",
+                "n01632777\\n01632777_12947.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "The moment's already passed",
+            "start_time": 152.48,
+            "end_time": 161.97,
+            "selected_image_ids": [
+                1088841,
+                680719,
+                775022,
+                774942,
+                681007
+            ],
+            "selected_image_paths": [
+                "n04399382\\n04399382_21501.JPEG",
+                "n03196217\\n03196217_1135.JPEG",
+                "n03544143\\n03544143_11138.JPEG",
+                "n03544143\\n03544143_10102.JPEG",
+                "n03196217\\n03196217_2775.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "Yeah, it's gone",
+            "start_time": 161.97,
+            "end_time": 167.97,
+            "selected_image_ids": [
+                761293,
+                1029479,
+                1156234
+            ],
+            "selected_image_paths": [
+                "n03494278\\n03494278_26014.JPEG",
+                "n04252225\\n04252225_24120.JPEG",
+                "n04584207\\n04584207_14976.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "And I'm not here",
+            "start_time": 171.34,
+            "end_time": 180.77,
+            "selected_image_ids": [
+                1010966,
+                1158199,
+                1159216,
+                1065486,
+                1126131
+            ],
+            "selected_image_paths": [
+                "n04201297\\n04201297_11588.JPEG",
+                "n04589890\\n04589890_679.JPEG",
+                "n04590129\\n04590129_29003.JPEG",
+                "n04344873\\n04344873_8902.JPEG",
+                "n04507155\\n04507155_304.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "This isn't happening",
+            "start_time": 180.77,
+            "end_time": 190.27,
+            "selected_image_ids": [
+                1094328,
+                1029479,
+                1142319
+            ],
+            "selected_image_paths": [
+                "n04418357\\n04418357_2728.JPEG",
+                "n04252225\\n04252225_24120.JPEG",
+                "n04548280\\n04548280_3224.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "I'm not here",
+            "start_time": 190.27,
+            "end_time": 199.88,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "I'm not here",
+            "start_time": 199.88,
+            "end_time": 205.01,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "Strobe lights and blown speakers",
+            "start_time": 210.13,
+            "end_time": 229.13,
+            "selected_image_ids": [
+                1048393,
+                1243463,
+                1048154,
+                1048568,
+                811734,
+                811118,
+                1048495
+            ],
+            "selected_image_paths": [
+                "n04286575\\n04286575_34605.JPEG",
+                "n09229709\\n09229709_11083.JPEG",
+                "n04286575\\n04286575_23092.JPEG",
+                "n04286575\\n04286575_42084.JPEG",
+                "n03691459\\n03691459_57590.JPEG",
+                "n03691459\\n03691459_29544.JPEG",
+                "n04286575\\n04286575_38978.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Fireworks and hurricanes",
+            "start_time": 229.13,
+            "end_time": 246.98,
+            "selected_image_ids": [
+                1104771,
+                1248081,
+                376573,
+                140140,
+                1243463,
+                420971,
+                1255320,
+                1255174,
+                421326,
+                1256323
+            ],
+            "selected_image_paths": [
+                "n04456115\\n04456115_5794.JPEG",
+                "n09288635\\n09288635_27176.JPEG",
+                "n02132136\\n02132136_321.JPEG",
+                "n01914609\\n01914609_18385.JPEG",
+                "n09229709\\n09229709_11083.JPEG",
+                "n02319095\\n02319095_6926.JPEG",
+                "n09472597\\n09472597_16494.JPEG",
+                "n09472597\\n09472597_11784.JPEG",
+                "n02319095\\n02319095_9048.JPEG",
+                "n09472597\\n09472597_7325.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "I'm not here",
+            "start_time": 246.98,
+            "end_time": 256.36,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "This isn't happening",
+            "start_time": 256.36,
+            "end_time": 266.02,
+            "selected_image_ids": [
+                1094328,
+                1029479,
+                1142319
+            ],
+            "selected_image_paths": [
+                "n04418357\\n04418357_2728.JPEG",
+                "n04252225\\n04252225_24120.JPEG",
+                "n04548280\\n04548280_3224.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "I'm not here",
+            "start_time": 266.02,
+            "end_time": 275.37,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "I'm not here",
+            "start_time": 275.37,
+            "end_time": 278.26,
+            "selected_image_ids": [
+                1071840,
+                1094328,
+                692172,
+                1081493
+            ],
+            "selected_image_paths": [
+                "n04355933\\n04355933_7248.JPEG",
+                "n04418357\\n04418357_2728.JPEG",
+                "n03223299\\n03223299_17572.JPEG",
+                "n04372370\\n04372370_33871.JPEG"
+            ]
+        }
+    ]
+}

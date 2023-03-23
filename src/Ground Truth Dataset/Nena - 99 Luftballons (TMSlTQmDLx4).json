@@ -1,0 +1,763 @@
+{
+    "id": "TMSlTQmDLx4",
+    "artist": "Nena",
+    "title": "99 Luftballons",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "Hast du etwas Zeit für mich?",
+            "start_time": 3.88,
+            "end_time": 6.72,
+            "selected_image_ids": [
+                1142536,
+                783043,
+                1058295,
+                1142606
+            ],
+            "selected_image_paths": [
+                "n04548280\\n04548280_4703.JPEG",
+                "n03595614\\n03595614_16186.JPEG",
+                "n04328186\\n04328186_18447.JPEG",
+                "n04548280\\n04548280_5120.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "Dann singe ich ein Lied für dich",
+            "start_time": 6.72,
+            "end_time": 9.92,
+            "selected_image_ids": [
+                835325,
+                834168,
+                834785,
+                835330,
+                834301
+            ],
+            "selected_image_paths": [
+                "n03759954\\n03759954_8955.JPEG",
+                "n03759954\\n03759954_13404.JPEG",
+                "n03759954\\n03759954_21541.JPEG",
+                "n03759954\\n03759954_8983.JPEG",
+                "n03759954\\n03759954_17120.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "Von neunundneunzig Luftballons",
+            "start_time": 9.92,
+            "end_time": 12.95,
+            "selected_image_ids": [
+                535738,
+                536021,
+                535249,
+                823251
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_3437.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n03720891\\n03720891_4367.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "Auf ihrem Weg zum Horizont",
+            "start_time": 12.95,
+            "end_time": 16.35,
+            "selected_image_ids": [
+                518726,
+                536299,
+                192656,
+                1252597,
+                1028636,
+                1043344
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02071294\\n02071294_5375.JPEG",
+                "n09428293\\n09428293_127.JPEG",
+                "n04252077\\n04252077_7868.JPEG",
+                "n04273569\\n04273569_3138.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "Denkst du vielleicht grad an mich?",
+            "start_time": 16.35,
+            "end_time": 19.81,
+            "selected_image_ids": [
+                335350,
+                364869,
+                1156221,
+                597377,
+                1160813,
+                1160649
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n02124075\\n02124075_353.JPEG",
+                "n04584207\\n04584207_14690.JPEG",
+                "n02916936\\n02916936_10710.JPEG",
+                "n04591157\\n04591157_6689.JPEG",
+                "n04591157\\n04591157_5444.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "Dann singe ich ein Lied für dich",
+            "start_time": 19.81,
+            "end_time": 22.75,
+            "selected_image_ids": [
+                835325,
+                834168,
+                834785,
+                835330,
+                834301
+            ],
+            "selected_image_paths": [
+                "n03759954\\n03759954_8955.JPEG",
+                "n03759954\\n03759954_13404.JPEG",
+                "n03759954\\n03759954_21541.JPEG",
+                "n03759954\\n03759954_8983.JPEG",
+                "n03759954\\n03759954_17120.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "Von neunundneunzig Luftballons",
+            "start_time": 22.75,
+            "end_time": 26.08,
+            "selected_image_ids": [
+                535738,
+                536021,
+                535249,
+                823251
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_3437.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n03720891\\n03720891_4367.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "Und dass sowas von sowas kommt",
+            "start_time": 26.08,
+            "end_time": 30.33,
+            "selected_image_ids": [
+                1094328,
+                914278,
+                1239787
+            ],
+            "selected_image_paths": [
+                "n04418357\\n04418357_2728.JPEG",
+                "n03924679\\n03924679_14.JPEG",
+                "n07930864\\n07930864_14619.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "Neunundneunzig Luftballons",
+            "start_time": 70.24,
+            "end_time": 72.97,
+            "selected_image_ids": [
+                535738,
+                535249,
+                536021
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n02782093\\n02782093_3437.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "Auf ihrem Weg zum Horizont",
+            "start_time": 72.97,
+            "end_time": 75.06,
+            "selected_image_ids": [
+                518726,
+                536299,
+                192656,
+                1252597,
+                1028636,
+                1043344
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n02071294\\n02071294_5375.JPEG",
+                "n09428293\\n09428293_127.JPEG",
+                "n04252077\\n04252077_7868.JPEG",
+                "n04273569\\n04273569_3138.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "Hielt man für Ufos aus dem All",
+            "start_time": 75.06,
+            "end_time": 77.79,
+            "selected_image_ids": [
+                1244139,
+                7308,
+                143916,
+                947055,
+                722246
+            ],
+            "selected_image_paths": [
+                "n09229709\\n09229709_45670.JPEG",
+                "n01496331\\n01496331_30585.JPEG",
+                "n01930112\\n01930112_13371.JPEG",
+                "n03992509\\n03992509_2176.JPEG",
+                "n03388043\\n03388043_3500.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "Darum schickte ein General",
+            "start_time": 77.79,
+            "end_time": 80.13,
+            "selected_image_ids": [
+                597960,
+                530897,
+                597447,
+                597770
+            ],
+            "selected_image_paths": [
+                "n02916936\\n02916936_437.JPEG",
+                "n02749479\\n02749479_5741.JPEG",
+                "n02916936\\n02916936_12151.JPEG",
+                "n02916936\\n02916936_3155.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "'Ne Fliegerstaffel hinterher",
+            "start_time": 80.13,
+            "end_time": 82.77,
+            "selected_image_ids": [
+                518726,
+                887147,
+                518925
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG",
+                "n03868863\\n03868863_8395.JPEG",
+                "n02690373\\n02690373_3871.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "Alarm zu geben, wenn's so wär'",
+            "start_time": 82.77,
+            "end_time": 85.18,
+            "selected_image_ids": [
+                681403,
+                1058295,
+                680983,
+                680786,
+                681335
+            ],
+            "selected_image_paths": [
+                "n03196217\\n03196217_5428.JPEG",
+                "n04328186\\n04328186_18447.JPEG",
+                "n03196217\\n03196217_2605.JPEG",
+                "n03196217\\n03196217_12752.JPEG",
+                "n03196217\\n03196217_50.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "Dabei war'n dort am Horizont",
+            "start_time": 85.18,
+            "end_time": 87.55,
+            "selected_image_ids": [
+                1157910,
+                1157940,
+                939598,
+                1168889
+            ],
+            "selected_image_paths": [
+                "n04589890\\n04589890_4409.JPEG",
+                "n04589890\\n04589890_4599.JPEG",
+                "n03976657\\n03976657_3016.JPEG",
+                "n04606251\\n04606251_10337.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "Nur neunundneunzig Luftballons",
+            "start_time": 87.55,
+            "end_time": 91.02,
+            "selected_image_ids": [
+                535738,
+                535249,
+                536021
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n02782093\\n02782093_3437.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "Neunundneunzig Düsenflieger",
+            "start_time": 100.36,
+            "end_time": 102.5,
+            "selected_image_ids": [
+                827309
+            ],
+            "selected_image_paths": [
+                "n03729826\\n03729826_5464.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Jeder war ein großer Krieger",
+            "start_time": 102.5,
+            "end_time": 105.18,
+            "selected_image_ids": [
+                673827,
+                629943,
+                629663,
+                673583,
+                630206,
+                630116,
+                630347,
+                629684
+            ],
+            "selected_image_paths": [
+                "n03146219\\n03146219_5054.JPEG",
+                "n03000247\\n03000247_20738.JPEG",
+                "n03000247\\n03000247_12413.JPEG",
+                "n03146219\\n03146219_2652.JPEG",
+                "n03000247\\n03000247_30710.JPEG",
+                "n03000247\\n03000247_2725.JPEG",
+                "n03000247\\n03000247_35969.JPEG",
+                "n03000247\\n03000247_13255.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "Hielten sich für Captain Kirk",
+            "start_time": 105.18,
+            "end_time": 107.54,
+            "selected_image_ids": [
+                335350,
+                1160649
+            ],
+            "selected_image_paths": [
+                "n02112706\\n02112706_283.JPEG",
+                "n04591157\\n04591157_5444.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "Das gab ein großes Feuerwerk",
+            "start_time": 107.54,
+            "end_time": 109.91,
+            "selected_image_ids": [
+                1248081,
+                1104771,
+                421326,
+                803946,
+                140140,
+                420971,
+                420396,
+                420891
+            ],
+            "selected_image_paths": [
+                "n09288635\\n09288635_27176.JPEG",
+                "n04456115\\n04456115_5794.JPEG",
+                "n02319095\\n02319095_9048.JPEG",
+                "n03666591\\n03666591_36162.JPEG",
+                "n01914609\\n01914609_18385.JPEG",
+                "n02319095\\n02319095_6926.JPEG",
+                "n02319095\\n02319095_3031.JPEG",
+                "n02319095\\n02319095_6537.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "Die Nachbarn haben nichts gerafft",
+            "start_time": 109.91,
+            "end_time": 112.37,
+            "selected_image_ids": [
+                332997,
+                1158484,
+                1157263,
+                309481
+            ],
+            "selected_image_paths": [
+                "n02112137\\n02112137_17706.JPEG",
+                "n04589890\\n04589890_9521.JPEG",
+                "n04589890\\n04589890_108.JPEG",
+                "n02108089\\n02108089_1103.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "Und fühlten sich gleich angemacht",
+            "start_time": 112.37,
+            "end_time": 115.06,
+            "selected_image_ids": [
+                936328,
+                219908,
+                134681
+            ],
+            "selected_image_paths": [
+                "n03970156\\n03970156_10494.JPEG",
+                "n02091032\\n02091032_6271.JPEG",
+                "n01877812\\n01877812_11247.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "Dabei schoss man am Horizont",
+            "start_time": 115.06,
+            "end_time": 117.43,
+            "selected_image_ids": [
+                693988,
+                979477,
+                1071397
+            ],
+            "selected_image_paths": [
+                "n03240683\\n03240683_3732.JPEG",
+                "n04090263\\n04090263_4701.JPEG",
+                "n04355933\\n04355933_2737.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "Auf neunundneunzig Luftballons",
+            "start_time": 117.43,
+            "end_time": 121.09,
+            "selected_image_ids": [
+                535738,
+                535249,
+                536021
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n02782093\\n02782093_3437.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "Neunundneunzig Kriegsminister",
+            "start_time": 149.41,
+            "end_time": 152.15,
+            "selected_image_ids": [
+                1021026,
+                574412
+            ],
+            "selected_image_paths": [
+                "n04229816\\n04229816_8426.JPEG",
+                "n02841315\\n02841315_20085.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "Streichholz und Benzinkanister",
+            "start_time": 152.15,
+            "end_time": 154.72,
+            "selected_image_ids": [
+                548856,
+                838576,
+                968631
+            ],
+            "selected_image_paths": [
+                "n02795169\\n02795169_3738.JPEG",
+                "n03764736\\n03764736_3960.JPEG",
+                "n04049303\\n04049303_1891.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "Hielten sich für schlaue Leute",
+            "start_time": 154.72,
+            "end_time": 157.18,
+            "selected_image_ids": [
+                708723,
+                1160649
+            ],
+            "selected_image_paths": [
+                "n03325584\\n03325584_14337.JPEG",
+                "n04591157\\n04591157_5444.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "Witterten schon fette Beute",
+            "start_time": 157.18,
+            "end_time": 159.51,
+            "selected_image_ids": [
+                378158,
+                203146
+            ],
+            "selected_image_paths": [
+                "n02133161\\n02133161_5470.JPEG",
+                "n02086910\\n02086910_1456.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "Riefen: \"Krieg!\" und wollten Macht",
+            "start_time": 159.51,
+            "end_time": 162.27,
+            "selected_image_ids": [
+                530737,
+                628442,
+                765594
+            ],
+            "selected_image_paths": [
+                "n02749479\\n02749479_4719.JPEG",
+                "n03000134\\n03000134_14.JPEG",
+                "n03498962\\n03498962_58020.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Mann, wer hätte das gedacht",
+            "start_time": 162.27,
+            "end_time": 164.38,
+            "selected_image_ids": [
+                1160813,
+                574694,
+                937215
+            ],
+            "selected_image_paths": [
+                "n04591157\\n04591157_6689.JPEG",
+                "n02841315\\n02841315_2630.JPEG",
+                "n03970156\\n03970156_42732.JPEG"
+            ]
+        },
+        {
+            "index": 31,
+            "text": "Dass es einmal so weit kommt",
+            "start_time": 164.38,
+            "end_time": 167.09,
+            "selected_image_ids": [
+                753515,
+                901663,
+                536299
+            ],
+            "selected_image_paths": [
+                "n03481172\\n03481172_10237.JPEG",
+                "n03891251\\n03891251_1249.JPEG",
+                "n02782093\\n02782093_4914.JPEG"
+            ]
+        },
+        {
+            "index": 32,
+            "text": "Wegen neunundneunzig Luftballons",
+            "start_time": 167.09,
+            "end_time": 170.27,
+            "selected_image_ids": [
+                535738,
+                535249,
+                536021
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n02782093\\n02782093_3437.JPEG"
+            ]
+        },
+        {
+            "index": 33,
+            "text": "Wegen neunundneunzig Luftballons",
+            "start_time": 172.37,
+            "end_time": 175.8,
+            "selected_image_ids": [
+                535738,
+                535249,
+                536021
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n02782093\\n02782093_3437.JPEG"
+            ]
+        },
+        {
+            "index": 34,
+            "text": "Neunundneunzig Luftballons",
+            "start_time": 183.0,
+            "end_time": 186.12,
+            "selected_image_ids": [
+                535738,
+                535249,
+                536021
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_2702.JPEG",
+                "n02782093\\n02782093_110.JPEG",
+                "n02782093\\n02782093_3437.JPEG"
+            ]
+        },
+        {
+            "index": 35,
+            "text": "Neunundneunzig Jahre Krieg",
+            "start_time": 193.73,
+            "end_time": 196.91,
+            "selected_image_ids": [
+                1167593,
+                843832,
+                952935,
+                589146,
+                1097170,
+                952833,
+                605616,
+                606064,
+                605970,
+                1096459
+            ],
+            "selected_image_paths": [
+                "n04604644\\n04604644_10859.JPEG",
+                "n03773504\\n03773504_425.JPEG",
+                "n04008634\\n04008634_15684.JPEG",
+                "n02892201\\n02892201_31832.JPEG",
+                "n04428191\\n04428191_424.JPEG",
+                "n04008634\\n04008634_12635.JPEG",
+                "n02950826\\n02950826_2121.JPEG",
+                "n02950826\\n02950826_4702.JPEG",
+                "n02950826\\n02950826_36523.JPEG",
+                "n04428191\\n04428191_14936.JPEG"
+            ]
+        },
+        {
+            "index": 36,
+            "text": "Ließen keinen Platz für Sieger",
+            "start_time": 196.91,
+            "end_time": 200.11,
+            "selected_image_ids": [
+                901663,
+                1095939
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_1249.JPEG",
+                "n04423845\\n04423845_46964.JPEG"
+            ]
+        },
+        {
+            "index": 37,
+            "text": "Kriegsminister gibt's nicht mehr",
+            "start_time": 200.11,
+            "end_time": 203.39,
+            "selected_image_ids": [
+                1068916,
+                1068183,
+                1021026,
+                1160649
+            ],
+            "selected_image_paths": [
+                "n04350905\\n04350905_37577.JPEG",
+                "n04350905\\n04350905_10761.JPEG",
+                "n04229816\\n04229816_8426.JPEG",
+                "n04591157\\n04591157_5444.JPEG"
+            ]
+        },
+        {
+            "index": 38,
+            "text": "Und auch keine Düsenflieger",
+            "start_time": 203.39,
+            "end_time": 206.51,
+            "selected_image_ids": [
+                518726
+            ],
+            "selected_image_paths": [
+                "n02690373\\n02690373_2219.JPEG"
+            ]
+        },
+        {
+            "index": 39,
+            "text": "Heute zieh' ich meine Runden",
+            "start_time": 206.51,
+            "end_time": 210.25,
+            "selected_image_ids": [
+                696325,
+                537215
+            ],
+            "selected_image_paths": [
+                "n03250847\\n03250847_2244.JPEG",
+                "n02783161\\n02783161_3428.JPEG"
+            ]
+        },
+        {
+            "index": 40,
+            "text": "Seh' die Welt in Trümmern liegen",
+            "start_time": 210.25,
+            "end_time": 213.76,
+            "selected_image_ids": [
+                732924,
+                1014789,
+                784496,
+                765328,
+                852872
+            ],
+            "selected_image_paths": [
+                "n03424325\\n03424325_8022.JPEG",
+                "n04208210\\n04208210_1360.JPEG",
+                "n03598930\\n03598930_2329.JPEG",
+                "n03498962\\n03498962_31483.JPEG",
+                "n03782006\\n03782006_7151.JPEG"
+            ]
+        },
+        {
+            "index": 41,
+            "text": "Hab' 'n Luftballon gefunden",
+            "start_time": 213.76,
+            "end_time": 217.46,
+            "selected_image_ids": [
+                535590,
+                536075,
+                535762,
+                535549,
+                535958,
+                535450,
+                536334
+            ],
+            "selected_image_paths": [
+                "n02782093\\n02782093_21522.JPEG",
+                "n02782093\\n02782093_3688.JPEG",
+                "n02782093\\n02782093_2752.JPEG",
+                "n02782093\\n02782093_2031.JPEG",
+                "n02782093\\n02782093_31693.JPEG",
+                "n02782093\\n02782093_1671.JPEG",
+                "n02782093\\n02782093_5086.JPEG"
+            ]
+        },
+        {
+            "index": 42,
+            "text": "Denk' an dich und lass' ihn fliegen",
+            "start_time": 217.46,
+            "end_time": 221.05,
+            "selected_image_ids": [
+                1126409,
+                187325,
+                536334,
+                536299,
+                926919,
+                1243874,
+                536165,
+                518726
+            ],
+            "selected_image_paths": [
+                "n04507155\\n04507155_5976.JPEG",
+                "n02051845\\n02051845_41844.JPEG",
+                "n02782093\\n02782093_5086.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n03944341\\n03944341_13600.JPEG",
+                "n09229709\\n09229709_29063.JPEG",
+                "n02782093\\n02782093_4218.JPEG",
+                "n02690373\\n02690373_2219.JPEG"
+            ]
+        }
+    ]
+}

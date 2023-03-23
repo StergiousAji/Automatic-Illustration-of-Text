@@ -1,0 +1,603 @@
+{
+    "id": "LUjGtyYEi90",
+    "artist": "Radiohead",
+    "title": "Weird Fishes / Arpeggi",
+    "chunks": [
+        {
+            "index": 1,
+            "text": "In the deepest ocean",
+            "start_time": 57.68,
+            "end_time": 61.83,
+            "selected_image_ids": [
+                139644,
+                1259628,
+                1259691,
+                193658,
+                195277
+            ],
+            "selected_image_paths": [
+                "n01910747\\n01910747_8430.JPEG",
+                "n10565667\\n10565667_2638.JPEG",
+                "n10565667\\n10565667_365.JPEG",
+                "n02074367\\n02074367_403.JPEG",
+                "n02077923\\n02077923_717.JPEG"
+            ]
+        },
+        {
+            "index": 2,
+            "text": "The bottom of the sea",
+            "start_time": 64.02,
+            "end_time": 69.52,
+            "selected_image_ids": [
+                1079009,
+                195277,
+                142023
+            ],
+            "selected_image_paths": [
+                "n04371430\\n04371430_555.JPEG",
+                "n02077923\\n02077923_717.JPEG",
+                "n01917289\\n01917289_4837.JPEG"
+            ]
+        },
+        {
+            "index": 3,
+            "text": "Your eyes",
+            "start_time": 69.52,
+            "end_time": 73.75,
+            "selected_image_ids": [
+                759611,
+                317345,
+                1035666,
+                812547
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n02109961\\n02109961_1339.JPEG",
+                "n04259630\\n04259630_16594.JPEG",
+                "n03692522\\n03692522_16159.JPEG"
+            ]
+        },
+        {
+            "index": 4,
+            "text": "They turn me",
+            "start_time": 75.88,
+            "end_time": 80.15,
+            "selected_image_ids": [
+                759611,
+                1073253,
+                335350
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n04356056\\n04356056_9140.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 5,
+            "text": "Why should I stay here?",
+            "start_time": 82.78,
+            "end_time": 87.17,
+            "selected_image_ids": [
+                319471,
+                1024212,
+                1064318,
+                330416,
+                1059177,
+                249736,
+                252855
+            ],
+            "selected_image_paths": [
+                "n02110063\\n02110063_6720.JPEG",
+                "n04239074\\n04239074_28435.JPEG",
+                "n04344873\\n04344873_11087.JPEG",
+                "n02111889\\n02111889_1976.JPEG",
+                "n04330267\\n04330267_12523.JPEG",
+                "n02096585\\n02096585_7091.JPEG",
+                "n02097209\\n02097209_213.JPEG"
+            ]
+        },
+        {
+            "index": 6,
+            "text": "Why should I stay?",
+            "start_time": 89.3,
+            "end_time": 97.47,
+            "selected_image_ids": [
+                1244377,
+                1158199,
+                418805,
+                989140,
+                1010966
+            ],
+            "selected_image_paths": [
+                "n09229709\\n09229709_5934.JPEG",
+                "n04589890\\n04589890_679.JPEG",
+                "n02317335\\n02317335_10310.JPEG",
+                "n04127249\\n04127249_244.JPEG",
+                "n04201297\\n04201297_11588.JPEG"
+            ]
+        },
+        {
+            "index": 7,
+            "text": "I'd be crazy not to follow",
+            "start_time": 107.6,
+            "end_time": 114.16,
+            "selected_image_ids": [
+                1177364,
+                1177786,
+                1252575
+            ],
+            "selected_image_paths": [
+                "n06794110\\n06794110_4014.JPEG",
+                "n06794110\\n06794110_7361.JPEG",
+                "n09428293\\n09428293_11657.JPEG"
+            ]
+        },
+        {
+            "index": 8,
+            "text": "Follow where you lead",
+            "start_time": 114.16,
+            "end_time": 119.83,
+            "selected_image_ids": [
+                1252575,
+                1177038,
+                1176654,
+                1177786,
+                1176866,
+                1178544,
+                1177364,
+                1178957,
+                1176557
+            ],
+            "selected_image_paths": [
+                "n09428293\\n09428293_11657.JPEG",
+                "n06794110\\n06794110_2401.JPEG",
+                "n06794110\\n06794110_12934.JPEG",
+                "n06794110\\n06794110_7361.JPEG",
+                "n06794110\\n06794110_1894.JPEG",
+                "n06874185\\n06874185_28040.JPEG",
+                "n06794110\\n06794110_4014.JPEG",
+                "n06874185\\n06874185_6315.JPEG",
+                "n06794110\\n06794110_1003.JPEG"
+            ]
+        },
+        {
+            "index": 9,
+            "text": "Your eyes",
+            "start_time": 119.83,
+            "end_time": 125.96,
+            "selected_image_ids": [
+                759611,
+                317345,
+                1035666,
+                812547
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n02109961\\n02109961_1339.JPEG",
+                "n04259630\\n04259630_16594.JPEG",
+                "n03692522\\n03692522_16159.JPEG"
+            ]
+        },
+        {
+            "index": 10,
+            "text": "They turn me",
+            "start_time": 125.96,
+            "end_time": 130.58,
+            "selected_image_ids": [
+                759611,
+                1073253,
+                335350
+            ],
+            "selected_image_paths": [
+                "n03485794\\n03485794_6855.JPEG",
+                "n04356056\\n04356056_9140.JPEG",
+                "n02112706\\n02112706_283.JPEG"
+            ]
+        },
+        {
+            "index": 11,
+            "text": "Turn me into phantoms",
+            "start_time": 132.92,
+            "end_time": 139.55,
+            "selected_image_ids": [
+                1017737,
+                1068797,
+                231528,
+                6193,
+                138605,
+                644334
+            ],
+            "selected_image_paths": [
+                "n04209239\\n04209239_14480.JPEG",
+                "n04350905\\n04350905_3236.JPEG",
+                "n02093647\\n02093647_1457.JPEG",
+                "n01494475\\n01494475_6400.JPEG",
+                "n01910747\\n01910747_11896.JPEG",
+                "n03045698\\n03045698_6308.JPEG"
+            ]
+        },
+        {
+            "index": 12,
+            "text": "I follow to the edge",
+            "start_time": 139.55,
+            "end_time": 145.15,
+            "selected_image_ids": [
+                1245008,
+                920647,
+                591150
+            ],
+            "selected_image_paths": [
+                "n09246464\\n09246464_16715.JPEG",
+                "n03933933\\n03933933_19015.JPEG",
+                "n02894605\\n02894605_24973.JPEG"
+            ]
+        },
+        {
+            "index": 13,
+            "text": "Of the earth",
+            "start_time": 145.15,
+            "end_time": 151.28,
+            "selected_image_ids": [
+                1047843,
+                932939,
+                932228,
+                1244269,
+                536299,
+                833483
+            ],
+            "selected_image_paths": [
+                "n04286575\\n04286575_13208.JPEG",
+                "n03958227\\n03958227_10864.JPEG",
+                "n03956157\\n03956157_23357.JPEG",
+                "n09229709\\n09229709_53069.JPEG",
+                "n02782093\\n02782093_4914.JPEG",
+                "n03743016\\n03743016_29522.JPEG"
+            ]
+        },
+        {
+            "index": 14,
+            "text": "And fall off",
+            "start_time": 151.28,
+            "end_time": 156.05,
+            "selected_image_ids": [
+                1080130,
+                363894,
+                1078946,
+                899047
+            ],
+            "selected_image_paths": [
+                "n04371774\\n04371774_15239.JPEG",
+                "n02123597\\n02123597_6889.JPEG",
+                "n04371430\\n04371430_5046.JPEG",
+                "n03888257\\n03888257_11587.JPEG"
+            ]
+        },
+        {
+            "index": 15,
+            "text": "Yeah, everybody leaves",
+            "start_time": 158.17,
+            "end_time": 164.56,
+            "selected_image_ids": [
+                901663,
+                692193,
+                902415,
+                902132,
+                902417,
+                640066,
+                902781,
+                692285,
+                1065486
+            ],
+            "selected_image_paths": [
+                "n03891251\\n03891251_1249.JPEG",
+                "n03223299\\n03223299_1820.JPEG",
+                "n03891251\\n03891251_4345.JPEG",
+                "n03891251\\n03891251_2645.JPEG",
+                "n03891251\\n03891251_4356.JPEG",
+                "n03032252\\n03032252_16959.JPEG",
+                "n03891251\\n03891251_7811.JPEG",
+                "n03223299\\n03223299_2310.JPEG",
+                "n04344873\\n04344873_8902.JPEG"
+            ]
+        },
+        {
+            "index": 16,
+            "text": "If they get the chance",
+            "start_time": 164.56,
+            "end_time": 170.07,
+            "selected_image_ids": [
+                753515,
+                936328,
+                1053263,
+                1160649,
+                364869
+            ],
+            "selected_image_paths": [
+                "n03481172\\n03481172_10237.JPEG",
+                "n03970156\\n03970156_10494.JPEG",
+                "n04311174\\n04311174_3657.JPEG",
+                "n04591157\\n04591157_5444.JPEG",
+                "n02124075\\n02124075_353.JPEG"
+            ]
+        },
+        {
+            "index": 17,
+            "text": "And this...",
+            "start_time": 170.07,
+            "end_time": 176.26,
+            "selected_image_ids": [
+                197379
+            ],
+            "selected_image_paths": [
+                "n02085782\\n02085782_664.JPEG"
+            ]
+        },
+        {
+            "index": 18,
+            "text": "Is my chance",
+            "start_time": 176.26,
+            "end_time": 182.92,
+            "selected_image_ids": [
+                926513,
+                1073253,
+                1036026,
+                1036289,
+                1071840,
+                887752,
+                1071586
+            ],
+            "selected_image_paths": [
+                "n03942813\\n03942813_8236.JPEG",
+                "n04356056\\n04356056_9140.JPEG",
+                "n04259630\\n04259630_25644.JPEG",
+                "n04259630\\n04259630_451.JPEG",
+                "n04355933\\n04355933_7248.JPEG",
+                "n03871628\\n03871628_17921.JPEG",
+                "n04355933\\n04355933_36.JPEG"
+            ]
+        },
+        {
+            "index": 19,
+            "text": "I get eaten by the worms",
+            "start_time": 182.92,
+            "end_time": 188.71,
+            "selected_image_ids": [
+                67865,
+                501305,
+                77938,
+                144147,
+                35277,
+                76995,
+                146860,
+                144558,
+                102997
+            ],
+            "selected_image_paths": [
+                "n01728572\\n01728572_19518.JPEG",
+                "n02526121\\n02526121_5231.JPEG",
+                "n01740131\\n01740131_10687.JPEG",
+                "n01930112\\n01930112_16318.JPEG",
+                "n01631663\\n01631663_1564.JPEG",
+                "n01739381\\n01739381_3847.JPEG",
+                "n01944390\\n01944390_2152.JPEG",
+                "n01930112\\n01930112_3216.JPEG",
+                "n01784675\\n01784675_2878.JPEG"
+            ]
+        },
+        {
+            "index": 20,
+            "text": "And weird fishes",
+            "start_time": 188.71,
+            "end_time": 195.85,
+            "selected_image_ids": [
+                138945,
+                139595,
+                510323,
+                1339,
+                37921,
+                1326,
+                501557
+            ],
+            "selected_image_paths": [
+                "n01910747\\n01910747_16962.JPEG",
+                "n01910747\\n01910747_7740.JPEG",
+                "n02655020\\n02655020_6507.JPEG",
+                "n01443537\\n01443537_10625.JPEG",
+                "n01632777\\n01632777_14366.JPEG",
+                "n01443537\\n01443537_10364.JPEG",
+                "n02526121\\n02526121_7672.JPEG"
+            ]
+        },
+        {
+            "index": 21,
+            "text": "Picked over by the worms",
+            "start_time": 195.85,
+            "end_time": 201.44,
+            "selected_image_ids": [
+                92748,
+                68145,
+                67680,
+                67698,
+                144902,
+                67826,
+                69007
+            ],
+            "selected_image_paths": [
+                "n01770393\\n01770393_4878.JPEG",
+                "n01728572\\n01728572_28084.JPEG",
+                "n01728572\\n01728572_16021.JPEG",
+                "n01728572\\n01728572_16316.JPEG",
+                "n01930112\\n01930112_9180.JPEG",
+                "n01728572\\n01728572_18716.JPEG",
+                "n01728920\\n01728920_16304.JPEG"
+            ]
+        },
+        {
+            "index": 22,
+            "text": "And weird fishes",
+            "start_time": 201.44,
+            "end_time": 207.68,
+            "selected_image_ids": [
+                138945,
+                139595,
+                510323,
+                1339,
+                37921,
+                1326,
+                501557
+            ],
+            "selected_image_paths": [
+                "n01910747\\n01910747_16962.JPEG",
+                "n01910747\\n01910747_7740.JPEG",
+                "n02655020\\n02655020_6507.JPEG",
+                "n01443537\\n01443537_10625.JPEG",
+                "n01632777\\n01632777_14366.JPEG",
+                "n01443537\\n01443537_10364.JPEG",
+                "n02526121\\n02526121_7672.JPEG"
+            ]
+        },
+        {
+            "index": 23,
+            "text": "Weird fishes",
+            "start_time": 207.68,
+            "end_time": 213.75,
+            "selected_image_ids": [
+                138945,
+                139595,
+                2417,
+                2277,
+                2314,
+                37921,
+                501557
+            ],
+            "selected_image_paths": [
+                "n01910747\\n01910747_16962.JPEG",
+                "n01910747\\n01910747_7740.JPEG",
+                "n01443537\\n01443537_596.JPEG",
+                "n01443537\\n01443537_371.JPEG",
+                "n01443537\\n01443537_4173.JPEG",
+                "n01632777\\n01632777_14366.JPEG",
+                "n02526121\\n02526121_7672.JPEG"
+            ]
+        },
+        {
+            "index": 24,
+            "text": "Weird fishes",
+            "start_time": 213.75,
+            "end_time": 220.05,
+            "selected_image_ids": [
+                138945,
+                139595,
+                2417,
+                2277,
+                2314,
+                37921,
+                501557
+            ],
+            "selected_image_paths": [
+                "n01910747\\n01910747_16962.JPEG",
+                "n01910747\\n01910747_7740.JPEG",
+                "n01443537\\n01443537_596.JPEG",
+                "n01443537\\n01443537_371.JPEG",
+                "n01443537\\n01443537_4173.JPEG",
+                "n01632777\\n01632777_14366.JPEG",
+                "n02526121\\n02526121_7672.JPEG"
+            ]
+        },
+        {
+            "index": 25,
+            "text": "Yeah I, I'll hit the bottom",
+            "start_time": 264.69,
+            "end_time": 273.62,
+            "selected_image_ids": [
+                1103128,
+                756635,
+                192831
+            ],
+            "selected_image_paths": [
+                "n04447861\\n04447861_4378.JPEG",
+                "n03483316\\n03483316_22907.JPEG",
+                "n02071294\\n02071294_8803.JPEG"
+            ]
+        },
+        {
+            "index": 26,
+            "text": "Hit the bottom and escape",
+            "start_time": 273.62,
+            "end_time": 280.29,
+            "selected_image_ids": [
+                541049,
+                1078946
+            ],
+            "selected_image_paths": [
+                "n02788148\\n02788148_39378.JPEG",
+                "n04371430\\n04371430_5046.JPEG"
+            ]
+        },
+        {
+            "index": 27,
+            "text": "Escape",
+            "start_time": 280.29,
+            "end_time": 284.64,
+            "selected_image_ids": [
+                241441,
+                715949,
+                272662,
+                1088841
+            ],
+            "selected_image_paths": [
+                "n02095570\\n02095570_1026.JPEG",
+                "n03355925\\n03355925_4955.JPEG",
+                "n02100877\\n02100877_26911.JPEG",
+                "n04399382\\n04399382_21501.JPEG"
+            ]
+        },
+        {
+            "index": 28,
+            "text": "I, I hit the bottom",
+            "start_time": 286.74,
+            "end_time": 295.38,
+            "selected_image_ids": [
+                1103128,
+                133872
+            ],
+            "selected_image_paths": [
+                "n04447861\\n04447861_4378.JPEG",
+                "n01873310\\n01873310_25658.JPEG"
+            ]
+        },
+        {
+            "index": 29,
+            "text": "Hit the bottom and escape",
+            "start_time": 295.38,
+            "end_time": 301.65,
+            "selected_image_ids": [
+                541049,
+                1078946
+            ],
+            "selected_image_paths": [
+                "n02788148\\n02788148_39378.JPEG",
+                "n04371430\\n04371430_5046.JPEG"
+            ]
+        },
+        {
+            "index": 30,
+            "text": "Escape",
+            "start_time": 301.65,
+            "end_time": 303.95,
+            "selected_image_ids": [
+                241441,
+                715949,
+                272662,
+                1088841
+            ],
+            "selected_image_paths": [
+                "n02095570\\n02095570_1026.JPEG",
+                "n03355925\\n03355925_4955.JPEG",
+                "n02100877\\n02100877_26911.JPEG",
+                "n04399382\\n04399382_21501.JPEG"
+            ]
+        }
+    ]
+}
