@@ -246,3 +246,88 @@
 
 ## 27/02/23
 * 4 hrs - Writing Background chapter introduction and begining literature review of Variable Depth Pooling paper
+
+## 28/02/23
+* 2 hrs - Performing 4 more user evaluations and validating completed ground-truths
+* 1 hr - Making system architecture diagrams for the Transcription Extractor and Annotation Interface
+
+## 02/03/23
+* 0.5 hr - Supervisor meeting
+* 2 hrs - Reading OpenAI paper on CLIP
+* 2 hrs - Researching papers for Image Retrieval History
+
+## 04/03/23
+* 3 hrs - Writing history of image retrieval within IR (BACKGROUND)
+
+## 05/03/23
+* 3 hrs - Writing history of relevance assessment within IR (BACKGROUND)
+
+## 06/03/23
+* 3 hrs - Writing analysis of previous thesis (BACKGROUND)
+* 2 hrs - Researching and writing existing annotation tools: Labelbox and SuperAnnotate (BACKGROUND)
+
+## 07/03/23
+* 3 hrs - Finishing Background chapter and writing summaries
+* 3 hrs - Creating wireframes for Design chapter
+
+## 08/03/23
+* 3 hrs - Proof-reading Introduction and Background chapters
+* 3 hrs - Writing User Interface Design section (DESIGN)
+
+## 09/03/23
+* 4 hrs - Writing about Audio page, Chunk page, Video page and Ground-Truth page (DESIGN)
+* 2 hrs - Writing summaries for Requirements and Design chapters
+
+## 10/03/23
+* 3 hrs - Writing three more sections (IMPLEMENTATION)
+* 2 hrs - Adding try-catch to fix ImageMagick bug
+
+## 11/03/23
+* 3 hrs - Writing more sections (IMPLEMENTATION)
+* 2 hrs - Fixing multilingual conditional bug
+
+## 12/03/23
+* 3 hrs - Finishing Implementation chapter
+* 3 hrs - Listing MoSCoW requirements (REQUIREMENTS/ANALYSIS)
+
+## 13/03/23
+* 4 hrs - Creating/Running video generation time experiment on current system (EVALUATION)
+* 2 hrs - Performed 4 more user evaluations
+
+## 14/03/23
+* 4 hrs - Running video generation time experiment on previous system (EVALUATION)
+* 2 hrs - Adding results to Appendix
+
+## 15/03/23
+* 2 hrs - Adding signed Ethics Checklist to Appendix
+* 2 hrs - Creating tables and adding figures for FAISS experiment
+
+## 16/03/23
+* 3 hrs - Completing Requirement Fulfillment section (EVALUATION)
+
+## 17/03/23
+* 3 hrs - Adding usability evaluation and writing about results (EVALUATION)
+* 2 hrs - Adding usability results and survey to Appendix
+
+## 18/03/23
+* 3 hrs - Finishing Evaluation summary and starting final chapter (CONCLUSIONS)
+
+## 19/03/23
+* 2 hrs - Writing Reflection and Future Work sections (CONCLUSTIONS)
+* 4 hrs - Creating graphs using matplotlib for experiments
+
+## 20/03/23
+* 4 hrs - Finishing dissertation and proof-reading up to Evaluation 6.1.2
+
+## 21/03/23
+* 4 hrs - Adding application walkthrough to Appendix
+* 2 hrs - Proof-reading rest of dissertation
+
+## 23/03/23
+* 2 hrs - Creating presentation slides
+* 2 hrs - Spellchecking dissertation
+* 1 hr - Working on deploying website with Railway
+
+## 24/03/23
+* 2 hrs - Checking timelog and repository structure
+* 3 hrs - Further work on deploying website
