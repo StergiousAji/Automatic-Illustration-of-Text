@@ -1,4 +1,4 @@
-# Automatic Videography Ground Truth Builder
+# Automatic Videography Ground Truth Constructor
 
 This is a prototype application to build automatic videography ground truths for any audio sources. The system will also feature an automatic videography tool that programmatically generates a video consisting of timely imagery relevant to the textual information present in the audio.
 
@@ -10,7 +10,7 @@ This is a prototype application to build automatic videography ground truths for
 ## Installation
 The following commands will show the steps to clone the repository. First navigate to a suitable workspace directory and run:
 ```cmd
-> git clone https://github.com/StergiousAji/Automatic-Illustration-of-Text.git
+> git clone https://github.com/StergiousAji/Autoamatic-Illustration-of-Text.git
 > cd Automatic-Illustration-of-Text\src
 ```
 
