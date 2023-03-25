@@ -1,6 +1,7 @@
 # Automatic Videography Ground Truth Constructor
 
 This is a prototype application to build automatic videography ground truths for any audio sources. The system will also feature an automatic videography tool that programmatically generates a video consisting of timely imagery relevant to the textual information present in the audio.
+Deployed here: https://automatic-videography.up.railway.app
 
 [Python](https://www.python.org/downloads/) version `3.9.2` or later is required to run this application. To check what version you have run this command on a command line terminal:
 ```cmd
