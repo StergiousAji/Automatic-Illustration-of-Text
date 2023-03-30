@@ -1,3 +1,5 @@
 *.tsv filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
+presentation/*.mp4 filter=lfs diff=lfs merge=lfs -text
+presentation/*.pptx filter=lfs diff=lfs merge=lfs -text
 *.pptx filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
