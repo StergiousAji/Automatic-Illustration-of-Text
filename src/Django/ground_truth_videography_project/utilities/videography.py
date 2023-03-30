@@ -53,4 +53,4 @@ def build_video(chunks, clip, audio_path, video_path):
     
     video = concatenate_videoclips(clips, method='compose')
     video.audio = audio_clip
-    video.write_videofile(video_path, fps=24, threads=8)
+    video.write_videofile(video_path, fps=24, threads=8, codec='mpeg4', audio_codec='aac')
