@@ -3,10 +3,8 @@ from .mxlrc import Musixmatch, Song, get_lrc
 import pylrc
 import os
 
-# TODO DELETE MAYBE???
-MUSIXMATCH_ACCESS_TOKEN = "200501593b603a3fdc5c9b4a696389f6589dd988e5a1cf02dfdce1"
-
-MUSIXMATCH_ACCESS_TOKEN = "2212262fac49706f69495b666eeb8b05c0b293b75997dd15e795af"
+# Insert MusixMatch Access Token here
+MUSIXMATCH_ACCESS_TOKEN = None
 def get_synced_lyrics(title, artist, folder, filename=""):
     musixmatch = Musixmatch(MUSIXMATCH_ACCESS_TOKEN)
     song = Song(artist, title)
