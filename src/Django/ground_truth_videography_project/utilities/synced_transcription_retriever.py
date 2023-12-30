@@ -5,7 +5,7 @@ import pylrc
 import os
 import whisper
 
-from config import MUSIXMATCH_ACCESS_TOKEN
+from utilities.configuration import MUSIXMATCH_ACCESS_TOKEN
 
 def get_synced_lyrics(title, artist, folder, filename):
     musixmatch = Musixmatch(MUSIXMATCH_ACCESS_TOKEN)

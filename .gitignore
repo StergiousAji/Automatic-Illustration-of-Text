@@ -145,4 +145,4 @@ imagenet-1k-test/
 image_vectors/
 
 # SECRET CONFIGURATION KEYS #
-config.py
+configuration.py
